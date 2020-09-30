@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,13 +11,10 @@ public class Attachments : MonoBehaviour
 {
     private Dictionary<Joint, FixedJoint2D> joints;
 
-    void Awake(){
-        joints = new Dictionary<Joint, FixedJoint2D>();
-    }
-
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        joints = new Dictionary<Joint, FixedJoint2D>();
         FixedJoint2D tJoint;
         float lLength, lWidth, lFrontAxle, lRearAxle;
         lLength = gameObject.GetComponent<BoxCollider2D>().size.y;
@@ -34,6 +30,7 @@ public class Attachments : MonoBehaviour
         tJoint = gameObject.AddComponent<FixedJoint2D>();
         tJoint.anchor = new Vector2(0f,lLength/2);
         tJoint.enabled = false;
+        tJoint.enableCollision = true;
         joints.Add(Joint.FBumper, tJoint);
 
         tJoint = gameObject.AddComponent<FixedJoint2D>();
@@ -81,12 +78,17 @@ public class Attachments : MonoBehaviour
         tJoint.enabled = false;
         joints.Add(Joint.Trunk, tJoint);
 
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+    public void Attach(Joint location, Attachable attachment){
+        FixedJoint2D tJoint = joints[location];
+
+        attachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f);
+        attachment.gameObject.transform.parent = gameObject.transform;
+        //tJoint.connectedBody = attachment.gameObject.GetComponent<Rigidbody2D>();
+        //tJoint.connectedAnchor = attachment.anchor;
+        //tJoint.enabled = true;
     }
+
 }

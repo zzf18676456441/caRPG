@@ -14,8 +14,6 @@ public class Driving : MonoBehaviour {
     public float frontAxleDistance = 2f;
     [Tooltip ("Distance from center of vehicle to center of rear axel (meters)")]
     public float rearAxleDistance = 1.5f;
-    [Tooltip ("For debugging, delete me!")]
-    public GameObject debugText;
     private bool frontSliding = false;
     private bool rearSliding = false;
     private int kills = 0;
@@ -79,6 +77,6 @@ public class Driving : MonoBehaviour {
     }
 
     void OnCollisionEnter2D (Collision2D col) {
-        debugText.GetComponent<UnityEngine.UI.Text> ().text = col.relativeVelocity.ToString ();
+        //debugText.GetComponent<UnityEngine.UI.Text> ().text = col.relativeVelocity.ToString ();
     }
 }
