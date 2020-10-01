@@ -11,11 +11,9 @@ public class Driving : MonoBehaviour {
     [Tooltip ("Sliding friction, 0.5-0.8 is reality, less is more fun")]
     public float kineticCoefficientOfFriction = 0.5f;
     [Tooltip ("Distance from center of object to center of front axel (meters)")]
-    public float frontAxelDistance = 2f;
+    public float frontAxleDistance = 2f;
     [Tooltip ("Distance from center of vehicle to center of rear axel (meters)")]
-    public float rearAxelDistance = 1.5f;
-    [Tooltip ("For debugging, delete me!")]
-    public GameObject debugText;
+    public float rearAxleDistance = 1.5f;
     private bool frontSliding = false;
     private bool rearSliding = false;
     private int kills = 0;
@@ -37,11 +35,11 @@ public class Driving : MonoBehaviour {
         Rigidbody2D body = gameObject.GetComponent<Rigidbody2D> ();
 
         // Add acceleration
-        body.AddForceAtPosition (frontWheels * acceleration * body.mass * verticalInput, transform.position + transform.up * frontAxelDistance);
+        body.AddForceAtPosition (frontWheels * acceleration * body.mass * verticalInput, transform.position + transform.up * frontAxleDistance);
 
         // Compute axel velocities
-        Vector2 fwv = body.velocity + frontAxelDistance * Mathf.Deg2Rad * body.angularVelocity * Vector2.Perpendicular (transform.up);
-        Vector2 rwv = body.velocity - rearAxelDistance * Mathf.Deg2Rad * body.angularVelocity * Vector2.Perpendicular (transform.up);
+        Vector2 fwv = body.velocity + frontAxleDistance * Mathf.Deg2Rad * body.angularVelocity * Vector2.Perpendicular (transform.up);
+        Vector2 rwv = body.velocity - rearAxleDistance * Mathf.Deg2Rad * body.angularVelocity * Vector2.Perpendicular (transform.up);
 
         // Compute horizontal velocities
         Vector2 fwHorizontal = fwv - Vector2.Dot (fwv, frontWheels) * frontWheels;
@@ -62,7 +60,7 @@ public class Driving : MonoBehaviour {
             if (fwHorizontal.magnitude * body.mass * 30 < maxStoppingPower)
                 maxStoppingPower = fwHorizontal.magnitude * body.mass * 30;
             fwHorizontal *= -maxStoppingPower / fwHorizontal.magnitude;
-            body.AddForceAtPosition (fwHorizontal, transform.position + transform.up * frontAxelDistance);
+            body.AddForceAtPosition (fwHorizontal, transform.position + transform.up * frontAxleDistance);
         }
 
         if (rwHorizontal.magnitude > 0) {
@@ -73,12 +71,12 @@ public class Driving : MonoBehaviour {
             if (rwHorizontal.magnitude * body.mass * 30 < maxStoppingPower)
                 maxStoppingPower = rwHorizontal.magnitude * body.mass * 30;
             rwHorizontal *= -maxStoppingPower / rwHorizontal.magnitude;
-            body.AddForceAtPosition (rwHorizontal, transform.position - transform.up * rearAxelDistance);
+            body.AddForceAtPosition (rwHorizontal, transform.position - transform.up * rearAxleDistance);
         }
 
     }
 
     void OnCollisionEnter2D (Collision2D col) {
-        debugText.GetComponent<UnityEngine.UI.Text> ().text = col.relativeVelocity.ToString ();
+        //debugText.GetComponent<UnityEngine.UI.Text> ().text = col.relativeVelocity.ToString ();
     }
 }
