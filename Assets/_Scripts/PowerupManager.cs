@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+*  FOR THE CAR
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +11,10 @@ using UnityEngine;
 public enum Joint {FBumper, FLTire, FRTire, Hood, 
     LDoor, RDoor, Center, BLTire, BRTire, Trunk, RBumper}
 
+public enum AttachType {Fixed, Spring}
 
-public class Attachments : MonoBehaviour
+
+public class PowerupManager : MonoBehaviour
 {
     private Dictionary<Joint, FixedJoint2D> joints;
 
@@ -81,14 +88,23 @@ public class Attachments : MonoBehaviour
     }
 
 
-    public void Attach(Joint location, Attachable attachment){
+    public void Attach(Joint location, PowerupAttachable attachment, AttachType aType){
         FixedJoint2D tJoint = joints[location];
-
         attachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f);
-        attachment.gameObject.transform.parent = gameObject.transform;
-        //tJoint.connectedBody = attachment.gameObject.GetComponent<Rigidbody2D>();
-        //tJoint.connectedAnchor = attachment.anchor;
-        //tJoint.enabled = true;
+
+        switch (aType)
+        {
+            case AttachType.Spring:
+            tJoint.connectedBody = attachment.gameObject.GetComponent<Rigidbody2D>();
+            tJoint.connectedAnchor = attachment.anchorOverride;
+            tJoint.enabled = true;
+            break;
+
+            case AttachType.Fixed:
+            default:
+            attachment.gameObject.transform.parent = gameObject.transform;
+            break;
+        }
     }
 
 }

@@ -28,7 +28,7 @@ public class Driving : MonoBehaviour {
         float verticalInput = Input.GetAxis ("Vertical");
         float horizontalInput = Input.GetAxis ("Horizontal");
         float handbrake = Input.GetAxis ("Jump");
-        float wheeldirection = horizontalInput * Mathf.Rad2Deg; // +- .5 radian, ~30 degrees
+        float wheeldirection = horizontalInput * Mathf.Rad2Deg / 2; // +- .5 radian, ~30 degrees
         Quaternion rot = Quaternion.Euler (0, 0, -wheeldirection);
         Vector2 frontWheels = (Vector2) (rot * transform.up); // unit vector pointing at angle of front wheels
         Vector2 rearWheels = transform.up; // unit vector pointing at angle of rear wheels (straight forward)
