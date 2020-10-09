@@ -28,6 +28,22 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 5
   wait: 0
+--- !u!114 &-3327714300894279001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8069659137356269396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02950a8fdbf76164fa8305c19a891511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 20
+  acceleration: 1
+  braking: 5
+  rotationSpeed: 30
 --- !u!1001 &213716460558543515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35,6 +51,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152141891301647811, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
+      propertyPath: m_LinearDrag
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4545291032537668665, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.730114

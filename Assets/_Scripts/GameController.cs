@@ -50,7 +50,41 @@ public class GameController : MonoBehaviour
     }
 }
 
-public class Player{
+public class Player : IDamagable{
     public float maxHealth = 100;
     public float currentHealth = 60;
+
+    public void ApplyDamage(Damage damage){
+        currentHealth -= damage.baseDamage;
+    }
+}
+
+
+
+public enum DamageType {Fixed, Velocity};
+public enum DamageFlag {Fire, Sonic, Physical, Piercing};
+
+public class Damage
+{
+    public float baseDamage;
+    public DamageType type;
+    public Dictionary<DamageFlag,DamageFlag> flags;
+
+    public Damage(float _baseDamage, DamageType _type){
+        baseDamage = _baseDamage;
+        type = _type;
+        flags = new Dictionary<DamageFlag, DamageFlag>();
+    }
+
+    public void AddDamageFlag(DamageFlag flag){
+        flags.Add(flag, flag);
+    }
+}
+
+public interface IDamager{
+    Damage GetDamage();
+}
+
+public interface IDamagable{
+    void ApplyDamage(Damage damage);
 }

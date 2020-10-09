@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamagable, IDamager
 {
 
     public float health = 50;
+
+    public float baseDamage = 20;
 
     void Update()
     {
@@ -35,5 +37,13 @@ public class Enemy : MonoBehaviour
     private void die()
     {
         Destroy(gameObject);
+    }
+
+    public Damage GetDamage(){
+        return new Damage(baseDamage, DamageType.Fixed);
+    }
+
+    public void ApplyDamage(Damage damage){
+        health -= damage.baseDamage;
     }
 }

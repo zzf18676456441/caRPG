@@ -14,7 +14,7 @@ public enum Joint {FBumper, FLTire, FRTire, Hood,
 public enum AttachType {Fixed, Spring, NonPhysical}
 
 
-public class PowerupManager : MonoBehaviour
+public class PowerupManager : MonoBehaviour, IDamager
 {
     private Dictionary<Joint, FixedJoint2D> joints;
     private Dictionary<bool, List<PowerupStats>> statBoosts;
@@ -153,11 +153,23 @@ public class PowerupManager : MonoBehaviour
     }
 
     public void NotifyCollision(Collision2D collision){
-        
+        Enemy e = collision.collider.gameObject.GetComponent<Enemy>();
+        if (e != null) {
+            Debug.Log("Got here!");
+            controller.GetPlayer().ApplyDamage(e.GetDamage());
+            e.ApplyDamage(GetDamage());
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         NotifyCollision(collision);
+    }
+
+
+    public Damage GetDamage(){
+        Damage damage = new Damage(50f, DamageType.Velocity);
+        damage.AddDamageFlag(DamageFlag.Piercing);
+        return damage;
     }
 }

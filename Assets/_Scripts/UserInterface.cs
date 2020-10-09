@@ -31,7 +31,7 @@ public class UserInterface : MonoBehaviour
     void Update()
     {
         speed = 2.23694f * controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude;
-        hp = controller.GetPlayer().currentHealth / controller.GetPlayer().maxHealth;
+        hp = 100 * controller.GetPlayer().currentHealth / controller.GetPlayer().maxHealth;
 
         Text speedt = speedometer.GetComponent<Text>();
 

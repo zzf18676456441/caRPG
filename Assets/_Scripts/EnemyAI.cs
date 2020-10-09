@@ -41,6 +41,6 @@ public class EnemyAI : MonoBehaviour
 
     void chase(Vector2 dir)
     {
-        rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
+        GetComponent<SinglePointMovement>().MoveByVector(dir);
     }
 }
