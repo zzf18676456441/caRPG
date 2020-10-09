@@ -11,27 +11,32 @@ public class EnemyAI : MonoBehaviour
     private Vector2 movement;
     public bool wait = false;
 
+
+    GameController controller;
+    void Awake(){
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
+        player = controller.GetCar().transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 dir = player.position - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
-        dir.Normalize();
-        movement = dir;
-
-        chase(movement);
+    
     }
 
     private void FixedUpdate()
     {
-        chase(movement);
+            Vector3 dir = player.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            rb.rotation = angle;
+            dir.Normalize();
+            movement = dir;
+            chase(movement);
     }
 
     void chase(Vector2 dir)

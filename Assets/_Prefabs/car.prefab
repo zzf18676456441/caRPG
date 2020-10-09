@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -309649962996153329}
   m_Layer: 0
   m_Name: car
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 6
-  staticCoefficientOfFriction: 0.9
+  staticCoefficientOfFriction: 2
   kineticCoefficientOfFriction: 0.5
   frontAxleDistance: 2
   rearAxleDistance: 1.5

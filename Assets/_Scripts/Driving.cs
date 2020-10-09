@@ -16,7 +16,6 @@ public class Driving : MonoBehaviour {
     public float rearAxleDistance = 1.5f;
     private bool frontSliding = false;
     private bool rearSliding = false;
-    private int kills = 0;
 
     // Start is called before the first frame update
     void Start () {

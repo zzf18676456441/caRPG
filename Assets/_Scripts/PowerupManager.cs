@@ -11,17 +11,19 @@ using UnityEngine;
 public enum Joint {FBumper, FLTire, FRTire, Hood, 
     LDoor, RDoor, Center, BLTire, BRTire, Trunk, RBumper}
 
-public enum AttachType {Fixed, Spring}
+public enum AttachType {Fixed, Spring, NonPhysical}
 
 
 public class PowerupManager : MonoBehaviour
 {
     private Dictionary<Joint, FixedJoint2D> joints;
     private Dictionary<bool, List<PowerupStats>> statBoosts;
+    GameController controller;
 
     // Start is called before the first frame update
     void Awake()
     {
+        controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
         joints = new Dictionary<Joint, FixedJoint2D>();
         FixedJoint2D tJoint;
         float lLength, lWidth, lFrontAxle, lRearAxle;
@@ -92,7 +94,7 @@ public class PowerupManager : MonoBehaviour
     }
 
 
-    public void Attach(Joint location, PowerupAttachable attachment, AttachType aType){
+    public PowerupManager Attach(Joint location, PowerupAttachable attachment, AttachType aType){
         FixedJoint2D tJoint = joints[location];
         attachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f);
 
@@ -109,13 +111,26 @@ public class PowerupManager : MonoBehaviour
             attachment.gameObject.transform.parent = gameObject.transform;
             break;
         }
+        return this;
     }
 
-    public void Attach(PowerupStats stats)
+    public PowerupManager ApplyStats(PowerupStats stats)
     {
         //gameObject.GetComponent<Driving>().acceleration = 20;
         statBoosts[false].Add(stats);
-        
+        stats.gameObject.SetActive(false);
+        return this;
+    }
+
+    public PowerupManager ApplyBoost(PowerupBoost boost)
+    {
+        //TODO:  Do something
+        return this;
+    }
+
+    public PowerupManager AddEvent(PowerupEvent pEvent){
+        //TODO:  Do something
+        return this;
     }
 
     void Update()
@@ -133,7 +148,16 @@ public class PowerupManager : MonoBehaviour
 
     private void activateStatBoost(PowerupStats stats)
     {
-        gameObject.GetComponent<Player>().health += stats.healthAdd;
+        controller.GetPlayer().currentHealth += stats.healthAdd;
         gameObject.GetComponent<Driving>().acceleration += stats.accelerationAdd;
+    }
+
+    public void NotifyCollision(Collision2D collision){
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        NotifyCollision(collision);
     }
 }

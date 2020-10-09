@@ -22,16 +22,24 @@ public class UserInterface : MonoBehaviour
     public GameObject score;
 
 
+    GameController controller;
+    void Awake(){
+        controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
+    }
+
     // Update is called once per frame
     void Update()
     {
+        speed = 2.23694f * controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude;
+        hp = controller.GetPlayer().currentHealth / controller.GetPlayer().maxHealth;
+
         Text speedt = speedometer.GetComponent<Text>();
 
-        speedt.text = "Speed: " + speed + " mph";
+        speedt.text = string.Format("Speed: {0:0.} mph", speed);
 
         Text healtht = health.GetComponent<Text>();
 
-        healtht.text = "Health: " + hp + "%";
+        healtht.text = string.Format("Health: {0:0.}%", hp);
 
         Text nitroust = nitrous.GetComponent<Text>();
 

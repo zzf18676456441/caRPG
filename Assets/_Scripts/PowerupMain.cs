@@ -7,8 +7,18 @@ using UnityEngine;
 
 public class PowerupMain : MonoBehaviour
 {
+    private bool attached;
+    private PowerupManager appliedManager;
+
+    void Awake(){
+        attached = false;
+    }
+
     public void ApplyTo(PowerupManager car)
     {
+        if(attached) return;
+        attached = true;
+
         PowerupAttachable pAttachable = GetComponent<PowerupAttachable>();
         PowerupEvent pEvent = GetComponent<PowerupEvent>();
         PowerupBoost pBoost = GetComponent<PowerupBoost>();
@@ -16,22 +26,47 @@ public class PowerupMain : MonoBehaviour
 
         if (pAttachable != null)
         {
-            car.Attach(pAttachable.attachLocation, pAttachable, pAttachable.attachType);
+            appliedManager = car.Attach(pAttachable.attachLocation, pAttachable, pAttachable.attachType);
         }
 
         if (pEvent != null)
         {
-            //TODO:  Event-driven powerups, i.e. create an explosion upon collision
+            appliedManager = car.AddEvent(pEvent);
         }
 
         if (pBoost != null)
         {
-            //TODO:  Boost-type powerups, i.e. healing effect or temporary speed
+            appliedManager = car.ApplyBoost(pBoost);
         }
 
         if (pStats != null)
         {
-            car.Attach(pStats);
+            appliedManager = car.ApplyStats(pStats);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(attached){
+            appliedManager.NotifyCollision(collision);
+        } else {
+            if (collision.otherCollider.gameObject.tag == "Player"){
+                ApplyTo(collision.otherCollider.gameObject.GetComponent<PowerupManager>());
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.tag == "Player" && attached == false){
+            ApplyTo(other.gameObject.GetComponent<PowerupManager>());
+        }
+        if (attached){
+            PowerupMain otherPowerup = other.GetComponent<PowerupMain>();
+            if (otherPowerup != null){
+                otherPowerup.ApplyTo(appliedManager);
+            }
+        }
+    }
+
+
 }
