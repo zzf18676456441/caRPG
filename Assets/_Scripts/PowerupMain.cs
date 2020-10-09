@@ -31,7 +31,7 @@ public class PowerupMain : MonoBehaviour
 
         if (pStats != null)
         {
-            //TODO:  Stat-affecting powerups, i.e. engine upgrades
+            car.Attach(pStats);
         }
     }
 }

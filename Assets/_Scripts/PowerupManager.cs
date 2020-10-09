@@ -17,6 +17,7 @@ public enum AttachType {Fixed, Spring}
 public class PowerupManager : MonoBehaviour
 {
     private Dictionary<Joint, FixedJoint2D> joints;
+    private Dictionary<bool, List<PowerupStats>> statBoosts;
 
     // Start is called before the first frame update
     void Awake()
@@ -85,6 +86,9 @@ public class PowerupManager : MonoBehaviour
         tJoint.enabled = false;
         joints.Add(Joint.Trunk, tJoint);
 
+        statBoosts = new Dictionary<bool, List<PowerupStats>>();
+        statBoosts.Add(true, new List<PowerupStats>());
+        statBoosts.Add(false, new List<PowerupStats>());
     }
 
 
@@ -107,4 +111,29 @@ public class PowerupManager : MonoBehaviour
         }
     }
 
+    public void Attach(PowerupStats stats)
+    {
+        //gameObject.GetComponent<Driving>().acceleration = 20;
+        statBoosts[false].Add(stats);
+        
+    }
+
+    void Update()
+    {
+        if (statBoosts[false].Count > 0)
+        {
+            for (int i = 0; i < statBoosts[false].Count; i++)
+            {
+                activateStatBoost(statBoosts[false][i]);
+                statBoosts[true].Add(statBoosts[false][i]);
+            }
+            statBoosts[false].Clear();
+        }
+    }
+
+    private void activateStatBoost(PowerupStats stats)
+    {
+        gameObject.GetComponent<Player>().health += stats.healthAdd;
+        gameObject.GetComponent<Driving>().acceleration += stats.accelerationAdd;
+    }
 }

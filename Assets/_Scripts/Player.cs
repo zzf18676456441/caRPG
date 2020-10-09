@@ -19,4 +19,15 @@ public class Player : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Equipment")
+        {
+            other.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            other.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            PowerupMain equip = other.gameObject.GetComponent<PowerupMain>();
+            equip.ApplyTo(GetComponent<PowerupManager>());
+        }
+    }
 }

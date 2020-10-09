@@ -79,4 +79,14 @@ public class Driving : MonoBehaviour {
     void OnCollisionEnter2D (Collision2D col) {
         //debugText.GetComponent<UnityEngine.UI.Text> ().text = col.relativeVelocity.ToString ();
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        /*if (other.tag == "Equipment")
+        {
+            acceleration = 20;
+            Destroy(other.gameObject);
+        }*/
+
+    }
 }
