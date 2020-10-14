@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [Tooltip ("The game object which this camera should follow")]
+    [Tooltip("The game object which this camera should follow")]
     private GameObject toFollow;
     GameController controller;
-    void Awake(){
+    void Awake()
+    {
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
     }
 
