@@ -124,8 +124,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1500
-  m_LinearDrag: 0.05
+  m_Mass: 550
+  m_LinearDrag: 0.01
   m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -145,11 +145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9737914938e1d4681f86e092a23fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 6
-  staticCoefficientOfFriction: 2
-  kineticCoefficientOfFriction: 0.9
+  acceleration: 3
+  staticCoefficientOfFriction: 1
+  kineticCoefficientOfFriction: 0.4
   frontAxleDistance: 2
-  rearAxleDistance: 1.5
+  rearAxleDistance: 2
 --- !u!114 &-309649962996153329
 MonoBehaviour:
   m_ObjectHideFlags: 0

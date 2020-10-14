@@ -12,6 +12,6 @@ public class CameraFX : MonoBehaviour
     }
     void FixedUpdate()
     {
-        mainCam.orthographicSize = 25 + .15f * (controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude);
+        mainCam.orthographicSize = 27 + .15f * (controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude);
     }
 }
