@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     }
     void Start()
     {
-        Invoke("AddStick", 2f);
+
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void AddStick()
+    public void AddStick()
     {
         PowerupMain tStick = Instantiate<GameObject>(stickPrefab).GetComponent<PowerupMain>();
         tStick.ApplyTo(car.GetComponent<PowerupManager>());
