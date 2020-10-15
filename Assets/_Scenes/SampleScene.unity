@@ -2082,6 +2082,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
+--- !u!1 &1327659125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7857221993545199055, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
+  m_PrefabInstance: {fileID: 719927296816592975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1327659126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327659125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30435ca6312f7244190a45568ec073ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  baseDamage: 20
+--- !u!114 &1327659127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327659125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d8c85cfd974144280602d7253affff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  stopDis: 20
+  backDis: 10
+  startShotTime: 2
+  projectile: {fileID: 8326137544831052569, guid: 8ff94924f9cdb6b49b961153812029ad, type: 3}
 --- !u!4 &1340294159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5239985250360986713, guid: 99193fdd40e2f524dad7110a2bd053c5, type: 3}
@@ -2179,9 +2215,8 @@ MonoBehaviour:
   acceleration: 6
   staticCoefficientOfFriction: 0.9
   kineticCoefficientOfFriction: 0.1
-  frontAxelDistance: 1.5
-  rearAxelDistance: 1.5
-  debugText: {fileID: 1427721551}
+  frontAxleDistance: 2
+  rearAxleDistance: 1.5
 --- !u!50 &1404767021
 Rigidbody2D:
   serializedVersion: 4

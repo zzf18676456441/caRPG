@@ -5,12 +5,12 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
 
-    public Transform player;
     public float speed = 0;
     private Rigidbody2D rb;
     private Vector2 movement;
     public bool wait = false;
 
+    private Transform player;
 
     GameController controller;
     void Awake(){
