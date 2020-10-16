@@ -32,6 +32,7 @@ public class UserInterface : MonoBehaviour
     {
         speed = 2.23694f * controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude;
         hp = 100 * controller.GetPlayer().currentHealth / controller.GetPlayer().maxHealth;
+        no2 = 100 * controller.GetPlayer().currentNO2 / controller.GetPlayer().maxNO2;
 
         Text speedt = speedometer.GetComponent<Text>();
 
@@ -43,7 +44,7 @@ public class UserInterface : MonoBehaviour
 
         Text nitroust = nitrous.GetComponent<Text>();
 
-        nitroust.text = "NO\u2082: " + no2 + "%";
+        nitroust.text = string.Format("NO\u2082: {0:0.}%", no2);
 
         Text scoret = score.GetComponent<Text>();
 

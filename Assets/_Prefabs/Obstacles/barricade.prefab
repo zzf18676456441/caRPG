@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2265395826497989915}
   - component: {fileID: 1683754635065933212}
   - component: {fileID: 7891681284615041679}
+  - component: {fileID: 7034414479634050246}
   m_Layer: 0
   m_Name: barricade
   m_TagString: Untagged
@@ -131,3 +132,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7034414479634050246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6480839441054297731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1a215584b22184683c7d6a6a6e320c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 10
+  type: 1
+  flags: 02000000

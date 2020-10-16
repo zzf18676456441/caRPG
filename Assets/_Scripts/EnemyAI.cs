@@ -35,7 +35,7 @@ public class EnemyAI : MonoBehaviour
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             rb.rotation = angle;
             dir.Normalize();
-            movement = dir;
+            movement = new Vector2(dir.x, dir.y);
             chase(movement);
     }
 

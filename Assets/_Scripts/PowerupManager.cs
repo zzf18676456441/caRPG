@@ -153,11 +153,20 @@ public class PowerupManager : MonoBehaviour, IDamager
     }
 
     public void NotifyCollision(Collision2D collision){
-        Enemy e = collision.collider.gameObject.GetComponent<Enemy>();
-        if (e != null) {
-            Debug.Log("Got here!");
-            controller.GetPlayer().ApplyDamage(e.GetDamage());
-            e.ApplyDamage(GetDamage());
+        // Can the thing I hit deal damage?
+        IDamager damager = (IDamager)collision.collider.GetComponent(typeof(IDamager));
+
+        // Can the thing I hit take damage?
+        IDamagable damagable = (IDamagable)collision.collider.GetComponent(typeof(IDamagable));
+
+        // If it can deal damage, apply that damage to the player.
+        if (damager != null) {
+            controller.HandleDamage(damager, controller.GetPlayer());
+        }        
+
+        // If it can take damage, apply this object's damage to it.
+        if (damagable != null) {
+            controller.HandleDamage(this, damagable);
         }
     }
 

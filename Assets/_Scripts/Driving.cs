@@ -14,12 +14,17 @@ public class Driving : MonoBehaviour {
     public float frontAxleDistance = 2f;
     [Tooltip ("Distance from center of vehicle to center of rear axel (meters)")]
     public float rearAxleDistance = 1.5f;
+    [Tooltip ("Boosting force, in Newtons.  Will not scale with car weight!")]
+    public float boostPower = 10000f;
     private bool frontSliding = false;
     private bool rearSliding = false;
+    
+     GameController controller;
 
     // Start is called before the first frame update
-    void Start () {
-
+    void Awake()
+    {
+        controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -27,7 +32,8 @@ public class Driving : MonoBehaviour {
         float verticalInput = Input.GetAxis ("Vertical");
         float horizontalInput = Input.GetAxis ("Horizontal");
         float handbrake = Input.GetAxis ("Jump");
-        float wheeldirection = horizontalInput * Mathf.Rad2Deg / 2; // +- .5 radian, ~30 degrees
+        float boost = Input.GetAxis("Boost");
+        float wheeldirection = horizontalInput * Mathf.Rad2Deg; // +- 1 radian, ~60 degrees
         Quaternion rot = Quaternion.Euler (0, 0, -wheeldirection);
         Vector2 frontWheels = (Vector2) (rot * transform.up); // unit vector pointing at angle of front wheels
         Vector2 rearWheels = transform.up; // unit vector pointing at angle of rear wheels (straight forward)
@@ -35,6 +41,14 @@ public class Driving : MonoBehaviour {
 
         // Add acceleration
         body.AddForceAtPosition (frontWheels * acceleration * body.mass * verticalInput, transform.position + transform.up * frontAxleDistance);
+
+        // Add boost
+        if (boost == 1 && controller.GetPlayer().currentNO2 > 0) {
+            controller.GetPlayer().currentNO2 -= 1;
+            if (controller.GetPlayer().currentNO2 < 0) controller.GetPlayer().currentNO2 = 0;
+
+            body.AddForce(boostPower * transform.up);
+        }
 
         // Compute axel velocities
         Vector2 fwv = body.velocity + frontAxleDistance * Mathf.Deg2Rad * body.angularVelocity * Vector2.Perpendicular (transform.up);
@@ -75,17 +89,4 @@ public class Driving : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter2D (Collision2D col) {
-        //debugText.GetComponent<UnityEngine.UI.Text> ().text = col.relativeVelocity.ToString ();
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        /*if (other.tag == "Equipment")
-        {
-            acceleration = 20;
-            Destroy(other.gameObject);
-        }*/
-
-    }
 }

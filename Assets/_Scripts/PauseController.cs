@@ -8,7 +8,13 @@ public class PauseController : MonoBehaviour
     private GameObject _pausePanel;
     private string _garageSceneName = "Level1";
     private string _mainMenuSceneName = "Level1";
+    GameController controller;
 
+    // Start is called before the first frame update
+    void Awake()
+    {
+        controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +44,7 @@ public class PauseController : MonoBehaviour
     // Reloads the current scene
     public void RestartLevel()
     {
+        controller.FinishLevel();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 

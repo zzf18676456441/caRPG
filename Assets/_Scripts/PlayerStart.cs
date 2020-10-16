@@ -13,6 +13,8 @@ public class PlayerStart : MonoBehaviour
     {
         GameObject player = controller.GetCar();
         player.transform.position = gameObject.transform.position;
+        player.transform.rotation = gameObject.transform.rotation;
+        player.SetActive(true);
     }
 
     // Update is called once per frame

@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour
     {
         if (GetPlayer().currentHealth <= 0)
         {
+            FinishLevel();
             SceneManager.LoadScene(2); //"Game Over" screen.
             GetPlayer().currentHealth = 100; //sets player health to 100 so we can get back in the game
         }
@@ -53,7 +54,13 @@ public class GameController : MonoBehaviour
         {
             return car;
         }
-        car = Instantiate(carPrefab);
+        car = CreateCar();
+        return car;
+    }
+
+    private GameObject CreateCar(){
+        GameObject car = Instantiate(carPrefab);
+        car.transform.SetParent(gameObject.transform);
         return car;
     }
 
@@ -67,16 +74,39 @@ public class GameController : MonoBehaviour
         player.controller = this;
         return player;
     }
+
+    public void FinishLevel(){
+        car.transform.position = gameObject.transform.position;
+        car.transform.rotation = gameObject.transform.rotation;
+        car.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+        car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+        player.currentNO2 = player.maxNO2;
+        car.SetActive(false);
+    }
+
+    public void HandleDamage(IDamager damager, IDamagable damagable){
+        damagable.ApplyDamage(damager.GetDamage());
+    }
 }
 
 public class Player : IDamagable
 {
     public float maxHealth = 100;
     public float currentHealth = 100;
+    public float maxNO2 = 100;
+    public float currentNO2 = 100;
     public GameController controller;
     public void ApplyDamage(Damage damage)
     {
-        currentHealth -= damage.baseDamage / (1 + (controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude * .5f));
+        switch(damage.type){
+            case DamageType.Fixed:
+                currentHealth -= damage.baseDamage / (1 + (controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude * .5f));
+            break;
+            case DamageType.Velocity:
+            default:
+                currentHealth -= damage.baseDamage;
+            break;    
+        }
     }
 }
 
