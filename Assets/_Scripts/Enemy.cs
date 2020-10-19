@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
         return new Damage(baseDamage, DamageType.Fixed);
     }
 
-    public void ApplyDamage(Damage damage){
+    public void ApplyDamage(Damage damage, float speed){
         health -= damage.baseDamage;
     }
 }

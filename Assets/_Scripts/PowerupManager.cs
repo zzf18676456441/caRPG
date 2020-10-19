@@ -161,12 +161,12 @@ public class PowerupManager : MonoBehaviour, IDamager
 
         // If it can deal damage, apply that damage to the player.
         if (damager != null) {
-            controller.HandleDamage(damager, controller.GetPlayer());
+            controller.HandleDamage(damager, controller.GetPlayer(), collision.relativeVelocity.magnitude);
         }        
 
         // If it can take damage, apply this object's damage to it.
         if (damagable != null) {
-            controller.HandleDamage(this, damagable);
+            controller.HandleDamage(this, damagable, collision.relativeVelocity.magnitude);
         }
     }
 
@@ -175,6 +175,13 @@ public class PowerupManager : MonoBehaviour, IDamager
         NotifyCollision(collision);
     }
 
+    
+    private void OnTriggerEnter2D(Collider2D other){
+        IDamager damager = (IDamager)other.GetComponent(typeof(IDamager));
+        if (damager != null) {
+            controller.HandleDamage(damager, controller.GetPlayer(), 0f);
+        }        
+    }
 
     public Damage GetDamage(){
         Damage damage = new Damage(50f, DamageType.Velocity);

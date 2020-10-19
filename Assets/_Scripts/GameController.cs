@@ -84,8 +84,8 @@ public class GameController : MonoBehaviour
         car.SetActive(false);
     }
 
-    public void HandleDamage(IDamager damager, IDamagable damagable){
-        damagable.ApplyDamage(damager.GetDamage());
+    public void HandleDamage(IDamager damager, IDamagable damagable, float speed){
+        damagable.ApplyDamage(damager.GetDamage(), speed);
     }
 }
 
@@ -96,7 +96,7 @@ public class Player : IDamagable
     public float maxNO2 = 100;
     public float currentNO2 = 100;
     public GameController controller;
-    public void ApplyDamage(Damage damage)
+    public void ApplyDamage(Damage damage, float speed)
     {
         switch(damage.type){
             case DamageType.Fixed:
@@ -141,5 +141,5 @@ public interface IDamager
 
 public interface IDamagable
 {
-    void ApplyDamage(Damage damage);
+    void ApplyDamage(Damage damage, float speed);
 }
