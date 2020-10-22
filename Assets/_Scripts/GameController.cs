@@ -10,22 +10,10 @@ public class GameController : MonoBehaviour
     private Player player;
     private GameObject car;
 
-    // Start is called before the first frame update
-
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
         SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
-    }
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void FixedUpdate()
@@ -87,6 +75,10 @@ public class GameController : MonoBehaviour
     public void HandleDamage(IDamager damager, IDamagable damagable, float speed){
         damagable.ApplyDamage(damager.GetDamage(), speed);
     }
+
+    public LevelStats GetLevelStats(){
+        return new LevelStats();
+    }
 }
 
 public class Player : IDamagable
@@ -142,4 +134,10 @@ public interface IDamager
 public interface IDamagable
 {
     void ApplyDamage(Damage damage, float speed);
+}
+
+public class LevelStats{
+    public int kills;
+    public float time;
+    public float damageTaken;
 }
