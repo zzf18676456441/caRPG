@@ -38,7 +38,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3c281eef7781d40b77e831c8873d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   speed: 5
   wait: 0
 --- !u!114 &2118343047
@@ -67,9 +66,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02950a8fdbf76164fa8305c19a891511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 20
-  acceleration: 3
-  rotationSpeed: 30
+  maxSpeed: 10
+  acceleration: 5
+  rotationSpeed: 720
+  direction: 1
 --- !u!1001 &3629237299516610810
 PrefabInstance:
   m_ObjectHideFlags: 0

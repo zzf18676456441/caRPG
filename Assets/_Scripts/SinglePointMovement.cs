@@ -4,14 +4,40 @@ using UnityEngine;
 
 public class SinglePointMovement : MonoBehaviour
 {
-    public float maxSpeed = 20;
-    public float acceleration = 2;
-    public float rotationSpeed = 30;
-    private Rigidbody2D rb;
+    public enum Direction{Up, Down, Left, Right}
 
+
+    [Header ("Movement Settings")]
+    [Tooltip ("Top speed, in meters per second (26 m/s = 60 mph)")]
+    public float maxSpeed = 10;
+    [Tooltip ("Acceleration, in meters per second^2 (5 m/s is reasonable for a car or a human)")]
+    public float acceleration = 5;
+    [Tooltip ("Rotation, in degrees per second (720 default)")]
+    public float rotationSpeed = 720;
+    [Header ("Sprite Settings")]
+    [Tooltip ("Direction of sprite considered \"forward\"")]
+    public Direction direction = Direction.Up;
+    
+    private Rigidbody2D rb;
+    private int counter;
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    /// <summary>
+    /// TAKES OVER RIGIDBODY DRAG PHYSICS
+    /// </summary>
+    void Start(){
+        rb.drag = 0;
+        rb.angularDrag = 0;
+    }
+
+
+    void FixedUpdate(){
+        counter++;
+        if(counter <= 30) rb.AddTorque(rb.inertia * rotationSpeed * Mathf.Deg2Rad);
+        if (counter == 220) RotationSetToMax(false);
     }
 
     /// <summary>
@@ -107,19 +133,177 @@ public class SinglePointMovement : MonoBehaviour
     }
 
 
+
+    /*
+    *
+    *     HELPER FUNCTIONS  
+    *
+    */
+
+    /// <summary>
+    /// The angle the gameobject is currently facing.
+    /// 0 degrees is up.
+    /// Rotation is counter-clockwise (left).
+    /// </summary>
+    /// <returns>The angle, in degrees, clamped to [0-360)</returns>
+    private float GetAngle(){
+        Vector2 original = new Vector2(transform.up.x, transform.up.y);
+        float result = Vector2.SignedAngle(new Vector2(0,1),original);
+        switch (direction){
+            case Direction.Right:
+            return (result + 270) % 360;
+            case Direction.Left:
+            return (result + 90) % 360;
+            case Direction.Down:
+            return (result + 180) % 360;
+            case Direction.Up:
+            default:
+            return result;
+        }
+    }
+
+    /// <summary>
+    /// Slows rotation with maximum force, for use when stopping from speed.
+    /// Stops from rotationSpeed in 5 FixedUpdates (1/10th of a second).
+    /// Formula:  inertia * rotationspeed * deg2rad * 10.
+    /// If you are less than formula, just use RotationStop()
+    /// </summary>
+    private void RotationHardSlow(){
+        if (rb.angularVelocity > 0)
+        {
+            rb.AddTorque(-rb.inertia * rotationSpeed * Mathf.Deg2Rad * 10f);
+        } else {
+            rb.AddTorque(rb.inertia * rotationSpeed * Mathf.Deg2Rad * 10f);
+        }
+    }
+
+    /// <summary>
+    /// Slows rotation with minimal force, for use when spinning.
+    /// Stops from rotationSpeed in 5 seconds.
+    /// Formula:  inertia * rotationspeed * deg2rad / 5.
+    /// If you are less than formula, just use RotationStop()
+    /// </summary>
+    private void RotationSoftSlow(){
+        if (rb.angularVelocity > 0)
+        {
+            rb.AddTorque(-rb.inertia * rotationSpeed * Mathf.Deg2Rad / 5f);
+        } else {
+            rb.AddTorque(rb.inertia * rotationSpeed * Mathf.Deg2Rad / 5f);
+        }
+    }
+
+    /// <summary>
+    /// Stops all rotation immediately, for use when stopping from low speed.
+    /// </summary>
+    private void RotationStop(){
+        rb.angularVelocity = 0;
+    }
+
+    /// <summary>
+    /// Speeds rotation with maximum force, for use when starting to spin.
+    /// Will hit full rotationSpeed in 5 FixedUpdates.
+    /// Formula:  inertia * rotationspeed * deg2rad * 10.
+    /// If you are close to rotationspeed already
+    /// </summary>
+    private void RotationAccelerate(bool left){
+        if (left)
+        {
+            rb.AddTorque(rb.inertia * rotationSpeed * Mathf.Deg2Rad * 10f);
+        } else {
+            rb.AddTorque(-rb.inertia * rotationSpeed * Mathf.Deg2Rad * 10f);
+        }
+    }
+
+    private void RotationSetToMax(bool left){
+        float speedDiff;
+        if (left) {
+            speedDiff = rb.angularVelocity - rotationSpeed;
+        } else {
+            speedDiff = rb.angularVelocity + rotationSpeed;
+        } 
+        rb.AddTorque(-rb.inertia * speedDiff * Mathf.Deg2Rad * 50f);
+    }
+
+
     /// <summary>
     /// A complete movement instruction.
     /// Generated on command, followed until completion/stopped.
     /// </summary>
     private class Instruction{
-
-
+        private MoveState state;
+        private Target moveTarget;
+        private Target lookTarget;
+        private Vector2 moveDirection;
+        private Vector2 lookDirection;
 
         /// <summary>
         /// Makes the next movement.
         /// </summary>
-        public void Move(){
+        public void Follow(){
 
+        }
+    }
+
+    /// <summary>
+    /// State variables for a given instruction
+    /// </summary>
+    private class MoveState{
+        // Reflects only the current goal of the movement.
+        // So if it gets hit but doesn't have an instruction,
+        // isMoving could be false but velocity could be nonzero.
+        public bool isMoving = false;
+        public bool isLooking = false;
+        public bool hasEndpoint = false;
+        public bool isSliding = false;
+        public bool isSpinning = false;
+        
+
+        public void StartSlide(){
+            isSliding = true;
+            isMoving = false;
+        }
+
+        public void Stop(){
+            isMoving = false;
+            isSliding = false;
+            hasEndpoint = false;
+        }
+
+        public void StopLooking(){
+            isLooking = false;
+        }
+
+        public void StartMoving(bool _hasEndpoint){
+            isMoving = true;
+            hasEndpoint = _hasEndpoint;
+        }
+
+        public void StartLooking(){
+            isLooking = true;
+        }
+    }
+
+    private class Target{
+        private Vector2 vectorTarget;
+        private Transform transformTarget;
+        private bool isVector;
+
+        public Target(Vector2 _vectorTarget){
+            vectorTarget = _vectorTarget;
+            isVector = true;
+        }
+
+        public Target(Transform _transformTarget){
+            transformTarget = _transformTarget;
+            isVector = false;
+        }
+
+        public Vector2 TargetLocation(){
+            if (isVector){
+                return new Vector2(vectorTarget.x, vectorTarget.y);
+            } else {
+                return new Vector2(transformTarget.position.x, transformTarget.position.y);
+            }
         }
     }
 }
