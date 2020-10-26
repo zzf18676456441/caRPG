@@ -17,8 +17,8 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
         }
     }
 
-/*
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
@@ -26,13 +26,14 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
             StartCoroutine(Wait());
         }
     }
-    */
+    
     IEnumerator Wait()
     {
         gameObject.GetComponent<EnemyAI>().enabled = false;
         yield return new WaitForSeconds(3);
         gameObject.GetComponent<EnemyAI>().enabled = true;
     }
+    */
 
     private void die()
     {

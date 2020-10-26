@@ -7,6 +7,7 @@ TagManager:
   - Weapon
   - Equipment
   - StartLocation
+  - Wall
   layers:
   - Default
   - TransparentFX

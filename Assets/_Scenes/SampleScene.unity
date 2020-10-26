@@ -2108,7 +2108,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327659125}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6d8c85cfd974144280602d7253affff, type: 3}
   m_Name: 
@@ -2118,6 +2118,21 @@ MonoBehaviour:
   backDis: 10
   startShotTime: 2
   projectile: {fileID: 8326137544831052569, guid: 8ff94924f9cdb6b49b961153812029ad, type: 3}
+--- !u!114 &1327659128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327659125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3c281eef7781d40b77e831c8873d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  wait: 0
+  startChase: 0
 --- !u!4 &1340294159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5239985250360986713, guid: 99193fdd40e2f524dad7110a2bd053c5, type: 3}
@@ -2217,6 +2232,7 @@ MonoBehaviour:
   kineticCoefficientOfFriction: 0.1
   frontAxleDistance: 2
   rearAxleDistance: 1.5
+  boostPower: 10000
 --- !u!50 &1404767021
 Rigidbody2D:
   serializedVersion: 4
@@ -2312,7 +2328,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1404767024
