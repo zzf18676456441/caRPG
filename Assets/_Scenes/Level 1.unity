@@ -784,6 +784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &62095866 stripped
@@ -1087,6 +1091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &80717054 stripped
@@ -1299,6 +1307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &88319254 stripped
@@ -1443,6 +1455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &107031464 stripped
@@ -1510,6 +1526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &115531429 stripped
@@ -1531,6 +1551,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1743,6 +1767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluebldg-1.png (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9031356277472326942, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
 --- !u!4 &130671485 stripped
@@ -1760,6 +1788,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1954,6 +1986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &148046968 stripped
@@ -2048,6 +2084,10 @@ PrefabInstance:
     - target: {fileID: 5481112123252466574, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
       propertyPath: m_Name
       value: arrowexit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481112123252466574, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5481112123252466579, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2159,6 +2199,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -2299,6 +2343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &165467307 stripped
@@ -2378,6 +2426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &168731325 stripped
@@ -2395,6 +2447,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2776,6 +2832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: purplestore-1.png (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5656437962699196865, guid: 658559d10bbec53429832d0ba75dd51f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7894527053293947898, guid: 658559d10bbec53429832d0ba75dd51f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 271.57208
@@ -2894,6 +2954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &190461949 stripped
@@ -2955,6 +3019,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -3137,6 +3205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 246.49208
@@ -3210,6 +3282,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3399,6 +3475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &219346335 stripped
@@ -3547,6 +3627,10 @@ PrefabInstance:
     - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
       propertyPath: m_Name
       value: bigasteroid (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
@@ -3699,6 +3783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluebldg-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 9031356277472326942, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
 --- !u!4 &248766849 stripped
@@ -3761,6 +3849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &253269969 stripped
@@ -3822,6 +3914,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -3989,6 +4085,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4216,6 +4316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: asteroid (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 469.87207
@@ -4297,6 +4401,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4403,6 +4511,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -4624,6 +4736,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -5061,6 +5177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &338193515 stripped
@@ -5083,6 +5203,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5145,6 +5269,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5276,6 +5404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Factorybldg-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 6625897644291524229, guid: 5817855e21a675d42b8f0edbc7baf978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5817855e21a675d42b8f0edbc7baf978, type: 3}
 --- !u!4 &350289581 stripped
@@ -5362,6 +5494,10 @@ PrefabInstance:
     - target: {fileID: 2846181856302655677, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
       propertyPath: m_Name
       value: TanBrickApt (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846181856302655677, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
@@ -5458,6 +5594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: asteroid (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 48.02
@@ -5540,6 +5680,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5671,6 +5815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &379886213 stripped
@@ -5737,6 +5885,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -5876,6 +6028,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -6334,6 +6490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &418482102 stripped
@@ -6395,6 +6555,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -6495,6 +6659,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6712,6 +6880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 408.07208
@@ -6906,6 +7078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TanBrickApt
       objectReference: {fileID: 0}
+    - target: {fileID: 2846181856302655677, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
 --- !u!4 &451334261 stripped
@@ -6979,6 +7155,10 @@ PrefabInstance:
     - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
       propertyPath: m_Name
       value: bigasteroid (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
@@ -7058,6 +7238,10 @@ PrefabInstance:
     - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
       propertyPath: m_Name
       value: bigasteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
@@ -7655,6 +7839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &522012058 stripped
@@ -7799,6 +7987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &526238051 stripped
@@ -7816,6 +8008,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8089,6 +8285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &551300827 stripped
@@ -8238,6 +8438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &557182664 stripped
@@ -8317,6 +8521,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8556,6 +8764,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -8896,6 +9108,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9328,6 +9544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &626792236 stripped
@@ -9390,6 +9610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &627591530 stripped
@@ -9411,6 +9635,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9841,6 +10069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &647116695 stripped
@@ -9914,6 +10146,10 @@ PrefabInstance:
     - target: {fileID: 6625897644291524229, guid: 5817855e21a675d42b8f0edbc7baf978, type: 3}
       propertyPath: m_Name
       value: Factorybldg-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625897644291524229, guid: 5817855e21a675d42b8f0edbc7baf978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5817855e21a675d42b8f0edbc7baf978, type: 3}
@@ -9989,6 +10225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TanBrickApt (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2846181856302655677, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
 --- !u!4 &652631054 stripped
@@ -10051,6 +10291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &654493536 stripped
@@ -10078,6 +10322,10 @@ PrefabInstance:
     - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_Name
       value: orangestore-1.png (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5783669414270643731, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10279,6 +10527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &658241656 stripped
@@ -10352,6 +10604,10 @@ PrefabInstance:
     - target: {fileID: 3420064911802791152, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
       propertyPath: m_Name
       value: redbldg-1.png (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420064911802791152, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
@@ -10559,6 +10815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &668755286 stripped
@@ -10576,6 +10836,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10683,6 +10947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &672743959 stripped
@@ -10744,6 +11012,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -10981,6 +11253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &685120439 stripped
@@ -10998,6 +11274,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11129,6 +11409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &687545558 stripped
@@ -11196,6 +11480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &687825851 stripped
@@ -11262,6 +11550,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -11337,6 +11629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &695431131 stripped
@@ -11354,6 +11650,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11428,6 +11728,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12009,6 +12313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &724205419 stripped
@@ -12182,6 +12490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 89.6129
@@ -12288,6 +12600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &737130930 stripped
@@ -12310,6 +12626,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12429,6 +12749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &741021829 stripped
@@ -12495,6 +12819,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -12652,6 +12980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluebldg-1.png (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9031356277472326942, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
 --- !u!4 &763926557 stripped
@@ -12751,6 +13083,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12881,6 +13217,10 @@ PrefabInstance:
     - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
       propertyPath: m_Name
       value: bluestore-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
@@ -13242,6 +13582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &807117173 stripped
@@ -13381,6 +13725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &816695592 stripped
@@ -13443,6 +13791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &822195188 stripped
@@ -13460,6 +13812,10 @@ PrefabInstance:
     - target: {fileID: 5481112123252466574, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
       propertyPath: m_Name
       value: arrowexit (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481112123252466574, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5481112123252466579, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13699,6 +14055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: orangestore-1.png (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5783669414270643731, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_LocalPosition.x
       value: 86.7
@@ -13860,6 +14220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: asteroid (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 91.872086
@@ -13978,6 +14342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluestore-1.png (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
 --- !u!4 &859660990 stripped
@@ -13995,6 +14363,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14195,6 +14567,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -14429,6 +14805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluebldg-1.png (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9031356277472326942, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
 --- !u!4 &874899778 stripped
@@ -14547,6 +14927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.61
@@ -14612,6 +14996,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14822,6 +15210,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -15107,6 +15499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: redbldg-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 3420064911802791152, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
 --- !u!4 &914506357 stripped
@@ -15124,6 +15520,10 @@ PrefabInstance:
     - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_Name
       value: orangestore-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5783669414270643731, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15624,6 +16024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1carpg
       objectReference: {fileID: 0}
+    - target: {fileID: 5336288585330103236, guid: aaf88ed1db16ada4fbe4a3f8a1060f37, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7517516256694920101, guid: aaf88ed1db16ada4fbe4a3f8a1060f37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 99.272095
@@ -15697,6 +16101,10 @@ PrefabInstance:
     - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_Name
       value: orangestore-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5783669414270643731, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15910,6 +16318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TanBrickApt
       objectReference: {fileID: 0}
+    - target: {fileID: 2846181856302655677, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b274aa453c4478b4b907d15bc78a1f79, type: 3}
 --- !u!4 &963786893 stripped
@@ -15986,6 +16398,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -16126,6 +16542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &976983995 stripped
@@ -16187,6 +16607,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -16288,6 +16712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: arrowexit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5481112123252466574, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5481112123252466579, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 403.16208
@@ -16349,6 +16777,10 @@ PrefabInstance:
     - target: {fileID: 5336288585330103236, guid: aaf88ed1db16ada4fbe4a3f8a1060f37, type: 3}
       propertyPath: m_Name
       value: building1carpg (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336288585330103236, guid: aaf88ed1db16ada4fbe4a3f8a1060f37, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 7517516256694920101, guid: aaf88ed1db16ada4fbe4a3f8a1060f37, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16480,6 +16912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &992105872 stripped
@@ -16501,6 +16937,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16575,6 +17015,10 @@ PrefabInstance:
     - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_Name
       value: orangestore-1.png (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5783669414270643731, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16653,6 +17097,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16759,6 +17207,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -17060,6 +17512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: redbldg-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 3420064911802791152, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
 --- !u!4 &1025776257 stripped
@@ -17164,6 +17620,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17352,6 +17812,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -17582,6 +18046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluestore-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
 --- !u!4 &1064458821 stripped
@@ -17643,6 +18111,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -17738,6 +18210,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17845,6 +18321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1072867385 stripped
@@ -17929,6 +18409,10 @@ PrefabInstance:
     - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_Name
       value: greenstore-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8130847398158238623, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18225,6 +18709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 236.59831
@@ -18380,6 +18868,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18609,6 +19101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: asteroid (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 310.27206
@@ -18691,6 +19187,10 @@ PrefabInstance:
     - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_Name
       value: orangestore-1.png (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5783669414270643731, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18877,6 +19377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1118441704 stripped
@@ -18938,6 +19442,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -19012,6 +19520,10 @@ PrefabInstance:
     - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
       propertyPath: m_Name
       value: bluestore-1.png (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
@@ -19152,6 +19664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1126974081 stripped
@@ -19255,6 +19771,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19362,6 +19882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1137201220 stripped
@@ -19424,6 +19948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1145862893 stripped
@@ -19441,6 +19969,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19516,6 +20048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: purplestore-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 5656437962699196865, guid: 658559d10bbec53429832d0ba75dd51f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7894527053293947898, guid: 658559d10bbec53429832d0ba75dd51f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.272087
@@ -19589,6 +20125,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19817,6 +20357,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20174,6 +20718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1192179448 stripped
@@ -20520,6 +21068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 282.47208
@@ -20797,6 +21349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1208013112 stripped
@@ -20814,6 +21370,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21011,6 +21571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluestore-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
 --- !u!4 &1221486529 stripped
@@ -21188,6 +21752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 185.7721
@@ -21261,6 +21829,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21432,7 +22004,7 @@ GameObject:
   - component: {fileID: 1251606522}
   m_Layer: 0
   m_Name: Obstacles
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21758,6 +22330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: asteroid (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 83.90788
@@ -22055,6 +22631,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22410,6 +22990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1283400978 stripped
@@ -22494,6 +23078,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22646,6 +23234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: asteroid (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 344.07208
@@ -22773,6 +23365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluestore-1.png (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
 --- !u!4 &1301187344 stripped
@@ -22839,6 +23435,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -23002,6 +23602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: orangestore-1.png (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5783669414270643731, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_LocalPosition.x
       value: 313.41144
@@ -23129,6 +23733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluestore-1.png (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
 --- !u!4 &1323952465 stripped
@@ -23223,6 +23831,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23341,6 +23953,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -23518,6 +24134,10 @@ PrefabInstance:
     - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_Name
       value: greenstore-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8130847398158238623, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23718,6 +24338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1339358458 stripped
@@ -23817,6 +24441,10 @@ PrefabInstance:
     - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_Name
       value: greenstore-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8130847398158238623, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23974,6 +24602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greenstore-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 8130847398158238623, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 86.772095
@@ -24099,6 +24731,10 @@ PrefabInstance:
     - target: {fileID: 9031356277472326942, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
       propertyPath: m_Name
       value: bluebldg-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031356277472326942, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
@@ -24321,6 +24957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1374273705 stripped
@@ -24342,6 +24982,10 @@ PrefabInstance:
     - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_Name
       value: orangestore-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267515840970124480, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5783669414270643731, guid: 6ccea13c9915f8947b833dda57e9b584, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24546,6 +25190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluestore-1.png (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
 --- !u!4 &1381979215 stripped
@@ -24572,6 +25220,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24679,6 +25331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1394249907 stripped
@@ -24704,6 +25360,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24810,6 +25470,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -24950,6 +25614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1411292746 stripped
@@ -25049,6 +25717,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25167,6 +25839,10 @@ PrefabInstance:
     - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
       propertyPath: m_Name
       value: bigasteroid (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
@@ -25533,6 +26209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1430673016 stripped
@@ -25779,6 +26459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1457227004 stripped
@@ -26011,6 +26695,10 @@ PrefabInstance:
     - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
       propertyPath: m_Name
       value: bluestore-1.png (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
@@ -26310,6 +26998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1471658234 stripped
@@ -26463,6 +27155,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -26742,6 +27438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &1490710819 stripped
@@ -26803,6 +27503,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -27196,6 +27900,10 @@ PrefabInstance:
     - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_Name
       value: greenstore-1.png (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8130847398158238623, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27593,6 +28301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1516360709 stripped
@@ -27610,6 +28322,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27680,6 +28396,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27869,6 +28589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1541864350 stripped
@@ -27886,6 +28610,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28005,6 +28733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1553721836 stripped
@@ -28110,6 +28842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 398.0503
@@ -28180,6 +28916,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28309,6 +29049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1572280956 stripped
@@ -28370,6 +29114,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -28521,6 +29269,10 @@ PrefabInstance:
     - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
       propertyPath: m_Name
       value: bigasteroid (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
@@ -28747,6 +29499,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -29084,6 +29840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: purplestore-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 5656437962699196865, guid: 658559d10bbec53429832d0ba75dd51f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7894527053293947898, guid: 658559d10bbec53429832d0ba75dd51f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 188.87209
@@ -29368,6 +30128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rubble1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 401.6
@@ -29496,6 +30260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1669352698 stripped
@@ -29558,6 +30326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1671638420 stripped
@@ -29575,6 +30347,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29681,6 +30457,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -29910,6 +30690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bluebldg-1.png (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9031356277472326942, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af5d73d58246714088f4ca7835f047a, type: 3}
 --- !u!4 &1694089097 stripped
@@ -29976,6 +30760,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -30055,6 +30843,10 @@ PrefabInstance:
     - target: {fileID: 6625897644291524229, guid: 5817855e21a675d42b8f0edbc7baf978, type: 3}
       propertyPath: m_Name
       value: Factorybldg-1.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625897644291524229, guid: 5817855e21a675d42b8f0edbc7baf978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5817855e21a675d42b8f0edbc7baf978, type: 3}
@@ -30493,6 +31285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1736086493 stripped
@@ -30510,6 +31306,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30584,6 +31384,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31138,6 +31942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1772841001 stripped
@@ -31294,6 +32102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: redbldg-1.png (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3420064911802791152, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
 --- !u!4 &1773567971 stripped
@@ -31355,6 +32167,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -31659,6 +32475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1788134801 stripped
@@ -31750,6 +32570,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 726213847}
     m_Modifications:
+    - target: {fileID: 998203340, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666622856, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3228305673942173924, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
       propertyPath: m_Name
       value: Shooter
@@ -31760,7 +32588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9138741790893635858, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.892437
+      value: 30.3
       objectReference: {fileID: 0}
     - target: {fileID: 9138741790893635858, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31805,6 +32633,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9138741790893635858, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
   m_PrefabInstance: {fileID: 1802606344}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1802606346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3228305673942173924, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
+  m_PrefabInstance: {fileID: 1802606344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1802606347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802606346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17aac3e2e98508247b18fdedb9f73475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColide: 0
 --- !u!1001 &1805698188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31987,6 +32833,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32474,6 +33324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1828533714 stripped
@@ -32670,6 +33524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: asteroid (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 233.1013
@@ -32860,6 +33718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!4 &1870759016 stripped
@@ -32921,6 +33783,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -33098,6 +33964,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33293,6 +34163,10 @@ PrefabInstance:
     - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
       propertyPath: m_Name
       value: bluestore-1.png (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114493065131896326, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b060ea9e8b624dae100307e9e1191, type: 3}
@@ -33502,6 +34376,10 @@ PrefabInstance:
     - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
       propertyPath: m_Name
       value: bigasteroid (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
@@ -33848,6 +34726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1925578483 stripped
@@ -33909,6 +34791,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -34004,6 +34890,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34185,6 +35075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &1964288298 stripped
@@ -34347,6 +35241,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34658,6 +35556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: purplestore-1.png (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5656437962699196865, guid: 658559d10bbec53429832d0ba75dd51f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7894527053293947898, guid: 658559d10bbec53429832d0ba75dd51f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 318.87207
@@ -34781,6 +35683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &2011718015 stripped
@@ -34865,6 +35771,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35123,6 +36033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &2045060668 stripped
@@ -35190,6 +36104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &2047094836 stripped
@@ -35256,6 +36174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: redbldg-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 3420064911802791152, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3ec883bc00acf43bf7930e995453ef, type: 3}
 --- !u!4 &2056718709 stripped
@@ -35273,6 +36195,10 @@ PrefabInstance:
     - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_Name
       value: greenstore-1.png (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363120671014210010, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8130847398158238623, guid: 52f43cd2729901e44b8160c9cf81ff19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35347,6 +36273,10 @@ PrefabInstance:
     - target: {fileID: 5481112123252466574, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
       propertyPath: m_Name
       value: arrowexit (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481112123252466574, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5481112123252466579, guid: 275771e9531b3ab4ab99998df3ef22b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35453,6 +36383,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -35635,6 +36569,10 @@ PrefabInstance:
     - target: {fileID: 5336288585330103236, guid: aaf88ed1db16ada4fbe4a3f8a1060f37, type: 3}
       propertyPath: m_Name
       value: building1carpg
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336288585330103236, guid: aaf88ed1db16ada4fbe4a3f8a1060f37, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 7517516256694920101, guid: aaf88ed1db16ada4fbe4a3f8a1060f37, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35854,6 +36792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: asteroid (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 469.77206
@@ -36043,6 +36985,10 @@ PrefabInstance:
     - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
       propertyPath: m_Name
       value: barricade (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
@@ -36352,6 +37298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barricade (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
 --- !u!4 &2128846551 stripped
@@ -36369,6 +37319,10 @@ PrefabInstance:
     - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_Name
       value: rubble1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443496026586244774, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5540911575720411479, guid: 9fbe841a533baaf48b59d4050eb93958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36575,6 +37529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigasteroid
       objectReference: {fileID: 0}
+    - target: {fileID: 710135153667666822, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be87e7e8d1d4c6b4cb32252fc5b34e47, type: 3}
 --- !u!1001 &3446457941634842672
@@ -36587,6 +37545,10 @@ PrefabInstance:
     - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_Name
       value: asteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200683105868528140, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5773358041566902519, guid: 4d875894db5c5764d91c8a48c2005f2e, type: 3}
       propertyPath: m_LocalPosition.x
