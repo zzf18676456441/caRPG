@@ -20,6 +20,7 @@ public class SinglePointMovement : MonoBehaviour
     
     private Rigidbody2D rb;
     private int counter;
+    private Instruction instruction;
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
@@ -31,13 +32,16 @@ public class SinglePointMovement : MonoBehaviour
     void Start(){
         rb.drag = 0;
         rb.angularDrag = 0;
+        instruction = new Instruction(this);
     }
 
 
     void FixedUpdate(){
-        counter++;
-        if(counter <= 30) rb.AddTorque(rb.inertia * rotationSpeed * Mathf.Deg2Rad);
-        if (counter == 220) RotationSetToMax(false);
+        instruction.Follow();
+
+//        counter++;
+//        if(counter <= 30) rb.AddTorque(rb.inertia * rotationSpeed * Mathf.Deg2Rad);
+//        if (counter == 220) RotationSetToMax(false);
     }
 
     /// <summary>
@@ -75,7 +79,7 @@ public class SinglePointMovement : MonoBehaviour
     /// </summary>
     /// <param name="target">Transform to look at</param>
     public void LookAt(Transform target){
-
+        instruction.SetLookTarget(new Target(target));
     }
 
     /// <summary>
@@ -146,20 +150,25 @@ public class SinglePointMovement : MonoBehaviour
     /// Rotation is counter-clockwise (left).
     /// </summary>
     /// <returns>The angle, in degrees, clamped to [0-360)</returns>
-    private float GetAngle(){
+    public float GetAngle(){
         Vector2 original = new Vector2(transform.up.x, transform.up.y);
         float result = Vector2.SignedAngle(new Vector2(0,1),original);
         switch (direction){
             case Direction.Right:
-            return (result + 270) % 360;
+                result += 270;
+            break;
             case Direction.Left:
-            return (result + 90) % 360;
+                result += 90;
+            break;
             case Direction.Down:
-            return (result + 180) % 360;
+                result += 180;
+            break;
             case Direction.Up:
             default:
-            return result;
+            break;
         }
+        if (result > 180) result -= 360;
+        return result;
     }
 
     /// <summary>
@@ -200,18 +209,10 @@ public class SinglePointMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// Speeds rotation with maximum force, for use when starting to spin.
-    /// Will hit full rotationSpeed in 5 FixedUpdates.
-    /// Formula:  inertia * rotationspeed * deg2rad * 10.
-    /// If you are close to rotationspeed already
+    /// Accelerates rotation by a given amount
     /// </summary>
-    private void RotationAccelerate(bool left){
-        if (left)
-        {
-            rb.AddTorque(rb.inertia * rotationSpeed * Mathf.Deg2Rad * 10f);
-        } else {
-            rb.AddTorque(-rb.inertia * rotationSpeed * Mathf.Deg2Rad * 10f);
-        }
+    private void RotationAccelerate(float acceleration){
+        rb.AddTorque(rb.inertia * acceleration * Mathf.Deg2Rad);
     }
 
     private void RotationSetToMax(bool left){
@@ -225,22 +226,113 @@ public class SinglePointMovement : MonoBehaviour
     }
 
 
+
+    private static float PickAcceleration(float velocity, float distance, float minAcc, float maxAcc){
+        // Gas:  Most inline with current velocity
+        // Brakes:  Most out of line with current velocity
+        float gas, brakes;
+        float minStopDistance;
+        float minVelocity, maxVelocity, singleFrameVelocity;
+        bool sFVCheck;
+        if (velocity >= 0){
+            gas = maxAcc;
+            brakes = minAcc;
+        } else {
+            gas = minAcc;
+            brakes = maxAcc;
+        }
+
+        minStopDistance = -velocity*velocity / (2*brakes);
+        
+                
+        // If I can't stop in time, max brakes.
+        if ((distance > 0 && minStopDistance >= distance) || (distance < 0 && minStopDistance <= distance)){
+            return brakes;
+        }
+
+
+
+        // SOMETHING HERE IS BROKEN STILL :*(
+        if (velocity >= 0){
+            minVelocity = velocity + brakes * 0.02f;
+            maxVelocity = velocity + gas * 0.02f;
+        } else {
+            minVelocity = velocity + gas * 0.02f;
+            maxVelocity = velocity + brakes * 0.02f;
+        }
+        singleFrameVelocity = distance * 50f;
+        sFVCheck = Mathf.Abs(singleFrameVelocity) < Mathf.Abs(brakes * 0.02f);
+        // If I could get exactly there with enough brakes to stop immediately after, move to exactly that amount.
+        if (minVelocity <= singleFrameVelocity && singleFrameVelocity <= maxVelocity && sFVCheck){
+            Debug.Log(distance + ", " + velocity + ", " + (velocity - singleFrameVelocity));
+            return (velocity - singleFrameVelocity)*10f;
+        }
+        
+        // Still no?  Okay, then if velocity and distance are aligned, gas it.
+        if ((velocity > 0 && distance > 0) || (velocity < 0 && distance < 0))
+            return gas;
+
+        // Uhoh, we're going the wrong way, brakes!
+        return brakes;
+
+    }
+
     /// <summary>
     /// A complete movement instruction.
     /// Generated on command, followed until completion/stopped.
     /// </summary>
     private class Instruction{
-        private MoveState state;
+        private MoveState state = new MoveState();
         private Target moveTarget;
         private Target lookTarget;
         private Vector2 moveDirection;
         private Vector2 lookDirection;
 
+        private SinglePointMovement parent;
+
+        public Instruction(SinglePointMovement _parent){
+            parent = _parent;
+        }
+
         /// <summary>
         /// Makes the next movement.
         /// </summary>
         public void Follow(){
+            if (lookTarget != null){
+                lookDirection = new Vector2(lookTarget.TargetLocation().x - parent.transform.position.x, 
+                                    lookTarget.TargetLocation().y - parent.transform.position.y);
+            }
 
+            // If we're trying to look at something, look at it.
+            if (state.isLooking){
+                float desiredDirection = Vector2.SignedAngle(new Vector2(0,1),lookDirection);
+                float diff = desiredDirection - parent.GetAngle();
+                if (diff < -180) diff += 360;
+                if (diff > 180) diff -= 360;
+                float velocity = parent.rb.angularVelocity;
+                float minAcc = -parent.rotationSpeed*10f;
+                float maxAcc = parent.rotationSpeed*10f;
+                if (velocity > 0){
+                    if (maxAcc * 0.02f + velocity > parent.rotationSpeed){
+                        maxAcc = (parent.rotationSpeed - velocity) * 0.02f;
+                    }
+                } else {
+                    if (minAcc * 0.02f + velocity < -parent.rotationSpeed){
+                        minAcc = -(parent.rotationSpeed - velocity) * 0.02f;
+                    }
+                }
+                float finalAcceleration = PickAcceleration(parent.rb.angularVelocity, diff, minAcc, maxAcc);
+                parent.RotationAccelerate(finalAcceleration);
+            }
+
+            // Otherwise, if we are moving, look forward
+
+            // And if not, just try to stop spinning
+        }
+
+        public void SetLookTarget(Target target){
+            lookTarget = target;
+            state.StartLooking();
         }
     }
 

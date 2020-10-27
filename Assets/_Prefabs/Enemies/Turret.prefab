@@ -67,7 +67,7 @@ MonoBehaviour:
   maxSpeed: 0
   acceleration: 5
   rotationSpeed: 720
-  direction: 3
+  direction: 1
 --- !u!1001 &3629237299516610810
 PrefabInstance:
   m_ObjectHideFlags: 0

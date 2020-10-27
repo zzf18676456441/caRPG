@@ -19,6 +19,6 @@ public class TurretAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(GetComponent<Rigidbody2D>().angularVelocity);
+        //Debug.Log(GetComponent<SinglePointMovement>().GetAngle());
     }
 }
