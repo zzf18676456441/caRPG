@@ -21,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         player = controller.GetCar().transform;
+        //GetComponent<SinglePointMovement>().Chase(player);
     }
 
     // Update is called once per frame
@@ -31,16 +32,11 @@ public class EnemyAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-            Vector3 dir = player.position - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            rb.rotation = angle;
-            dir.Normalize();
-            movement = new Vector2(dir.x, dir.y);
-            chase(movement);
+
     }
 
     void chase(Vector2 dir)
     {
-        GetComponent<SinglePointMovement>().MoveByVector(dir);
+     
     }
 }
