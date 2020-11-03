@@ -38,9 +38,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3c281eef7781d40b77e831c8873d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   speed: 5
-  wait: 0
+  startChase: 0
+  chaseRange: 30
 --- !u!114 &2118343047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,7 +91,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3152141891301647811, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
       propertyPath: m_Mass
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4545291032537668665, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
       propertyPath: m_LocalPosition.x

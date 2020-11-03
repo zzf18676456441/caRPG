@@ -31,23 +31,20 @@ public class UserInterface : MonoBehaviour
     void Update()
     {
         speed = 2.23694f * controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude;
-        hp = 100 * controller.GetPlayer().currentHealth / controller.GetPlayer().maxHealth;
-        no2 = 100 * controller.GetPlayer().currentNO2 / controller.GetPlayer().maxNO2;
+        hp = controller.GetPlayer().currentHealth / controller.GetPlayer().maxHealth;
+        no2 = controller.GetPlayer().currentNO2 / controller.GetPlayer().maxNO2;
 
-        Text speedt = speedometer.GetComponent<Text>();
+        speedometer.transform.rotation = Quaternion.Euler(speedometer.transform.rotation.eulerAngles.x, speedometer.transform.rotation.eulerAngles.y, Mathf.Max(49 - (speed * 157f/120f), -108));
 
-        speedt.text = string.Format("Speed: {0:0.} mph", speed);
+        Image healthbar = health.GetComponent<Image>();
+        healthbar.fillAmount = hp;
+        healthbar.color = new Color(1f*(1-hp), 1f*hp, 0f);
 
-        Text healtht = health.GetComponent<Text>();
-
-        healtht.text = string.Format("Health: {0:0.}%", hp);
-
-        Text nitroust = nitrous.GetComponent<Text>();
-
-        nitroust.text = string.Format("NO\u2082: {0:0.}%", no2);
+        Image no2bar = nitrous.GetComponent<Image>();
+        no2bar.fillAmount = no2;
 
         Text scoret = score.GetComponent<Text>();
 
-        scoret.text = "Score: " + no2;
+        scoret.text = "" + Mathf.FloorToInt(speed + no2 * 100);
     }
 }
