@@ -26,6 +26,7 @@ public class SinglePointMovement : MonoBehaviour
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
+        instruction = new Instruction(this);
     }
 
     /// <summary>
@@ -34,7 +35,6 @@ public class SinglePointMovement : MonoBehaviour
     void Start(){
         rb.drag = 0;
         rb.angularDrag = 0;
-        instruction = new Instruction(this);
     }
 
 
@@ -208,6 +208,7 @@ public class SinglePointMovement : MonoBehaviour
         /// Makes the next movement.
         /// </summary>
         public void Follow(){
+            if(state.isIdle) return;
             float desiredDirection, diff, velocity, finalAcceleration;
             Vector2 lookDirection, moveDirection;
             Vector2 undesiredVelocity; // The amount of the current velocity
@@ -225,7 +226,7 @@ public class SinglePointMovement : MonoBehaviour
             diff = desiredDirection - parent.GetAngle();
             if (diff < -180) diff += 360;
             if (diff > 180) diff -= 360;
-            Debug.Log("Diff: " + diff + ", aVel: " + parent.rb.angularVelocity + ", looking: " + state.isLooking);
+            //Debug.Log("Diff: " + diff + ", aVel: " + parent.rb.angularVelocity + ", looking: " + state.isLooking);
             fm = new FeasibleMoves(diff,parent.rb.angularVelocity,parent.rotationSpeed,parent.rotationSpeed*10f,parent.rotationSpeed*10f,parent.rotationSpeed/5f);
             finalAcceleration = fm.PickAcceleration();
             parent.RotationAccelerate(finalAcceleration);
@@ -284,30 +285,36 @@ public class SinglePointMovement : MonoBehaviour
         public bool hasEndpoint = false;
         public bool isSliding = false;
         public bool isSpinning = false;
+        public bool isIdle = true;
         
 
         public void StartSlide(){
             isSliding = true;
             isMoving = false;
+            isIdle = false;
         }
 
         public void Stop(){
             isMoving = false;
             isSliding = false;
             hasEndpoint = false;
+            isIdle = false;
         }
 
         public void StopLooking(){
             isLooking = false;
+            isIdle = false;
         }
 
         public void StartMoving(bool _hasEndpoint){
             isMoving = true;
             hasEndpoint = _hasEndpoint;
+            isIdle = false;
         }
 
         public void StartLooking(){
             isLooking = true;
+            isIdle = false;
         }
     }
 
@@ -337,9 +344,15 @@ public class SinglePointMovement : MonoBehaviour
 
     private class FeasibleMoves{
         // Goals, derived
-        public float velocity, gas, brakes, distance;
-        // Gas:  Results in the highest speed (so most in line with velocity).
-        // Brakes:  Results in the lowest speed (always against velocity).
+        public float velocity, gas, brakes, distance, direction, minPV, maxPV;
+        // Velocity (signed) - current speed and direction
+        // Distance (unsigned) - distance to goal (always positive)
+        // Direction (signed) -  +/- 1, depending if this is all backwards
+        // Gas (signed) - maximum acceleration towards direction.  Usually positive, but could be negative if velocity is too high.
+        // Brakes (signed) - usually negative, but could be postive if velocity is negative.  Always smaller than gas.
+        // minPV - slowest towards the goal
+        // maxPV - fastest towards the goal
+
 
         /// <summary>
         /// 
@@ -351,32 +364,91 @@ public class SinglePointMovement : MonoBehaviour
         /// <param name="maxBraking">(UNSIGNED) Max Braking</param>
         /// <param name="minBraking">(UNSIGNED) Min Braking - think sliding friction</param>
         public FeasibleMoves(float distance, float velocity, float maxSpeed, float maxAcceleration, float maxBraking, float minBraking){
-            this.velocity = velocity;
-            this.distance = distance;
+            if (distance >= 0) {
+                direction = 1;
+                this.velocity = velocity;
+                this.distance = distance;
+            } else {
+                direction = -1;
+                this.velocity = -velocity;
+                this.distance = -distance;
+            }
             // If |velocity| > maxSpeed, you must slow down (acts against velocity).
-            if (velocity > maxSpeed) {
+            if (this.velocity > maxSpeed) {
                 gas = -minBraking;
                 brakes = -maxBraking;
-            } else if (velocity < -maxSpeed) {
-                gas = minBraking;
-                brakes = maxBraking;
+            } else if (this.velocity < -maxSpeed) {
+                gas = maxBraking;
+                brakes = minBraking;
             } else {
                 // Okay you can accelerate or brake, up to you
-                if (velocity >= 0){
+                if (this.velocity >= 0){
                     gas = maxAcceleration;
                     brakes = -maxBraking;
                 } else {
-                    gas = -maxAcceleration;
-                    brakes = maxBraking;
+                    gas = maxBraking;
+                    brakes = minBraking;
                 }
             }
-            //Debug.Log("Distance: " + distance + ", Velocity: " + velocity + ", Gas: " + gas + ", Brakes: " + brakes);
+            
+            minPV = this.velocity + brakes * 0.02f;
+            maxPV = this.velocity + gas * 0.02f;
+            if (minPV > maxPV) Debug.Log("Error in FM: range is flipped");
         }
 
         public float PickAcceleration(){
+            // Case 0:  Am I already there?
+            if (distance == 0) {
+                // If so, can I stop this frame?
+                if(minPV < 0 && maxPV > 0){
+                    return -direction*velocity*50f;
+                }
+                // If not, at least slow down as much as possible
+                if(velocity > 0) return direction*brakes;
+                else return direction*gas;
+            }
+
+            // Case 1:  Am I going the wrong way?
+            if (velocity < 0) {
+                // Would I overshoot if I went to max velocity?
+                if(maxPV > 0 && maxPV > distance * 50f){
+                    return direction * (distance*50f - velocity) * 50f;
+                }
+                // Nope, gas it
+                return direction * gas;
+            }
+            
+            // At this point we know distance > 0 && velocity >= 0 
+            // Next check: If I slam the brakes right now, how far will I go?
+            int fastestStop = (int) (-50f * velocity / brakes);  // In frames, 50 frames/second
+            float brakingDistance = (fastestStop * velocity * 0.02f + fastestStop * (fastestStop + 1) * brakes * 0.0002f);
+            
+            // Case 2:  I can't stop, but might as well try
+            if (brakingDistance >= distance){
+                return direction*brakes;
+            }
+
+                      
+            // Okay, what if I gassed it for a frame, then braked as hard as possible?
+            fastestStop = (int) (-50f * maxPV / brakes);  // In frames, 50 frames/second
+            brakingDistance = maxPV * 0.02f + (fastestStop * maxPV * 0.02f + fastestStop * (fastestStop + 1) * brakes * 0.0002f);
+            if(fastestStop == 1) Debug.Log(brakingDistance);
+            // Case 3: I'd still be fine after gassing it
+            if (brakingDistance < distance){
+                return direction*gas;
+            }
+
+            // Case 4:  TODO - fastestStop = 1!
+            return 0f;
+
+
+
+            /*
             float minVelocity, maxVelocity, singleFrameVelocity;
             bool sFVCheck;
             float brakeLevel;
+
+
 
             // Debug.Log("DISTANCE: " + distance);
             // Case one: Is it time to start slowing down?
@@ -415,20 +487,33 @@ public class SinglePointMovement : MonoBehaviour
             sFVCheck = Mathf.Abs(singleFrameVelocity) < Mathf.Abs(brakes * 0.02f);
             // If I could get exactly there with enough brakes to stop immediately after, move to exactly that amount.
             if (minVelocity <= singleFrameVelocity && singleFrameVelocity <= maxVelocity && sFVCheck){
-                //Debug.Log("Case 2");
+                Debug.Log("Case 2");
                 return (singleFrameVelocity-velocity)*50f;
             }
 
-            // Case three:  Not close enough to stop, hit the gas instead
-            if ((velocity >= 0 && distance > 0) || (velocity <= 0 && distance < 0)){
-                //Debug.Log("Case 3");
+            // Case three:  Am I even moving?
+            if (velocity == 0) {
+                Debug.Log(minVelocity + "/ Case 3 /" + distance + "/" + gas + "/" + brakes);
+                if(distance > 0){
+                    if (gas > 0) return gas;
+                    else return -gas;
+                } else if (distance < 0) {
+                    if (gas < 0) return gas;
+                    else return -gas;
+                } else return 0;
+            }
+
+            // Case four:  Not close enough to stop, hit the gas instead
+            if ((velocity > 0 && distance > 0) || (velocity < 0 && distance < 0)){
+                Debug.Log(gas);
                 return gas;
             }
 
-            // Case four:  We are going the wrong way, hit the brakes
-            //Debug.Log("Case 4");
-            return brakes;
 
+            // Case five:  We are going the wrong way, hit the brakes
+            Debug.Log("Case 5");
+            return brakes;
+*/
         }
     }
 
