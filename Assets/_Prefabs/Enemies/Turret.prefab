@@ -26,7 +26,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.098}
   m_EdgeRadius: 0
---- !u!114 &2118343046
+--- !u!114 &-2867706770484559272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35,11 +35,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6870190510102607157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3c281eef7781d40b77e831c8873d95, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fde5594b3eb7114b9b2d4d7d9ae1e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  wait: 0
 --- !u!114 &2118343047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,10 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02950a8fdbf76164fa8305c19a891511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 0
   acceleration: 5
-  braking: 30
-  sliding: 2
   rotationSpeed: 720
   direction: 1
 --- !u!1001 &3629237299516610810
@@ -153,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7857221993545199055, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
       propertyPath: m_Name
-      value: Bruiser
+      value: Turret
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4787978529642840411, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
