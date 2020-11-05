@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3631116753757512419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228305673942173924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17aac3e2e98508247b18fdedb9f73475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColide: 0
 --- !u!114 &998203340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,8 +25,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3c281eef7781d40b77e831c8873d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  wait: 0
+  startChase: 0
+  chaseRange: 30
+  stopChaseRange: 100
 --- !u!114 &998203341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,8 +56,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   stopDis: 20
-  backDis: 10
+  backDis: 15
+  chaseRange: 30
+  stopChaseRange: 60
   startShotTime: 2
+  startChase: 0
   projectile: {fileID: 468592939498837183, guid: 18d5c8317b4eb4c4f99df6a3f642a3b8, type: 3}
 --- !u!114 &5895657734369652514
 MonoBehaviour:
@@ -59,6 +76,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   acceleration: 5
+  braking: 20
+  sliding: 2
   rotationSpeed: 720
   direction: 1
 --- !u!1001 &4739839741947962667

@@ -7,26 +7,31 @@ public class EnemyAIShoot : MonoBehaviour
 {
 
     public float speed;
-    public float stopDis;
-    public float backDis;
+    public float stopDis = 15f;
+    public float backDis = 10f;
 
     //if player out of this range, enemy will back to randomly roaming otherwise it will chase enemy and attack.
     public float chaseRange = 30f;
+    public float stopChaseRange = 60f;
 
     private float shotFrequencey;
     public float startShotTime;
     public bool startChase = false;
 
+    private bool isChasing = false;
+    private bool isRetreating = false;
+
     public GameObject projectile;
 
     private Transform player;
-
-
+    private SinglePointMovement spm;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("GameControllerObject").GetComponent<GameController>().GetCar().transform;
+        spm = gameObject.GetComponent<SinglePointMovement>();
+        spm.maxSpeed /= 5;
         shotFrequencey = startShotTime;
     }
 
@@ -35,22 +40,26 @@ public class EnemyAIShoot : MonoBehaviour
     {
         if (startChase)
         {
-            if (Vector2.Distance(transform.position, player.position) > stopDis)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            float distance = Vector2.Distance(transform.position, player.position);
+            if (isChasing && distance < stopDis) {
+                isChasing = false;
+                spm.Stop();
             }
-            else if (Vector2.Distance(transform.position, player.position) < stopDis && Vector2.Distance(transform.position, player.position) > backDis)
-            {
-                transform.position = this.transform.position;
+            if (!isRetreating && distance < backDis){
+                isRetreating = true;
+                spm.MoveByVector(transform.position - player.position);
             }
-            else if (Vector2.Distance(transform.position, player.position) < backDis)
+            if (isRetreating && distance > stopDis)
             {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+                isRetreating = false;
+                isChasing = true;
+                spm.Chase(player);
             }
 
             if (shotFrequencey <= 0)
             {
-                Instantiate(projectile, transform.position, Quaternion.identity);
+                GameObject shot = Instantiate(projectile, transform.position, Quaternion.identity);
+                shot.GetComponent<Projectile>().FireAt(player.position - transform.position);
                 shotFrequencey = startShotTime;
             }
             else
@@ -68,16 +77,24 @@ public class EnemyAIShoot : MonoBehaviour
 
     private void FindTarget()
     {
-        if (Vector2.Distance(transform.position, player.position) < chaseRange)
+        if ((!startChase) && Vector2.Distance(transform.position, player.position) < chaseRange)
         {
-            Debug.Log("find it!");
             startChase = true;
             gameObject.GetComponent<EnemyRoamAI>().enabled = false;
+            spm.maxSpeed *= 5;
+            isChasing = true;
+            spm.Chase(player);
+            spm.LookAt(player);
+            return;
         }
-        else if (startChase)
+
+        if (startChase && Vector2.Distance(transform.position, player.position) > stopChaseRange)
         {
             startChase = false;
+            spm.maxSpeed /= 5;
+            spm.StopLooking();
             gameObject.GetComponent<EnemyRoamAI>().enabled = true;
+            return;
         }
     }
 }

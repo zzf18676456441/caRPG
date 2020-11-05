@@ -39,7 +39,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  wait: 0
+  startChase: 0
+  chaseRange: 30
 --- !u!114 &2118343047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +73,19 @@ MonoBehaviour:
   sliding: 2
   rotationSpeed: 720
   direction: 1
+--- !u!114 &-5277162646988904057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870190510102607157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17aac3e2e98508247b18fdedb9f73475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColide: 0
 --- !u!1001 &3629237299516610810
 PrefabInstance:
   m_ObjectHideFlags: 0
