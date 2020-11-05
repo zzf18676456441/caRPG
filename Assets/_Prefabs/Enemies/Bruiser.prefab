@@ -68,6 +68,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   acceleration: 5
+  braking: 30
+  sliding: 2
   rotationSpeed: 720
   direction: 1
 --- !u!1001 &3629237299516610810

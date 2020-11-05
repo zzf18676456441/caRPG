@@ -21,7 +21,8 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         player = controller.GetCar().transform;
-        //GetComponent<SinglePointMovement>().Chase(player);
+        GetComponent<SinglePointMovement>().MoveToLocation(new Vector2(0,15));
+        GetComponent<SinglePointMovement>().LookAt(player);
     }
 
     // Update is called once per frame

@@ -20,7 +20,8 @@ public class TurretAI : MonoBehaviour
     void FixedUpdate()
     {
         i++;
-        if (i == 100) GetComponent<SinglePointMovement>().LookAt(new Vector2(10f, 0f));;
+        if (i == 100) GetComponent<SinglePointMovement>().LookAt(controller.GetCar().transform);
+        if (i == 200) GetComponent<SinglePointMovement>().StopLooking();
         //Debug.Log(GetComponent<SinglePointMovement>().GetAngle());
     }
 }
