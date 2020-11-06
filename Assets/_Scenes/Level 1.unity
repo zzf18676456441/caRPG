@@ -337,6 +337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &18489787 stripped
@@ -398,6 +402,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -1043,9 +1051,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3631116753757512419, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666622856, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3228305673942173924, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
       propertyPath: m_Name
       value: Shooter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228305673942173924, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672413547418075368, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
+      propertyPath: m_Mass
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9138741790893635858, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1053,7 +1077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9138741790893635858, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.4
+      value: 39.41
       objectReference: {fileID: 0}
     - target: {fileID: 9138741790893635858, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3235,6 +3259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &206576537 stripped
@@ -4042,6 +4070,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -5074,6 +5106,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -7061,6 +7097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &445310594 stripped
@@ -7361,6 +7401,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -7669,6 +7713,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -8560,6 +8608,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -10733,6 +10785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &663053832 stripped
@@ -12065,6 +12121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &716666575 stripped
@@ -12208,6 +12268,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -13340,6 +13404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &777001360 stripped
@@ -13401,6 +13469,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -17494,6 +17566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1017513909 stripped
@@ -18448,6 +18524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1076274991 stripped
@@ -18746,6 +18826,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -19365,6 +19449,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -21549,6 +21637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1217507518 stripped
@@ -22009,6 +22101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1242790244 stripped
@@ -22367,6 +22463,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -23112,6 +23212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1289975874 stripped
@@ -23515,6 +23619,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 726213847}
     m_Modifications:
+    - target: {fileID: -5277162646988904057, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118343046, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 957500925766010051, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.652721
@@ -23559,9 +23671,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1865348144441638201, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
-      value: Bruiser (1)
+      value: Bomber
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -23570,6 +23690,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 957500925766010051, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
   m_PrefabInstance: {fileID: 1308793162}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1308793164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+  m_PrefabInstance: {fileID: 1308793162}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1308793165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308793164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce571f019c98154cac682979872e5c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startChase: 0
+  chaseRange: 30
+  stopChaseRange: 50
+  fieldOfImpact: 20
+  force: 5000
+  LayerToHit:
+    serializedVersion: 2
+    m_Bits: 256
+  explodeTime: 3
 --- !u!1001 &1309023008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26121,6 +26267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1422787510 stripped
@@ -27432,6 +27582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1484169765 stripped
@@ -27939,6 +28093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1505244337 stripped
@@ -28079,6 +28237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1506114057 stripped
@@ -28137,9 +28299,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1865348144441638201, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -29776,6 +29946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1610968432 stripped
@@ -30095,6 +30269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1638839669 stripped
@@ -30156,6 +30334,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -30971,6 +31153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1710009602 stripped
@@ -31062,6 +31248,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 726213847}
     m_Modifications:
+    - target: {fileID: -5277162646988904057, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118343046, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 957500925766010051, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.042859
@@ -31106,17 +31300,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1865348144441638201, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -5277162646988904057, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1729215571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 957500925766010051, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
   m_PrefabInstance: {fileID: 1729215570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1729215572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+  m_PrefabInstance: {fileID: 1729215570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1729215573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729215572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17aac3e2e98508247b18fdedb9f73475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColide: 0
 --- !u!1001 &1730141082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31781,6 +32002,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -32718,6 +32943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1805698189 stripped
@@ -33192,6 +33421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1818205591 stripped
@@ -33657,6 +33890,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -34319,6 +34556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1899598393 stripped
@@ -34455,6 +34696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1901453405 stripped
@@ -34516,6 +34761,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -35025,6 +35274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1962687796 stripped
@@ -35153,6 +35406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &1965560329 stripped
@@ -35219,6 +35476,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -35761,6 +36022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &2015233437 stripped
@@ -35982,6 +36247,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
@@ -36786,6 +37055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bruiser (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
 --- !u!4 &2092666360 stripped
@@ -36935,6 +37208,10 @@ PrefabInstance:
     - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
       propertyPath: m_Name
       value: Bruiser (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}

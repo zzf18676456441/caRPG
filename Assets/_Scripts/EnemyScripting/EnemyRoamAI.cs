@@ -20,7 +20,7 @@ public class EnemyRoamAI : MonoBehaviour
     void FixedUpdate()
     {
         float reachedPositionDis = 1f;
-        if((Vector3.Distance(transform.position, roamPosition) < reachedPositionDis) || isColide)
+        if ((Vector3.Distance(transform.position, roamPosition) < reachedPositionDis) || isColide)
         {
             roamPosition = GetRandomPosition();
             isColide = false;

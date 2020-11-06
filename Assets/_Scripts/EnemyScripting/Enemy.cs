@@ -8,6 +8,12 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     public float health = 50;
 
     public float baseDamage = 20;
+    private SpriteRenderer sprite;
+
+    void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
@@ -45,6 +51,14 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     }
 
     public void ApplyDamage(Damage damage, float speed){
+        FlashRed();
         health -= damage.baseDamage;
+    }
+
+    IEnumerator FlashRed()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(1f);
+        sprite.color = Color.white;
     }
 }
