@@ -97,4 +97,13 @@ public class EnemyAIShoot : MonoBehaviour
             return;
         }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, stopChaseRange);
+    }
+
 }
