@@ -11,13 +11,14 @@ public class EnemyExplodeAI : MonoBehaviour
     public float stopChaseRange = 50f;
 
     public float fieldOfImpact;
-    public float force;
 
     public LayerMask LayerToHit;
 
     private Transform player;
     private SpriteRenderer sprite;
     public float explodeTime = 3f;
+
+
 
     GameController controller;
     void Awake()
@@ -98,14 +99,11 @@ public class EnemyExplodeAI : MonoBehaviour
         foreach (Collider2D obj in objects)
         {
             Vector2 dir = obj.transform.position - transform.position;
-            if (obj.gameObject.CompareTag("Player"))
-            {
-                obj.GetComponent<Rigidbody2D>().AddForce(dir * force * 50);
+            IDamagable damagable = (IDamagable)obj.GetComponent(typeof(IDamagable));
+            if (damagable != null) {
+                DamageSystem.ApplyDamage(this.GetComponent<Enemy>(), damagable, dir);
             }
-            else
-            {
-                obj.GetComponent<Rigidbody2D>().AddForce(dir * force);
-            }
+            
         }
 
 

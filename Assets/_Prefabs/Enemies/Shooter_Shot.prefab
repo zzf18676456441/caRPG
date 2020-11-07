@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 20
-  acceleration: 2000
+  acceleration: 1000
   braking: 20
   sliding: 2
   rotationSpeed: 720

@@ -8,6 +8,10 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     public float health = 50;
 
     public float baseDamage = 20;
+    public DamageType damageType = DamageType.VelocityMitigated;
+    public DamageFlag[] damageFlags = {DamageFlag.Impact};
+    public float knockbackForce = 0f;
+
     private SpriteRenderer sprite;
 
     void Start()
@@ -23,34 +27,21 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
         }
     }
 
-
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Player"))
-        {
-            health -= collision.gameObject.GetComponent<Player>().damage;
-            StartCoroutine(Wait());
-        }
-    }
-    
-    IEnumerator Wait()
-    {
-        gameObject.GetComponent<EnemyAI>().enabled = false;
-        yield return new WaitForSeconds(3);
-        gameObject.GetComponent<EnemyAI>().enabled = true;
-    }
-    */
-
     private void die()
     {
         Destroy(gameObject);
     }
 
     public Damage GetDamage(){
-        return new Damage(baseDamage, DamageType.Fixed);
+        Damage result = new Damage(baseDamage, damageType);
+        foreach (DamageFlag flag in damageFlags){
+            result.AddDamageFlag(flag);
+            if (flag == DamageFlag.Knockback){result.knockbackForce = knockbackForce;}
+        }
+        return result;
     }
 
-    public void ApplyDamage(Damage damage, float speed){
+    public void ApplyDamage(Damage damage, Vector2 speed){
         FlashRed();
         health -= damage.baseDamage;
     }
