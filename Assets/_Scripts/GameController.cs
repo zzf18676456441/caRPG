@@ -9,11 +9,12 @@ public class GameController : MonoBehaviour
     public GameObject stickPrefab;
     private Player player;
     private GameObject car;
+    private int gameFreeze;
 
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
+        StartLevel("Level 1");
     }
 
     void FixedUpdate()
@@ -74,6 +75,10 @@ public class GameController : MonoBehaviour
 
     public LevelStats GetLevelStats(){
         return new LevelStats();
+    }
+
+    public void StartLevel(string levelName){
+        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
     }
 }
 
@@ -158,7 +163,13 @@ public interface IDamagable
 }
 
 public class LevelStats{
-    public int kills;
-    public float time;
-    public float damageTaken;
+    public Dictionary<LevelRewards.ConditionType, float> stats = new Dictionary<LevelRewards.ConditionType, float>();
+
+    public void AddStat(LevelRewards.ConditionType type, float value){
+        stats[type] += value;
+    }
+
+    public void SetStat(LevelRewards.ConditionType type, float value){
+        stats[type] = value;
+    }
 }
