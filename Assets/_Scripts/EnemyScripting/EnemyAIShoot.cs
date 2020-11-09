@@ -41,19 +41,24 @@ public class EnemyAIShoot : MonoBehaviour
         if (startChase)
         {
             float distance = Vector2.Distance(transform.position, player.position);
-            if (isChasing && distance < stopDis) {
+            if (isChasing && distance < stopDis)
+            {
                 isChasing = false;
                 spm.Stop();
+                gameObject.GetComponent<ShooterAnimator>().Idle();
             }
-            if (!isRetreating && distance < backDis){
+            if (!isRetreating && distance < backDis)
+            {
                 isRetreating = true;
                 spm.MoveByVector(transform.position - player.position);
+                gameObject.GetComponent<ShooterAnimator>().Walk();
             }
             if (isRetreating && distance > stopDis)
             {
                 isRetreating = false;
                 isChasing = true;
                 spm.Chase(player);
+                gameObject.GetComponent<ShooterAnimator>().Walk();
             }
 
             if (shotFrequencey <= 0)
@@ -61,13 +66,14 @@ public class EnemyAIShoot : MonoBehaviour
                 GameObject shot = Instantiate(projectile, transform.position, Quaternion.identity);
                 shot.GetComponent<Projectile>().FireAt(player.position - transform.position);
                 shotFrequencey = startShotTime;
+                gameObject.GetComponent<ShooterAnimator>().Shoot();
             }
             else
             {
                 shotFrequencey -= Time.deltaTime;
             }
         }
-        
+
     }
 
     void FixedUpdate()

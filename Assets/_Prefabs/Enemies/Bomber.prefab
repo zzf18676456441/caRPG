@@ -26,6 +26,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.098}
   m_EdgeRadius: 0
+--- !u!95 &7732563334794183002
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8511228838526005122}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8baada7c0d7da264a8e9c547c5c81b12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &809615564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +77,8 @@ MonoBehaviour:
   damageType: 0
   damageFlags: 0100000003000000
   knockbackForce: 500000
+  aliengore: {fileID: 8389471273476262039, guid: 8c35374a695163d4780b22210b438113, type: 3}
+  alienblood: {fileID: 808029405415505083, guid: 10a82af5d5aa8e94f8fe9f399be7880c, type: 3}
 --- !u!114 &1308793165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +95,7 @@ MonoBehaviour:
   chaseRange: 30
   stopChaseRange: 50
   fieldOfImpact: 20
+  explosion: {fileID: 3630504700203359332, guid: c442330af8c4be943a5d92ac219892a4, type: 3}
   LayerToHit:
     serializedVersion: 2
     m_Bits: 256
@@ -123,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 988517989265810483, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5295187d595e15e4ca0ec94ac3e6fe19, type: 3}
+      objectReference: {fileID: 21300000, guid: 1b481053f6139754a9da996ea4269d7b, type: 3}
     - target: {fileID: 3152141891301647811, guid: e62718272b4b17243a5eaa762c3cfe53, type: 3}
       propertyPath: m_Mass
       value: 20

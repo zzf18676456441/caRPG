@@ -14,7 +14,8 @@ public class EnemyAI : MonoBehaviour
 
 
     GameController controller;
-    void Awake(){
+    void Awake()
+    {
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
     }
     // Start is called before the first frame update

@@ -9,8 +9,10 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
     public float baseDamage = 20;
     public DamageType damageType = DamageType.VelocityMitigated;
-    public DamageFlag[] damageFlags = {DamageFlag.Impact};
+    public DamageFlag[] damageFlags = { DamageFlag.Impact };
     public float knockbackForce = 0f;
+    public GameObject aliengore;
+    public GameObject alienblood;
 
     private SpriteRenderer sprite;
 
@@ -21,7 +23,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
     void Update()
     {
-        if(health <= 0)
+        if (health <= 0)
         {
             die();
         }
@@ -29,19 +31,25 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
     private void die()
     {
+        Instantiate(aliengore);
+        GameObject g = Instantiate(alienblood, transform.position, Quaternion.identity);
+        g.GetComponent<ParticleSystem>().Play();
         Destroy(gameObject);
     }
 
-    public Damage GetDamage(){
+    public Damage GetDamage()
+    {
         Damage result = new Damage(baseDamage, damageType);
-        foreach (DamageFlag flag in damageFlags){
+        foreach (DamageFlag flag in damageFlags)
+        {
             result.AddDamageFlag(flag);
-            if (flag == DamageFlag.Knockback){result.knockbackForce = knockbackForce;}
+            if (flag == DamageFlag.Knockback) { result.knockbackForce = knockbackForce; }
         }
         return result;
     }
 
-    public void ApplyDamage(Damage damage, Vector2 speed){
+    public void ApplyDamage(Damage damage, Vector2 speed)
+    {
         FlashRed();
         health -= damage.baseDamage;
     }

@@ -12,6 +12,8 @@ public class EnemyExplodeAI : MonoBehaviour
 
     public float fieldOfImpact;
 
+    public GameObject explosion;
+
     public LayerMask LayerToHit;
 
     private Transform player;
@@ -100,10 +102,11 @@ public class EnemyExplodeAI : MonoBehaviour
         {
             Vector2 dir = obj.transform.position - transform.position;
             IDamagable damagable = (IDamagable)obj.GetComponent(typeof(IDamagable));
-            if (damagable != null) {
+            if (damagable != null)
+            {
                 DamageSystem.ApplyDamage(this.GetComponent<Enemy>(), damagable, dir);
             }
-            
+
         }
 
 
@@ -113,18 +116,20 @@ public class EnemyExplodeAI : MonoBehaviour
     void FlashRed(float time)
     {
         Debug.Log(time);
-        if(time <= 0.1f)
+        if (time <= 0.1f)
         {
+            GameObject g = Instantiate(explosion, transform.position, Quaternion.identity);
+            g.GetComponent<ParticleSystem>().Play();
             ApplyExplode();
         }
         else
         {
             sprite.color = Color.red;
-            StartCoroutine(Tick(time/3));
+            StartCoroutine(Tick(time / 3));
             sprite.color = Color.white;
             FlashRed(time - time / 3);
         }
-        
+
     }
 
     IEnumerator Tick(float time)
