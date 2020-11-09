@@ -9,11 +9,12 @@ public class GameController : MonoBehaviour
     public GameObject stickPrefab;
     private Player player;
     private GameObject car;
+    private int gameFreeze;
 
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
+        StartLevel("Level 1");
     }
 
     void FixedUpdate()
@@ -72,12 +73,12 @@ public class GameController : MonoBehaviour
         car.SetActive(false);
     }
 
-    public void HandleDamage(IDamager damager, IDamagable damagable, float speed){
-        damagable.ApplyDamage(damager.GetDamage(), speed);
-    }
-
     public LevelStats GetLevelStats(){
         return new LevelStats();
+    }
+
+    public void StartLevel(string levelName){
+        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
     }
 }
 
@@ -88,30 +89,55 @@ public class Player : IDamagable
     public float maxNO2 = 100;
     public float currentNO2 = 100;
     public GameController controller;
-    public void ApplyDamage(Damage damage, float speed)
+    public void ApplyDamage(Damage damage, Vector2 velocity)
     {
+        float damageTaken = damage.baseDamage;
+
         switch(damage.type){
-            case DamageType.Fixed:
-                currentHealth -= damage.baseDamage / (1 + (controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude * .5f));
+            case DamageType.VelocityMitigated:
+                damageTaken /= (1 + (controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude * .5f));
             break;
-            case DamageType.Velocity:
+            case DamageType.VelocityAmplified:
+            case DamageType.Fixed:
             default:
-                currentHealth -= damage.baseDamage;
             break;    
         }
+
+        foreach(DamageFlag flag in damage.flags.Keys){
+            switch(flag){
+                case DamageFlag.Knockback:
+                    controller.GetCar().GetComponent<Rigidbody2D>().AddForce(velocity * damage.knockbackForce / velocity.magnitude);
+                break;
+                default:
+                break;
+            }
+        }
+
+        currentHealth -= damageTaken;
+
+    }
+}
+
+public static class DamageSystem
+{
+    public static void ApplyDamage(IDamager damager, IDamagable damagable, Vector2 velocity){
+        damagable.ApplyDamage(damager.GetDamage(), velocity);
+    }
+    public static void ApplyDamage(IDamager damager, IDamagable damagable){
+        damagable.ApplyDamage(damager.GetDamage(), new Vector2(0,0));
     }
 }
 
 
-
-public enum DamageType { Fixed, Velocity };
-public enum DamageFlag { Fire, Sonic, Physical, Piercing };
+public enum DamageType { Fixed, VelocityAmplified, VelocityMitigated };
+public enum DamageFlag { Impact, Explosion, Projectile, Knockback };
 
 public class Damage
 {
     public float baseDamage;
     public DamageType type;
     public Dictionary<DamageFlag, DamageFlag> flags;
+    public float knockbackForce;
 
     public Damage(float _baseDamage, DamageType _type)
     {
@@ -133,11 +159,17 @@ public interface IDamager
 
 public interface IDamagable
 {
-    void ApplyDamage(Damage damage, float speed);
+    void ApplyDamage(Damage damage, Vector2 velocity);
 }
 
 public class LevelStats{
-    public int kills;
-    public float time;
-    public float damageTaken;
+    public Dictionary<LevelRewards.ConditionType, float> stats = new Dictionary<LevelRewards.ConditionType, float>();
+
+    public void AddStat(LevelRewards.ConditionType type, float value){
+        stats[type] += value;
+    }
+
+    public void SetStat(LevelRewards.ConditionType type, float value){
+        stats[type] = value;
+    }
 }

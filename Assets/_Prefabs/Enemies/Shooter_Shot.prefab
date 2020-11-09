@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3024415740242393131}
   - component: {fileID: 5464724525484898157}
   - component: {fileID: -3463488573677154528}
+  - component: {fileID: -5968672840040176299}
+  - component: {fileID: -2140671853826968504}
   m_Layer: 0
   m_Name: Shooter_Shot
   m_TagString: Untagged
@@ -113,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff4bf9dfd8b9b14990bcce37843a66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  duration: 5
 --- !u!114 &-3463488573677154528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +131,42 @@ MonoBehaviour:
   baseDamage: 10
   type: 0
   flags: 
+--- !u!114 &-5968672840040176299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468592939498837183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02950a8fdbf76164fa8305c19a891511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 20
+  acceleration: 1000
+  braking: 20
+  sliding: 2
+  rotationSpeed: 720
+  direction: 1
+--- !u!50 &-2140671853826968504
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468592939498837183}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

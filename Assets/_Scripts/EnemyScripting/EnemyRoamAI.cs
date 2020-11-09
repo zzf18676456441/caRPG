@@ -14,21 +14,18 @@ public class EnemyRoamAI : MonoBehaviour
     {
         startPosition = transform.position;
         roamPosition = GetRandomPosition();
-    }
-
-    void Update()
-    {
-        GetComponent<SinglePointMovement>().MoveByVector(new Vector2(roamPosition.x, roamPosition.y));
+        GetComponent<SinglePointMovement>().MoveToLocation(roamPosition);
     }
 
     void FixedUpdate()
     {
         float reachedPositionDis = 1f;
-        if((Vector3.Distance(transform.position, roamPosition) < reachedPositionDis) || isColide)
+        if ((Vector3.Distance(transform.position, roamPosition) < reachedPositionDis) || isColide)
         {
             roamPosition = GetRandomPosition();
             isColide = false;
             StartCoroutine(Wait());
+            GetComponent<SinglePointMovement>().MoveToLocation(roamPosition);
         }
     }
 
@@ -47,7 +44,7 @@ public class EnemyRoamAI : MonoBehaviour
 
     private Vector3 GetRandomPosition()
     {
-        return startPosition + GetRandomDir() * Random.Range(10f, 70f);
+        return startPosition + GetRandomDir() * Random.Range(10f, 15f);
     }
 
     IEnumerator Wait()

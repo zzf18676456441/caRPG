@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-
-    public float speed = 0;
-    private Rigidbody2D rb;
-    private Vector2 movement;
     private bool wait = false;
     public bool startChase = false;
     //if player out of this range, enemy will back to randomly roaming otherwise it will chase enemy and attack.
     public float chaseRange = 30f;
+    public float stopChaseRange = 50f;
 
     private Transform player;
 
 
     GameController controller;
     void Awake(){
-        rb = gameObject.GetComponent<Rigidbody2D>();
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
     }
     // Start is called before the first frame update
     void Start()
     {
         player = controller.GetCar().transform;
-
+        gameObject.GetComponent<SinglePointMovement>().maxSpeed /= 5;
     }
 
     // Update is called once per frame
@@ -35,12 +31,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (startChase)
             {
-                Vector3 dir = player.position - transform.position;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                rb.rotation = angle;
-                dir.Normalize();
-                movement = new Vector2(dir.x, dir.y);
-                chase(movement);
+                gameObject.GetComponent<SinglePointMovement>().Chase(player);
             }
         }
     }
@@ -52,28 +43,28 @@ public class EnemyAI : MonoBehaviour
 
     private void FindTarget()
     {
-        if (Vector2.Distance(transform.position, player.position) < chaseRange)
+        if ((!startChase) && Vector2.Distance(transform.position, player.position) < chaseRange)
         {
             startChase = true;
             gameObject.GetComponent<EnemyRoamAI>().enabled = false;
+            gameObject.GetComponent<SinglePointMovement>().maxSpeed *= 5;
+            return;
         }
-        else if(startChase)
+
+        if (startChase && Vector2.Distance(transform.position, player.position) > stopChaseRange)
         {
             startChase = false;
+            gameObject.GetComponent<SinglePointMovement>().maxSpeed /= 5;
             gameObject.GetComponent<EnemyRoamAI>().enabled = true;
+            return;
         }
     }
-
-    void chase(Vector2 dir)
-    {
-        GetComponent<SinglePointMovement>().MoveByVector(dir);
-    }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            gameObject.GetComponent<SinglePointMovement>().Stop();
             StartCoroutine(Wait());
         }
     }
@@ -83,6 +74,14 @@ public class EnemyAI : MonoBehaviour
         wait = true;
         yield return new WaitForSeconds(1);
         wait = false;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, stopChaseRange);
     }
 
 }
