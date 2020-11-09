@@ -34,7 +34,7 @@ public class UserInterface : MonoBehaviour
         hp = controller.GetPlayer().currentHealth / controller.GetPlayer().maxHealth;
         no2 = controller.GetPlayer().currentNO2 / controller.GetPlayer().maxNO2;
 
-        speedometer.transform.rotation = Quaternion.Euler(speedometer.transform.rotation.eulerAngles.x, speedometer.transform.rotation.eulerAngles.y, Mathf.Max(49 - (speed * 157f/120f), -108));
+        speedometer.transform.rotation = Quaternion.Euler(speedometer.transform.rotation.eulerAngles.x, speedometer.transform.rotation.eulerAngles.y, Mathf.Max(38 - (speed * 141f/120f), -103));
 
         Image healthbar = health.GetComponent<Image>();
         healthbar.fillAmount = hp;
