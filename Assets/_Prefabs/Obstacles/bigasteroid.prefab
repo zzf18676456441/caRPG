@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 710135153667666819}
   - component: {fileID: 710135153667666816}
   - component: {fileID: -7149572582249783142}
+  - component: {fileID: -1242086491814126277}
   m_Layer: 0
   m_Name: bigasteroid
   m_TagString: Untagged
@@ -324,3 +325,18 @@ PolygonCollider2D:
       - {x: 0.27985817, y: -0.23004997}
       - {x: 0.2799377, y: -0.18005249}
       - {x: 0.2701976, y: -0.1799914}
+--- !u!114 &-1242086491814126277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710135153667666822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1a215584b22184683c7d6a6a6e320c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 2
+  type: 1
+  flags: 0000000004000000

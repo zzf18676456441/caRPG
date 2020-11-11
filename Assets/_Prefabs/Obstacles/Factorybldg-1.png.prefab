@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4369726350144464841}
   - component: {fileID: 5847383141452634923}
   - component: {fileID: 2037925505297100316}
+  - component: {fileID: -4848868998214301782}
   m_Layer: 0
   m_Name: Factorybldg-1.png
   m_TagString: Untagged
@@ -131,3 +132,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.823858, y: 5.1587143}
   m_EdgeRadius: 0
+--- !u!114 &-4848868998214301782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625897644291524229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1a215584b22184683c7d6a6a6e320c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 2
+  type: 1
+  flags: 0000000004000000

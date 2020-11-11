@@ -184,7 +184,7 @@ public class PowerupManager : MonoBehaviour, IDamager
     }
 
     public Damage GetDamage(){
-        Damage damage = new Damage(50f, DamageType.VelocityAmplified);
+        Damage damage = new Damage(50f, DamageType.VelocityAmplified, this.gameObject);
         damage.AddDamageFlag(DamageFlag.Impact);
         return damage;
     }
