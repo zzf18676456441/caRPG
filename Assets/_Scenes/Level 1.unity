@@ -15409,7 +15409,7 @@ PrefabInstance:
     - target: {fileID: 6459631481931307175, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 913766021}
+      objectReference: {fileID: 0}
     - target: {fileID: 6459631481931307175, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadGarage
@@ -15433,7 +15433,7 @@ PrefabInstance:
     - target: {fileID: 6459631482446339899, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 913766021}
+      objectReference: {fileID: 0}
     - target: {fileID: 6459631482446339899, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartLevel
@@ -15457,7 +15457,7 @@ PrefabInstance:
     - target: {fileID: 6459631482893555405, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 913766021}
+      objectReference: {fileID: 0}
     - target: {fileID: 6459631482893555405, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadMainMenu
@@ -15628,23 +15628,6 @@ PrefabInstance:
       objectReference: {fileID: 2738718108066658818, guid: 5b034ef53e2cbea4799037224d0755b3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
---- !u!1 &913766020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6855478539559918051, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
-  m_PrefabInstance: {fileID: 913766019}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &913766021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913766020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610b3e59be6c0be45a6fe3510fb8f587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &913766022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9202851682094686661, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}

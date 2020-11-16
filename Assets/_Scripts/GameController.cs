@@ -123,6 +123,10 @@ public class Player : IDamagable
         
         currentHealth -= damageTaken;
     }
+
+    public void AddNO2(float amount){
+        currentNO2 += amount;
+    }
 }
 
 public static class DamageSystem
