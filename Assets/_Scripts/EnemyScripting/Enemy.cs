@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     public float health = 50;
 
     public float baseDamage = 20;
+    public float nO2Reward = 10f;
     public DamageType damageType = DamageType.VelocityMitigated;
     public DamageFlag[] damageFlags = { DamageFlag.Impact };
     public float knockbackForce = 0f;
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     public GameObject alienblood;
 
     private SpriteRenderer sprite;
+    private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
 
     void Start()
     {
@@ -42,6 +44,10 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
     public void ApplyDamage(Damage damage, Vector2 velocity)
     {
+        if(recentDamagers.ContainsKey(damage.source)){
+            if (Time.time < recentDamagers[damage.source] + 0.2f) return;
+        }
+        recentDamagers[damage.source] = Time.time;
         FlashRed();
         float damageTaken = damage.baseDamage;
 
@@ -57,12 +63,43 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
             break;    
         }
 
+        foreach(DamageFlag flag in damage.flags.Keys){
+            switch(flag){
+                case DamageFlag.Wall:
+                    if (velocity.magnitude > 25f){
+                        damageTaken *= 25;
+                    }
+                    else
+                        damageTaken = 0;
+                break;
+                default:
+                break;
+            }
+        }
+
         health -= damageTaken;
         if (health <= 0)
         {
+            GameObject.Find("GameControllerObject").GetComponent<GameController>().GetPlayer().AddNO2(nO2Reward);
             die();
         }
     }
+
+    /// Collision damage
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        IDamager damager = (IDamager)collision.collider.GetComponent(typeof(IDamager));
+        IDamagable damagable = (IDamagable)collision.collider.GetComponent(typeof(IDamagable));
+        Enemy enemyCheck = (Enemy)collision.collider.GetComponent(typeof(Enemy));
+        if (enemyCheck != null) return;
+        if (damager != null) {
+            DamageSystem.ApplyDamage(damager, this, collision.relativeVelocity);
+        }        
+        if (damagable != null) {
+            DamageSystem.ApplyDamage(this, damagable, collision.relativeVelocity);
+        }
+    }
+
 
     IEnumerator FlashRed()
     {
