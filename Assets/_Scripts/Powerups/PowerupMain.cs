@@ -57,7 +57,7 @@ public class PowerupMain : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        if (other.gameObject.tag == "Player" && attached == false){
+        if (other.gameObject.tag == "Player" && !attached){
             ApplyTo(other.gameObject.GetComponent<PowerupManager>());
         }
         if (attached){

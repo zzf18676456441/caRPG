@@ -17,7 +17,8 @@ public enum AttachType {Fixed, Spring, NonPhysical}
 public class PowerupManager : MonoBehaviour, IDamager
 {
     private Dictionary<Joint, FixedJoint2D> joints;
-    private Dictionary<bool, List<PowerupStats>> statBoosts;
+    //private Dictionary<bool, List<PowerupStats>> statBoosts;
+    private Dictionary<PowerupStats, bool> statBoosts;
     GameController controller;
 
     // Start is called before the first frame update
@@ -78,7 +79,7 @@ public class PowerupManager : MonoBehaviour, IDamager
         tJoint.enabled = false;
         joints.Add(Joint.RDoor, tJoint);
 
-        tJoint = gameObject.AddComponent<FixedJoint2D>();
+        /*tJoint = gameObject.AddComponent<FixedJoint2D>();
         tJoint.anchor = new Vector2(0f,lFrontAxle);
         tJoint.enabled = false;
         joints.Add(Joint.Hood, tJoint);
@@ -86,11 +87,13 @@ public class PowerupManager : MonoBehaviour, IDamager
         tJoint = gameObject.AddComponent<FixedJoint2D>();
         tJoint.anchor = new Vector2(0f,-lRearAxle);
         tJoint.enabled = false;
-        joints.Add(Joint.Trunk, tJoint);
+        joints.Add(Joint.Trunk, tJoint);*/
 
-        statBoosts = new Dictionary<bool, List<PowerupStats>>();
-        statBoosts.Add(true, new List<PowerupStats>());
-        statBoosts.Add(false, new List<PowerupStats>());
+        //statBoosts = new Dictionary<bool, List<PowerupStats>>();
+        //statBoosts.Add(true, new List<PowerupStats>());
+        //statBoosts.Add(false, new List<PowerupStats>());
+
+        statBoosts = new Dictionary<PowerupStats, bool>();
     }
 
 
@@ -116,8 +119,9 @@ public class PowerupManager : MonoBehaviour, IDamager
 
     public PowerupManager ApplyStats(PowerupStats stats)
     {
-        //gameObject.GetComponent<Driving>().acceleration = 20;
-        statBoosts[false].Add(stats);
+        //statBoosts[false].Add(stats);
+        statBoosts.Add(stats, true);
+        activateStatBoost(stats);
         stats.gameObject.SetActive(false);
         return this;
     }
@@ -135,7 +139,7 @@ public class PowerupManager : MonoBehaviour, IDamager
 
     void Update()
     {
-        if (statBoosts[false].Count > 0)
+        /*if (statBoosts[false].Count > 0)
         {
             for (int i = 0; i < statBoosts[false].Count; i++)
             {
@@ -143,13 +147,37 @@ public class PowerupManager : MonoBehaviour, IDamager
                 statBoosts[true].Add(statBoosts[false][i]);
             }
             statBoosts[false].Clear();
-        }
+        }*/
     }
 
     private void activateStatBoost(PowerupStats stats)
     {
-        controller.GetPlayer().currentHealth += stats.healthAdd;
+        //Change maxHealth
+        controller.GetPlayer().maxHealth += stats.maxHealthAdd;
+        controller.GetPlayer().currentHealth += stats.maxHealthAdd;
+
+        //Change Health
+        if (controller.GetPlayer().currentHealth + stats.healthAdd >= controller.GetPlayer().maxHealth)
+        {
+            controller.GetPlayer().currentHealth = controller.GetPlayer().maxHealth;
+        }
+        else
+        {
+            controller.GetPlayer().currentHealth += stats.healthAdd;
+        }
+
+        //Change Acceleration
         gameObject.GetComponent<Driving>().acceleration += stats.accelerationAdd;
+
+        //Change MaxNO2
+        controller.GetPlayer().maxNO2 += stats.maxNO2Add;
+        controller.GetPlayer().currentNO2 += stats.maxNO2Add;
+
+        //Change Weight
+
+
+        //Change Grip
+
     }
 
     public void NotifyCollision(Collision2D collision){

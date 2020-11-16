@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         StartLevel("Level 1");
+        
     }
 
     void FixedUpdate()
@@ -44,14 +45,16 @@ public class GameController : MonoBehaviour
             return car;
         }
         car = CreateCar();
+        
         return car;
     }
 
     private GameObject CreateCar(){
         GameObject car = Instantiate(carPrefab);
         car.transform.SetParent(gameObject.transform);
+
         return car;
-    }
+    } 
 
     public Player GetPlayer()
     {

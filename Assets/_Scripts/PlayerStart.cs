@@ -15,6 +15,8 @@ public class PlayerStart : MonoBehaviour
         player.transform.position = gameObject.transform.position;
         player.transform.rotation = gameObject.transform.rotation;
         player.SetActive(true);
+        //controller.GetPlayer().currentHealth = 400;
+        controller.AddStick();
     }
 
     // Update is called once per frame
