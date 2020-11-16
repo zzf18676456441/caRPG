@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         StartLevel("Level 1");
-        
+
     }
 
     void FixedUpdate()
@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
             return car;
         }
         car = CreateCar();
-        
+
         return car;
     }
 
@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
         car.transform.SetParent(gameObject.transform);
 
         return car;
-    } 
+    }
 
     public Player GetPlayer()
     {
@@ -92,8 +92,15 @@ public class Player : IDamagable
     public float maxNO2 = 100;
     public float currentNO2 = 100;
     public GameController controller;
+    private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
+
     public void ApplyDamage(Damage damage, Vector2 velocity)
     {
+        if(recentDamagers.ContainsKey(damage.source)){
+            if (Time.time < recentDamagers[damage.source] + 1f) return;
+        }
+        recentDamagers[damage.source] = Time.time;
+
         float damageTaken = damage.baseDamage;
 
         switch(damage.type){
@@ -101,9 +108,11 @@ public class Player : IDamagable
                 damageTaken /= (1 + (controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude * .5f));
             break;
             case DamageType.VelocityAmplified:
+                damageTaken *= velocity.magnitude / 25f;
+            break;
             case DamageType.Fixed:
             default:
-            break;    
+            break;
         }
 
         foreach(DamageFlag flag in damage.flags.Keys){
@@ -117,7 +126,6 @@ public class Player : IDamagable
         }
 
         currentHealth -= damageTaken;
-
     }
 }
 
@@ -133,7 +141,7 @@ public static class DamageSystem
 
 
 public enum DamageType { Fixed, VelocityAmplified, VelocityMitigated };
-public enum DamageFlag { Impact, Explosion, Projectile, Knockback };
+public enum DamageFlag { Impact, Explosion, Projectile, Knockback, Wall };
 
 public class Damage
 {
@@ -141,12 +149,14 @@ public class Damage
     public DamageType type;
     public Dictionary<DamageFlag, DamageFlag> flags;
     public float knockbackForce;
+    public GameObject source;
 
-    public Damage(float _baseDamage, DamageType _type)
+    public Damage(float _baseDamage, DamageType _type, GameObject _source)
     {
         baseDamage = _baseDamage;
         type = _type;
         flags = new Dictionary<DamageFlag, DamageFlag>();
+        source = _source;
     }
 
     public void AddDamageFlag(DamageFlag flag)

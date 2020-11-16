@@ -21,14 +21,6 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
-    {
-        if (health <= 0)
-        {
-            die();
-        }
-    }
-
     private void die()
     {
         Instantiate(aliengore);
@@ -39,7 +31,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
     public Damage GetDamage()
     {
-        Damage result = new Damage(baseDamage, damageType);
+        Damage result = new Damage(baseDamage, damageType, this.gameObject);
         foreach (DamageFlag flag in damageFlags)
         {
             result.AddDamageFlag(flag);
@@ -48,10 +40,28 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
         return result;
     }
 
-    public void ApplyDamage(Damage damage, Vector2 speed)
+    public void ApplyDamage(Damage damage, Vector2 velocity)
     {
         FlashRed();
-        health -= damage.baseDamage;
+        float damageTaken = damage.baseDamage;
+
+        switch(damage.type){
+            case DamageType.VelocityMitigated:
+                damageTaken /= (1 + (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude * .5f));
+            break;
+            case DamageType.VelocityAmplified:
+                damageTaken *= (velocity.magnitude + 25f) / 25f;
+            break;
+            case DamageType.Fixed:
+            default:
+            break;    
+        }
+
+        health -= damageTaken;
+        if (health <= 0)
+        {
+            die();
+        }
     }
 
     IEnumerator FlashRed()

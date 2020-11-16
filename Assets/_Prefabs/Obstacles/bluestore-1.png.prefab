@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5299804844552725956}
   - component: {fileID: 3548433275821626619}
   - component: {fileID: 4514244128848025739}
+  - component: {fileID: -2962320934017458190}
   m_Layer: 0
   m_Name: bluestore-1.png
   m_TagString: Untagged
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.4630318}
+  m_Offset: {x: 0, y: -1.6279855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.94772, y: 7.0479507}
+  m_Size: {x: 9.94772, y: 6.6520624}
   m_EdgeRadius: 0
 --- !u!50 &4514244128848025739
 Rigidbody2D:
@@ -131,3 +132,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2962320934017458190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114493065131896326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1a215584b22184683c7d6a6a6e320c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 2
+  type: 1
+  flags: 0000000004000000

@@ -13,7 +13,7 @@ public class GenericDamager : MonoBehaviour, IDamager
 
     
     public Damage GetDamage(){
-        Damage result = new Damage(baseDamage, type);
+        Damage result = new Damage(baseDamage, type, this.gameObject);
         foreach (DamageFlag flag in flags){
             result.AddDamageFlag(flag);
         }
