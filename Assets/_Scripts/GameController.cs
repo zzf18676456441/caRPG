@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour
     public GameObject FramePrefab;
     public GameObject TrunkPrefab;
 
+    public string[] levels;
+    private int nextLevel = 0;
+
     private Player player;
     private GameObject car;
     private int gameFreeze;
@@ -121,21 +124,22 @@ public class GameController : MonoBehaviour
     }
 
     public void FinishLevel(){
-        car.transform.position = gameObject.transform.position;
-        car.transform.rotation = gameObject.transform.rotation;
         car.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
         player.currentNO2 = player.maxNO2;
         car.SetActive(false);
+
+        SceneManager.LoadScene("Garage", LoadSceneMode.Single);
     }
 
     public LevelStats GetLevelStats(){
         return new LevelStats();
     }
 
-    public void StartLevel(string levelName){
-        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+    public void StartNextLevel(){
+        SceneManager.LoadScene(levels[nextLevel++], LoadSceneMode.Single);
     }
+
 }
 
 public class Player : IDamagable
@@ -189,6 +193,10 @@ public class Player : IDamagable
         }
 
         currentHealth -= damageTaken;
+    }
+
+    public void AddNO2(float amount){
+        currentNO2 += amount;
     }
 }
 
