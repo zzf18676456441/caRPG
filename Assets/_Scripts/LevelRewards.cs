@@ -34,7 +34,6 @@ public class LevelRewards : MonoBehaviour
 
     void Start(){
         UpdateText();
-        Invoke("Hide",5);
     }
 
     public void Show(){
