@@ -38,7 +38,14 @@ public class Driving : MonoBehaviour {
         Vector2 frontWheels = (Vector2) (rot * transform.up); // unit vector pointing at angle of front wheels
         Vector2 rearWheels = transform.up; // unit vector pointing at angle of rear wheels (straight forward)
         Rigidbody2D body = gameObject.GetComponent<Rigidbody2D> ();
+        Player player = controller.GetPlayer();
 
+        if (player.GetLevelStats().stats[LevelRewards.ConditionType.TopSpeed] < body.velocity.magnitude)
+            player.GetLevelStats().SetStat(LevelRewards.ConditionType.TopSpeed, body.velocity.magnitude);
+
+        if (verticalInput < 0)
+            player.GetLevelStats().AddStat(LevelRewards.ConditionType.Brakes, 0.02f);
+            
         // Add acceleration
         body.AddForceAtPosition (frontWheels * acceleration * body.mass * verticalInput, transform.position + transform.up * frontAxleDistance);
 

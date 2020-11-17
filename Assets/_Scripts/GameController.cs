@@ -66,17 +66,15 @@ public class GameController : MonoBehaviour
     }
 
     public void FinishLevel(){
+        player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
         car.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
         player.currentNO2 = player.maxNO2;
         car.SetActive(false);
-        
+
         SceneManager.LoadScene("Garage", LoadSceneMode.Single);
     }
 
-    public LevelStats GetLevelStats(){
-        return new LevelStats();
-    }
 
     public void StartNextLevel(){
         SceneManager.LoadScene(levels[nextLevel++], LoadSceneMode.Single);
@@ -92,6 +90,15 @@ public class Player : IDamagable
     public float currentNO2 = 100;
     public GameController controller;
     private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
+    private LevelStats levelStats = new LevelStats();
+
+    public void ResetStats(){
+        levelStats = new LevelStats();
+    }
+
+    public LevelStats GetLevelStats(){
+        return levelStats;
+    }
 
     public void ApplyDamage(Damage damage, Vector2 velocity)
     {
@@ -119,12 +126,16 @@ public class Player : IDamagable
                 case DamageFlag.Knockback:
                     controller.GetCar().GetComponent<Rigidbody2D>().AddForce(velocity * damage.knockbackForce / velocity.magnitude);
                 break;
+                case DamageFlag.Wall:
+                    levelStats.AddStat(LevelRewards.ConditionType.WallContacts, 1f);
+                break;
                 default:
                 break;
             }
         }
         
         currentHealth -= damageTaken;
+        levelStats.AddStat(LevelRewards.ConditionType.DamageTaken, damageTaken);
     }
 
     public void AddNO2(float amount){

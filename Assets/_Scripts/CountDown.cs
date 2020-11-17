@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
-    int alpha = 200;
-    public int count = 5;
     float startTime;
     Text text;
     // Start is called before the first frame update
