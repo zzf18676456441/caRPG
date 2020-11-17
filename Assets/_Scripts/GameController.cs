@@ -6,7 +6,22 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameObject carPrefab;
-    public GameObject stickPrefab;
+
+    public GameObject FLTirePrefab;
+    public GameObject FRTirePrefab;
+    public GameObject BLTirePrefab;
+    public GameObject BRTirePrefab;
+    public GameObject RDoorPrefab;
+    public GameObject LDoorPrefab;
+    public GameObject FBumperPrefab;
+    public GameObject BBumperPrefab;
+    public GameObject RoofPrefab;
+    public GameObject TiresPrefab;
+    public GameObject EnginePrefab;
+    public GameObject BumpersPrefab;
+    public GameObject FramePrefab;
+    public GameObject TrunkPrefab;
+
     private Player player;
     private GameObject car;
     private int gameFreeze;
@@ -15,7 +30,6 @@ public class GameController : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         StartLevel("Level 1");
-
     }
 
     void FixedUpdate()
@@ -32,10 +46,49 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void AddStick()
+    public void AddEquipment()
     {
-        PowerupMain tStick = Instantiate<GameObject>(stickPrefab).GetComponent<PowerupMain>();
-        tStick.ApplyTo(car.GetComponent<PowerupManager>());
+        PowerupMain FLTire = Instantiate<GameObject>(FLTirePrefab).GetComponent<PowerupMain>();
+        FLTire.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain FRTire = Instantiate<GameObject>(FRTirePrefab).GetComponent<PowerupMain>();
+        FRTire.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain BLTire = Instantiate<GameObject>(BLTirePrefab).GetComponent<PowerupMain>();
+        BLTire.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain BRTire = Instantiate<GameObject>(BRTirePrefab).GetComponent<PowerupMain>();
+        BRTire.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain LDoor = Instantiate<GameObject>(LDoorPrefab).GetComponent<PowerupMain>();
+        LDoor.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain RDoor = Instantiate<GameObject>(RDoorPrefab).GetComponent<PowerupMain>();
+        RDoor.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain FBumper = Instantiate<GameObject>(FBumperPrefab).GetComponent<PowerupMain>();
+        FBumper.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain BBumper = Instantiate<GameObject>(BBumperPrefab).GetComponent<PowerupMain>();
+        BBumper.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain Roof = Instantiate<GameObject>(RoofPrefab).GetComponent<PowerupMain>();
+        Roof.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain Tires = Instantiate<GameObject>(TiresPrefab).GetComponent<PowerupMain>();
+        Tires.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain Engine = Instantiate<GameObject>(EnginePrefab).GetComponent<PowerupMain>();
+        Engine.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain Bumpers = Instantiate<GameObject>(BumpersPrefab).GetComponent<PowerupMain>();
+        Bumpers.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain Frame = Instantiate<GameObject>(FramePrefab).GetComponent<PowerupMain>();
+        Frame.ApplyTo(car.GetComponent<PowerupManager>());
+
+        PowerupMain Trunk = Instantiate<GameObject>(TrunkPrefab).GetComponent<PowerupMain>();
+        Trunk.ApplyTo(car.GetComponent<PowerupManager>());
     }
 
     public GameObject GetCar()
@@ -89,6 +142,7 @@ public class Player : IDamagable
 {
     public float maxHealth = 100;
     public float currentHealth = 100;
+    public float currentArmor = 0;
     public float maxNO2 = 100;
     public float currentNO2 = 100;
     public GameController controller;
@@ -123,6 +177,15 @@ public class Player : IDamagable
                 default:
                 break;
             }
+        }
+
+        if (damageTaken - currentArmor <= 0)
+        {
+            damageTaken = 0;
+        }
+        else
+        {
+            damageTaken -= currentArmor;
         }
 
         currentHealth -= damageTaken;

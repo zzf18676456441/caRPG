@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachLocation: 0
   attachType: 0
+  isWeapon: 1
   anchorOverride: {x: 0, y: 0}
 --- !u!61 &1014996410150815063
 BoxCollider2D:

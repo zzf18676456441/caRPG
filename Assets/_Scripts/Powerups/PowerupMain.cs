@@ -27,19 +27,20 @@ public class PowerupMain : MonoBehaviour
         if (pAttachable != null)
         {
             appliedManager = car.Attach(pAttachable.attachLocation, pAttachable, pAttachable.attachType);
+            if (pStats != null)
+            {
+                appliedManager = appliedManager.ApplyStats(pStats);
+            }
         }
-
-        if (pEvent != null)
+        else if (pEvent != null)
         {
             appliedManager = car.AddEvent(pEvent);
         }
-
-        if (pBoost != null)
+        else if (pBoost != null)
         {
             appliedManager = car.ApplyBoost(pBoost);
         }
-
-        if (pStats != null)
+        else if (pStats != null)
         {
             appliedManager = car.ApplyStats(pStats);
         }

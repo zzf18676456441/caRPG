@@ -8,8 +8,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum Joint {FBumper, FLTire, FRTire, Hood, 
-    LDoor, RDoor, Center, BLTire, BRTire, Trunk, RBumper}
+public enum Joint {FBumper, FLTire, FRTire, LDoor, RDoor, Center, BLTire, BRTire, RBumper, Bumpers, Engine, Frame, Tires, Trunk, Hood}
 
 public enum AttachType {Fixed, Spring, NonPhysical}
 
@@ -17,6 +16,7 @@ public enum AttachType {Fixed, Spring, NonPhysical}
 public class PowerupManager : MonoBehaviour, IDamager
 {
     private Dictionary<Joint, FixedJoint2D> joints;
+    private Dictionary<Joint, PowerupAttachable> equipment;
     //private Dictionary<bool, List<PowerupStats>> statBoosts;
     private Dictionary<PowerupStats, bool> statBoosts;
     GameController controller;
@@ -32,7 +32,6 @@ public class PowerupManager : MonoBehaviour, IDamager
         lWidth = gameObject.GetComponent<BoxCollider2D>().size.x;
         lFrontAxle = gameObject.GetComponent<Driving>().frontAxleDistance;
         lRearAxle = gameObject.GetComponent<Driving>().rearAxleDistance;
-        
 
         tJoint = gameObject.AddComponent<FixedJoint2D>();
         tJoint.enabled = false;
@@ -79,41 +78,62 @@ public class PowerupManager : MonoBehaviour, IDamager
         tJoint.enabled = false;
         joints.Add(Joint.RDoor, tJoint);
 
-        /*tJoint = gameObject.AddComponent<FixedJoint2D>();
-        tJoint.anchor = new Vector2(0f,lFrontAxle);
-        tJoint.enabled = false;
-        joints.Add(Joint.Hood, tJoint);
+        equipment = new Dictionary<Joint, PowerupAttachable>();
 
-        tJoint = gameObject.AddComponent<FixedJoint2D>();
-        tJoint.anchor = new Vector2(0f,-lRearAxle);
-        tJoint.enabled = false;
-        joints.Add(Joint.Trunk, tJoint);*/
-
-        //statBoosts = new Dictionary<bool, List<PowerupStats>>();
-        //statBoosts.Add(true, new List<PowerupStats>());
-        //statBoosts.Add(false, new List<PowerupStats>());
+        equipment.Add(Joint.Bumpers, null);
+        equipment.Add(Joint.Engine, null);
+        equipment.Add(Joint.Frame, null);
+        equipment.Add(Joint.Tires, null);
+        equipment.Add(Joint.Trunk, null);
 
         statBoosts = new Dictionary<PowerupStats, bool>();
     }
 
 
     public PowerupManager Attach(Joint location, PowerupAttachable attachment, AttachType aType){
-        FixedJoint2D tJoint = joints[location];
-        attachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f);
-
-        switch (aType)
+        
+        if (attachment.isWeapon)
         {
-            case AttachType.Spring:
-            tJoint.connectedBody = attachment.gameObject.GetComponent<Rigidbody2D>();
-            tJoint.connectedAnchor = attachment.anchorOverride;
-            tJoint.enabled = true;
-            break;
+            FixedJoint2D tJoint = joints[location];
+            attachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f);
 
-            case AttachType.Fixed:
-            default:
-            attachment.gameObject.transform.parent = gameObject.transform;
-            break;
+            switch (aType)
+            {
+                case AttachType.Spring:
+                    tJoint.connectedBody = attachment.gameObject.GetComponent<Rigidbody2D>();
+                    tJoint.connectedAnchor = attachment.anchorOverride;
+                    tJoint.enabled = true;
+                    break;
+
+                case AttachType.Fixed:
+                default:
+                    attachment.gameObject.transform.parent = gameObject.transform;
+                    break;
+            }
         }
+        else
+        {
+            equipment[location] = attachment;
+        }
+        
+        return this;
+    }
+
+    public PowerupManager Dettach(Joint location, PowerupAttachable attachment, AttachType aType)
+    {
+
+        if (attachment.isWeapon)
+        {
+            FixedJoint2D tJoint = joints[location];
+            tJoint = gameObject.AddComponent<FixedJoint2D>();
+            tJoint.anchor = new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x / 2, -gameObject.GetComponent<Driving>().rearAxleDistance);
+            tJoint.enabled = false;
+        }
+        else
+        {
+            equipment[location] = null;
+        }
+
         return this;
     }
 
@@ -122,7 +142,17 @@ public class PowerupManager : MonoBehaviour, IDamager
         //statBoosts[false].Add(stats);
         statBoosts.Add(stats, true);
         activateStatBoost(stats);
-        stats.gameObject.SetActive(false);
+        if (stats.isPowerUp)
+        {
+            stats.gameObject.SetActive(false);
+        }
+        return this;
+    }
+
+    public PowerupManager RemoveStats(PowerupStats stats)
+    {
+        statBoosts[stats] = false;
+        deactivateStatBoost(stats);
         return this;
     }
 
@@ -174,10 +204,30 @@ public class PowerupManager : MonoBehaviour, IDamager
         controller.GetPlayer().currentNO2 += stats.maxNO2Add;
 
         //Change Weight
+        gameObject.GetComponent<Rigidbody2D>().mass += stats.weightAdd;
 
+        //Change Armor
+        controller.GetPlayer().currentArmor += stats.maxArmorAdd;
+    }
 
-        //Change Grip
+    private void deactivateStatBoost(PowerupStats stats)
+    {
+        //Change maxHealth
+        controller.GetPlayer().maxHealth -= stats.maxHealthAdd;
+        controller.GetPlayer().currentHealth -= stats.maxHealthAdd;
 
+        //Change Acceleration
+        gameObject.GetComponent<Driving>().acceleration -= stats.accelerationAdd;
+
+        //Change MaxNO2
+        controller.GetPlayer().maxNO2 -= stats.maxNO2Add;
+        controller.GetPlayer().currentNO2 -= stats.maxNO2Add;
+
+        //Change Weight
+        gameObject.GetComponent<Rigidbody2D>().mass -= stats.weightAdd;
+
+        //Change Armor
+        controller.GetPlayer().currentArmor += stats.maxArmorAdd;
     }
 
     public void NotifyCollision(Collision2D collision){

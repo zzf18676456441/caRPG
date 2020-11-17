@@ -27,7 +27,7 @@ public class FinishLine : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.tag == "Player"){
             controller.FinishLevel();
-            controller.AddStick();
+            //controller.AddEquipment();
             controller.GetPlayer().currentHealth = 400;
             SceneManager.LoadScene(1);
         }

@@ -109,6 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPowerUp: 1
+  maxHealthAdd: 0
+  maxArmorAdd: 0
+  maxNO2Add: 0
   healthAdd: 10
   healthMult: 0
   weightAdd: 0

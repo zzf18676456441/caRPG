@@ -5,7 +5,9 @@ using UnityEngine;
 public class PowerupStats : MonoBehaviour
 {
     [Header("Stat Effects")]
+    public bool  isPowerUp;
     public float maxHealthAdd;
+    public float maxArmorAdd;
     public float maxNO2Add;
     public float healthAdd;
     public float healthMult;
