@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Level A.unity
     guid: fb09561ac9cfe584abb1c98288f1dd31
+  - enabled: 1
+    path: Assets/_Scenes/Garage.unity
+    guid: 7cf9820100fcb814c9378d33e4ee9186
+  - enabled: 1
+    path: Assets/_Scenes/Victory.unity
+    guid: c2874a2cf62d56143bb0d9f711571548
   m_configObjects: {}
