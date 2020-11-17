@@ -12,11 +12,11 @@ public class PlayerStart : MonoBehaviour
     void Start()
     {
         GameObject player = controller.GetCar();
+        //controller.AddEquipment();
         player.transform.position = gameObject.transform.position;
         player.transform.rotation = gameObject.transform.rotation;
         player.SetActive(true);
-        //controller.GetPlayer().currentHealth = 400;
-        controller.AddEquipment();
+        
     }
 
     // Update is called once per frame

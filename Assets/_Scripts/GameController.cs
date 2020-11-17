@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        StartLevel("Level 1");
+        //StartLevel("Level 1");
     }
 
     void FixedUpdate()
