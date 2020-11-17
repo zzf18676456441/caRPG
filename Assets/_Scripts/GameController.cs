@@ -32,7 +32,6 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        //StartLevel("Level 1");
     }
 
     void FixedUpdate()
@@ -130,11 +129,20 @@ public class GameController : MonoBehaviour
         player.currentNO2 = player.maxNO2;
         car.SetActive(false);
 
+        SceneManager.LoadScene("LevelComplete", LoadSceneMode.Single);
+    }
+
+    public void StartGarageLevel(){
         SceneManager.LoadScene("Garage", LoadSceneMode.Single);
     }
 
+    public void RetryLevel(){
+        player.ResetStats();
+        SceneManager.LoadScene(levels[nextLevel-1], LoadSceneMode.Single);
+    }
 
     public void StartNextLevel(){
+        player.ResetStats();
         SceneManager.LoadScene(levels[nextLevel++], LoadSceneMode.Single);
     }
 

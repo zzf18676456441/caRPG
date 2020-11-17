@@ -13,4 +13,12 @@ public class ButtonScripts : MonoBehaviour
     public void StartNextLevel(){
         controller.StartNextLevel();
     }
+
+    public void RetryLevel(){
+        controller.RetryLevel();
+    }
+
+    public void StartGarageLevel(){
+        controller.StartGarageLevel();
+    }
 }
