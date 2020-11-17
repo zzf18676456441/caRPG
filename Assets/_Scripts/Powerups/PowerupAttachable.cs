@@ -7,6 +7,7 @@ public class PowerupAttachable : MonoBehaviour
     [Header("Attachment Location")]
     public Joint attachLocation = Joint.Center;
     public AttachType attachType = AttachType.Fixed;
+    public bool isWeapon;
 
     [Tooltip("Leave 0,0 to auto-calculate")]
     public Vector2 anchorOverride;
