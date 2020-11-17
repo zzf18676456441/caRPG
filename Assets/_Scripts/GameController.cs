@@ -258,7 +258,19 @@ public interface IDamagable
 }
 
 public class LevelStats{
-    public Dictionary<LevelRewards.ConditionType, float> stats = new Dictionary<LevelRewards.ConditionType, float>();
+    public Dictionary<LevelRewards.ConditionType, float> stats;
+
+    public LevelStats(){
+        stats = new Dictionary<LevelRewards.ConditionType, float>();
+        stats.Add(LevelRewards.ConditionType.Brakes,0f);
+        stats.Add(LevelRewards.ConditionType.DamageDealt,0f);
+        stats.Add(LevelRewards.ConditionType.DamageTaken,0f);
+        stats.Add(LevelRewards.ConditionType.EnemyContacts,0f);
+        stats.Add(LevelRewards.ConditionType.Kills,0f);
+        stats.Add(LevelRewards.ConditionType.Time,0f);
+        stats.Add(LevelRewards.ConditionType.TopSpeed,0f);
+        stats.Add(LevelRewards.ConditionType.WallContacts,0f);
+    }   
 
     public void AddStat(LevelRewards.ConditionType type, float value){
         stats[type] += value;
