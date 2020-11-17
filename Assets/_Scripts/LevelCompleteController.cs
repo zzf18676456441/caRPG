@@ -20,10 +20,10 @@ public class LevelCompleteController : MonoBehaviour
                     text.text = levelStats.stats[LevelRewards.ConditionType.Kills].ToString();
                 break;
                 case "DamageTakenText":
-                    text.text = levelStats.stats[LevelRewards.ConditionType.DamageTaken].ToString();
+                    text.text = ((int)levelStats.stats[LevelRewards.ConditionType.DamageTaken]).ToString();
                 break;
                 case "DamageDealtText":
-                    text.text = levelStats.stats[LevelRewards.ConditionType.DamageDealt].ToString();
+                    text.text = ((int)levelStats.stats[LevelRewards.ConditionType.DamageDealt]).ToString();
                 break;
                 case "TopSpeedText":
                     text.text = (int)(levelStats.stats[LevelRewards.ConditionType.TopSpeed] * 2.23694) + " mph";
@@ -34,8 +34,8 @@ public class LevelCompleteController : MonoBehaviour
                 case "WallContactsText":
                     text.text = levelStats.stats[LevelRewards.ConditionType.WallContacts].ToString();
                 break;
-                case "Brakes":
-                    text.text = levelStats.stats[LevelRewards.ConditionType.Brakes].ToString() + "s";
+                case "BrakesText":
+                    text.text = levelStats.stats[LevelRewards.ConditionType.Brakes].ToString("0.00") + "s";
                 break;
                 case "TimeText":
                     int time = (int)levelStats.stats[LevelRewards.ConditionType.Time];
