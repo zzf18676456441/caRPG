@@ -18,7 +18,7 @@ public class PauseController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _pausePanel = GameObject.Find("Pause Menu");
+        _pausePanel = GameObject.Find("HUD").transform.Find("Pause Menu").gameObject;
         _pausePanel.SetActive(false);
     }
 

@@ -63,6 +63,10 @@ public class GameController : MonoBehaviour
 
     public void FinishLevel(){
         player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
+        List<GameObject> rewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>().GetRewards();
+        foreach(GameObject reward in rewards){
+            reward.GetComponent<PowerupMain>().SetOwned(true);
+        }
         car.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
         car.transform.up = new Vector3(0, 1, 0);
