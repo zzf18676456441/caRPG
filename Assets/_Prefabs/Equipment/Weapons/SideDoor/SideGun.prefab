@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 334630378091377918}
   - component: {fileID: 7031194446161988495}
   - component: {fileID: 6827618569672543971}
-  - component: {fileID: 2961018891630334427}
   - component: {fileID: 8600120032122692231}
   - component: {fileID: -2289892497362326449}
+  - component: {fileID: -440283253310299409}
   m_Layer: 0
   m_Name: SideGun
   m_TagString: Weapon
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 03d7ecb7b28f2e64db97e96be24b7cbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 469721684f88d824380fca6a46a8bd83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,12 +111,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcec008de9a1254b95f4353716639b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachLocation: 4
-  attachType: 0
   isWeapon: 1
-  anchorOverride: {x: 0, y: 0}
---- !u!61 &2961018891630334427
-BoxCollider2D:
+  weaponLocation: 1
+  modLocation: 2
+  attachType: 0
+  baseDamage: 50
+  damageType: 1
+  damageFlags: 00000000
+  anchorOverride: {x: -0.6, y: 0}
+--- !u!114 &8600120032122692231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177135278564436823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthAdd: 0
+  maxHealthMult: 0
+  maxArmorAdd: 1
+  maxArmorMult: 0
+  maxNO2Add: 0
+  maxNO2Mult: 0
+  weightAdd: 0
+  gripAdd: 0
+  gripMult: 0
+  accelerationAdd: 0.1
+  accelerationMult: 0
+  topSpeedAdd: 0
+  topSpeedMult: 0
+--- !u!114 &-2289892497362326449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177135278564436823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7e9216b8bf2d248a6230813b9a91e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 10
+  BulletPrefab: {fileID: 4850939274895371085, guid: de9f60ab66c1f974baaca902477dde7f, type: 3}
+  rightSide: 0
+  leftSide: 0
+  straight: 0
+--- !u!60 &-440283253310299409
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,50 +178,57 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 3}
+    oldSize: {x: 1.28, y: 2.56}
     newSize: {x: 3, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 0.5}
-  m_EdgeRadius: 0
---- !u!114 &8600120032122692231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5177135278564436823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPowerUp: 0
-  maxHealthAdd: 0
-  maxArmorAdd: 1
-  maxNO2Add: 0
-  healthAdd: 0
-  healthMult: 0
-  weightAdd: 0
-  weightMult: 0
-  gripAdd: 0
-  gripMult: 0
-  accelerationAdd: 0.1
-  accelerationMult: 0
---- !u!114 &-2289892497362326449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5177135278564436823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c7e9216b8bf2d248a6230813b9a91e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 10
-  BulletPrefab: {fileID: 4850939274895371085, guid: de9f60ab66c1f974baaca902477dde7f, type: 3}
+  m_Points:
+    m_Paths:
+    - - {x: -0.17, y: -0.93}
+      - {x: -0.11, y: -0.90999997}
+      - {x: 0.13, y: -0.78999996}
+      - {x: 0.19, y: -0.72999996}
+      - {x: 0.25, y: -0.71}
+      - {x: 0.35, y: -0.61}
+      - {x: 0.41, y: -0.59}
+      - {x: 0.58, y: -0.41}
+      - {x: 0.58, y: -0.24}
+      - {x: 0.57, y: -0.21}
+      - {x: 0.48999998, y: -0.13}
+      - {x: 0.14, y: -0.14}
+      - {x: 0.14999999, y: -0.099999994}
+      - {x: 0.29, y: -0.11}
+      - {x: 0.35, y: -0.049999997}
+      - {x: 0.35, y: 0.17}
+      - {x: 0.29, y: 0.24}
+      - {x: 0.14999999, y: 0.22999999}
+      - {x: 0.14, y: 0.71999997}
+      - {x: 0.07, y: 0.82}
+      - {x: -0.099999994, y: 0.82}
+      - {x: -0.19, y: 0.72999996}
+      - {x: -0.17999999, y: -0.14}
+      - {x: -0.56, y: -0.14}
+      - {x: -0.58, y: -0.16}
+      - {x: -0.58, y: -0.32}
+      - {x: -0.56, y: -0.34}
+      - {x: -0.35, y: -0.35}
+      - {x: -0.32999998, y: -0.31}
+      - {x: 0.29999998, y: -0.29999998}
+      - {x: 0.29, y: -0.32999998}
+      - {x: 0.35999998, y: -0.35999998}
+      - {x: 0.11, y: -0.53}
+      - {x: 0.04, y: -0.58}
+      - {x: -0.01, y: -0.61}
+      - {x: -0.17, y: -0.69}
+      - {x: -0.24, y: -0.74}
+      - {x: -0.29, y: -0.77}
+      - {x: -0.45, y: -0.84999996}
+      - {x: -0.58, y: -0.98999995}
+      - {x: -0.58, y: -1.0799999}
+      - {x: -0.56, y: -1.1}
+      - {x: -0.42, y: -1.1}
+      - {x: -0.37, y: -1.05}
+      - {x: -0.31, y: -1.03}
+      - {x: -0.22999999, y: -0.98999995}

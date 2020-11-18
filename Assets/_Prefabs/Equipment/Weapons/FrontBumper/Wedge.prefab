@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6237389800867604785}
   - component: {fileID: 3726907279900153408}
   - component: {fileID: 931086918032692012}
-  - component: {fileID: 8880208454396120084}
   - component: {fileID: -6524955071916032184}
+  - component: {fileID: 3175638058917892875}
   m_Layer: 0
   m_Name: Wedge
   m_TagString: Weapon
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 25e2fe2f65485224486bdc974f565298, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81d506a2f113b8c4b83f4919937506a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,9 +117,34 @@ MonoBehaviour:
   baseDamage: 50
   damageType: 1
   damageFlags: 00000000
-  anchorOverride: {x: 0, y: 0}
---- !u!61 &8880208454396120084
-BoxCollider2D:
+  anchorOverride: {x: 0, y: -0.3}
+--- !u!114 &-6524955071916032184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581767801936459416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthAdd: 0
+  maxHealthMult: 0
+  maxArmorAdd: 3
+  maxArmorMult: 0
+  maxNO2Add: 0
+  maxNO2Mult: 0
+  weightAdd: 0
+  gripAdd: 0
+  gripMult: 0
+  accelerationAdd: 0.5
+  accelerationMult: 0
+  topSpeedAdd: 0
+  topSpeedMult: 0
+--- !u!60 &3175638058917892875
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,39 +160,37 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 1.5}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 3, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 0.5}
-  m_EdgeRadius: 0
---- !u!114 &-6524955071916032184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581767801936459416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPowerUp: 0
-  healthAdd: 0
-  maxHealthAdd: 0
-  maxHealthMult: 0
-  maxArmorAdd: 3
-  maxArmorMult: 0
-  maxNO2Add: 0
-  maxNO2Mult: 0
-  weightAdd: 0
-  gripAdd: 0
-  gripMult: 0
-  accelerationAdd: 0.5
-  accelerationMult: 0
-  topSpeedAdd: 0
-  topSpeedMult: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.34, y: -0.38}
+      - {x: 0.34, y: -0.39999998}
+      - {x: 0.35999998, y: -0.42}
+      - {x: 0.45999998, y: -0.45999998}
+      - {x: 0.62, y: -0.45999998}
+      - {x: 0.62, y: -0.32999998}
+      - {x: 0.59, y: -0.26999998}
+      - {x: 0.51, y: -0.14999999}
+      - {x: 0.42999998, y: -0.07}
+      - {x: 0.17999999, y: 0.049999997}
+      - {x: 0.14999999, y: 0.13}
+      - {x: 0.089999996, y: 0.19}
+      - {x: 0.06, y: 0.24}
+      - {x: 0.04, y: 0.26}
+      - {x: -0.02, y: 0.26}
+      - {x: -0.14, y: 0.07}
+      - {x: -0.21, y: 0.03}
+      - {x: -0.37, y: -0.049999997}
+      - {x: -0.42999998, y: -0.11}
+      - {x: -0.45999998, y: -0.16}
+      - {x: -0.58, y: -0.32}
+      - {x: -0.58, y: -0.45999998}
+      - {x: -0.47, y: -0.45999998}
+      - {x: -0.45, y: -0.42999998}
+      - {x: -0.31, y: -0.42999998}
+      - {x: -0.29, y: -0.39}

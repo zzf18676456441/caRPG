@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5203691058778449712}
   - component: {fileID: 3242648787264608321}
   - component: {fileID: 1320525658192616749}
-  - component: {fileID: 7315049771603165717}
   - component: {fileID: 4308293816391676233}
+  - component: {fileID: 7147093487109554794}
   m_Layer: 0
   m_Name: WheelSpike
   m_TagString: Weapon
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 767d5bf16372ef0478fb5025b642a97d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b3196dfe4d898f4f9086c4f9c7561e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,12 +110,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcec008de9a1254b95f4353716639b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachLocation: 2
-  attachType: 0
   isWeapon: 1
-  anchorOverride: {x: 0, y: 0}
---- !u!61 &7315049771603165717
-BoxCollider2D:
+  weaponLocation: 0
+  modLocation: 2
+  attachType: 0
+  baseDamage: 50
+  damageType: 1
+  damageFlags: 00000000
+  anchorOverride: {x: -0.6, y: 0}
+--- !u!114 &4308293816391676233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813745153944893593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthAdd: 0
+  maxHealthMult: 0
+  maxArmorAdd: 1
+  maxArmorMult: 0
+  maxNO2Add: 0
+  maxNO2Mult: 0
+  weightAdd: 0
+  gripAdd: 0
+  gripMult: 0
+  accelerationAdd: 0
+  accelerationMult: 0
+  topSpeedAdd: 0
+  topSpeedMult: 0
+--- !u!60 &7147093487109554794
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,36 +160,34 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 3, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 0.5}
-  m_EdgeRadius: 0
---- !u!114 &4308293816391676233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813745153944893593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPowerUp: 0
-  maxHealthAdd: 0
-  maxArmorAdd: 1
-  maxNO2Add: 0
-  healthAdd: 0
-  healthMult: 0
-  weightAdd: 0
-  weightMult: 0
-  gripAdd: 0
-  gripMult: 0
-  accelerationAdd: 0
-  accelerationMult: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.14, y: -0.38}
+      - {x: 0.26999998, y: -0.38}
+      - {x: 0.32999998, y: -0.13}
+      - {x: 0.58, y: -0.07}
+      - {x: 0.58, y: 0.02}
+      - {x: 0.41, y: 0.08}
+      - {x: 0.31, y: 0.17}
+      - {x: 0.26, y: 0.34}
+      - {x: 0.17999999, y: 0.34}
+      - {x: 0.12, y: 0.17}
+      - {x: 0.14, y: 0.06}
+      - {x: -0.32999998, y: 0.25}
+      - {x: -0.41, y: 0.34}
+      - {x: -0.52, y: 0.34}
+      - {x: -0.57, y: 0.31}
+      - {x: -0.62, y: 0.25}
+      - {x: -0.62, y: -0.28}
+      - {x: -0.59, y: -0.32999998}
+      - {x: -0.53999996, y: -0.38}
+      - {x: -0.42, y: -0.38}
+      - {x: -0.32, y: -0.29}
+      - {x: -0.34, y: -0.099999994}
+      - {x: 0.11, y: -0.12}
