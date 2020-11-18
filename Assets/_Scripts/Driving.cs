@@ -41,11 +41,16 @@ public class Driving : MonoBehaviour {
         Rigidbody2D body = gameObject.GetComponent<Rigidbody2D> ();
         Player player = controller.GetPlayer();
 
-        if (player.GetLevelStats().stats[LevelRewards.ConditionType.TopSpeed] < body.velocity.magnitude)
-            player.GetLevelStats().SetStat(LevelRewards.ConditionType.TopSpeed, body.velocity.magnitude);
+        if (player.GetLevelStats().stats[LevelRewards.ConditionType.TopSpeed] < body.velocity.magnitude * 2.23694f)
+            player.GetLevelStats().SetStat(LevelRewards.ConditionType.TopSpeed, body.velocity.magnitude * 2.23694f);
 
-        if (verticalInput < 0)
+        if (verticalInput < 0){
             player.GetLevelStats().AddStat(LevelRewards.ConditionType.Brakes, 0.02f);
+            if (Vector2.Dot(body.velocity, rearWheels) > 0 || body.velocity.magnitude > 10f){
+                body.AddForce(body.velocity * acceleration / body.velocity.magnitude * body.mass * verticalInput * 5);
+                return;
+            }
+        }
             
         // Add acceleration
         body.AddForceAtPosition (frontWheels * acceleration * body.mass * verticalInput, transform.position + transform.up * frontAxleDistance);
