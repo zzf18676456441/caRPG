@@ -240,26 +240,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4601903894265213536, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
-      propertyPath: levels.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601903894265213536, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
-      propertyPath: carPrefab
-      value: 
-      objectReference: {fileID: 5246917541190323975, guid: 991e895cc43f1364f82c1b2af7b62c78, type: 3}
-    - target: {fileID: 4601903894265213536, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
-      propertyPath: levels.Array.data[0]
-      value: Level A
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601903894265213536, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
-      propertyPath: levels.Array.data[1]
-      value: Level 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601903894265213536, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
-      propertyPath: levels.Array.data[2]
-      value: Victory
-      objectReference: {fileID: 0}
     - target: {fileID: 8588011641132197003, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
       propertyPath: m_Name
       value: GameControllerObject

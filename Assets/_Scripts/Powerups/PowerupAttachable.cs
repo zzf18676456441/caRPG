@@ -15,6 +15,8 @@ public class PowerupAttachable : MonoBehaviour, IDamager
     public DamageType damageType = DamageType.VelocityAmplified;
     public DamageFlag[] damageFlags = { DamageFlag.Impact };
 
+    
+
 
     [Tooltip("Leave 0,0 to auto-calculate")]
     public Vector2 anchorOverride;

@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 77819130}
   - component: {fileID: 77819129}
   m_Layer: 5
-  m_Name: Attachment 6
+  m_Name: Upgrade 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 87833387}
   - component: {fileID: 87833386}
   m_Layer: 5
-  m_Name: Attachment 6
+  m_Name: Upgrade 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1995,6 +1995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144380451}
+  - component: {fileID: 144380452}
   m_Layer: 5
   m_Name: Rims
   m_TagString: Untagged
@@ -2023,6 +2024,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &144380452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144380450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &145196677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3538,7 +3551,7 @@ GameObject:
   - component: {fileID: 284579832}
   - component: {fileID: 284579831}
   m_Layer: 5
-  m_Name: Attachment 5
+  m_Name: Upgrade 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3778,7 +3791,7 @@ GameObject:
   - component: {fileID: 303299366}
   - component: {fileID: 303299365}
   m_Layer: 5
-  m_Name: Attachment 3
+  m_Name: Upgrade 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4018,7 +4031,7 @@ GameObject:
   - component: {fileID: 320014653}
   - component: {fileID: 320014652}
   m_Layer: 5
-  m_Name: Attachment 4
+  m_Name: Upgrade 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6168,7 +6181,7 @@ GameObject:
   - component: {fileID: 481518533}
   - component: {fileID: 481518532}
   m_Layer: 5
-  m_Name: Attachment 1
+  m_Name: Upgrade 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7367,6 +7380,7 @@ GameObject:
   - component: {fileID: 619095438}
   - component: {fileID: 619095437}
   - component: {fileID: 619095436}
+  - component: {fileID: 619095440}
   m_Layer: 5
   m_Name: GarageUI
   m_TagString: Untagged
@@ -7457,6 +7471,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &619095440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619095435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b0849171bebca438d0c0f30a7ff49b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &629642770
 GameObject:
   m_ObjectHideFlags: 0
@@ -7869,7 +7895,7 @@ GameObject:
   - component: {fileID: 660406901}
   - component: {fileID: 660406900}
   m_Layer: 5
-  m_Name: Attachment 2
+  m_Name: Upgrade 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8109,7 +8135,7 @@ GameObject:
   - component: {fileID: 677744161}
   - component: {fileID: 677744160}
   m_Layer: 5
-  m_Name: Attachment 4
+  m_Name: Upgrade 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8541,7 +8567,7 @@ GameObject:
   - component: {fileID: 712430688}
   - component: {fileID: 712430687}
   m_Layer: 5
-  m_Name: Attachment 5
+  m_Name: Upgrade 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8661,7 +8687,7 @@ GameObject:
   - component: {fileID: 727703345}
   - component: {fileID: 727703344}
   m_Layer: 5
-  m_Name: Attachment 3
+  m_Name: Upgrade 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9010,6 +9036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756131107}
+  - component: {fileID: 756131108}
   m_Layer: 5
   m_Name: Engine
   m_TagString: Untagged
@@ -9038,6 +9065,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &756131108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756131106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &773953204
 GameObject:
   m_ObjectHideFlags: 0
@@ -9288,7 +9327,7 @@ GameObject:
   - component: {fileID: 819203505}
   - component: {fileID: 819203504}
   m_Layer: 5
-  m_Name: Attachment 1
+  m_Name: Upgrade 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9839,7 +9878,7 @@ GameObject:
   - component: {fileID: 846190947}
   - component: {fileID: 846190946}
   m_Layer: 5
-  m_Name: Attachment 6
+  m_Name: Upgrade 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10482,6 +10521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 925448255}
+  - component: {fileID: 925448256}
   m_Layer: 5
   m_Name: Chassis
   m_TagString: Untagged
@@ -10510,6 +10550,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &925448256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925448254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &927916913
 GameObject:
   m_ObjectHideFlags: 0
@@ -10917,6 +10969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 960756769}
+  - component: {fileID: 960756770}
   m_Layer: 5
   m_Name: Rear Bumper
   m_TagString: Untagged
@@ -10945,6 +10998,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &960756770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960756768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961283714
 GameObject:
   m_ObjectHideFlags: 0
@@ -10994,7 +11059,7 @@ GameObject:
   - component: {fileID: 964307790}
   - component: {fileID: 964307789}
   m_Layer: 5
-  m_Name: Attachment 4
+  m_Name: Upgrade 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11466,7 +11531,7 @@ GameObject:
   - component: {fileID: 986305286}
   - component: {fileID: 986305285}
   m_Layer: 5
-  m_Name: Attachment 7
+  m_Name: Upgrade 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12166,7 +12231,7 @@ GameObject:
   - component: {fileID: 1092806967}
   - component: {fileID: 1092806966}
   m_Layer: 5
-  m_Name: Attachment 5
+  m_Name: Upgrade 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13499,7 +13564,7 @@ GameObject:
   - component: {fileID: 1223714550}
   - component: {fileID: 1223714549}
   m_Layer: 5
-  m_Name: Attachment 1
+  m_Name: Upgrade 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13619,7 +13684,7 @@ GameObject:
   - component: {fileID: 1226644033}
   - component: {fileID: 1226644032}
   m_Layer: 5
-  m_Name: Attachment 7
+  m_Name: Upgrade 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13739,7 +13804,7 @@ GameObject:
   - component: {fileID: 1227001804}
   - component: {fileID: 1227001803}
   m_Layer: 5
-  m_Name: Attachment 7
+  m_Name: Upgrade 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14355,7 +14420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HOOD
+  m_Text: Doors
 --- !u!222 &1240562669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14456,7 +14521,7 @@ GameObject:
   - component: {fileID: 1264090353}
   - component: {fileID: 1264090352}
   m_Layer: 5
-  m_Name: Attachment 2
+  m_Name: Upgrade 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15257,7 +15322,7 @@ GameObject:
   - component: {fileID: 1344099849}
   - component: {fileID: 1344099848}
   m_Layer: 5
-  m_Name: Attachment 5
+  m_Name: Upgrade 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15498,7 +15563,7 @@ GameObject:
   - component: {fileID: 1355188093}
   - component: {fileID: 1355188092}
   m_Layer: 5
-  m_Name: Attachment 3
+  m_Name: Upgrade 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15929,7 +15994,7 @@ GameObject:
   - component: {fileID: 1377011513}
   - component: {fileID: 1377011512}
   m_Layer: 5
-  m_Name: Attachment 5
+  m_Name: Upgrade 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16447,7 +16512,7 @@ GameObject:
   - component: {fileID: 1391038343}
   - component: {fileID: 1391038342}
   m_Layer: 5
-  m_Name: Attachment 6
+  m_Name: Upgrade 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16567,7 +16632,7 @@ GameObject:
   - component: {fileID: 1392299201}
   - component: {fileID: 1392299200}
   m_Layer: 5
-  m_Name: Attachment 1
+  m_Name: Upgrade 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16687,7 +16752,7 @@ GameObject:
   - component: {fileID: 1393438223}
   - component: {fileID: 1393438222}
   m_Layer: 5
-  m_Name: Attachment 2
+  m_Name: Upgrade 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16998,6 +17063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1417300454}
+  - component: {fileID: 1417300455}
   m_Layer: 5
   m_Name: Nitro
   m_TagString: Untagged
@@ -17026,6 +17092,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1417300455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417300453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1417769330
 GameObject:
   m_ObjectHideFlags: 0
@@ -17118,7 +17196,7 @@ GameObject:
   - component: {fileID: 1420622195}
   - component: {fileID: 1420622194}
   m_Layer: 5
-  m_Name: Attachment 3
+  m_Name: Upgrade 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17490,7 +17568,7 @@ GameObject:
   - component: {fileID: 1434476726}
   - component: {fileID: 1434476725}
   m_Layer: 5
-  m_Name: Attachment 7
+  m_Name: Upgrade 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17610,7 +17688,7 @@ GameObject:
   - component: {fileID: 1446494617}
   - component: {fileID: 1446494616}
   m_Layer: 5
-  m_Name: Attachment 3
+  m_Name: Upgrade 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17730,7 +17808,7 @@ GameObject:
   - component: {fileID: 1457767316}
   - component: {fileID: 1457767315}
   m_Layer: 5
-  m_Name: Attachment 2
+  m_Name: Upgrade 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18115,6 +18193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1490264567}
+  - component: {fileID: 1490264568}
   m_Layer: 5
   m_Name: Front Bumper
   m_TagString: Untagged
@@ -18143,6 +18222,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1490264568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490264566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1491062776
 GameObject:
   m_ObjectHideFlags: 0
@@ -18309,8 +18400,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1515248239}
+  - component: {fileID: 1515248240}
   m_Layer: 5
-  m_Name: Hood
+  m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18337,6 +18429,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1515248240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515248238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1530262458
 GameObject:
   m_ObjectHideFlags: 0
@@ -18778,6 +18882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1563723315}
+  - component: {fileID: 1563723316}
   m_Layer: 5
   m_Name: Wheels
   m_TagString: Untagged
@@ -18806,6 +18911,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1563723316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563723314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1574316073
 GameObject:
   m_ObjectHideFlags: 0
@@ -18973,7 +19090,7 @@ GameObject:
   - component: {fileID: 1577425304}
   - component: {fileID: 1577425303}
   m_Layer: 5
-  m_Name: Attachment 6
+  m_Name: Upgrade 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19913,7 +20030,7 @@ GameObject:
   - component: {fileID: 1664224155}
   - component: {fileID: 1664224154}
   m_Layer: 5
-  m_Name: Attachment 2
+  m_Name: Upgrade 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20262,7 +20379,7 @@ GameObject:
   - component: {fileID: 1688751843}
   - component: {fileID: 1688751842}
   m_Layer: 5
-  m_Name: Attachment 4
+  m_Name: Upgrade 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21852,6 +21969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1842265749}
+  - component: {fileID: 1842265750}
   m_Layer: 5
   m_Name: Roof
   m_TagString: Untagged
@@ -21880,6 +21998,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1842265750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842265748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1852985807
 GameObject:
   m_ObjectHideFlags: 0
@@ -22255,7 +22385,7 @@ GameObject:
   - component: {fileID: 1883745774}
   - component: {fileID: 1883745773}
   m_Layer: 5
-  m_Name: Attachment 7
+  m_Name: Upgrade 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22770,7 +22900,7 @@ GameObject:
   - component: {fileID: 1941108556}
   - component: {fileID: 1941108555}
   m_Layer: 5
-  m_Name: Attachment 4
+  m_Name: Upgrade 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23754,7 +23884,7 @@ GameObject:
   - component: {fileID: 2028343186}
   - component: {fileID: 2028343185}
   m_Layer: 5
-  m_Name: Attachment 1
+  m_Name: Upgrade 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24028,6 +24158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2053491974}
+  - component: {fileID: 2053491975}
   m_Layer: 5
   m_Name: Exterior
   m_TagString: Untagged
@@ -24056,6 +24187,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2053491975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053491973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b695b456b38c6f4a8983a23d9e8be79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2071178401
 GameObject:
   m_ObjectHideFlags: 0

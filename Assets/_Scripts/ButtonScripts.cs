@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ButtonScripts : MonoBehaviour
 {
-   GameController controller;
+    GameController controller;
+    private GameObject attachedItem;
     void Awake()
     {
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
@@ -21,4 +22,14 @@ public class ButtonScripts : MonoBehaviour
     public void StartGarageLevel(){
         controller.StartGarageLevel();
     }
+
+    public void SetItem(GameObject item){
+        attachedItem = item;
+    }
+
+    public void EquipItem(){
+        controller.GetCar().GetComponent<PowerupManager>().Attach(attachedItem.GetComponent<PowerupAttachable>(), AttachType.Fixed);
+    }
+
+
 }

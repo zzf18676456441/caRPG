@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198019462802842804}
   - component: {fileID: 4601903894265213536}
+  - component: {fileID: 773619174187756968}
   m_Layer: 0
   m_Name: GameControllerObject
   m_TagString: Untagged
@@ -43,18 +44,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 297ce4d0bdb2b2248b553a0e07e90f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carPrefab: {fileID: 0}
-  FLTirePrefab: {fileID: 6300236096890605252, guid: 2e37779c6e79b8e4ba21de07012af815, type: 3}
-  FRTirePrefab: {fileID: 2299778204463287940, guid: 4edfff7bba5260845a43cf5697853d38, type: 3}
-  BLTirePrefab: {fileID: 5599593167063545647, guid: bc728857b176c5e4899b982726c98035, type: 3}
-  BRTirePrefab: {fileID: 6978999147535886708, guid: 044145be54d689c4ba4f48a25b9df54b, type: 3}
-  RDoorPrefab: {fileID: 5244269767457076863, guid: 15f122603c5e22746a4dc4a2f753ab26, type: 3}
-  LDoorPrefab: {fileID: 1213467437585526218, guid: 2f59451449ddff44e9084c0c191b2bc4, type: 3}
-  FBumperPrefab: {fileID: 424778859491095356, guid: 53b58d0f1259ea04ea0ffe49043c9b86, type: 3}
-  BBumperPrefab: {fileID: 7668684729367957811, guid: 6558ae9c24e84c34982662fa324f1f72, type: 3}
-  RoofPrefab: {fileID: 5560290491643388817, guid: d0832b8aaf486f142b2c07ffeec01a16, type: 3}
-  TiresPrefab: {fileID: 261466770757549597, guid: 9fc42b9974dc6024283bcc5ed8949319, type: 3}
-  EnginePrefab: {fileID: 5781204156322854848, guid: f6645e06ca5282142a092faf4dc28f5d, type: 3}
-  BumpersPrefab: {fileID: 6059206185759125739, guid: 249a9fc7fdff6414b88aa841f8e0dde8, type: 3}
-  FramePrefab: {fileID: 1899712038258736377, guid: edf8ac4faeb46de449ca2001244d8368, type: 3}
-  TrunkPrefab: {fileID: 8890965693646081665, guid: e84358a52fc270e47a46d84fbe3e12fa, type: 3}
+  carPrefab: {fileID: 5246917541190323975, guid: 991e895cc43f1364f82c1b2af7b62c78, type: 3}
+  levels:
+  - Level A
+  - Level 1
+  - Victory
+--- !u!114 &773619174187756968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588011641132197003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32cabac6c7bb8b8418f74874c718c986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BumperMods:
+  - {fileID: 6059206185759125739, guid: 249a9fc7fdff6414b88aa841f8e0dde8, type: 3}
+  - {fileID: 5229482596423148789, guid: 297dc2d296d49f04087cd3666cb93cb2, type: 3}
+  - {fileID: 8224738086250565089, guid: b8f2bd3f7dedbf04b9f94f1fee10df71, type: 3}
+  - {fileID: 1604762033859200424, guid: f70683612e4c6c94caf80c139d15d440, type: 3}
+  EngineMods:
+  - {fileID: 5781204156322854848, guid: f6645e06ca5282142a092faf4dc28f5d, type: 3}
+  - {fileID: 939260356217735846, guid: bff54d904ae091248928178b792b5c75, type: 3}
+  - {fileID: 4876395645895061165, guid: 29bb8cce780c1294aa62f911d0d6d618, type: 3}
+  - {fileID: 3289613575055373672, guid: 8c660d59b19e72b459146143709f2df6, type: 3}
+  FrameMods:
+  - {fileID: 1899712038258736377, guid: edf8ac4faeb46de449ca2001244d8368, type: 3}
+  - {fileID: 1161212937076821648, guid: a42e1352d9b5220408edb5995a871077, type: 3}
+  - {fileID: 1083606076836578062, guid: a3ea3fdda8becd344a93d867a0f2e9c0, type: 3}
+  - {fileID: 3625820789473760418, guid: 3bbe261072187df438a42f9d15c522ef, type: 3}
+  TireMods:
+  - {fileID: 261466770757549597, guid: 9fc42b9974dc6024283bcc5ed8949319, type: 3}
+  - {fileID: 7821235356055314250, guid: d2f2be9b1a01ecd4cb8d8be1a39c18dc, type: 3}
+  - {fileID: 5848195538417588410, guid: 41d37b0281377294c9d707090dbed230, type: 3}
+  - {fileID: 7587167504933136469, guid: e5b51f7df69d65a45889cc2c43d7f8a6, type: 3}
+  TrunkMods:
+  - {fileID: 8890965693646081665, guid: e84358a52fc270e47a46d84fbe3e12fa, type: 3}
+  - {fileID: 6873642386960782468, guid: f3efe371c30c1df4dbaf8e9ff5d6ff1c, type: 3}
+  - {fileID: 2072115852281423213, guid: 86faffcba516e4640b39914b9485551a, type: 3}
+  - {fileID: 6340638447910774808, guid: 8d012ff5cafadf24ba9330bfa8fa8428, type: 3}
+  GrillWeapons:
+  - {fileID: 6014955629493736324, guid: a7e510b06cb920e4d8f4220fb7da4353, type: 3}
+  - {fileID: 1581767801936459416, guid: 57242fe70b9acc141bb99f8edd0599a3, type: 3}
+  - {fileID: 424778859491095356, guid: 53b58d0f1259ea04ea0ffe49043c9b86, type: 3}
+  HitchWeapons:
+  - {fileID: 7668684729367957811, guid: 6558ae9c24e84c34982662fa324f1f72, type: 3}
+  - {fileID: 4150057713731885806, guid: a54791047829ae14bafcb01bb0b04061, type: 3}
+  RoofWeapons:
+  - {fileID: 9056182004023871808, guid: 594d7f9546eeab8478d9c5a2bed30a02, type: 3}
+  - {fileID: 5560290491643388817, guid: d0832b8aaf486f142b2c07ffeec01a16, type: 3}
+  DoorWeapons:
+  - {fileID: 649526909172273394, guid: d0ca926da2f52bb4baf6c1aa391ceb43, type: 3}
+  - {fileID: 5290406870913352687, guid: df5445f7fa20b0c4ca2df110e3a92771, type: 3}
+  - {fileID: 1213467437585526218, guid: 2f59451449ddff44e9084c0c191b2bc4, type: 3}
+  WheelWeapons:
+  - {fileID: 6300236096890605252, guid: 2e37779c6e79b8e4ba21de07012af815, type: 3}
+  - {fileID: 1232937319822577003, guid: 8ea4e78763226b54b9b8fbffe71fad53, type: 3}
