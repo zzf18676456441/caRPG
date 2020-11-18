@@ -196,6 +196,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 773619174187756968, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
+      propertyPath: WheelWeapons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 773619174187756968, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
+      propertyPath: DoorWeapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1604635227308429132, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
+    - target: {fileID: 773619174187756968, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
+      propertyPath: DoorWeapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 3176504602822217685, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
+    - target: {fileID: 773619174187756968, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
+      propertyPath: DoorWeapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 5177135278564436823, guid: dd4279fa7f902d64bb139a8773bdeece, type: 3}
+    - target: {fileID: 773619174187756968, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
+      propertyPath: WheelWeapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 6041694151145073396, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+    - target: {fileID: 773619174187756968, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
+      propertyPath: WheelWeapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 813745153944893593, guid: 1ec2c9d209fce5340b8faeaa06cdb4f2, type: 3}
+    - target: {fileID: 773619174187756968, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
+      propertyPath: WheelWeapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 396488815324301216, guid: 2a93be1ced343834595f497e3c766058, type: 3}
     - target: {fileID: 1198019462802842804, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
