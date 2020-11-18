@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1199172755858634077}
   - component: {fileID: 8472216282695469612}
   - component: {fileID: 5386334982803689280}
-  - component: {fileID: 4402039063858614392}
   - component: {fileID: 7158834791684743972}
   - component: {fileID: -1497912208821627398}
+  - component: {fileID: 5015904730840381996}
   m_Layer: 0
   m_Name: WheelGun
   m_TagString: Weapon
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: b7d16382bf58d5844979107bb72b1259, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9f4e89f3bd459f4981e0be7a683558a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,36 +111,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcec008de9a1254b95f4353716639b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachLocation: 2
-  attachType: 0
   isWeapon: 1
-  anchorOverride: {x: 0, y: 0}
---- !u!61 &4402039063858614392
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6041694151145073396}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 3, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 0.5}
-  m_EdgeRadius: 0
+  weaponLocation: 0
+  modLocation: 2
+  attachType: 0
+  baseDamage: 50
+  damageType: 1
+  damageFlags: 00000000
+  anchorOverride: {x: -0.3, y: 0}
 --- !u!114 &7158834791684743972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,18 +131,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPowerUp: 0
   maxHealthAdd: 0
+  maxHealthMult: 0
   maxArmorAdd: 0
+  maxArmorMult: 0
   maxNO2Add: 0
-  healthAdd: 0
-  healthMult: 0
+  maxNO2Mult: 0
   weightAdd: 0
-  weightMult: 0
   gripAdd: 0
   gripMult: 0
   accelerationAdd: 0
   accelerationMult: 0
+  topSpeedAdd: 0
+  topSpeedMult: 0
 --- !u!114 &-1497912208821627398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +161,39 @@ MonoBehaviour:
   rightSide: 0
   leftSide: 0
   straight: 0
+--- !u!60 &5015904730840381996
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6041694151145073396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 3, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.29, y: -0.01}
+      - {x: 0.14999999, y: -0.01}
+      - {x: 0.17, y: 0.55}
+      - {x: 0.089999996, y: 0.58}
+      - {x: -0.14, y: 0.58}
+      - {x: -0.17999999, y: 0.51}
+      - {x: -0.17999999, y: -0.5}
+      - {x: 0.16, y: -0.5}
+      - {x: 0.29, y: -0.35}
+      - {x: 0.34, y: -0.29999998}
+      - {x: 0.34, y: -0.06}

@@ -34,6 +34,9 @@ public class LevelRewards : MonoBehaviour
 
     void Start(){
         UpdateText();
+        gameObject.transform.Find("Reward1").GetComponent<Image>().sprite = rewardOnePrefab.GetComponent<SpriteRenderer>().sprite;
+        gameObject.transform.Find("Reward2").GetComponent<Image>().sprite = rewardTwoPrefab.GetComponent<SpriteRenderer>().sprite;
+        gameObject.transform.Find("Reward3").GetComponent<Image>().sprite = rewardThreePrefab.GetComponent<SpriteRenderer>().sprite;
     }
 
     public void Show(){
