@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 767d5bf16372ef0478fb5025b642a97d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b3196dfe4d898f4f9086c4f9c7561e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,9 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcec008de9a1254b95f4353716639b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachLocation: 2
-  attachType: 0
   isWeapon: 1
+  weaponLocation: 2
+  modLocation: 2
+  attachType: 0
+  baseDamage: 50
+  damageType: 1
+  damageFlags: 00000000
   anchorOverride: {x: 0, y: 0}
 --- !u!61 &7315049771603165717
 BoxCollider2D:
@@ -131,7 +135,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 3, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,15 +156,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPowerUp: 0
   maxHealthAdd: 0
+  maxHealthMult: 0
   maxArmorAdd: 1
+  maxArmorMult: 0
   maxNO2Add: 0
-  healthAdd: 0
-  healthMult: 0
+  maxNO2Mult: 0
   weightAdd: 0
-  weightMult: 0
   gripAdd: 0
   gripMult: 0
   accelerationAdd: 0
   accelerationMult: 0
+  topSpeedAdd: 0
+  topSpeedMult: 0
