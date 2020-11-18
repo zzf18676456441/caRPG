@@ -67,5 +67,25 @@ PrefabInstance:
       propertyPath: attachLocation
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6827618569672543971, guid: dd4279fa7f902d64bb139a8773bdeece, type: 3}
+      propertyPath: weaponLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600120032122692231, guid: dd4279fa7f902d64bb139a8773bdeece, type: 3}
+      propertyPath: maxHealthMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600120032122692231, guid: dd4279fa7f902d64bb139a8773bdeece, type: 3}
+      propertyPath: maxArmorMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600120032122692231, guid: dd4279fa7f902d64bb139a8773bdeece, type: 3}
+      propertyPath: maxNO2Mult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600120032122692231, guid: dd4279fa7f902d64bb139a8773bdeece, type: 3}
+      propertyPath: topSpeedMult
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd4279fa7f902d64bb139a8773bdeece, type: 3}

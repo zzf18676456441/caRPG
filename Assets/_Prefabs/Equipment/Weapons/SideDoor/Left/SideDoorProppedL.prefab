@@ -55,9 +55,29 @@ PrefabInstance:
       propertyPath: attachLocation
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1106967200537029368, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
+      propertyPath: weaponLocation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1604635227308429132, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
       propertyPath: m_Name
       value: SideDoorProppedL
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793900541624780444, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
+      propertyPath: maxHealthMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793900541624780444, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
+      propertyPath: maxArmorMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793900541624780444, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
+      propertyPath: maxNO2Mult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793900541624780444, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
+      propertyPath: topSpeedMult
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6140929300515590373, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
       propertyPath: m_FlipX

@@ -12,7 +12,7 @@ public class PlayerStart : MonoBehaviour
     void Start()
     {
         GameObject player = controller.GetCar();
-        //controller.AddEquipment();
+        controller.AddEquipment();
         player.transform.position = gameObject.transform.position;
         player.transform.rotation = gameObject.transform.rotation;
         player.SetActive(true);

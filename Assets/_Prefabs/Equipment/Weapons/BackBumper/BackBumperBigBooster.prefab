@@ -110,9 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcec008de9a1254b95f4353716639b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachLocation: 8
-  attachType: 0
   isWeapon: 1
+  weaponLocation: 3
+  modLocation: 2
+  attachType: 0
+  baseDamage: 50
+  damageType: 1
+  damageFlags: 00000000
   anchorOverride: {x: 0, y: 0}
 --- !u!61 &6293974430988820578
 BoxCollider2D:
@@ -152,15 +156,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPowerUp: 0
   maxHealthAdd: 0
+  maxHealthMult: 0
   maxArmorAdd: 0
+  maxArmorMult: 0
   maxNO2Add: 50
-  healthAdd: 0
-  healthMult: 0
+  maxNO2Mult: 0
   weightAdd: 0
-  weightMult: 0
   gripAdd: 0
   gripMult: 0
   accelerationAdd: 0
   accelerationMult: 0
+  topSpeedAdd: 0
+  topSpeedMult: 0

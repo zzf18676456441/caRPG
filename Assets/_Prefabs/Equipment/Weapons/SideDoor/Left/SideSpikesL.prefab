@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2059293583856469509, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
+      propertyPath: maxHealthMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059293583856469509, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
+      propertyPath: maxArmorMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059293583856469509, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
+      propertyPath: maxNO2Mult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059293583856469509, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
+      propertyPath: topSpeedMult
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3176504602822217685, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
       propertyPath: m_Name
       value: SideSpikesL
@@ -58,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 3822788531061008993, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
       propertyPath: attachLocation
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822788531061008993, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
+      propertyPath: weaponLocation
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8027964914923835516, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
       propertyPath: m_FlipX

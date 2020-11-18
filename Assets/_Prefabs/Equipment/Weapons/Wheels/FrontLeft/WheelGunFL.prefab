@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: attachLocation
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5386334982803689280, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: weaponLocation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -66,6 +70,22 @@ PrefabInstance:
     - target: {fileID: 6041694151145073396, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
       propertyPath: m_Name
       value: WheelGunFL
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158834791684743972, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: maxHealthMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158834791684743972, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: maxArmorMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158834791684743972, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: maxNO2Mult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158834791684743972, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: topSpeedMult
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}

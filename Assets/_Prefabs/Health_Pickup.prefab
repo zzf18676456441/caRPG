@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7852772939578139018}
   - component: {fileID: 7852772939578139019}
   - component: {fileID: 7852772939578139023}
-  - component: {fileID: 7852772939578139016}
   - component: {fileID: -6646777324806821451}
+  - component: {fileID: 8412193071965558208}
   m_Layer: 0
   m_Name: Health_Pickup
   m_TagString: Equipment
@@ -97,30 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d30b697f606534c920cdbe9ac124c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7852772939578139016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7852772939578139060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPowerUp: 1
-  maxHealthAdd: 0
-  maxArmorAdd: 0
-  maxNO2Add: 0
-  healthAdd: 10
-  healthMult: 0
-  weightAdd: 0
-  weightMult: 0
-  gripAdd: 0
-  gripMult: 0
-  accelerationAdd: 0
-  accelerationMult: 0
 --- !u!61 &-6646777324806821451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +123,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &8412193071965558208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7852772939578139060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea7e854c284d9a42b40964887af1d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

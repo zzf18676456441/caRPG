@@ -19,7 +19,6 @@ public class PauseController : MonoBehaviour
     void Start()
     {
         _pausePanel = GameObject.Find("Pause Menu");
-        Time.timeScale = 1;
         _pausePanel.SetActive(false);
     }
 

@@ -27,7 +27,6 @@ public class GameController : MonoBehaviour
 
     private Player player;
     private GameObject car;
-    private int gameFreeze;
 
     void Awake()
     {
@@ -50,47 +49,7 @@ public class GameController : MonoBehaviour
 
     public void AddEquipment()
     {
-        PowerupMain FLTire = Instantiate<GameObject>(FLTirePrefab).GetComponent<PowerupMain>();
-        FLTire.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain FRTire = Instantiate<GameObject>(FRTirePrefab).GetComponent<PowerupMain>();
-        FRTire.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain BLTire = Instantiate<GameObject>(BLTirePrefab).GetComponent<PowerupMain>();
-        BLTire.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain BRTire = Instantiate<GameObject>(BRTirePrefab).GetComponent<PowerupMain>();
-        BRTire.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain LDoor = Instantiate<GameObject>(LDoorPrefab).GetComponent<PowerupMain>();
-        LDoor.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain RDoor = Instantiate<GameObject>(RDoorPrefab).GetComponent<PowerupMain>();
-        RDoor.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain FBumper = Instantiate<GameObject>(FBumperPrefab).GetComponent<PowerupMain>();
-        FBumper.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain BBumper = Instantiate<GameObject>(BBumperPrefab).GetComponent<PowerupMain>();
-        BBumper.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain Roof = Instantiate<GameObject>(RoofPrefab).GetComponent<PowerupMain>();
-        Roof.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain Tires = Instantiate<GameObject>(TiresPrefab).GetComponent<PowerupMain>();
-        Tires.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain Engine = Instantiate<GameObject>(EnginePrefab).GetComponent<PowerupMain>();
-        Engine.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain Bumpers = Instantiate<GameObject>(BumpersPrefab).GetComponent<PowerupMain>();
-        Bumpers.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain Frame = Instantiate<GameObject>(FramePrefab).GetComponent<PowerupMain>();
-        Frame.ApplyTo(car.GetComponent<PowerupManager>());
-
-        PowerupMain Trunk = Instantiate<GameObject>(TrunkPrefab).GetComponent<PowerupMain>();
-        Trunk.ApplyTo(car.GetComponent<PowerupManager>());
+        GetCar().GetComponent<PowerupManager>().Attach(FBumperPrefab.GetComponent<PowerupAttachable>(),AttachType.Fixed);
     }
 
     public GameObject GetCar()
@@ -100,14 +59,13 @@ public class GameController : MonoBehaviour
             return car;
         }
         car = CreateCar();
-
         return car;
     }
 
     private GameObject CreateCar(){
         GameObject car = Instantiate(carPrefab);
         car.transform.SetParent(gameObject.transform);
-
+        car.SetActive(false);
         return car;
     }
 
@@ -119,6 +77,7 @@ public class GameController : MonoBehaviour
         }
         player = new Player();
         player.controller = this;
+        player.SetupPlayer();
         return player;
     }
 
@@ -126,6 +85,7 @@ public class GameController : MonoBehaviour
         player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
         car.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+        car.GetComponent<Rigidbody2D>().rotation = 0;
         player.currentNO2 = player.maxNO2;
         car.SetActive(false);
 
@@ -158,6 +118,29 @@ public class Player : IDamagable
     public GameController controller;
     private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
     private LevelStats levelStats = new LevelStats();
+    
+    public PowerupStats baseStats;
+
+    public void SetupPlayer(){
+        baseStats = controller.gameObject.AddComponent<PowerupStats>();
+        baseStats.maxHealthAdd = 100;
+        baseStats.maxArmorAdd = 0;
+        baseStats.maxNO2Add = 100;
+        baseStats.weightAdd = controller.GetCar().GetComponent<Rigidbody2D>().mass;
+        baseStats.topSpeedAdd = controller.GetCar().GetComponent<Driving>().topSpeed;
+        baseStats.gripAdd = controller.GetCar().GetComponent<Driving>().staticCoefficientOfFriction;
+        baseStats.accelerationAdd = controller.GetCar().GetComponent<Driving>().acceleration;
+    }
+
+    public void ReApplyStats(PowerupStats powerups){
+        maxHealth = (baseStats.maxHealthAdd + powerups.maxHealthAdd) * (1+powerups.maxHealthMult);
+        maxNO2 = (baseStats.maxNO2Add + powerups.maxNO2Add) * (1+powerups.maxNO2Mult);
+        currentArmor = (baseStats.maxArmorAdd + powerups.maxArmorAdd) * (1+powerups.maxArmorMult);
+        controller.GetCar().GetComponent<Rigidbody2D>().mass = baseStats.weightAdd + powerups.weightAdd;
+        controller.GetCar().GetComponent<Driving>().topSpeed = (baseStats.topSpeedAdd + powerups.topSpeedAdd) * (1+powerups.topSpeedMult);
+        controller.GetCar().GetComponent<Driving>().staticCoefficientOfFriction = (baseStats.gripAdd + powerups.gripAdd) * (1+powerups.gripMult);
+        controller.GetCar().GetComponent<Driving>().acceleration = (baseStats.accelerationAdd + powerups.accelerationAdd) * (1+powerups.accelerationMult);
+    }
 
     public void ResetStats(){
         levelStats = new LevelStats();

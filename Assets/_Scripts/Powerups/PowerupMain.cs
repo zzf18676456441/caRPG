@@ -14,6 +14,11 @@ public class PowerupMain : MonoBehaviour
         attached = false;
     }
 
+    public void SetManager(PowerupManager _appliedManager){
+        appliedManager = _appliedManager;
+        attached = true;
+    }
+
     public void ApplyTo(PowerupManager car)
     {
         if(attached) return;
@@ -26,11 +31,7 @@ public class PowerupMain : MonoBehaviour
 
         if (pAttachable != null)
         {
-            appliedManager = car.Attach(pAttachable.attachLocation, pAttachable, pAttachable.attachType);
-            if (pStats != null)
-            {
-                appliedManager = appliedManager.ApplyStats(pStats);
-            }
+            appliedManager = car.Attach(pAttachable, pAttachable.attachType);
         }
         else if (pEvent != null)
         {
@@ -40,16 +41,13 @@ public class PowerupMain : MonoBehaviour
         {
             appliedManager = car.ApplyBoost(pBoost);
         }
-        else if (pStats != null)
-        {
-            appliedManager = car.ApplyStats(pStats);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(attached){
-            appliedManager.NotifyCollision(collision);
+        PowerupAttachable attachable = gameObject.GetComponent<PowerupAttachable>();
+        if(attachable != null){
+            appliedManager.NotifyCollision(collision, attachable);
         } else {
             if (collision.otherCollider.gameObject.tag == "Player"){
                 ApplyTo(collision.otherCollider.gameObject.GetComponent<PowerupManager>());

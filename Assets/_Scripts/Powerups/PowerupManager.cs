@@ -9,16 +9,18 @@ using UnityEngine;
 
 
 public enum Joint {FBumper, FLTire, FRTire, LDoor, RDoor, Center, BLTire, BRTire, RBumper, Bumpers, Engine, Frame, Tires, Trunk, Hood}
-
 public enum AttachType {Fixed, Spring, NonPhysical}
+public enum WeaponMount {Wheels, Doors, Grill, Hitch, Roof}
+public enum ModMount {Tires, Engine, Bumpers, Frame, Trunk}
 
 
 public class PowerupManager : MonoBehaviour, IDamager
 {
     private Dictionary<Joint, FixedJoint2D> joints;
-    private Dictionary<Joint, PowerupAttachable> equipment;
-    //private Dictionary<bool, List<PowerupStats>> statBoosts;
-    private Dictionary<PowerupStats, bool> statBoosts;
+    private Dictionary<WeaponMount, PowerupAttachable> equippedWeapons;
+    private Dictionary<ModMount, PowerupAttachable> equippedMods;
+    private Dictionary<WeaponMount, List<GameObject>> physicalWeapons;
+    
     GameController controller;
 
     // Start is called before the first frame update
@@ -78,87 +80,109 @@ public class PowerupManager : MonoBehaviour, IDamager
         tJoint.enabled = false;
         joints.Add(Joint.RDoor, tJoint);
 
-        equipment = new Dictionary<Joint, PowerupAttachable>();
-
-        equipment.Add(Joint.Bumpers, null);
-        equipment.Add(Joint.Engine, null);
-        equipment.Add(Joint.Frame, null);
-        equipment.Add(Joint.Tires, null);
-        equipment.Add(Joint.Trunk, null);
-
-        statBoosts = new Dictionary<PowerupStats, bool>();
+        equippedWeapons = new Dictionary<WeaponMount, PowerupAttachable>();
+        equippedMods = new Dictionary<ModMount, PowerupAttachable>();
+        physicalWeapons = new Dictionary<WeaponMount, List<GameObject>>();
     }
 
 
-    public PowerupManager Attach(Joint location, PowerupAttachable attachment, AttachType aType){
+    public PowerupManager Attach(PowerupAttachable attachment, AttachType aType){
+        if (attachment.isWeapon){
+            WeaponMount slot = attachment.weaponLocation;
+            List<Joint> attachJoints = new List<Joint>();
+            List<GameObject> newWeapons = new List<GameObject>();
+            equippedWeapons[slot] = attachment;
+            if (physicalWeapons.ContainsKey(slot)){
+                foreach(GameObject oldWeapon in physicalWeapons[slot]){
+                    Destroy(oldWeapon);
+                }
+            }
+            
+            switch(slot){
+                case WeaponMount.Grill:
+                    attachJoints.Add(Joint.FBumper);
+                break;
+                case WeaponMount.Hitch:
+                    attachJoints.Add(Joint.RBumper);
+                break;
+                case WeaponMount.Doors:
+                    attachJoints.Add(Joint.LDoor);
+                    attachJoints.Add(Joint.RDoor);
+                break;
+                case WeaponMount.Roof:
+                    attachJoints.Add(Joint.Center);
+                break;
+                case WeaponMount.Wheels:
+                    attachJoints.Add(Joint.FLTire);
+                    attachJoints.Add(Joint.FRTire);
+                    attachJoints.Add(Joint.BLTire);
+                    attachJoints.Add(Joint.BRTire);
+                break;
+            }
+
+            foreach(Joint joint in attachJoints){
+                FixedJoint2D tJoint = joints[joint];
+                PowerupAttachable newAttachment = Instantiate(attachment.gameObject).GetComponent<PowerupAttachable>();
+                newAttachment.GetComponent<PowerupMain>().SetManager(this);
+                newWeapons.Add(newAttachment.gameObject);
+                newAttachment.SetAnchor(joint);
+                newAttachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f);
+                
+                switch (aType)
+                {
+                    case AttachType.Spring:
+                        tJoint.connectedBody = newAttachment.gameObject.GetComponent<Rigidbody2D>();
+                        tJoint.connectedAnchor = newAttachment.anchorOverride;
+                        tJoint.enabled = true;
+                    break;
+
+                    case AttachType.Fixed:
+                    default:
+                        newAttachment.gameObject.transform.parent = gameObject.transform;
+                    break;
+                }
+            }
+
+            physicalWeapons[slot] = newWeapons;
+
+        } else {
+            equippedMods[attachment.modLocation] = attachment;
+        }
         
-        if (attachment.isWeapon)
-        {
-            FixedJoint2D tJoint = joints[location];
-            attachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f);
+        ReCalcStats();
 
-            switch (aType)
-            {
-                case AttachType.Spring:
-                    tJoint.connectedBody = attachment.gameObject.GetComponent<Rigidbody2D>();
-                    tJoint.connectedAnchor = attachment.anchorOverride;
-                    tJoint.enabled = true;
-                    break;
+        return this;
+    }
 
-                case AttachType.Fixed:
-                default:
-                    attachment.gameObject.transform.parent = gameObject.transform;
-                    break;
+    public void ReCalcStats(){
+        PowerupStats powerupStats = gameObject.AddComponent<PowerupStats>();
+        foreach(PowerupAttachable attachment in equippedWeapons.Values){
+            PowerupStats newStats = attachment.GetComponent<PowerupStats>();
+            if(newStats != null){
+                powerupStats.maxHealthAdd += newStats.maxHealthAdd;
+                powerupStats.maxHealthMult += newStats.maxHealthMult;
+                powerupStats.maxArmorAdd += newStats.maxArmorAdd;
+                powerupStats.maxArmorMult += newStats.maxArmorMult;
+                powerupStats.maxNO2Add += newStats.maxNO2Add;
+                powerupStats.maxNO2Mult += newStats.maxNO2Mult;
+                powerupStats.weightAdd += newStats.weightAdd;
+                powerupStats.gripAdd += newStats.gripAdd;
+                powerupStats.gripMult += newStats.gripMult;
+                powerupStats.accelerationAdd += newStats.accelerationAdd;
+                powerupStats.accelerationMult += newStats.accelerationMult;
+                powerupStats.topSpeedAdd += newStats.topSpeedAdd;
+                powerupStats.topSpeedMult += newStats.topSpeedMult;
             }
         }
-        else
-        {
-            equipment[location] = attachment;
-        }
-        
-        return this;
+        controller.GetPlayer().ReApplyStats(powerupStats);
+        Destroy(powerupStats);
     }
 
-    public PowerupManager Dettach(Joint location, PowerupAttachable attachment, AttachType aType)
-    {
-
-        if (attachment.isWeapon)
-        {
-            FixedJoint2D tJoint = joints[location];
-            tJoint = gameObject.AddComponent<FixedJoint2D>();
-            tJoint.anchor = new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x / 2, -gameObject.GetComponent<Driving>().rearAxleDistance);
-            tJoint.enabled = false;
-        }
-        else
-        {
-            equipment[location] = null;
-        }
-
-        return this;
-    }
-
-    public PowerupManager ApplyStats(PowerupStats stats)
-    {
-        //statBoosts[false].Add(stats);
-        statBoosts.Add(stats, true);
-        activateStatBoost(stats);
-        if (stats.isPowerUp)
-        {
-            stats.gameObject.SetActive(false);
-        }
-        return this;
-    }
-
-    public PowerupManager RemoveStats(PowerupStats stats)
-    {
-        statBoosts[stats] = false;
-        deactivateStatBoost(stats);
-        return this;
-    }
 
     public PowerupManager ApplyBoost(PowerupBoost boost)
     {
-        //TODO:  Do something
+        controller.GetPlayer().currentHealth += boost.healthBoost;
+        controller.GetPlayer().currentNO2 += boost.nO2Boost;
         return this;
     }
 
@@ -167,70 +191,7 @@ public class PowerupManager : MonoBehaviour, IDamager
         return this;
     }
 
-    void Update()
-    {
-        /*if (statBoosts[false].Count > 0)
-        {
-            for (int i = 0; i < statBoosts[false].Count; i++)
-            {
-                activateStatBoost(statBoosts[false][i]);
-                statBoosts[true].Add(statBoosts[false][i]);
-            }
-            statBoosts[false].Clear();
-        }*/
-    }
-
-    private void activateStatBoost(PowerupStats stats)
-    {
-        //Change maxHealth
-        controller.GetPlayer().maxHealth += stats.maxHealthAdd;
-        controller.GetPlayer().currentHealth += stats.maxHealthAdd;
-
-        //Change Health
-        if (controller.GetPlayer().currentHealth + stats.healthAdd >= controller.GetPlayer().maxHealth)
-        {
-            controller.GetPlayer().currentHealth = controller.GetPlayer().maxHealth;
-        }
-        else
-        {
-            controller.GetPlayer().currentHealth += stats.healthAdd;
-        }
-
-        //Change Acceleration
-        gameObject.GetComponent<Driving>().acceleration += stats.accelerationAdd;
-
-        //Change MaxNO2
-        controller.GetPlayer().maxNO2 += stats.maxNO2Add;
-        controller.GetPlayer().currentNO2 += stats.maxNO2Add;
-
-        //Change Weight
-        gameObject.GetComponent<Rigidbody2D>().mass += stats.weightAdd;
-
-        //Change Armor
-        controller.GetPlayer().currentArmor += stats.maxArmorAdd;
-    }
-
-    private void deactivateStatBoost(PowerupStats stats)
-    {
-        //Change maxHealth
-        controller.GetPlayer().maxHealth -= stats.maxHealthAdd;
-        controller.GetPlayer().currentHealth -= stats.maxHealthAdd;
-
-        //Change Acceleration
-        gameObject.GetComponent<Driving>().acceleration -= stats.accelerationAdd;
-
-        //Change MaxNO2
-        controller.GetPlayer().maxNO2 -= stats.maxNO2Add;
-        controller.GetPlayer().currentNO2 -= stats.maxNO2Add;
-
-        //Change Weight
-        gameObject.GetComponent<Rigidbody2D>().mass -= stats.weightAdd;
-
-        //Change Armor
-        controller.GetPlayer().currentArmor += stats.maxArmorAdd;
-    }
-
-    public void NotifyCollision(Collision2D collision){
+    public void NotifyCollision(Collision2D collision, IDamager hitter){
         // Can the thing I hit deal damage?
         IDamager damager = (IDamager)collision.collider.GetComponent(typeof(IDamager));
 
@@ -244,13 +205,13 @@ public class PowerupManager : MonoBehaviour, IDamager
 
         // If it can take damage, apply this object's damage to it.
         if (damagable != null) {
-            DamageSystem.ApplyDamage(this, damagable, collision.relativeVelocity);
+            DamageSystem.ApplyDamage(hitter, damagable, collision.relativeVelocity);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        NotifyCollision(collision);
+        NotifyCollision(collision, this);
     }
 
     

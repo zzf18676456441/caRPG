@@ -19,6 +19,7 @@ public class Driving : MonoBehaviour {
     private bool frontSliding = false;
     private bool rearSliding = false;
     
+    public float topSpeed = 100; // Not yet implemented
      GameController controller;
 
     // Start is called before the first frame update
