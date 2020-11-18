@@ -11,10 +11,14 @@ public class GarageMenuBar : MonoBehaviour
             PowerupMain main = item.GetComponent<PowerupMain>();
             Transform element = gameObject.transform.Find("Inventory Area").Find("Items").Find("Upgrade " + index);
             element.GetChild(0).GetComponent<Text>().text = item.gameObject.name;
+            element.GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
             if(main.IsOwned()){
                 element.GetComponent<Button>().interactable = true;
+                element.GetChild(0).GetComponent<Text>().color = Color.white;
+                element.GetComponent<Image>().color = Color.white;
             } else {
                 element.GetComponent<Button>().interactable = false;
+                element.GetComponent<Image>().color = Color.black;
             }
             ButtonScripts scripts = element.gameObject.AddComponent<ButtonScripts>();
             scripts.SetItem(item);
