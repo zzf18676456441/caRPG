@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 573307839319617227}
   - component: {fileID: 172230505631622238}
   m_Layer: 0
-  m_Name: BronzeEngine
+  m_Name: Bronze Engine
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

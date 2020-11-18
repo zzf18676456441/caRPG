@@ -6,22 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameObject carPrefab;
-
-    public GameObject FLTirePrefab;
-    public GameObject FRTirePrefab;
-    public GameObject BLTirePrefab;
-    public GameObject BRTirePrefab;
-    public GameObject RDoorPrefab;
-    public GameObject LDoorPrefab;
-    public GameObject FBumperPrefab;
-    public GameObject BBumperPrefab;
-    public GameObject RoofPrefab;
-    public GameObject TiresPrefab;
-    public GameObject EnginePrefab;
-    public GameObject BumpersPrefab;
-    public GameObject FramePrefab;
-    public GameObject TrunkPrefab;
-
     public string[] levels;
     private int nextLevel = 0;
 
@@ -47,11 +31,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void AddEquipment()
-    {
-        GetCar().GetComponent<PowerupManager>().Attach(FBumperPrefab.GetComponent<PowerupAttachable>(),AttachType.Fixed);
-    }
-
+    
     public GameObject GetCar()
     {
         if (car != null)
@@ -85,7 +65,7 @@ public class GameController : MonoBehaviour
         player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
         car.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
-        car.GetComponent<Rigidbody2D>().rotation = 0;
+        car.transform.up = new Vector3(0, 1, 0);
         player.currentNO2 = player.maxNO2;
         car.SetActive(false);
 

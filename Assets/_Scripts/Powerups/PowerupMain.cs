@@ -10,9 +10,18 @@ public class PowerupMain : MonoBehaviour
     private bool attached;
     private PowerupManager appliedManager;
 
+    private bool isOwned = false;
+
+    public bool IsOwned(){ return isOwned;}
+
+    public void SetOwned(bool owned){
+        isOwned = owned;
+    }
+
     void Awake(){
         attached = false;
     }
+
 
     public void SetManager(PowerupManager _appliedManager){
         appliedManager = _appliedManager;
