@@ -44,6 +44,8 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
     public void ApplyDamage(Damage damage, Vector2 velocity)
     {
+        Player player = GameObject.Find("GameControllerObject").GetComponent<GameController>().GetPlayer();
+
         if(recentDamagers.ContainsKey(damage.source)){
             if (Time.time < recentDamagers[damage.source] + 0.2f) return;
         }
@@ -73,14 +75,17 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
                         damageTaken = 0;
                 break;
                 default:
+                    player.GetLevelStats().AddStat(LevelRewards.ConditionType.EnemyContacts,1);
                 break;
             }
         }
 
         health -= damageTaken;
+        player.GetLevelStats().AddStat(LevelRewards.ConditionType.DamageDealt, damageTaken);
         if (health <= 0)
         {
-            GameObject.Find("GameControllerObject").GetComponent<GameController>().GetPlayer().AddNO2(nO2Reward);
+            player.AddNO2(nO2Reward);
+            player.GetLevelStats().AddStat(LevelRewards.ConditionType.Kills, 1);
             die();
         }
     }

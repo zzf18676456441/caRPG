@@ -34,7 +34,6 @@ public class LevelRewards : MonoBehaviour
 
     void Start(){
         UpdateText();
-        Invoke("Hide",5);
     }
 
     public void Show(){
@@ -47,7 +46,7 @@ public class LevelRewards : MonoBehaviour
 
     public List<GameObject> GetRewards(){
         List<GameObject> rewards = new List<GameObject>();
-        LevelStats stats = controller.GetLevelStats();
+        LevelStats stats = controller.GetPlayer().GetLevelStats();
         
         ConditionType type = rewardOneCondition;
         ComparisonType comparison = rewardOneComparison;

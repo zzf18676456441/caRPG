@@ -8,6 +8,7 @@ TagManager:
   - Equipment
   - StartLocation
   - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX

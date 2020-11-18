@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4811019935567734687
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -1497912208821627398, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: leftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199172755858634077, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5386334982803689280, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: attachLocation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5386334982803689280, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: weaponLocation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578241614982157405, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6041694151145073396, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: m_Name
+      value: WheelGunFL
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158834791684743972, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: maxHealthMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158834791684743972, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: maxArmorMult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158834791684743972, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: maxNO2Mult
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158834791684743972, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
+      propertyPath: topSpeedMult
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 380f1aa3f0db92a4cad4d7cfefa5cebe, type: 3}
