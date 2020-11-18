@@ -110,13 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcec008de9a1254b95f4353716639b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWeapon: 1
-  weaponLocation: 0
-  modLocation: 2
   attachType: 0
   baseDamage: 50
   damageType: 1
   damageFlags: 00000000
+  isWeapon: 1
+  weaponLocation: 
+  modLocation: 2
   anchorOverride: {x: -0.6, y: 0}
 --- !u!114 &4308293816391676233
 MonoBehaviour:
