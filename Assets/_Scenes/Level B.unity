@@ -55747,6 +55747,7 @@ GameObject:
   - component: {fileID: 1075093253}
   - component: {fileID: 1075093255}
   - component: {fileID: 1075093254}
+  - component: {fileID: 1075093256}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -55849,6 +55850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 1075093251}
+  crashAnim: {fileID: 1075093256}
 --- !u!114 &1075093255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55861,6 +55863,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29bab1ef05b66814e8b31d39395d474a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &1075093256
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075093249}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 95dfb08bddff5e742b5a05ebde971905, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 95dfb08bddff5e742b5a05ebde971905, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1075416461
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class RestartHandler : MonoBehaviour
         backgroundImage.color = new Color(.6f, .35f, .35f, Mathf.Abs(Mathf.Sin(Time.time)) + .1f);
         if (Input.anyKey)
         {
-            SceneManager.LoadScene(1);
+            controller.RetryLevel();
         }
     }
 }
