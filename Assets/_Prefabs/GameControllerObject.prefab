@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 297ce4d0bdb2b2248b553a0e07e90f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carPrefab: {fileID: 5246917541190323975, guid: 991e895cc43f1364f82c1b2af7b62c78, type: 3}
+  carPrefab: {fileID: 5246917541190323975, guid: 991e895cc43f1364f82c1b2af7b62c78,
+    type: 3}
   levels:
   - Level A
   - Level 1
