@@ -183,6 +183,7 @@ public class PowerupManager : MonoBehaviour, IDamager
     {
         controller.GetPlayer().currentHealth += boost.healthBoost;
         controller.GetPlayer().currentNO2 += boost.nO2Boost;
+        Destroy(boost.gameObject);
         return this;
     }
 

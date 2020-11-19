@@ -19,7 +19,7 @@ public class UserInterface : MonoBehaviour
 
     public GameObject nitrous;
 
-    public GameObject score;
+
 
 
     GameController controller;
@@ -43,8 +43,5 @@ public class UserInterface : MonoBehaviour
         Image no2bar = nitrous.GetComponent<Image>();
         no2bar.fillAmount = no2;
 
-        Text scoret = score.GetComponent<Text>();
-
-        scoret.text = "" + Mathf.FloorToInt(speed + no2 * 100);
     }
 }
