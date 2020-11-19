@@ -20681,6 +20681,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardOnePrefab
+      value: 
+      objectReference: {fileID: 3176504602822217685, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardTwoCondition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardTwoComparison
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardTwoValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardTwoPrefab
+      value: 
+      objectReference: {fileID: 5560290491643388817, guid: d0832b8aaf486f142b2c07ffeec01a16, type: 3}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardThreeCondition
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardThreeValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardThreePrefab
+      value: 
+      objectReference: {fileID: 813745153944893593, guid: 1ec2c9d209fce5340b8faeaa06cdb4f2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
 --- !u!1001 &393933838
@@ -55744,7 +55776,6 @@ GameObject:
   - component: {fileID: 1075093252}
   - component: {fileID: 1075093251}
   - component: {fileID: 1075093250}
-  - component: {fileID: 1075093253}
   - component: {fileID: 1075093255}
   - component: {fileID: 1075093254}
   - component: {fileID: 1075093256}
@@ -55790,7 +55821,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 500
+  orthographic size: 18.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -55814,29 +55845,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075093249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146, y: 115.8, z: -10}
+  m_LocalPosition: {x: -167.5, y: -63.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1075093253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075093249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 989be7138a039fb47ae74c8aefb43a9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  singleWidth: 6.5
-  desiredWidth: 280
-  leftToRight: 1
-  positiveDirection: 0
-  repeatMe: {fileID: 1941021320}
 --- !u!114 &1075093254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103838,11 +103852,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1941021320 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6480839441054297731, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
-  m_PrefabInstance: {fileID: 834230373}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1941021325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3160063794493046121, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
