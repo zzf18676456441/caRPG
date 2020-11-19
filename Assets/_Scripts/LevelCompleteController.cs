@@ -26,7 +26,7 @@ public class LevelCompleteController : MonoBehaviour
                     text.text = ((int)levelStats.stats[LevelRewards.ConditionType.DamageDealt]).ToString();
                 break;
                 case "TopSpeedText":
-                    text.text = (int)(levelStats.stats[LevelRewards.ConditionType.TopSpeed] * 2.23694) + " mph";
+                    text.text = (int)(levelStats.stats[LevelRewards.ConditionType.TopSpeed]) + " mph";
                 break;
                 case "EnemyContactsText":
                     text.text = levelStats.stats[LevelRewards.ConditionType.EnemyContacts].ToString();

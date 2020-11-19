@@ -69,6 +69,25 @@ public class LevelRewards : MonoBehaviour
         return rewards;
     }
 
+    public bool IsMet(int reward){
+        controller.GetPlayer().GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
+        LevelStats stats = controller.GetPlayer().GetLevelStats();
+        ConditionType type = rewardOneCondition;
+        ComparisonType comparison = rewardOneComparison;
+        float value = rewardOneValue;
+        if (reward > 1) {
+            if (reward == 2){
+                type = rewardTwoCondition;
+                comparison = rewardTwoComparison;
+                value = rewardTwoValue; 
+            } else {
+                type = rewardThreeCondition;
+                comparison = rewardThreeComparison;
+                value = rewardThreeValue; 
+            }
+        }
+        return(ConditionMet(stats, type, comparison, value));
+    }
 
     private bool ConditionMet(LevelStats stats, ConditionType type, ComparisonType comparison, float value){
         float statValue = stats.stats[type];

@@ -1336,6 +1336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: equipment (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8412193071965558208, guid: 7ad80a0e1daa45143892c52cfec76807, type: 3}
+      propertyPath: healthBoost
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ad80a0e1daa45143892c52cfec76807, type: 3}
 --- !u!1001 &88319253
@@ -8821,6 +8825,10 @@ PrefabInstance:
     - target: {fileID: 7852772939578139060, guid: 7ad80a0e1daa45143892c52cfec76807, type: 3}
       propertyPath: m_Name
       value: equipment (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412193071965558208, guid: 7ad80a0e1daa45143892c52cfec76807, type: 3}
+      propertyPath: healthBoost
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ad80a0e1daa45143892c52cfec76807, type: 3}
@@ -38004,6 +38012,10 @@ PrefabInstance:
     - target: {fileID: 7852772939578139060, guid: 7ad80a0e1daa45143892c52cfec76807, type: 3}
       propertyPath: m_Name
       value: equipment
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412193071965558208, guid: 7ad80a0e1daa45143892c52cfec76807, type: 3}
+      propertyPath: healthBoost
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ad80a0e1daa45143892c52cfec76807, type: 3}
