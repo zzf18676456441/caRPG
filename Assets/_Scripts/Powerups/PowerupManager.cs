@@ -155,27 +155,18 @@ public class PowerupManager : MonoBehaviour, IDamager
     }
 
     public void ReCalcStats(){
-        PowerupStats powerupStats = gameObject.AddComponent<PowerupStats>();
+        StatPack powerupStats = new StatPack();
         foreach(PowerupAttachable attachment in equippedWeapons.Values){
             PowerupStats newStats = attachment.GetComponent<PowerupStats>();
             if(newStats != null){
-                powerupStats.maxHealthAdd += newStats.maxHealthAdd;
-                powerupStats.maxHealthMult += newStats.maxHealthMult;
-                powerupStats.maxArmorAdd += newStats.maxArmorAdd;
-                powerupStats.maxArmorMult += newStats.maxArmorMult;
-                powerupStats.maxNO2Add += newStats.maxNO2Add;
-                powerupStats.maxNO2Mult += newStats.maxNO2Mult;
-                powerupStats.weightAdd += newStats.weightAdd;
-                powerupStats.gripAdd += newStats.gripAdd;
-                powerupStats.gripMult += newStats.gripMult;
-                powerupStats.accelerationAdd += newStats.accelerationAdd;
-                powerupStats.accelerationMult += newStats.accelerationMult;
-                powerupStats.topSpeedAdd += newStats.topSpeedAdd;
-                powerupStats.topSpeedMult += newStats.topSpeedMult;
+                StatPack newPack = newStats.GetPack();
+                foreach(StatPack.StatType type in System.Enum.GetValues(typeof(StatPack.StatType))){
+                    powerupStats.SetAdd(type, powerupStats.GetAdd(type) + newPack.GetAdd(type));
+                    powerupStats.SetMult(type, powerupStats.GetMult(type) + newPack.GetMult(type));
+                }
             }
         }
         controller.GetPlayer().ReApplyStats(powerupStats);
-        Destroy(powerupStats);
     }
 
 

@@ -20,6 +20,13 @@ public class GarageMenuBar : MonoBehaviour
                 element.GetComponent<Button>().interactable = false;
                 element.GetComponent<Image>().color = Color.black;
             }
+            if(!main.IsChecked()){
+                main.Check();
+                StatPack stats = item.GetComponent<PowerupStats>().GetPack();
+                if (stats != null){
+                    SendStats(stats);
+                }
+            }
             ButtonScripts scripts = element.gameObject.AddComponent<ButtonScripts>();
             scripts.SetItem(item);
             element.GetComponent<Button>().onClick.AddListener(scripts.EquipItem);
@@ -33,5 +40,9 @@ public class GarageMenuBar : MonoBehaviour
             Transform element = gameObject.transform.Find("Inventory Area").Find("Items").Find("Upgrade " + index);
             element.gameObject.SetActive(false);
         }
+    }
+
+    private void SendStats(StatPack stats){
+        GarageStats.TryUpdate(stats);
     }
 }

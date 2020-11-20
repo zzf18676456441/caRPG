@@ -6,6 +6,7 @@ public class GarageController : MonoBehaviour
 {
     GameController controller;
     InventoryMaster inventory;
+    GarageSlider sliderController;
     // Start is called before the first frame update
     void Awake()
     {
@@ -15,7 +16,9 @@ public class GarageController : MonoBehaviour
 
     void Start()
     {
-        UpdateEquips();    
+        UpdateEquips();
+        sliderController = transform.Find("StatSliders").GetComponent<GarageSlider>();
+        sliderController.SetSlidersOnOpen();
     }
 
 
@@ -66,4 +69,47 @@ public class GarageController : MonoBehaviour
         }
 
     }
+
+}
+
+
+
+public static class GarageStats{
+    
+    private static Dictionary<StatPack.StatType, float> maxStatValsBase = new Dictionary<StatPack.StatType, float>();
+    private static Dictionary<StatPack.StatType, float> maxStatValsMult = new Dictionary<StatPack.StatType, float>();
+    private static Dictionary<StatPack.StatType, float> minStatValsBase = new Dictionary<StatPack.StatType, float>();
+    private static Dictionary<StatPack.StatType, float> minStatValsMult = new Dictionary<StatPack.StatType, float>();
+    
+    private static StatPack baseStats = new StatPack();
+    private static StatPack currentStats = new StatPack();
+
+
+    public static void TryUpdate(StatPack pack){
+       //TODO:  How does this work now?
+    }
+
+    public static float MinStatValue(StatPack.StatType stat){
+        return (baseStats.GetAdd(stat) + minStatValsBase[stat]) * (1 + minStatValsMult[stat]);
+    }
+
+    public static float MaxStatValue(StatPack.StatType stat){
+        return (baseStats.GetAdd(stat) + maxStatValsBase[stat]) * (1 + maxStatValsMult[stat]);
+    }
+
+    public static void SetBaseStats(StatPack pack){
+        baseStats = pack;
+        //Weight never gets multiplied
+        maxStatValsMult[StatPack.StatType.Weight] = 0; 
+        minStatValsMult[StatPack.StatType.Weight] = 0;
+    }
+
+    public static void SetCurrentStats(StatPack pack){
+        currentStats = pack;
+    }
+
+    public static float CurrentStatValue(StatPack.StatType type){
+        return currentStats.GetAdd(type);
+    }
+
 }
