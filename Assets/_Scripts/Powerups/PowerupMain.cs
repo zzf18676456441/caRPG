@@ -12,15 +12,19 @@ public class PowerupMain : MonoBehaviour
 
     private bool isOwned = false;
     private bool isChecked = false;
+    private bool isEquipped = false;
 
     public bool IsOwned(){ return isOwned;}
     public bool IsChecked(){return isChecked;}
+    public bool IsEquipped(){return isEquipped;}
 
     public void SetOwned(bool owned){
         isOwned = owned;
     }
 
     public void Check(){isChecked = true;}
+    public void Equip(){isEquipped = true;}
+    public void UnEquip(){isEquipped = false;}
 
     void Awake(){
         attached = false;

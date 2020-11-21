@@ -119,7 +119,7 @@ public class Player : IDamagable
     }
 
     public void ReApplyStats(StatPack powerups){
-        StatPack newStats = ApplyToBase(powerups);
+        StatPack newStats = StatPack.ApplyToBase(baseStats, powerups);
         maxHealth = newStats.GetAdd(StatPack.StatType.Health);
         maxNO2 = newStats.GetAdd(StatPack.StatType.Nitro);
         currentArmor = newStats.GetAdd(StatPack.StatType.Armor);
@@ -130,13 +130,7 @@ public class Player : IDamagable
         GarageStats.SetCurrentStats(newStats);
     }
 
-    private StatPack ApplyToBase(StatPack powerups){
-        StatPack result = new StatPack();
-        foreach(StatPack.StatType type in System.Enum.GetValues(typeof(StatPack.StatType))){
-            result.SetAdd(type, (baseStats.GetAdd(type) + powerups.GetAdd(type)) * (1 + powerups.GetMult(type)));
-        }
-        return result;
-    }
+
 
 
     public void ResetStats(){

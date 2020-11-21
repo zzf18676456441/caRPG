@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWeapon: 1
-  weaponLocation: 2
+  weaponLocation: 1
   modLocation: 2
   attachType: 0
   baseDamage: 50

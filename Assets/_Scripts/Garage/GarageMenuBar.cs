@@ -24,12 +24,17 @@ public class GarageMenuBar : MonoBehaviour
                 main.Check();
                 StatPack stats = item.GetComponent<PowerupStats>().GetPack();
                 if (stats != null){
-                    SendStats(stats);
+                    SendStats(stats, item.GetComponent<PowerupAttachable>());
                 }
             }
             ButtonScripts scripts = element.gameObject.AddComponent<ButtonScripts>();
+            GarageItemButton gIB = element.gameObject.AddComponent<GarageItemButton>();
             scripts.SetItem(item);
             element.GetComponent<Button>().onClick.AddListener(scripts.EquipItem);
+            GarageSlider slider = GameObject.Find("GarageUI").transform.Find("StatSliders").GetComponent<GarageSlider>();
+            gIB.slider = slider;
+            gIB.item = item;
+            element.GetComponent<Button>().onClick.AddListener(slider.SetSlidersOnNewEquip);
             index++;
         }
 
@@ -42,7 +47,8 @@ public class GarageMenuBar : MonoBehaviour
         }
     }
 
-    private void SendStats(StatPack stats){
-        GarageStats.TryUpdate(stats);
+    private void SendStats(StatPack stats, PowerupAttachable attachable){
+        if(attachable.isWeapon) GarageStats.TryUpdate(stats, attachable.weaponLocation);
+        else GarageStats.TryUpdate(stats, attachable.modLocation);
     }
 }

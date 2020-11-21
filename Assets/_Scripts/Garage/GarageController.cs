@@ -16,8 +16,8 @@ public class GarageController : MonoBehaviour
 
     void Start()
     {
-        UpdateEquips();
         sliderController = transform.Find("StatSliders").GetComponent<GarageSlider>();
+        UpdateEquips();
         sliderController.SetSlidersOnOpen();
     }
 
@@ -76,32 +76,68 @@ public class GarageController : MonoBehaviour
 
 public static class GarageStats{
     
-    private static Dictionary<StatPack.StatType, float> maxStatValsBase = new Dictionary<StatPack.StatType, float>();
-    private static Dictionary<StatPack.StatType, float> maxStatValsMult = new Dictionary<StatPack.StatType, float>();
-    private static Dictionary<StatPack.StatType, float> minStatValsBase = new Dictionary<StatPack.StatType, float>();
-    private static Dictionary<StatPack.StatType, float> minStatValsMult = new Dictionary<StatPack.StatType, float>();
+    private static Dictionary<ModMount, StatPack> ModMin = new Dictionary<ModMount, StatPack>();
+    private static Dictionary<ModMount, StatPack> ModMax = new Dictionary<ModMount, StatPack>();
+    private static Dictionary<WeaponMount, StatPack> WeaponMin = new Dictionary<WeaponMount, StatPack>();
+    private static Dictionary<WeaponMount, StatPack> WeaponMax = new Dictionary<WeaponMount, StatPack>();
+
+    public static StatPack baseStats = new StatPack();
+    public static StatPack currentStats = new StatPack();
+
+    private static StatPack minStats = new StatPack();
+    private static StatPack maxStats = new StatPack();
     
-    private static StatPack baseStats = new StatPack();
-    private static StatPack currentStats = new StatPack();
-
-
-    public static void TryUpdate(StatPack pack){
-       //TODO:  How does this work now?
+    public static void TryUpdate(StatPack pack, ModMount mod){
+       if(ModMin.ContainsKey(mod)){
+            ModMin[mod] = StatPack.Min(ModMin[mod],pack);
+            ModMax[mod] = StatPack.Max(ModMax[mod],pack);
+       } else {
+            ModMin[mod] = StatPack.Min(new StatPack(),pack);
+            ModMax[mod] = StatPack.Max(new StatPack(),pack);
+       }
+       UpdateMinMax();
     }
 
+    public static void TryUpdate(StatPack pack, WeaponMount weapon){
+        if(WeaponMin.ContainsKey(weapon)){
+            WeaponMin[weapon] = StatPack.Min(WeaponMin[weapon],pack);
+            WeaponMax[weapon] = StatPack.Max(WeaponMax[weapon],pack);
+       } else {
+            WeaponMin[weapon] = StatPack.Min(new StatPack(),pack);
+            WeaponMax[weapon] = StatPack.Max(new StatPack(),pack);
+       }
+       UpdateMinMax();
+    }
+
+    private static void UpdateMinMax(){
+        minStats = new StatPack();
+        maxStats = new StatPack();
+        foreach(StatPack pack in ModMin.Values){
+            minStats += pack;
+        }
+        foreach(StatPack pack in ModMax.Values){
+            maxStats += pack;
+        }
+
+        foreach(StatPack pack in WeaponMin.Values){
+            minStats += pack;
+        }
+        foreach(StatPack pack in WeaponMax.Values){
+            maxStats += pack;
+        }
+    }
+
+
     public static float MinStatValue(StatPack.StatType stat){
-        return (baseStats.GetAdd(stat) + minStatValsBase[stat]) * (1 + minStatValsMult[stat]);
+        return (baseStats.GetAdd(stat) + minStats.GetAdd(stat)) * (1 + minStats.GetMult(stat));
     }
 
     public static float MaxStatValue(StatPack.StatType stat){
-        return (baseStats.GetAdd(stat) + maxStatValsBase[stat]) * (1 + maxStatValsMult[stat]);
+        return (baseStats.GetAdd(stat) + maxStats.GetAdd(stat)) * (1 + maxStats.GetMult(stat));
     }
 
     public static void SetBaseStats(StatPack pack){
         baseStats = pack;
-        //Weight never gets multiplied
-        maxStatValsMult[StatPack.StatType.Weight] = 0; 
-        minStatValsMult[StatPack.StatType.Weight] = 0;
     }
 
     public static void SetCurrentStats(StatPack pack){

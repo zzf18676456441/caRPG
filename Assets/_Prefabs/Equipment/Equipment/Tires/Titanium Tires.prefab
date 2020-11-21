@@ -85,11 +85,11 @@ MonoBehaviour:
   maxNO2Add: 0
   maxNO2Mult: 0
   weightAdd: 0
-  gripAdd: 0
+  gripAdd: 0.8
   gripMult: 0
   accelerationAdd: 0.2
   accelerationMult: 0
-  topSpeedAdd: 0
+  topSpeedAdd: 20
   topSpeedMult: 0
 --- !u!212 &-9218879485845414925
 SpriteRenderer:
