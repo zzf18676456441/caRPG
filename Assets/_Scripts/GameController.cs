@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
 
     private Player player;
     private GameObject car;
+    private LevelRewardsPassable rewardsPassable;
 
     void Awake()
     {
@@ -63,7 +64,9 @@ public class GameController : MonoBehaviour
 
     public void FinishLevel(){
         player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
-        List<GameObject> rewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>().GetRewards();
+        LevelRewards levelRewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>(); 
+        List<GameObject> rewards = levelRewards.GetRewards();
+        rewardsPassable = levelRewards.Save();
         foreach(GameObject reward in rewards){
             reward.GetComponent<PowerupMain>().SetOwned(true);
         }
@@ -73,7 +76,12 @@ public class GameController : MonoBehaviour
         player.currentNO2 = player.maxNO2;
         car.SetActive(false);
 
+
         SceneManager.LoadScene("LevelComplete", LoadSceneMode.Single);
+    }
+
+    public LevelRewardsPassable GetRewards(){
+        return rewardsPassable;
     }
 
     public void StartGarageLevel(){

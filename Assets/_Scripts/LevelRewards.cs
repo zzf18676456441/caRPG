@@ -25,6 +25,7 @@ public class LevelRewards : MonoBehaviour
     public float rewardThreeValue;
     public GameObject rewardThreePrefab;
 
+    public bool inLevel = true;
 
     private GameController controller;
     void Awake()
@@ -33,10 +34,16 @@ public class LevelRewards : MonoBehaviour
     }
 
     void Start(){
+        if(!inLevel){
+            Load(controller.GetRewards());
+        }
         UpdateText();
         gameObject.transform.Find("Reward1").GetComponent<Image>().sprite = rewardOnePrefab.GetComponent<SpriteRenderer>().sprite;
         gameObject.transform.Find("Reward2").GetComponent<Image>().sprite = rewardTwoPrefab.GetComponent<SpriteRenderer>().sprite;
         gameObject.transform.Find("Reward3").GetComponent<Image>().sprite = rewardThreePrefab.GetComponent<SpriteRenderer>().sprite;
+        if(!inLevel){
+            ShowSuccessFailure();
+        }
     }
 
     public void Show(){
@@ -45,6 +52,27 @@ public class LevelRewards : MonoBehaviour
 
     public void Hide(){
         gameObject.SetActive(false);
+    }
+
+    public void Load(LevelRewardsPassable source){
+        rewardOneCondition = source.rewardOneCondition;
+        rewardOneComparison = source.rewardOneComparison;
+        rewardOneValue = source.rewardOneValue;
+        rewardOnePrefab = source.rewardOnePrefab;
+
+        rewardTwoCondition = source.rewardTwoCondition;
+        rewardTwoComparison = source.rewardTwoComparison;
+        rewardTwoValue = source.rewardTwoValue;
+        rewardTwoPrefab = source.rewardTwoPrefab;
+        
+        rewardThreeCondition = source.rewardThreeCondition;
+        rewardThreeComparison = source.rewardThreeComparison;
+        rewardThreeValue = source.rewardThreeValue;
+        rewardThreePrefab = source.rewardThreePrefab;
+    }
+
+    public LevelRewardsPassable Save(){
+        return new LevelRewardsPassable(this);
     }
 
     public List<GameObject> GetRewards(){
@@ -70,7 +98,6 @@ public class LevelRewards : MonoBehaviour
     }
 
     public bool IsMet(int reward){
-        controller.GetPlayer().GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
         LevelStats stats = controller.GetPlayer().GetLevelStats();
         ConditionType type = rewardOneCondition;
         ComparisonType comparison = rewardOneComparison;
@@ -121,6 +148,25 @@ public class LevelRewards : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void ShowSuccessFailure(){
+        for(int reward = 1; reward < 4; reward++){
+            string target = "Reward" + reward + "Success";
+            Debug.Log(target);
+            Text[] textElements = gameObject.GetComponentsInChildren<Text>();
+            foreach(Text text in textElements){
+                if(text.name == target){
+                    if (IsMet(reward)){
+                        text.color = Color.green;
+                        text.text = "SUCCESS";
+                    } else {
+                        text.color = Color.red;
+                        text.text = "FAILURE";
+                    }
+                }
+            }
+        }        
     }
 
     private string GetDescription(ConditionType condition, ComparisonType comparison, float value){
@@ -182,4 +228,40 @@ public class LevelRewards : MonoBehaviour
       
     }
 
+}
+
+public class LevelRewardsPassable{
+    public LevelRewards.ConditionType rewardOneCondition;
+    public LevelRewards.ComparisonType rewardOneComparison;
+    public float rewardOneValue;
+    public GameObject rewardOnePrefab;
+
+
+    public LevelRewards.ConditionType rewardTwoCondition;
+    public LevelRewards.ComparisonType rewardTwoComparison;
+    public float rewardTwoValue;
+    public GameObject rewardTwoPrefab;
+    
+  
+    public LevelRewards.ConditionType rewardThreeCondition;
+    public LevelRewards.ComparisonType rewardThreeComparison;
+    public float rewardThreeValue;
+    public GameObject rewardThreePrefab;
+
+    public LevelRewardsPassable(LevelRewards source){
+        rewardOneCondition = source.rewardOneCondition;
+        rewardOneComparison = source.rewardOneComparison;
+        rewardOneValue = source.rewardOneValue;
+        rewardOnePrefab = source.rewardOnePrefab;
+
+        rewardTwoCondition = source.rewardTwoCondition;
+        rewardTwoComparison = source.rewardTwoComparison;
+        rewardTwoValue = source.rewardTwoValue;
+        rewardTwoPrefab = source.rewardTwoPrefab;
+        
+        rewardThreeCondition = source.rewardThreeCondition;
+        rewardThreeComparison = source.rewardThreeComparison;
+        rewardThreeValue = source.rewardThreeValue;
+        rewardThreePrefab = source.rewardThreePrefab;
+    }
 }
