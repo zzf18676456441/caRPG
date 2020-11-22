@@ -85,7 +85,7 @@ MonoBehaviour:
   maxNO2Add: 0
   maxNO2Mult: 0
   weightAdd: 0
-  gripAdd: 0
+  gripAdd: 0.1
   gripMult: 0
   accelerationAdd: 0.1
   accelerationMult: 0

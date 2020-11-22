@@ -23,6 +23,18 @@ public class PowerupManager : MonoBehaviour, IDamager
     
     GameController controller;
 
+
+    public PowerupAttachable GetMod(ModMount mount){ 
+        if (equippedMods.ContainsKey(mount))
+            return equippedMods[mount];
+        return null;
+    }
+    public PowerupAttachable GetWeapon(WeaponMount mount){
+        if (equippedWeapons.ContainsKey(mount))
+            return equippedWeapons[mount];
+        return null;
+    }
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -91,7 +103,12 @@ public class PowerupManager : MonoBehaviour, IDamager
             WeaponMount slot = attachment.weaponLocation;
             List<Joint> attachJoints = new List<Joint>();
             List<GameObject> newWeapons = new List<GameObject>();
+
+            if(equippedWeapons.ContainsKey(slot)){
+                equippedWeapons[slot].GetComponent<PowerupMain>().UnEquip();
+            }
             equippedWeapons[slot] = attachment;
+            
             if (physicalWeapons.ContainsKey(slot)){
                 foreach(GameObject oldWeapon in physicalWeapons[slot]){
                     Destroy(oldWeapon);
@@ -146,36 +163,34 @@ public class PowerupManager : MonoBehaviour, IDamager
             physicalWeapons[slot] = newWeapons;
 
         } else {
+            if(equippedMods.ContainsKey(attachment.modLocation)){
+                equippedMods[attachment.modLocation].GetComponent<PowerupMain>().UnEquip();
+            }
             equippedMods[attachment.modLocation] = attachment;
         }
         
+        attachment.GetComponent<PowerupMain>().Equip();
         ReCalcStats();
+
 
         return this;
     }
 
     public void ReCalcStats(){
-        PowerupStats powerupStats = gameObject.AddComponent<PowerupStats>();
+        StatPack powerupStats = new StatPack();
         foreach(PowerupAttachable attachment in equippedWeapons.Values){
             PowerupStats newStats = attachment.GetComponent<PowerupStats>();
             if(newStats != null){
-                powerupStats.maxHealthAdd += newStats.maxHealthAdd;
-                powerupStats.maxHealthMult += newStats.maxHealthMult;
-                powerupStats.maxArmorAdd += newStats.maxArmorAdd;
-                powerupStats.maxArmorMult += newStats.maxArmorMult;
-                powerupStats.maxNO2Add += newStats.maxNO2Add;
-                powerupStats.maxNO2Mult += newStats.maxNO2Mult;
-                powerupStats.weightAdd += newStats.weightAdd;
-                powerupStats.gripAdd += newStats.gripAdd;
-                powerupStats.gripMult += newStats.gripMult;
-                powerupStats.accelerationAdd += newStats.accelerationAdd;
-                powerupStats.accelerationMult += newStats.accelerationMult;
-                powerupStats.topSpeedAdd += newStats.topSpeedAdd;
-                powerupStats.topSpeedMult += newStats.topSpeedMult;
+                powerupStats += newStats.GetPack();
+            }
+        }
+        foreach(PowerupAttachable attachment in equippedMods.Values){
+            PowerupStats newStats = attachment.GetComponent<PowerupStats>();
+            if(newStats != null){
+                powerupStats += newStats.GetPack();
             }
         }
         controller.GetPlayer().ReApplyStats(powerupStats);
-        Destroy(powerupStats);
     }
 
 

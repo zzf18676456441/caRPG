@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
 
     private Player player;
     private GameObject car;
+    private LevelRewardsPassable rewardsPassable;
 
     void Awake()
     {
@@ -63,7 +64,9 @@ public class GameController : MonoBehaviour
 
     public void FinishLevel(){
         player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
-        List<GameObject> rewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>().GetRewards();
+        LevelRewards levelRewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>(); 
+        List<GameObject> rewards = levelRewards.GetRewards();
+        rewardsPassable = levelRewards.Save();
         foreach(GameObject reward in rewards){
             reward.GetComponent<PowerupMain>().SetOwned(true);
         }
@@ -73,7 +76,12 @@ public class GameController : MonoBehaviour
         player.currentNO2 = player.maxNO2;
         car.SetActive(false);
 
+
         SceneManager.LoadScene("LevelComplete", LoadSceneMode.Single);
+    }
+
+    public LevelRewardsPassable GetRewards(){
+        return rewardsPassable;
     }
 
     public void StartGarageLevel(){
@@ -103,31 +111,40 @@ public class Player : IDamagable
     private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
     private LevelStats levelStats = new LevelStats();
     
-    public PowerupStats baseStats;
+    public StatPack baseStats;
 
     public void SetupPlayer(){
-        baseStats = controller.gameObject.AddComponent<PowerupStats>();
-        baseStats.maxHealthAdd = 100;
-        baseStats.maxArmorAdd = 0;
-        baseStats.maxNO2Add = 100;
-        baseStats.weightAdd = controller.GetCar().GetComponent<Rigidbody2D>().mass;
-        baseStats.topSpeedAdd = controller.GetCar().GetComponent<Driving>().topSpeed;
-        baseStats.gripAdd = controller.GetCar().GetComponent<Driving>().staticCoefficientOfFriction;
-        baseStats.accelerationAdd = controller.GetCar().GetComponent<Driving>().acceleration;
+        baseStats = new StatPack();
+        baseStats.SetAdd(StatPack.StatType.Health, 100);
+        baseStats.SetAdd(StatPack.StatType.Nitro, 100);
+        
+        baseStats.SetAdd(StatPack.StatType.Weight, controller.GetCar().GetComponent<Rigidbody2D>().mass);
+        baseStats.SetAdd(StatPack.StatType.TopSpeed, controller.GetCar().GetComponent<Driving>().topSpeed);
+        baseStats.SetAdd(StatPack.StatType.Grip, controller.GetCar().GetComponent<Driving>().staticCoefficientOfFriction);
+        baseStats.SetAdd(StatPack.StatType.Acceleration, controller.GetCar().GetComponent<Driving>().acceleration);
+        GarageStats.SetBaseStats(baseStats);
+        GarageStats.SetCurrentStats(baseStats);
     }
 
-    public void ReApplyStats(PowerupStats powerups){
-        maxHealth = (baseStats.maxHealthAdd + powerups.maxHealthAdd) * (1+powerups.maxHealthMult);
-        maxNO2 = (baseStats.maxNO2Add + powerups.maxNO2Add) * (1+powerups.maxNO2Mult);
-        currentArmor = (baseStats.maxArmorAdd + powerups.maxArmorAdd) * (1+powerups.maxArmorMult);
-        controller.GetCar().GetComponent<Rigidbody2D>().mass = baseStats.weightAdd + powerups.weightAdd;
-        controller.GetCar().GetComponent<Driving>().topSpeed = (baseStats.topSpeedAdd + powerups.topSpeedAdd) * (1+powerups.topSpeedMult);
-        controller.GetCar().GetComponent<Driving>().staticCoefficientOfFriction = (baseStats.gripAdd + powerups.gripAdd) * (1+powerups.gripMult);
-        controller.GetCar().GetComponent<Driving>().acceleration = (baseStats.accelerationAdd + powerups.accelerationAdd) * (1+powerups.accelerationMult);
+    public void ReApplyStats(StatPack powerups){
+        StatPack newStats = StatPack.ApplyToBase(baseStats, powerups);
+        maxHealth = newStats.GetAdd(StatPack.StatType.Health);
+        maxNO2 = newStats.GetAdd(StatPack.StatType.Nitro);
+        currentArmor = newStats.GetAdd(StatPack.StatType.Armor);
+        controller.GetCar().GetComponent<Rigidbody2D>().mass = newStats.GetAdd(StatPack.StatType.Weight);
+        controller.GetCar().GetComponent<Driving>().topSpeed = newStats.GetAdd(StatPack.StatType.TopSpeed);
+        controller.GetCar().GetComponent<Driving>().staticCoefficientOfFriction = newStats.GetAdd(StatPack.StatType.Grip);
+        controller.GetCar().GetComponent<Driving>().acceleration = newStats.GetAdd(StatPack.StatType.Acceleration);
+        GarageStats.SetCurrentStats(newStats);
     }
+
+
+
 
     public void ResetStats(){
         levelStats = new LevelStats();
+        currentHealth = maxHealth;
+        currentNO2 = maxNO2;
     }
 
     public LevelStats GetLevelStats(){
@@ -162,6 +179,9 @@ public class Player : IDamagable
                 break;
                 case DamageFlag.Wall:
                     levelStats.AddStat(LevelRewards.ConditionType.WallContacts, 1f);
+                break;
+                case DamageFlag.Piercing:
+                    damageTaken+=currentArmor;
                 break;
                 default:
                 break;
@@ -198,7 +218,7 @@ public static class DamageSystem
 
 
 public enum DamageType { Fixed, VelocityAmplified, VelocityMitigated };
-public enum DamageFlag { Impact, Explosion, Projectile, Knockback, Wall };
+public enum DamageFlag { Impact, Explosion, Projectile, Knockback, Wall, Piercing };
 
 public class Damage
 {

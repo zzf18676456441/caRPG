@@ -23,7 +23,9 @@ public class ScoreControl : MonoBehaviour
 
     void Update()
     {
+        
         stats = controller.GetPlayer().GetLevelStats();
+        stats.SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
 
         float value = 0f;
         if (Time.realtimeSinceStartup > time + 3){
@@ -50,6 +52,7 @@ public class ScoreControl : MonoBehaviour
         } else {
             scoreText.text = value.ToString("0.00");
         }
+
         if (rewards.IsMet(reward)) scoreText.color = Color.green;
         else scoreText.color = Color.red;
     }
