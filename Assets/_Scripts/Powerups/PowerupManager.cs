@@ -143,8 +143,13 @@ public class PowerupManager : MonoBehaviour, IDamager
                 newAttachment.GetComponent<PowerupMain>().SetManager(this);
                 newWeapons.Add(newAttachment.gameObject);
                 newAttachment.SetAnchor(joint);
-                newAttachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f);
-                
+                if (joint == Joint.BLTire || joint == Joint.FLTire || joint == Joint.LDoor){
+                    newAttachment.gameObject.transform.localScale = new Vector3(-1,1,1);
+                    newAttachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f) - new Vector3(newAttachment.anchorOverride.x, newAttachment.anchorOverride.y,0);
+                } else {
+                    newAttachment.gameObject.transform.position = gameObject.transform.position + new Vector3(tJoint.anchor.x, tJoint.anchor.y, 0f) + new Vector3(newAttachment.anchorOverride.x, newAttachment.anchorOverride.y,0);
+                }
+
                 switch (aType)
                 {
                     case AttachType.Spring:

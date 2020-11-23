@@ -118,7 +118,7 @@ MonoBehaviour:
   baseDamage: 50
   damageType: 1
   damageFlags: 00000000
-  anchorOverride: {x: -0.6, y: 0}
+  anchorOverride: {x: 0.65, y: 0.6}
 --- !u!114 &8600120032122692231
 MonoBehaviour:
   m_ObjectHideFlags: 0

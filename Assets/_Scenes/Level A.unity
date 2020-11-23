@@ -6882,7 +6882,7 @@ PrefabInstance:
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardTwoPrefab
       value: 
-      objectReference: {fileID: 5781204156322854848, guid: f6645e06ca5282142a092faf4dc28f5d, type: 3}
+      objectReference: {fileID: 1604635227308429132, guid: 9456b77bc77e81a4bb5e5e57d6a94ecc, type: 3}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardThreeCondition
       value: 6
@@ -6894,7 +6894,7 @@ PrefabInstance:
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardThreePrefab
       value: 
-      objectReference: {fileID: 6014955629493736324, guid: a7e510b06cb920e4d8f4220fb7da4353, type: 3}
+      objectReference: {fileID: 813745153944893593, guid: 1ec2c9d209fce5340b8faeaa06cdb4f2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
 --- !u!1001 &594287046
