@@ -5226,6 +5226,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2732399006076392707, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 82263667b6a685449a15e533d2211f59, type: 3}
     - target: {fileID: 1198019462802842804, guid: 26231eee02852ea4dbb2e9cbf914fdb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5380,6 +5384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 890218965}
   - component: {fileID: 890218966}
+  - component: {fileID: 890218967}
   m_Layer: 0
   m_Name: city
   m_TagString: Untagged
@@ -5452,6 +5457,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &890218967
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890218964}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c81ef2253667e8541946fdf45747c045, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c81ef2253667e8541946fdf45747c045, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1237476303
 GameObject:
   m_ObjectHideFlags: 0
