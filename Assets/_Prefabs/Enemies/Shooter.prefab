@@ -74,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   baseDamage: 20
+  nO2Reward: 10
   damageType: 2
   damageFlags: 00000000
   knockbackForce: 0
