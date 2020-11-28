@@ -7,11 +7,16 @@ public class GameController : MonoBehaviour
 {
     public GameObject carPrefab;
     public string[] levels;
+
     private int nextLevel = 0;
 
     private Player player;
     private GameObject car;
     private LevelRewardsPassable rewardsPassable;
+
+    public bool handbreakDown = false;
+    private bool handbreakSFXPlayed = false;
+    private CarSFXHandler carSFX;
 
     void Awake()
     {
@@ -30,9 +35,20 @@ public class GameController : MonoBehaviour
         {
             GetPlayer().currentHealth += .0005f + (.001f * (GetCar().GetComponent<Rigidbody2D>().velocity.magnitude));
         }
+
+        //audio code
+        if (handbreakDown && !handbreakSFXPlayed && !(carSFX is null))
+        {
+            carSFX.PlaySqueal();
+            handbreakSFXPlayed = true;
+        }
+        else if (!handbreakDown)
+        {
+            handbreakSFXPlayed = false;
+        }
     }
 
-    
+
     public GameObject GetCar()
     {
         if (car != null)
@@ -43,10 +59,13 @@ public class GameController : MonoBehaviour
         return car;
     }
 
-    private GameObject CreateCar(){
+    private GameObject CreateCar()
+    {
         GameObject car = Instantiate(carPrefab);
         car.transform.SetParent(gameObject.transform);
         car.SetActive(false);
+        if (carSFX is null)
+            carSFX = car.GetComponentInChildren<CarSFXHandler>();
         return car;
     }
 
@@ -62,15 +81,17 @@ public class GameController : MonoBehaviour
         return player;
     }
 
-    public void FinishLevel(){
-        player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time,Time.timeSinceLevelLoad);
-        LevelRewards levelRewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>(); 
+    public void FinishLevel()
+    {
+        player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time, Time.timeSinceLevelLoad);
+        LevelRewards levelRewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>();
         List<GameObject> rewards = levelRewards.GetRewards();
         rewardsPassable = levelRewards.Save();
-        foreach(GameObject reward in rewards){
+        foreach (GameObject reward in rewards)
+        {
             reward.GetComponent<PowerupMain>().SetOwned(true);
         }
-        car.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+        car.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
         car.transform.up = new Vector3(0, 1, 0);
         player.currentNO2 = player.maxNO2;
@@ -80,20 +101,24 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("LevelComplete", LoadSceneMode.Single);
     }
 
-    public LevelRewardsPassable GetRewards(){
+    public LevelRewardsPassable GetRewards()
+    {
         return rewardsPassable;
     }
 
-    public void StartGarageLevel(){
+    public void StartGarageLevel()
+    {
         SceneManager.LoadScene("Garage", LoadSceneMode.Single);
     }
 
-    public void RetryLevel(){
+    public void RetryLevel()
+    {
         player.ResetStats();
-        SceneManager.LoadScene(levels[nextLevel-1], LoadSceneMode.Single);
+        SceneManager.LoadScene(levels[nextLevel - 1], LoadSceneMode.Single);
     }
 
-    public void StartNextLevel(){
+    public void StartNextLevel()
+    {
         player.ResetStats();
         SceneManager.LoadScene(levels[nextLevel++], LoadSceneMode.Single);
     }
@@ -110,14 +135,15 @@ public class Player : IDamagable
     public GameController controller;
     private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
     private LevelStats levelStats = new LevelStats();
-    
+
     public StatPack baseStats;
 
-    public void SetupPlayer(){
+    public void SetupPlayer()
+    {
         baseStats = new StatPack();
         baseStats.SetAdd(StatPack.StatType.Health, 100);
         baseStats.SetAdd(StatPack.StatType.Nitro, 100);
-        
+
         baseStats.SetAdd(StatPack.StatType.Weight, controller.GetCar().GetComponent<Rigidbody2D>().mass);
         baseStats.SetAdd(StatPack.StatType.TopSpeed, controller.GetCar().GetComponent<Driving>().topSpeed);
         baseStats.SetAdd(StatPack.StatType.Grip, controller.GetCar().GetComponent<Driving>().staticCoefficientOfFriction);
@@ -126,7 +152,8 @@ public class Player : IDamagable
         GarageStats.SetCurrentStats(baseStats);
     }
 
-    public void ReApplyStats(StatPack powerups){
+    public void ReApplyStats(StatPack powerups)
+    {
         StatPack newStats = StatPack.ApplyToBase(baseStats, powerups);
         maxHealth = newStats.GetAdd(StatPack.StatType.Health);
         maxNO2 = newStats.GetAdd(StatPack.StatType.Nitro);
@@ -141,50 +168,56 @@ public class Player : IDamagable
 
 
 
-    public void ResetStats(){
+    public void ResetStats()
+    {
         levelStats = new LevelStats();
         currentHealth = maxHealth;
         currentNO2 = maxNO2;
     }
 
-    public LevelStats GetLevelStats(){
+    public LevelStats GetLevelStats()
+    {
         return levelStats;
     }
 
     public void ApplyDamage(Damage damage, Vector2 velocity)
     {
-        if(recentDamagers.ContainsKey(damage.source)){
+        if (recentDamagers.ContainsKey(damage.source))
+        {
             if (Time.time < recentDamagers[damage.source] + 1f) return;
         }
         recentDamagers[damage.source] = Time.time;
 
         float damageTaken = damage.baseDamage;
 
-        switch(damage.type){
+        switch (damage.type)
+        {
             case DamageType.VelocityMitigated:
                 damageTaken /= (1 + (controller.GetCar().GetComponent<Rigidbody2D>().velocity.magnitude * .5f));
-            break;
+                break;
             case DamageType.VelocityAmplified:
                 damageTaken *= velocity.magnitude / 25f;
-            break;
+                break;
             case DamageType.Fixed:
             default:
-            break;
+                break;
         }
 
-        foreach(DamageFlag flag in damage.flags.Keys){
-            switch(flag){
+        foreach (DamageFlag flag in damage.flags.Keys)
+        {
+            switch (flag)
+            {
                 case DamageFlag.Knockback:
                     controller.GetCar().GetComponent<Rigidbody2D>().AddForce(velocity * damage.knockbackForce / velocity.magnitude);
-                break;
+                    break;
                 case DamageFlag.Wall:
                     levelStats.AddStat(LevelRewards.ConditionType.WallContacts, 1f);
-                break;
+                    break;
                 case DamageFlag.Piercing:
-                    damageTaken+=currentArmor;
-                break;
+                    damageTaken += currentArmor;
+                    break;
                 default:
-                break;
+                    break;
             }
         }
 
@@ -201,18 +234,22 @@ public class Player : IDamagable
         levelStats.AddStat(LevelRewards.ConditionType.DamageTaken, damageTaken);
     }
 
-    public void AddNO2(float amount){
-        currentNO2 += amount;
+    public void AddNO2(float amount)
+    {
+        if (currentNO2 < maxNO2)
+            currentNO2 += amount;
     }
 }
 
 public static class DamageSystem
 {
-    public static void ApplyDamage(IDamager damager, IDamagable damagable, Vector2 velocity){
+    public static void ApplyDamage(IDamager damager, IDamagable damagable, Vector2 velocity)
+    {
         damagable.ApplyDamage(damager.GetDamage(), velocity);
     }
-    public static void ApplyDamage(IDamager damager, IDamagable damagable){
-        damagable.ApplyDamage(damager.GetDamage(), new Vector2(0,0));
+    public static void ApplyDamage(IDamager damager, IDamagable damagable)
+    {
+        damagable.ApplyDamage(damager.GetDamage(), new Vector2(0, 0));
     }
 }
 
@@ -252,26 +289,30 @@ public interface IDamagable
     void ApplyDamage(Damage damage, Vector2 velocity);
 }
 
-public class LevelStats{
+public class LevelStats
+{
     public Dictionary<LevelRewards.ConditionType, float> stats;
 
-    public LevelStats(){
+    public LevelStats()
+    {
         stats = new Dictionary<LevelRewards.ConditionType, float>();
-        stats.Add(LevelRewards.ConditionType.Brakes,0f);
-        stats.Add(LevelRewards.ConditionType.DamageDealt,0f);
-        stats.Add(LevelRewards.ConditionType.DamageTaken,0f);
-        stats.Add(LevelRewards.ConditionType.EnemyContacts,0f);
-        stats.Add(LevelRewards.ConditionType.Kills,0f);
-        stats.Add(LevelRewards.ConditionType.Time,0f);
-        stats.Add(LevelRewards.ConditionType.TopSpeed,0f);
-        stats.Add(LevelRewards.ConditionType.WallContacts,0f);
-    }   
+        stats.Add(LevelRewards.ConditionType.Brakes, 0f);
+        stats.Add(LevelRewards.ConditionType.DamageDealt, 0f);
+        stats.Add(LevelRewards.ConditionType.DamageTaken, 0f);
+        stats.Add(LevelRewards.ConditionType.EnemyContacts, 0f);
+        stats.Add(LevelRewards.ConditionType.Kills, 0f);
+        stats.Add(LevelRewards.ConditionType.Time, 0f);
+        stats.Add(LevelRewards.ConditionType.TopSpeed, 0f);
+        stats.Add(LevelRewards.ConditionType.WallContacts, 0f);
+    }
 
-    public void AddStat(LevelRewards.ConditionType type, float value){
+    public void AddStat(LevelRewards.ConditionType type, float value)
+    {
         stats[type] += value;
     }
 
-    public void SetStat(LevelRewards.ConditionType type, float value){
+    public void SetStat(LevelRewards.ConditionType type, float value)
+    {
         stats[type] = value;
     }
 }
