@@ -33,7 +33,6 @@ public class EnemyExplodeAI : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         player = controller.GetCar().transform;
         gameObject.GetComponent<SinglePointMovement>().maxSpeed /= 5;
-        sprite.color = Color.red;
     }
 
     // Update is called once per frame
