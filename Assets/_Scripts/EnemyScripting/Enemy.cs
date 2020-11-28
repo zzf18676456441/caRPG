@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     public float knockbackForce = 0f;
     public GameObject aliengore;
     public GameObject alienblood;
+    public EnemyAudioHandler audioHandler;
 
     private SpriteRenderer sprite;
     private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
@@ -46,41 +48,54 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     {
         Player player = GameObject.Find("GameControllerObject").GetComponent<GameController>().GetPlayer();
 
-        if(recentDamagers.ContainsKey(damage.source)){
+        if (recentDamagers.ContainsKey(damage.source))
+        {
             if (Time.time < recentDamagers[damage.source] + 0.2f) return;
         }
         recentDamagers[damage.source] = Time.time;
         FlashRed();
         float damageTaken = damage.baseDamage;
 
-        switch(damage.type){
+        switch (damage.type)
+        {
             case DamageType.VelocityMitigated:
                 damageTaken /= (1 + (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude * .5f));
-            break;
+                break;
             case DamageType.VelocityAmplified:
                 damageTaken *= (velocity.magnitude + 25f) / 25f;
-            break;
+                break;
             case DamageType.Fixed:
             default:
-            break;    
+                break;
         }
 
-        foreach(DamageFlag flag in damage.flags.Keys){
-            switch(flag){
+        foreach (DamageFlag flag in damage.flags.Keys)
+        {
+            switch (flag)
+            {
                 case DamageFlag.Wall:
-                    if (velocity.magnitude > 25f){
+                    if (velocity.magnitude > 25f)
+                    {
                         damageTaken *= 25;
                     }
                     else
                         damageTaken = 0;
-                break;
+                    break;
                 default:
-                    player.GetLevelStats().AddStat(LevelRewards.ConditionType.EnemyContacts,1);
-                break;
+                    player.GetLevelStats().AddStat(LevelRewards.ConditionType.EnemyContacts, 1);
+                    break;
             }
         }
 
         health -= damageTaken;
+        if (damageTaken > 0)
+        {
+            try
+            {
+                audioHandler.PlayDeathSound();
+            }
+            catch (Exception) { }
+        }
         player.GetLevelStats().AddStat(LevelRewards.ConditionType.DamageDealt, damageTaken);
         if (health <= 0)
         {
@@ -97,10 +112,12 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
         IDamagable damagable = (IDamagable)collision.collider.GetComponent(typeof(IDamagable));
         Enemy enemyCheck = (Enemy)collision.collider.GetComponent(typeof(Enemy));
         if (enemyCheck != null) return;
-        if (damager != null) {
+        if (damager != null)
+        {
             DamageSystem.ApplyDamage(damager, this, collision.relativeVelocity);
-        }        
-        if (damagable != null) {
+        }
+        if (damagable != null)
+        {
             DamageSystem.ApplyDamage(this, damagable, collision.relativeVelocity);
         }
     }

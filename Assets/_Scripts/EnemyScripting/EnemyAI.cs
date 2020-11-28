@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     //if player out of this range, enemy will back to randomly roaming otherwise it will chase enemy and attack.
     public float chaseRange = 30f;
     public float stopChaseRange = 50f;
+    public EnemyAudioHandler audioHandler;
 
     private Transform player;
 
@@ -33,6 +34,7 @@ public class EnemyAI : MonoBehaviour
             if (startChase)
             {
                 gameObject.GetComponent<SinglePointMovement>().Chase(player);
+                audioHandler.PlayActionSound();
             }
         }
     }
