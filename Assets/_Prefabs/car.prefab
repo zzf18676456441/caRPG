@@ -911,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 5246917541190323971}
     - target: {fileID: 2252828196363338180, guid: aa2575beb8f81224eab3cd697f04456d, type: 3}
       propertyPath: outlineColor.a
-      value: 0.69803923
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2252828196363338182, guid: aa2575beb8f81224eab3cd697f04456d, type: 3}
       propertyPath: m_LocalPosition.x

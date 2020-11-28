@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 5
+  explosion: {fileID: 3630504700203359332, guid: c442330af8c4be943a5d92ac219892a4, type: 3}
 --- !u!114 &-3463488573677154528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1a215584b22184683c7d6a6a6e320c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 10
+  baseDamage: 12
   type: 0
   flags: 
 --- !u!114 &-5968672840040176299
