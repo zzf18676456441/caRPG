@@ -4936,4 +4936,5 @@ MonoBehaviour:
   goreSounds:
   - {fileID: 8300000, guid: 3286ab455d25ab24ea6c9d1518737f8c, type: 3}
   - {fileID: 8300000, guid: 8faeb7643b567724880d50b5a1f00892, type: 3}
+  - {fileID: 8300000, guid: 9d48d1288d91d9d41bb13c54cd2042e8, type: 3}
   source: {fileID: -3653562774382816904}

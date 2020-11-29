@@ -16,13 +16,28 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     public GameObject aliengore;
     public GameObject alienblood;
     public EnemyAudioHandler audioHandler;
+    private float recoveryTimer = .1f;
+    private float recoveryTime;
 
     private SpriteRenderer sprite;
     private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
 
     void Start()
     {
+        recoveryTime = recoveryTimer;
         sprite = GetComponent<SpriteRenderer>();
+    }
+    void Update()
+    {
+        if (recoveryTime <= 0 && sprite.color.a == 0)
+        {
+            sprite.color = Color.white;
+            recoveryTime = recoveryTimer;
+        }
+        else if (recoveryTime > 0 && sprite.color.a == 0)
+        {
+            recoveryTime -= Time.deltaTime;
+        }
     }
 
     private void die()
@@ -53,7 +68,6 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
             if (Time.time < recentDamagers[damage.source] + 0.2f) return;
         }
         recentDamagers[damage.source] = Time.time;
-        FlashRed();
         float damageTaken = damage.baseDamage;
 
         switch (damage.type)
@@ -95,6 +109,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
                 audioHandler.PlayDeathSound();
             }
             catch (Exception) { }
+            sprite.color = new Color(0, 0, 0, 0);
         }
         player.GetLevelStats().AddStat(LevelRewards.ConditionType.DamageDealt, damageTaken);
         if (health <= 0)
@@ -123,10 +138,8 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     }
 
 
-    IEnumerator FlashRed()
+    void FlashRed()
     {
         sprite.color = Color.red;
-        yield return new WaitForSeconds(1f);
-        sprite.color = Color.white;
     }
 }
