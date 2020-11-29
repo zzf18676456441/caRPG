@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,21 +17,29 @@ public class EnemyAudioHandler : MonoBehaviour
     {
         if (actionSoundTime <= 0)
         {
-            source.clip = actionSounds[Random.Range(0, actionSounds.Count)];
+            try
+            {
+                source.clip = actionSounds[UnityEngine.Random.Range(0, actionSounds.Count)];
+            }
+            catch (Exception) { }
             source.Play();
-            source.pitch = Random.Range(0.85f, 1f);
+            source.pitch = UnityEngine.Random.Range(0.85f, 1f);
             actionSoundTime = actionSoundTimer;
         }
         else
         {
-            if (Random.Range(0, 2) == 0)
+            if (UnityEngine.Random.Range(0, 2) == 0)
                 actionSoundTime -= Time.deltaTime;
         }
     }
     public void PlayDeathSound()
     {
         source.Stop();
-        source.clip = deathSounds[Random.Range(0, deathSounds.Count)];
+        try
+        {
+            source.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Count)];
+        }
+        catch (Exception) { }
         source.Play();
     }
 }

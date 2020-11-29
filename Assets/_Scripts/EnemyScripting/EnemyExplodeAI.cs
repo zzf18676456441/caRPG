@@ -20,7 +20,7 @@ public class EnemyExplodeAI : MonoBehaviour
     private SpriteRenderer sprite;
     public float explodeTime = 3f;
 
-
+    public EnemyAudioHandler audioHandler;
 
     GameController controller;
     void Awake()
@@ -64,6 +64,7 @@ public class EnemyExplodeAI : MonoBehaviour
         if ((!startChase) && Vector2.Distance(transform.position, player.position) < chaseRange)
         {
             startChase = true;
+            audioHandler.PlayActionSound();
             gameObject.GetComponent<EnemyRoamAI>().enabled = false;
             gameObject.GetComponent<SinglePointMovement>().maxSpeed *= 5;
             return;
