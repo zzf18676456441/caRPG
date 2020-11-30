@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     private SpriteRenderer sprite;
     private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
 
-    void Start()
+    void Awake()
     {
         recoveryTime = recoveryTimer;
         sprite = GetComponent<SpriteRenderer>();
@@ -65,6 +65,11 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
         if (recentDamagers.ContainsKey(damage.source))
         {
+            if (this.name == "Boss")
+            {
+                if (Time.time < recentDamagers[damage.source] + 0.5f) return;
+            }
+            else
             if (Time.time < recentDamagers[damage.source] + 0.2f) return;
         }
         recentDamagers[damage.source] = Time.time;
@@ -109,7 +114,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
                 audioHandler.PlayDeathSound();
             }
             catch (Exception) { }
-            sprite.color = new Color(0, 0, 0, 0);
+            sprite.color = new Color(0f, 0f, 0f, 0f);
         }
         player.GetLevelStats().AddStat(LevelRewards.ConditionType.DamageDealt, damageTaken);
         if (health <= 0)

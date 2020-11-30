@@ -82,9 +82,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: cd90eeacf3bcca5418443c472535a06a, type: 3}
-  m_Color: {r: 1, g: 0.5896226, b: 0.80236745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30435ca6312f7244190a45568ec073ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 7500
+  health: 5000
   baseDamage: 50
   nO2Reward: 10
   damageType: 2
