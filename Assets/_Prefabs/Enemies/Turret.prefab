@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 3147642646958132201}
   - component: {fileID: 1819272876545910382}
   - component: {fileID: 763259486613153485}
-  - component: {fileID: 2673420885785881407}
   - component: {fileID: 2673420885785881404}
+  - component: {fileID: 1389273851559220239}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: Turret
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,25 +270,6 @@ MonoBehaviour:
   sliding: 2
   rotationSpeed: 720
   direction: 1
---- !u!114 &2673420885785881407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2673420885785881406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6edb0baa83cf25c4fb8c5d5804e2b451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 50
-  startShotTime_Mode1: 2
-  startShotTime_Mode2: 5
-  startShotTime_Mode3: 8
-  projectile1: {fileID: 468592939498837183, guid: 18d5c8317b4eb4c4f99df6a3f642a3b8, type: 3}
-  projectile2: {fileID: 8640706373894764829, guid: 02f18192039e7e64c93acb2db1f308b5, type: 3}
-  projectile3: {fileID: 6096736112796660664, guid: b0241da71dd202f45bae4d325dd25a34, type: 3}
 --- !u!114 &2673420885785881404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +291,25 @@ MonoBehaviour:
   aliengore: {fileID: 0}
   alienblood: {fileID: 0}
   audioHandler: {fileID: 0}
+--- !u!114 &1389273851559220239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673420885785881406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edb0baa83cf25c4fb8c5d5804e2b451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 50
+  startShotTime_Mode1: 3
+  startShotTime_Mode2: 5
+  startShotTime_Mode3: 8
+  projectile1: {fileID: 468592939498837183, guid: 18d5c8317b4eb4c4f99df6a3f642a3b8, type: 3}
+  projectile2: {fileID: 8640706373894764829, guid: 02f18192039e7e64c93acb2db1f308b5, type: 3}
+  projectile3: {fileID: 6096736112796660664, guid: b0241da71dd202f45bae4d325dd25a34, type: 3}
 --- !u!1 &3155469645502018696
 GameObject:
   m_ObjectHideFlags: 0
