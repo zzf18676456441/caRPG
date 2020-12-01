@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Wall"))
         {
-            GameObject detonated = Instantiate(explosion, this.transform.position, Quaternion.identity);
+            Instantiate(explosion, this.transform.position, Quaternion.identity);
             DestroyProjectile();
         }
     }
@@ -37,5 +37,6 @@ public class Projectile : MonoBehaviour
     void DestroyProjectile()
     {
         Destroy(gameObject);
+        Instantiate(explosion, this.transform.position, Quaternion.identity);
     }
 }
