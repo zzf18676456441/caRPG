@@ -35,5 +35,9 @@ public class ButtonScripts : MonoBehaviour
         controller.ExitGame();
     }
 
+    public void MainMenu(){
+        controller.MainMenu();
+    }
+
 
 }

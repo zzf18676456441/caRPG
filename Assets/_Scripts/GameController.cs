@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         if (GetPlayer().currentHealth <= 0)
         {
             FinishLevel();
-            SceneManager.LoadScene(2); //"Game Over" screen.
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single); //"Game Over" screen.
             GetPlayer().currentHealth = 100; //sets player health to 100 so we can get back in the game
         }
         if (GetPlayer().currentHealth < GetPlayer().maxHealth)
@@ -133,6 +133,11 @@ public class GameController : MonoBehaviour
         Application.Quit();
     }
 
+    public void MainMenu(){
+        player.ResetStats();
+        nextLevel = 0;
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
 }
 
 public class Player : IDamagable

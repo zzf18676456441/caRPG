@@ -15,9 +15,10 @@ public class RestartHandler : MonoBehaviour
     {
         //makes the background flash
         backgroundImage.color = new Color(.6f, .35f, .35f, Mathf.Abs(Mathf.Sin(Time.time)) + .1f);
-        if (Input.anyKey)
+/*        if (Input.anyKey)
         {
             controller.RetryLevel();
         }
+    */
     }
 }
