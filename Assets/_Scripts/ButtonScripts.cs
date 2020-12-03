@@ -31,5 +31,9 @@ public class ButtonScripts : MonoBehaviour
         controller.GetCar().GetComponent<PowerupManager>().Attach(attachedItem.GetComponent<PowerupAttachable>(), AttachType.Fixed);
     }
 
+    public void Quit(){
+        controller.ExitGame();
+    }
+
 
 }

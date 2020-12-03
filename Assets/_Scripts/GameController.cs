@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     public bool handbreakDown = false;
     private bool handbreakSFXPlayed = false;
     private CarSFXHandler carSFX;
+    private bool started = false;
 
     void Awake()
     {
@@ -25,6 +26,11 @@ public class GameController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!started){
+            started = true;
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
+        
         if (GetPlayer().currentHealth <= 0)
         {
             FinishLevel();
@@ -121,6 +127,10 @@ public class GameController : MonoBehaviour
     {
         player.ResetStats();
         SceneManager.LoadScene(levels[nextLevel++], LoadSceneMode.Single);
+    }
+
+    public void ExitGame(){
+        Application.Quit();
     }
 
 }
