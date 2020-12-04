@@ -129,6 +129,12 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(levels[nextLevel++], LoadSceneMode.Single);
     }
 
+    public void StartLevel(int index){
+        player.ResetStats();
+        nextLevel = index + 1;
+        SceneManager.LoadScene(levels[index], LoadSceneMode.Single);
+    }
+
     public void ExitGame(){
         Application.Quit();
     }

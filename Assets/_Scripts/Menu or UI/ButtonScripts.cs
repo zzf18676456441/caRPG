@@ -6,6 +6,9 @@ public class ButtonScripts : MonoBehaviour
 {
     GameController controller;
     private GameObject attachedItem;
+
+    public int number;
+
     void Awake()
     {
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
@@ -39,5 +42,16 @@ public class ButtonScripts : MonoBehaviour
         controller.MainMenu();
     }
 
+    public void ShowPopup(GameObject popup){
+        GameObject shown = Instantiate(popup,transform.parent);
+    }
+
+    public void StartButtonPresetLevel(){
+        controller.StartLevel(number);
+    }
+
+    public void KillParent(){
+        Destroy(gameObject.transform.parent.gameObject);
+    }
 
 }

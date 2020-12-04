@@ -5631,11 +5631,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 963001181}
         m_TargetAssemblyTypeName: ButtonScripts, Assembly-CSharp
-        m_MethodName: StartNextLevel
-        m_Mode: 1
+        m_MethodName: ShowPopup
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5581983448239380477, guid: f432af1bea315354e8d6c3b35d04a0ab, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Level A
@@ -5691,6 +5691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7938c889ff19c3245954d2b4572b337c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 0
 --- !u!1 &1237476303
 GameObject:
   m_ObjectHideFlags: 0
@@ -11014,6 +11015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7938c889ff19c3245954d2b4572b337c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 0
 --- !u!1 &1796858131
 GameObject:
   m_ObjectHideFlags: 0
@@ -11277,11 +11279,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1987353233}
         m_TargetAssemblyTypeName: ButtonScripts, Assembly-CSharp
-        m_MethodName: StartNextLevel
-        m_Mode: 1
+        m_MethodName: ShowPopup
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4412273640347920449, guid: bbbb4e865a682084c958b9a42016e1db, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Level A
@@ -11337,6 +11339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7938c889ff19c3245954d2b4572b337c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 0
 --- !u!1 &2073236067
 GameObject:
   m_ObjectHideFlags: 0
@@ -11561,6 +11564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7938c889ff19c3245954d2b4572b337c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 0
 --- !u!1 &2096074976
 GameObject:
   m_ObjectHideFlags: 0
@@ -11729,6 +11733,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1237476307}
     m_Modifications:
+    - target: {fileID: 3409825672329938416, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowPopup
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409825672329938416, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409825672329938416, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409825672329938416, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3971990093229481314, guid: c82761d2ffda75a4d843aea383af0ec6, type: 3}
     - target: {fileID: 3409825672329938422, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
       propertyPath: m_Name
       value: Credits
