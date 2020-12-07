@@ -51,7 +51,7 @@ public class PauseController : MonoBehaviour
 
     public void LoadGarage()
     {
-        controller.StartGarageLevel();
+        controller.StartGarageMidLevel();
     }
 
     public void LoadMainMenu()

@@ -218,6 +218,12 @@ public class GameController : MonoBehaviour
         nextLevel = 0;
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
+
+    public void StartGarageMidLevel(){
+        nextLevel--;
+        StartGarageLevel();
+    }
+
 }
 
 public class Player : IDamagable
