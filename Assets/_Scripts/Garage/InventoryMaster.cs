@@ -14,5 +14,4 @@ public class InventoryMaster : MonoBehaviour
     public List<GameObject> RoofWeapons;
     public List<GameObject> DoorWeapons;
     public List<GameObject> WheelWeapons;  
-
 }

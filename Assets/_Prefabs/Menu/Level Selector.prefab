@@ -858,6 +858,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartButtonPresetLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 3409825672329938416, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3409825672329938422, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
       propertyPath: m_Name
       value: Button0
@@ -945,6 +949,10 @@ PrefabInstance:
     - target: {fileID: 3409825672329938423, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409825672702411415, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
+      propertyPath: m_Text
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b86078cdf830e504995d54adeb3c1017, type: 3}
