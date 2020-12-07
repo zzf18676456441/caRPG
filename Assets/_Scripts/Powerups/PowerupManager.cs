@@ -20,7 +20,8 @@ public class PowerupManager : MonoBehaviour, IDamager
     private Dictionary<WeaponMount, PowerupAttachable> equippedWeapons;
     private Dictionary<ModMount, PowerupAttachable> equippedMods;
     private Dictionary<WeaponMount, List<GameObject>> physicalWeapons;
-    
+
+    public float baseDamage = 20f;    
     GameController controller;
 
 
@@ -181,6 +182,33 @@ public class PowerupManager : MonoBehaviour, IDamager
         return this;
     }
 
+    public void Remove(WeaponMount slot){
+        Debug.Log("CALLED");
+        if(equippedWeapons.ContainsKey(slot)){
+            equippedWeapons[slot].GetComponent<PowerupMain>().UnEquip();
+            equippedWeapons.Remove(slot);
+        }
+        if (physicalWeapons.ContainsKey(slot)){
+            foreach(GameObject oldWeapon in physicalWeapons[slot]){
+                Destroy(oldWeapon);
+            }
+        }
+        ReCalcStats();
+    }
+
+    public void Remove(ModMount slot){
+        if(equippedMods.ContainsKey(slot)){
+            equippedMods[slot].GetComponent<PowerupMain>().UnEquip();
+            equippedMods.Remove(slot);
+        }
+        ReCalcStats();
+    }
+
+    public float GetWeaponDamage(WeaponMount slot){
+        if(equippedWeapons.ContainsKey(slot)) return equippedWeapons[slot].baseDamage;
+        return baseDamage;
+    }
+
     public void ReCalcStats(){
         StatPack powerupStats = new StatPack();
         foreach(PowerupAttachable attachment in equippedWeapons.Values){
@@ -244,7 +272,7 @@ public class PowerupManager : MonoBehaviour, IDamager
     }
 
     public Damage GetDamage(){
-        Damage damage = new Damage(50f, DamageType.VelocityAmplified, this.gameObject);
+        Damage damage = new Damage(baseDamage, DamageType.VelocityAmplified, this.gameObject);
         damage.AddDamageFlag(DamageFlag.Impact);
         return damage;
     }

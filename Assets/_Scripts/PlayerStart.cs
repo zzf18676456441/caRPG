@@ -15,7 +15,7 @@ public class PlayerStart : MonoBehaviour
         player.transform.position = gameObject.transform.position;
         player.transform.rotation = gameObject.transform.rotation;
         player.SetActive(true);
-        
+        player.GetComponent<Driving>().enabled = true;
     }
 
     // Update is called once per frame

@@ -31,7 +31,16 @@ public class ButtonScripts : MonoBehaviour
     }
 
     public void EquipItem(){
-        controller.GetCar().GetComponent<PowerupManager>().Attach(attachedItem.GetComponent<PowerupAttachable>(), AttachType.Fixed);
+        if(attachedItem.GetComponent<PowerupMain>().IsOwned()){
+            controller.GetCar().GetComponent<PowerupManager>().Attach(attachedItem.GetComponent<PowerupAttachable>(), AttachType.Fixed);
+            transform.parent.GetComponent<GarageMenuBar>().Select(this.gameObject);
+        }
+    }
+
+    public void UnequipItem(){
+        GarageItemButton gIB = gameObject.GetComponent<GarageItemButton>();
+        gIB.Unequip(controller);
+        transform.parent.GetComponent<GarageMenuBar>().Select(this.gameObject);
     }
 
     public void Quit(){

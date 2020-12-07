@@ -117,7 +117,7 @@ MonoBehaviour:
   weaponLocation: 3
   modLocation: 2
   attachType: 0
-  baseDamage: 0
+  baseDamage: 20
   damageType: 1
   damageFlags: 00000000
   anchorOverride: {x: 0, y: -0.4}

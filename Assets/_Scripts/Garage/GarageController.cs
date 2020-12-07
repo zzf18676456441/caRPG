@@ -6,12 +6,14 @@ public class GarageController : MonoBehaviour
 {
     GameController controller;
     InventoryMaster inventory;
+    Driving car;
     GarageSlider sliderController;
     // Start is called before the first frame update
     void Awake()
     {
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
         inventory = controller.GetComponent<InventoryMaster>();
+        car = controller.GetCar().GetComponent<Driving>();
     }
 
     void Start()
@@ -21,48 +23,51 @@ public class GarageController : MonoBehaviour
         sliderController.SetSlidersOnOpen();
     }
 
-
+    void Update()
+    {
+        if (car.enabled) car.enabled = false;
+    }
 
     private void UpdateEquips(){
-        GameObject ItemGroup = transform.Find("Inventory").Find("Upgrades Tab").Find("ItemGroup").gameObject;
+        GameObject ItemGroup = transform.Find("Inventory").Find("Mods").gameObject;
         foreach(GarageMenuBar child in ItemGroup.transform.GetComponentsInChildren<GarageMenuBar>())
         {
             switch (child.gameObject.name){
-                case "Engine":
+                case "EngineMods":
                     child.UpdateButtons(inventory.EngineMods);
                 break;
-                case "Wheels":
+                case "WheelMods":
                     child.UpdateButtons(inventory.TireMods);
                 break;
-                case "Chassis":
+                case "ChassisMods":
                     child.UpdateButtons(inventory.BumperMods);
                 break;
-                case "Nitro":
+                case "NitroMods":
                     child.UpdateButtons(inventory.TrunkMods);
                 break;
-                case "Exterior":
+                case "BumperMods":
                     child.UpdateButtons(inventory.FrameMods);
                 break;
             }
         }
 
-        ItemGroup = transform.Find("Inventory").Find("Attachments Tab").Find("ItemGroup").gameObject;
+        ItemGroup = transform.Find("Inventory").Find("Weapons").gameObject;
         foreach(GarageMenuBar child in ItemGroup.transform.GetComponentsInChildren<GarageMenuBar>())
         {
             switch (child.gameObject.name){
-                case "Front Bumper":
+                case "FrontWeapons":
                     child.UpdateButtons(inventory.GrillWeapons);
                 break;
-                case "Rear Bumper":
+                case "RearWeapons":
                     child.UpdateButtons(inventory.HitchWeapons);
                 break;
-                case "Rims":
+                case "WheelWeapons":
                     child.UpdateButtons(inventory.WheelWeapons);
                 break;
-                case "Doors":
+                case "DoorWeapons":
                     child.UpdateButtons(inventory.DoorWeapons);
                 break;
-                case "Roof":
+                case "RoofWeapons":
                     child.UpdateButtons(inventory.RoofWeapons);
                 break;
             }
@@ -87,6 +92,10 @@ public static class GarageStats{
     private static StatPack minStats = new StatPack();
     private static StatPack maxStats = new StatPack();
     
+    public static float minDamage = 20f; // Set to be the car's base damage
+    public static float maxDamage = 20f;
+
+
     public static void TryUpdate(StatPack pack, ModMount mod){
        if(ModMin.ContainsKey(mod)){
             ModMin[mod] = StatPack.Min(ModMin[mod],pack);
@@ -98,15 +107,16 @@ public static class GarageStats{
        UpdateMinMax();
     }
 
-    public static void TryUpdate(StatPack pack, WeaponMount weapon){
+    public static void TryUpdate(StatPack pack, WeaponMount weapon, float damage){
+        if (damage > maxDamage) maxDamage = damage;
         if(WeaponMin.ContainsKey(weapon)){
             WeaponMin[weapon] = StatPack.Min(WeaponMin[weapon],pack);
             WeaponMax[weapon] = StatPack.Max(WeaponMax[weapon],pack);
-       } else {
+        } else {
             WeaponMin[weapon] = StatPack.Min(new StatPack(),pack);
             WeaponMax[weapon] = StatPack.Max(new StatPack(),pack);
-       }
-       UpdateMinMax();
+        }
+        UpdateMinMax();
     }
 
     private static void UpdateMinMax(){

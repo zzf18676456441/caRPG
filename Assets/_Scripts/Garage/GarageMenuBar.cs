@@ -7,18 +7,26 @@ public class GarageMenuBar : MonoBehaviour
 {
     public void UpdateButtons(List<GameObject> items){
         int index = 1;
+        Transform element = transform.Find("Slot0");
+        Select(element.gameObject);
+        PowerupMain main;
+        
+        GarageItemButton gIB = element.gameObject.AddComponent<GarageItemButton>();
+        ButtonScripts scripts = element.gameObject.GetComponent<ButtonScripts>();
+        GarageSlider slider = GameObject.Find("GarageUI").transform.Find("StatSliders").GetComponent<GarageSlider>();
+        gIB.slider = slider;
+        gIB.Unequipper(gameObject.name);
+        element.GetComponent<Button>().onClick.AddListener(scripts.UnequipItem);
+
         foreach(GameObject item in items){
-            PowerupMain main = item.GetComponent<PowerupMain>();
-            Transform element = gameObject.transform.Find("Inventory Area").Find("Items").Find("Upgrade " + index);
-            element.GetChild(0).GetComponent<Text>().text = item.gameObject.name;
-            element.GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
+            main = item.GetComponent<PowerupMain>();
+            element = gameObject.transform.Find("Slot" + index);
+            element.Find("Text").GetComponent<Text>().text = item.gameObject.name;
+            element.Find("Image").GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
             if(main.IsOwned()){
-                element.GetComponent<Button>().interactable = true;
-                element.GetChild(0).GetComponent<Text>().color = Color.white;
-                element.GetComponent<Image>().color = Color.white;
+                element.Find("Image").GetComponent<Image>().color = Color.white;
             } else {
-                element.GetComponent<Button>().interactable = false;
-                element.GetComponent<Image>().color = Color.black;
+                element.Find("Image").GetComponent<Image>().color = Color.black;
             }
             if(!main.IsChecked()){
                 main.Check();
@@ -27,28 +35,35 @@ public class GarageMenuBar : MonoBehaviour
                     SendStats(stats, item.GetComponent<PowerupAttachable>());
                 }
             }
-            ButtonScripts scripts = element.gameObject.AddComponent<ButtonScripts>();
-            GarageItemButton gIB = element.gameObject.AddComponent<GarageItemButton>();
+            if(main.IsEquipped()){
+                Select(element.gameObject);
+            }
+            scripts = element.gameObject.GetComponent<ButtonScripts>();
+            gIB = element.gameObject.AddComponent<GarageItemButton>();
             scripts.SetItem(item);
             element.GetComponent<Button>().onClick.AddListener(scripts.EquipItem);
-            GarageSlider slider = GameObject.Find("GarageUI").transform.Find("StatSliders").GetComponent<GarageSlider>();
+            slider = GameObject.Find("GarageUI").transform.Find("StatSliders").GetComponent<GarageSlider>();
             gIB.slider = slider;
             gIB.item = item;
             element.GetComponent<Button>().onClick.AddListener(slider.SetSlidersOnNewEquip);
             index++;
         }
 
-        Transform ItemBar = gameObject.transform.Find("Inventory Area").Find("Items");
-        ItemBar.GetComponent<RectTransform>().sizeDelta = new Vector2(66 * index, 62);
-
-        for(;index<8;index++){
-            Transform element = gameObject.transform.Find("Inventory Area").Find("Items").Find("Upgrade " + index);
+        for(;index<5;index++){
+            element = gameObject.transform.Find("Slot" + index);
             element.gameObject.SetActive(false);
         }
     }
 
+    public void Select(GameObject button){
+        foreach(Button child in gameObject.GetComponentsInChildren<Button>()){
+            if (child.name == button.name){child.interactable = false;}
+            else child.interactable = true;
+        }
+    }
+
     private void SendStats(StatPack stats, PowerupAttachable attachable){
-        if(attachable.isWeapon) GarageStats.TryUpdate(stats, attachable.weaponLocation);
+        if(attachable.isWeapon) GarageStats.TryUpdate(stats, attachable.weaponLocation, attachable.baseDamage);
         else GarageStats.TryUpdate(stats, attachable.modLocation);
     }
 }

@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseController : MonoBehaviour
 {
     private GameObject _pausePanel;
-    private string _garageSceneName = "Level1";
-    private string _mainMenuSceneName = "Level1";
+
     GameController controller;
 
     // Start is called before the first frame update
@@ -43,17 +42,16 @@ public class PauseController : MonoBehaviour
     // Reloads the current scene
     public void RestartLevel()
     {
-        controller.FinishLevel();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+       controller.RetryLevel();
     }
 
     public void LoadGarage()
     {
-        SceneManager.LoadScene(_garageSceneName, LoadSceneMode.Single);
+        controller.StartGarageLevel();
     }
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(_mainMenuSceneName, LoadSceneMode.Single);
+        controller.MainMenu();
     }
 }
