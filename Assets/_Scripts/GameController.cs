@@ -22,6 +22,78 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+
+        // Create PlayerPrefs to be sited elsewhere or pulls out their data
+        if (!PlayerPrefs.HasKey("CurrentLevel"))
+            PlayerPrefs.SetInt("CurrentLevel", 0);
+        else
+            nextLevel = PlayerPrefs.GetInt("CurrentLevel");
+        if (!PlayerPrefs.HasKey("Unlocks"))
+            PlayerPrefs.SetString("Unlocks", "");
+        else
+            LoadSavedUnlocks();
+    }
+
+    /// <summary>
+    /// Sets all of the saved Unlocks to be Owned.
+    /// </summary>
+    /// <remarks>
+    /// Uses the string at PlayerPrefs["Unlocks"]. The string is broken apart and
+    /// read to find the item which is owned and the list which contains it in the
+    /// InventoryMaster class. Upon finding the correct prefab with a PowerupMain
+    /// component, calls the SetOwned method with true.
+    /// </remarks>
+    private void LoadSavedUnlocks()
+    {
+        InventoryMaster invMast = gameObject.GetComponent<InventoryMaster>();
+        // Get the things that are unlocked
+        string ownedItemsStr = PlayerPrefs.GetString("Unlocks"); // follows the form "<slot>:<item name>,<slot>:<item name>,..."
+        string[] ownedItems = ownedItemsStr.Split(',');
+        foreach (string item in ownedItems)
+        {
+            if (item == "")
+                continue;
+            string[] itemParts = item.Split(':');
+            string slot = itemParts[0];
+            string itemName = itemParts[1];
+            if (itemName == "stick")
+                continue;
+            print(item);
+            System.Predicate<GameObject> findByName = (gO) => gO.name == itemName;
+            switch (slot)
+            {
+                case "Bumpers":
+                    invMast.BumperMods.Find(findByName).GetComponent<PowerupMain>().SetOwned(true); // Look for the game object in this list with the
+                    break;                                                                          // name that matches itemName, then grab its PowerupMain and call SetOwned
+                case "Engine":
+                    invMast.EngineMods.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                case "Frame":
+                    invMast.FrameMods.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                case "Tires":
+                    invMast.TireMods.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                case "Trunk":
+                    invMast.TrunkMods.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                case "Grill":
+                    invMast.GrillWeapons.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                case "Hitch":
+                    invMast.HitchWeapons.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                case "Roof":
+                    invMast.RoofWeapons.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                case "Doors":
+                    invMast.DoorWeapons.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                case "Wheels":
+                    invMast.WheelWeapons.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -103,7 +175,9 @@ public class GameController : MonoBehaviour
         player.currentNO2 = player.maxNO2;
         car.SetActive(false);
 
-
+        if (nextLevel > PlayerPrefs.GetInt("CurrentLevel"))
+            PlayerPrefs.SetInt("CurrentLevel", nextLevel);
+        
         SceneManager.LoadScene("LevelComplete", LoadSceneMode.Single);
     }
 

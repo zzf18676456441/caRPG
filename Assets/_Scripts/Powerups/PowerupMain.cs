@@ -20,6 +20,22 @@ public class PowerupMain : MonoBehaviour
 
     public void SetOwned(bool owned){
         isOwned = owned;
+        string name = gameObject.name;
+        PowerupAttachable attachInfo = gameObject.GetComponent<PowerupAttachable>();
+        string location;
+        if (attachInfo.isWeapon)
+            location = attachInfo.weaponLocation.ToString();
+        else
+            location = attachInfo.modLocation.ToString();
+        string saveData = location + ":" + name;
+        string unlocks = PlayerPrefs.GetString("Unlocks");
+        if (!unlocks.Contains(saveData))
+        {
+            if (unlocks.Length == 0)
+                PlayerPrefs.SetString("Unlocks", saveData);
+            else
+                PlayerPrefs.SetString("Unlocks", unlocks + "," + saveData);
+        }
     }
 
     public void Check(){isChecked = true;}
