@@ -52,7 +52,17 @@ public class ButtonScripts : MonoBehaviour
     }
 
     public void ShowPopup(GameObject popup){
-        GameObject shown = Instantiate(popup,transform.parent);
+        // Logic to ensure multiple level selects aren't opened
+        if (popup.TryGetComponent<LevelSelectOpen>(out LevelSelectOpen lco))
+        {
+            if (LevelSelectOpen.open)
+                return;
+            else
+                LevelSelectOpen.open = true;
+        }
+
+        // Creates a popup
+        GameObject shown = Instantiate(popup, transform.parent);
     }
 
     public void StartButtonPresetLevel(){

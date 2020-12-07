@@ -7,6 +7,7 @@ public class LevelSelectOpen : MonoBehaviour
 {
     GameController controller;
     int currentLevel = 0;
+    public static bool open = false;
     void Awake()
     {
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
@@ -31,6 +32,14 @@ public class LevelSelectOpen : MonoBehaviour
                 buttonHolder.SetActive(false);
             }
         }        
+    }
+
+    /// <summary>
+    /// Logic used to ensure that we allow people to relaunch level select after closing this.
+    /// </summary>
+    private void OnDestroy()
+    {
+        open = false;
     }
 
 }
