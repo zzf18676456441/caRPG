@@ -30,11 +30,15 @@ public class PauseController : MonoBehaviour
             {
                 Time.timeScale = 0;
                 _pausePanel.SetActive(true);
+                GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>().Show();
             }
             else
             {
-                Time.timeScale = 1;
-                _pausePanel.SetActive(false);
+                if(!CountDown.counting){
+                    Time.timeScale = 1;
+                    _pausePanel.SetActive(false);
+                    GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>().Hide();
+                }
             }
         }
     }
