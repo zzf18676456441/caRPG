@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6919944635825866556}
   - component: {fileID: -8982485059368349963}
   m_Layer: 0
-  m_Name: Titanium Frame
+  m_Name: Diamond Frame
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d48974635744bdd41a28497d8cfa02a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13643a430cb05e345ae9c07649ab63fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
