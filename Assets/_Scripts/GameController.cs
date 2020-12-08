@@ -199,14 +199,28 @@ public class GameController : MonoBehaviour
 
     public void StartNextLevel()
     {
+        if (nextLevel >= levels.Length) nextLevel = 0;
         player.ResetStats();
         SceneManager.LoadScene(levels[nextLevel++], LoadSceneMode.Single);
     }
 
+    public void StartNextLevelWithGarage()
+    {
+        if (PlayerPrefs.GetString("Unlocks").Length > 1){
+                StartGarageLevel();
+        } else {
+            if (nextLevel>0){
+                StartGarageLevel();
+            } else {
+                StartNextLevel();
+            }    
+        }
+    }
+
     public void StartLevel(int index){
         player.ResetStats();
-        nextLevel = index + 1;
-        SceneManager.LoadScene(levels[index], LoadSceneMode.Single);
+        nextLevel = index;
+        StartGarageLevel();
     }
 
     public void ExitGame(){
@@ -215,13 +229,39 @@ public class GameController : MonoBehaviour
 
     public void MainMenu(){
         player.ResetStats();
-        nextLevel = 0;
+        car.SetActive(false);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
     public void StartGarageMidLevel(){
         nextLevel--;
         StartGarageLevel();
+    }
+
+    public void StartNewGame(){
+        PlayerPrefs.SetInt("CurrentLevel", 0);
+        PlayerPrefs.SetString("Unlocks", "");
+        InventoryMaster invMaster = GetComponent<InventoryMaster>();
+        foreach(List<GameObject> list in invMaster.AllItems){
+            foreach(GameObject obj in list){
+                obj.GetComponent<PowerupMain>().SetOwned(false);
+            }
+        }
+        nextLevel = 0;
+        StartNextLevel();
+    }
+
+    public void UnlockAllLevels(){
+        PlayerPrefs.SetInt("CurrentLevel", levels.Length);
+    }
+
+    public void UnlockAllItems(){
+        InventoryMaster invMaster = GetComponent<InventoryMaster>();
+        foreach(List<GameObject> list in invMaster.AllItems){
+            foreach(GameObject obj in list){
+                obj.GetComponent<PowerupMain>().SetOwned(true);
+            }
+        }
     }
 
 }
@@ -416,4 +456,5 @@ public class LevelStats
     {
         stats[type] = value;
     }
+
 }

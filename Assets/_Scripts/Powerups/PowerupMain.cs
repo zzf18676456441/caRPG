@@ -20,6 +20,10 @@ public class PowerupMain : MonoBehaviour
 
     public void SetOwned(bool owned){
         isOwned = owned;
+        if(!isOwned) {
+            isEquipped = false;
+            return;
+        }
         string name = gameObject.name;
         PowerupAttachable attachInfo = gameObject.GetComponent<PowerupAttachable>();
         string location;

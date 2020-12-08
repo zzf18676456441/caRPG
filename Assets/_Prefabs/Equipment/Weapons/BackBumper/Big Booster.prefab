@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2346239554762276698}
   - component: {fileID: 654944996449243966}
   - component: {fileID: 353163240122963167}
-  - component: {fileID: 6891249789547904474}
   m_Layer: 0
   m_Name: Big Booster
   m_TagString: Weapon
@@ -162,21 +161,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.15}
   serializedVersion: 2
   m_Radius: 0.6
---- !u!114 &6891249789547904474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4150057713731885806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7927acfdec26b14c94f317ac294f39e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NitroL: {fileID: 4675260636272694773}
-  NitroR: {fileID: 4675260636272694773}
-  previousNO2: 0
 --- !u!1 &4361921623352835993
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,8 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7927acfdec26b14c94f317ac294f39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NitroL: {fileID: 0}
-  NitroR: {fileID: 0}
+  NitroL: {fileID: 4675260636272694773}
+  NitroR: {fileID: 4675260636272694773}
   previousNO2: 0
 --- !u!1001 &8889073559656371786
 PrefabInstance:

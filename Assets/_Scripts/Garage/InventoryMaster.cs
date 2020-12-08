@@ -13,5 +13,21 @@ public class InventoryMaster : MonoBehaviour
     public List<GameObject> HitchWeapons;
     public List<GameObject> RoofWeapons;
     public List<GameObject> DoorWeapons;
-    public List<GameObject> WheelWeapons;  
+    public List<GameObject> WheelWeapons; 
+
+    public List<List<GameObject>> AllItems;
+
+    void Awake(){
+        AllItems = new List<List<GameObject>>();
+        AllItems.Add(BumperMods);
+        AllItems.Add(EngineMods);
+        AllItems.Add(FrameMods);
+        AllItems.Add(TireMods);
+        AllItems.Add(TrunkMods);
+        AllItems.Add(GrillWeapons);
+        AllItems.Add(HitchWeapons);
+        AllItems.Add(RoofWeapons);
+        AllItems.Add(DoorWeapons);
+        AllItems.Add(WheelWeapons);
+    } 
 }

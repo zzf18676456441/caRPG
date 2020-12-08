@@ -73,4 +73,20 @@ public class ButtonScripts : MonoBehaviour
         Destroy(gameObject.transform.parent.gameObject);
     }
 
+    public void StartNextLevelWithGarage(){
+        controller.StartNextLevelWithGarage();
+    }
+
+    public void UnlockAllItems(){
+        controller.UnlockAllItems();
+    }
+
+    public void UnlockAllLevels(){
+        controller.UnlockAllLevels();
+    }
+
+    public void StartNewGame(){
+        controller.StartNewGame();
+    }
+
 }
