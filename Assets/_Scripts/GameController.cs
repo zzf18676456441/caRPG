@@ -58,7 +58,6 @@ public class GameController : MonoBehaviour
             string itemName = itemParts[1];
             if (itemName == "stick")
                 continue;
-            print(item);
             System.Predicate<GameObject> findByName = (gO) => gO.name == itemName;
             switch (slot)
             {
