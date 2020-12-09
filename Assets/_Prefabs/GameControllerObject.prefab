@@ -46,16 +46,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carPrefab: {fileID: 5246917541190323975, guid: 991e895cc43f1364f82c1b2af7b62c78, type: 3}
   levels:
-  - (1) Driving Intro
-  - (2) Brute Intro
-  - (10) Level B
-  - (11) Level E
-  - (12) Level D
-  - (13) Level 1
-  - (14) Boss Level
+  - (1) Prelude
+  - (2) First Contact
+  - (3) Melee
+  - (4) Runaway
+  - (5) Killbox
+  - (6) The Hammer
+  - (7) Firefight
+  - (8) Hunted
+  - (9) Powder Keg
+  - (10) Detour
+  - (11) Occupation
+  - (12) Industrial Park
+  - (13) Ground Zero
+  - (14) The Guardian
   - Victory
-  - (4) Turret Intro
-  - (6) MidBoss
   handbreakDown: 0
 --- !u!114 &773619174187756968
 MonoBehaviour:

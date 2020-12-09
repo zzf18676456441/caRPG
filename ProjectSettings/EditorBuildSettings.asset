@@ -12,17 +12,50 @@ EditorBuildSettings:
     path: Assets/_Scenes/MainMenu.unity
     guid: c7925fed27c1b284e8838598a92e714a
   - enabled: 1
-    path: Assets/_Scenes/(13) Level 1.unity
+    path: Assets/_Scenes/(1) Prelude.unity
+    guid: fb09561ac9cfe584abb1c98288f1dd31
+  - enabled: 1
+    path: Assets/_Scenes/(2) First Contact.unity
+    guid: 02e4bde638c048c478b9e8001c289f47
+  - enabled: 1
+    path: Assets/_Scenes/(3) Melee.unity
+    guid: 8377fbedf5fc0b34a95ab09937ad0368
+  - enabled: 1
+    path: Assets/_Scenes/(4) Runaway.unity
+    guid: 4d52954282c0f8d4c97fd660c51b5cd0
+  - enabled: 1
+    path: Assets/_Scenes/(5) Killbox.unity
+    guid: ee75a9db6f5f7054fa0db17b3ce6daf1
+  - enabled: 1
+    path: Assets/_Scenes/(6) The Hammer.unity
+    guid: 84f05f995eae7844093821ae97cf314a
+  - enabled: 1
+    path: Assets/_Scenes/(7) Firefight.unity
+    guid: 1df3e1976d9ced3408b4991e7a92ec4a
+  - enabled: 1
+    path: Assets/_Scenes/(8) Hunted.unity
+    guid: b210498173abbb44aa0227446153d399
+  - enabled: 1
+    path: Assets/_Scenes/(9) Powder Keg.unity
+    guid: 7e8a4e82829ad144ebee6c5e351e600a
+  - enabled: 1
+    path: Assets/_Scenes/(10) Detour.unity
+    guid: a24309cfd9734ac43a5703dd2df5aff0
+  - enabled: 1
+    path: Assets/_Scenes/(11) Occupation.unity
+    guid: 2dde3bf8d3160034cae78815261b6001
+  - enabled: 1
+    path: Assets/_Scenes/(12) Industrial Park.unity
+    guid: b5b708ea085635e4e800905ba2818189
+  - enabled: 1
+    path: Assets/_Scenes/(13) Ground Zero.unity
     guid: e1810c4b06603e549b2aefebf6c9fb24
+  - enabled: 1
+    path: Assets/_Scenes/(14) The Guardian.unity
+    guid: d78e497aab053444db848071b1f952e8
   - enabled: 1
     path: Assets/_Scenes/GameOver.unity
     guid: b9fce527bc203ed459e7ee6896a3394b
-  - enabled: 1
-    path: Assets/_Scenes/(12) Level D.unity
-    guid: b5b708ea085635e4e800905ba2818189
-  - enabled: 1
-    path: Assets/_Scenes/(1) Driving Intro.unity
-    guid: fb09561ac9cfe584abb1c98288f1dd31
   - enabled: 1
     path: Assets/_Scenes/Garage.unity
     guid: 7cf9820100fcb814c9378d33e4ee9186
@@ -32,22 +65,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/LevelComplete.unity
     guid: 7fe373fd53eda554787d8eaf7c916866
-  - enabled: 1
-    path: Assets/_Scenes/(10) Level B.unity
-    guid: a24309cfd9734ac43a5703dd2df5aff0
-  - enabled: 1
-    path: Assets/_Scenes/(14) Boss Level.unity
-    guid: d78e497aab053444db848071b1f952e8
-  - enabled: 1
-    path: Assets/_Scenes/(2) Brute Intro.unity
-    guid: 02e4bde638c048c478b9e8001c289f47
-  - enabled: 1
-    path: Assets/_Scenes/(11) Level E.unity
-    guid: 2dde3bf8d3160034cae78815261b6001
-  - enabled: 1
-    path: Assets/_Scenes/(4) Turret Intro.unity
-    guid: 4d52954282c0f8d4c97fd660c51b5cd0
-  - enabled: 1
-    path: Assets/_Scenes/(6) MidBoss.unity
-    guid: 84f05f995eae7844093821ae97cf314a
   m_configObjects: {}
