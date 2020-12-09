@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: baseDamage
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 6647930760710113527, guid: 02f18192039e7e64c93acb2db1f308b5, type: 3}
+      propertyPath: acceleration
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 8640706373894764829, guid: 02f18192039e7e64c93acb2db1f308b5, type: 3}
       propertyPath: m_Name
       value: Shooter_Shot

@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class TurretAI : MonoBehaviour
 {
-    int i = 0;
+    public float attackRange = 50f;
+    public float startShotTime = 1f;
+    public GameObject projectile;
+    
+    private Transform player;
+
+    private float shotFrequencey;
     GameController controller;
+
+    private bool tracking = false;
+
     void Awake()
     {
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
@@ -13,15 +22,40 @@ public class TurretAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //
+        player = controller.GetCar().transform;
+        shotFrequencey = startShotTime;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        i++;
-        if (i == 100) GetComponent<SinglePointMovement>().LookAt(controller.GetCar().transform);
-        if (i == 200) GetComponent<SinglePointMovement>().StopLooking();
-        //Debug.Log(GetComponent<SinglePointMovement>().GetAngle());
+        float distance = Vector2.Distance(transform.position, player.position);
+        if (tracking) {
+            if(distance > attackRange) {
+                tracking = false;
+                GetComponent<SinglePointMovement>().StopLooking();
+            }   
+            else {
+                shoot_one();
+            }
+        } else if(distance <= attackRange) {
+            tracking = true;
+            GetComponent<SinglePointMovement>().LookAt(player);
+        }
+        
+    }
+
+
+    private void shoot_one()
+    {
+        if (shotFrequencey <= 0)
+        {
+            GameObject shot = Instantiate(projectile, transform.position, Quaternion.identity);
+            shot.GetComponent<Projectile>().FireAt(transform.up);
+            shotFrequencey = startShotTime;
+        }
+        else
+        {
+            shotFrequencey -= Time.deltaTime;
+        }
     }
 }
