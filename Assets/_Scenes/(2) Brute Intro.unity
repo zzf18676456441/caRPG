@@ -1834,7 +1834,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: f761cf023a3b6544ca59e7031d447160, type: 3}
+      objectReference: {fileID: 21300000, guid: 65b0625a618ca9d4891f0d8aa3ec56a6, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
@@ -4651,7 +4651,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5190ab1bf3319c74a95936d050b888bb, type: 3}
+      objectReference: {fileID: 21300000, guid: 6b38bf7714bbb254793d0ec8ee8ead32, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0

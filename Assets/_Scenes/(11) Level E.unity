@@ -383,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 73675fe3e7b77074480d94f0057eab8f, type: 3}
+      objectReference: {fileID: 21300000, guid: 4eef2dcaae7666845a88732d4a58bc79, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalPosition.y
       value: 25.7
@@ -2801,7 +2801,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 77458c5eb2144e94283b011bca2ab5f9, type: 3}
+      objectReference: {fileID: 21300000, guid: 364bfef0cc15e4e498cf6ec800349ebf, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalPosition.y
       value: -17.5
@@ -3616,7 +3616,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 73675fe3e7b77074480d94f0057eab8f, type: 3}
+      objectReference: {fileID: 21300000, guid: 364bfef0cc15e4e498cf6ec800349ebf, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalPosition.y
       value: -9.2
@@ -7743,7 +7743,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 73675fe3e7b77074480d94f0057eab8f, type: 3}
+      objectReference: {fileID: 21300000, guid: 4eef2dcaae7666845a88732d4a58bc79, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalPosition.y
       value: 6.6

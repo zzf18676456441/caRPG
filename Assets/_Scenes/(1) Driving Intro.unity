@@ -10398,7 +10398,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 77458c5eb2144e94283b011bca2ab5f9, type: 3}
+      objectReference: {fileID: 21300000, guid: 364bfef0cc15e4e498cf6ec800349ebf, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalPosition.y
       value: -29.8
@@ -15665,7 +15665,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8b7102b2dda7e554ba00c41c7b651b29, type: 3}
+      objectReference: {fileID: 21300000, guid: bed320810b4a3fd42b0080b8cb8f76cd, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -24868,7 +24868,7 @@ PrefabInstance:
     - target: {fileID: 5923978953933024029, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: turnSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8b7102b2dda7e554ba00c41c7b651b29, type: 3}
+      objectReference: {fileID: 21300000, guid: bed320810b4a3fd42b0080b8cb8f76cd, type: 3}
     - target: {fileID: 5923978954027810311, guid: 842797bf0cb61144f8469d0edce3d0ff, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
