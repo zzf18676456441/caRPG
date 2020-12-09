@@ -19,6 +19,8 @@ public class UserInterface : MonoBehaviour
 
     public GameObject nitrous;
 
+    public GameObject sign;
+
     GameController controller;
     void Awake(){
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
@@ -42,13 +44,20 @@ public class UserInterface : MonoBehaviour
 
     }
 
-    public void DrawSign(TurnType turnType)
+    public void DrawSign(Sprite turnSign)
     {
-
+        Image signSlot = sign.GetComponent<Image>();
+        if (turnSign == null)
+            signSlot.color = new Color(1f, 1f, 1f, 0f);
+        else
+            signSlot.color = new Color(1f, 1f, 1f, 1f);
+        signSlot.sprite = turnSign;
     }
 
     public void HideSign()
     {
-
+        Image signSlot = sign.GetComponent<Image>();
+        signSlot.sprite = null;
+        signSlot.color = new Color(1f, 1f, 1f, 0f);
     }
 }

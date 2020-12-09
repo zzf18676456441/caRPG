@@ -5,8 +5,8 @@ using UnityEngine;
 public class TurnManager : MonoBehaviour
 {
     public GameObject turnPartner;
-    public bool passedThrough;
-    public TurnType turnType;
+    public bool passedThrough = false;
+    public Sprite turnSprite;
     private UserInterface ui;
 
     public void Awake()
@@ -14,23 +14,26 @@ public class TurnManager : MonoBehaviour
         ui = GameObject.Find("HUD").GetComponent<UserInterface>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (turnPartner.GetComponent<TurnManager>().passedThrough)
+            if (passedThrough)
             {
                 ui.HideSign();
+                passedThrough = false;
+            }
+            else if (turnPartner.GetComponent<TurnManager>().passedThrough)
+            {
+                ui.HideSign();
+                passedThrough = false;
+                turnPartner.GetComponent<TurnManager>().passedThrough = false;
             }
             else
             {
-                ui.DrawSign(turnType);
+                ui.DrawSign(turnSprite);
+                passedThrough = true;
             }
         }
     }
-}
-
-public enum TurnType
-{
-    Right, Left, U_Turn_Right, U_Turn_Left, Fork, Right_Shift, Left_Shift
 }
