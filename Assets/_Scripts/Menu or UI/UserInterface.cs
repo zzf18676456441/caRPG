@@ -19,9 +19,6 @@ public class UserInterface : MonoBehaviour
 
     public GameObject nitrous;
 
-
-
-
     GameController controller;
     void Awake(){
         controller = GameObject.Find("GameControllerObject").GetComponent<GameController>();
@@ -42,6 +39,16 @@ public class UserInterface : MonoBehaviour
 
         Image no2bar = nitrous.GetComponent<Image>();
         no2bar.fillAmount = no2;
+
+    }
+
+    public void DrawSign(TurnType turnType)
+    {
+
+    }
+
+    public void HideSign()
+    {
 
     }
 }
