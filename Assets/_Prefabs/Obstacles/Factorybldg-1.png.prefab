@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 850337918861269665}
   - component: {fileID: 4369726350144464841}
   - component: {fileID: 5847383141452634923}
+  - component: {fileID: 2037925505297100316}
   - component: {fileID: -4848868998214301782}
-  - component: {fileID: 5135821412369460840}
   m_Layer: 0
   m_Name: Factorybldg-1.png
   m_TagString: Untagged
@@ -106,6 +106,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &2037925505297100316
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625897644291524229}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.076657295, y: -2.4092293}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.823858, y: 5.1587143}
+  m_EdgeRadius: 0
 --- !u!114 &-4848868998214301782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,34 +147,3 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
---- !u!60 &5135821412369460840
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6625897644291524229}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 4.8159385, y: -4.9660378}
-      - {x: 4.749629, y: -0.9899569}
-      - {x: 3.2975228, y: 0.13046455}
-      - {x: -3.0203855, y: 0.17994939}
-      - {x: -4.953847, y: -0.8792577}
-      - {x: -4.9404364, y: -4.9451537}
