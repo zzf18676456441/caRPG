@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/(4) Turret Intro.unity
     guid: 4d52954282c0f8d4c97fd660c51b5cd0
+  - enabled: 1
+    path: Assets/_Scenes/(6) MidBoss.unity
+    guid: 84f05f995eae7844093821ae97cf314a
   m_configObjects: {}

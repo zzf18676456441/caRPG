@@ -55,6 +55,7 @@ MonoBehaviour:
   - (14) Boss Level
   - Victory
   - (4) Turret Intro
+  - (6) MidBoss
   handbreakDown: 0
 --- !u!114 &773619174187756968
 MonoBehaviour:
