@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0b0533fa5cfef43b3812e341917e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseDamage: 20
 --- !u!114 &1787533981440672938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,16 +372,16 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.35
-  m_Pitch: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.85
+  m_Pitch: 0.85
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 185
+  Priority: 45
   DopplerLevel: 1
-  MinDistance: 2.7731762
+  MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -473,7 +474,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 935cf4967da0e36429ce917694f31bd1, type: 3}
   - {fileID: 8300000, guid: 6b7463bf97c166c47b332f414a3599ef, type: 3}
   - {fileID: 8300000, guid: 9fbd0e6f1ad2a434d8af1c81155b6edb, type: 3}
-  carCrashes: []
+  carCrashes:
+  - {fileID: 8300000, guid: 9edd1aeb664ac4f47884aa54c374d5d9, type: 3}
+  - {fileID: 8300000, guid: 46b78799a42f0c34f92b9781434bd313, type: 3}
   audioPlayer: {fileID: 1249297852930144834}
 --- !u!1 &6069463618136671920
 GameObject:

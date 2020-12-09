@@ -97,11 +97,12 @@ public class GameController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!started){
+        if (!started)
+        {
             started = true;
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
-        
+
         if (GetPlayer().currentHealth <= 0)
         {
             FinishLevel();
@@ -142,7 +143,10 @@ public class GameController : MonoBehaviour
         car.transform.SetParent(gameObject.transform);
         car.SetActive(false);
         if (carSFX is null)
+        {
             carSFX = car.GetComponentInChildren<CarSFXHandler>();
+            player.SetCarSFX(carSFX);
+        }
         return car;
     }
 
@@ -176,7 +180,7 @@ public class GameController : MonoBehaviour
 
         if (nextLevel > PlayerPrefs.GetInt("CurrentLevel"))
             PlayerPrefs.SetInt("CurrentLevel", nextLevel);
-        
+
         SceneManager.LoadScene("LevelComplete", LoadSceneMode.Single);
     }
 
@@ -205,44 +209,57 @@ public class GameController : MonoBehaviour
 
     public void StartNextLevelWithGarage()
     {
-        if (PlayerPrefs.GetString("Unlocks").Length > 1){
+        if (PlayerPrefs.GetString("Unlocks").Length > 1)
+        {
+            StartGarageLevel();
+        }
+        else
+        {
+            if (nextLevel > 0)
+            {
                 StartGarageLevel();
-        } else {
-            if (nextLevel>0){
-                StartGarageLevel();
-            } else {
+            }
+            else
+            {
                 StartNextLevel();
-            }    
+            }
         }
     }
 
-    public void StartLevel(int index){
+    public void StartLevel(int index)
+    {
         player.ResetStats();
         nextLevel = index;
         StartGarageLevel();
     }
 
-    public void ExitGame(){
+    public void ExitGame()
+    {
         Application.Quit();
     }
 
-    public void MainMenu(){
+    public void MainMenu()
+    {
         player.ResetStats();
         car.SetActive(false);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
-    public void StartGarageMidLevel(){
+    public void StartGarageMidLevel()
+    {
         nextLevel--;
         StartGarageLevel();
     }
 
-    public void StartNewGame(){
+    public void StartNewGame()
+    {
         PlayerPrefs.SetInt("CurrentLevel", 0);
         PlayerPrefs.SetString("Unlocks", "");
         InventoryMaster invMaster = GetComponent<InventoryMaster>();
-        foreach(List<GameObject> list in invMaster.AllItems){
-            foreach(GameObject obj in list){
+        foreach (List<GameObject> list in invMaster.AllItems)
+        {
+            foreach (GameObject obj in list)
+            {
                 obj.GetComponent<PowerupMain>().SetOwned(false);
             }
         }
@@ -250,14 +267,18 @@ public class GameController : MonoBehaviour
         StartNextLevel();
     }
 
-    public void UnlockAllLevels(){
+    public void UnlockAllLevels()
+    {
         PlayerPrefs.SetInt("CurrentLevel", levels.Length);
     }
 
-    public void UnlockAllItems(){
+    public void UnlockAllItems()
+    {
         InventoryMaster invMaster = GetComponent<InventoryMaster>();
-        foreach(List<GameObject> list in invMaster.AllItems){
-            foreach(GameObject obj in list){
+        foreach (List<GameObject> list in invMaster.AllItems)
+        {
+            foreach (GameObject obj in list)
+            {
                 obj.GetComponent<PowerupMain>().SetOwned(true);
             }
         }
@@ -278,6 +299,8 @@ public class Player : IDamagable
 
     public StatPack baseStats;
 
+    private CarSFXHandler carSFX;
+
     public void SetupPlayer()
     {
         baseStats = new StatPack();
@@ -290,6 +313,11 @@ public class Player : IDamagable
         baseStats.SetAdd(StatPack.StatType.Acceleration, controller.GetCar().GetComponent<Driving>().acceleration);
         GarageStats.SetBaseStats(baseStats);
         GarageStats.SetCurrentStats(baseStats);
+    }
+
+    public void SetCarSFX(CarSFXHandler sfx)
+    {
+        carSFX = sfx;
     }
 
     public void ReApplyStats(StatPack powerups)
@@ -368,6 +396,11 @@ public class Player : IDamagable
         else
         {
             damageTaken -= currentArmor;
+        }
+
+        if (damageTaken >= 1)
+        {
+            carSFX.PlayDamage();
         }
 
         currentHealth -= damageTaken;
