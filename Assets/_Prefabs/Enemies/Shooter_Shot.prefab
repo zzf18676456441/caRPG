@@ -83,5 +83,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shooter_Shot
       objectReference: {fileID: 0}
+    - target: {fileID: 9149445981794766742, guid: 02f18192039e7e64c93acb2db1f308b5, type: 3}
+      propertyPath: rolloffMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149445981794766742, guid: 02f18192039e7e64c93acb2db1f308b5, type: 3}
+      propertyPath: MaxDistance
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02f18192039e7e64c93acb2db1f308b5, type: 3}
