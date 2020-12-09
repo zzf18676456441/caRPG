@@ -11,4 +11,9 @@ public class CarSFXHandler : MonoBehaviour
         audioPlayer.clip = tireSqueals[UnityEngine.Random.Range(0, tireSqueals.Count)];
         audioPlayer.Play();
     }
+    public void PlayDamage()
+    {
+        audioPlayer.clip = carCrashes[UnityEngine.Random.Range(0, carCrashes.Count)];
+        audioPlayer.Play();
+    }
 }
