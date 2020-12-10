@@ -38,13 +38,35 @@ public class LevelRewards : MonoBehaviour
             Load(controller.GetRewards());
         }
         UpdateText();
-        gameObject.transform.Find("Reward1").GetComponent<Image>().sprite = rewardOnePrefab.GetComponent<SpriteRenderer>().sprite;
-        gameObject.transform.Find("Reward2").GetComponent<Image>().sprite = rewardTwoPrefab.GetComponent<SpriteRenderer>().sprite;
-        gameObject.transform.Find("Reward3").GetComponent<Image>().sprite = rewardThreePrefab.GetComponent<SpriteRenderer>().sprite;
+        Image image = gameObject.transform.Find("Reward1").GetComponent<Image>();
+        image.sprite = rewardOnePrefab.GetComponent<SpriteRenderer>().sprite;
+        if (rewardOnePrefab.GetComponent<PowerupMain>().IsOwned()){
+            image.color = new Color(0.2f, 0.2f, 0.2f, 1);
+            transform.Find("Reward1Text").GetComponent<Text>().color = Color.green;
+        }
+        image = gameObject.transform.Find("Reward2").GetComponent<Image>();
+        image.sprite = rewardTwoPrefab.GetComponent<SpriteRenderer>().sprite;
+        if (rewardTwoPrefab.GetComponent<PowerupMain>().IsOwned()){
+            image.color = new Color(0.2f, 0.2f, 0.2f, 1);
+            transform.Find("Reward2Text").GetComponent<Text>().color = Color.green;
+        }
+        image = gameObject.transform.Find("Reward3").GetComponent<Image>();
+        image.sprite = rewardThreePrefab.GetComponent<SpriteRenderer>().sprite;
+        if (rewardThreePrefab.GetComponent<PowerupMain>().IsOwned()){
+            image.color = new Color(0.2f, 0.2f, 0.2f, 1);
+            transform.Find("Reward3Text").GetComponent<Text>().color = Color.green;
+        }
         if(!inLevel){
             ShowSuccessFailure();
+            List<GameObject> rewards = GetRewards();
+            foreach (GameObject reward in rewards)
+            {
+                reward.GetComponent<PowerupMain>().SetOwned(true);
+            }
         }
     }
+
+
 
     public void Show(){
         gameObject.SetActive(true);
@@ -97,23 +119,30 @@ public class LevelRewards : MonoBehaviour
         return rewards;
     }
 
-    public bool IsMet(int reward){
+    public int IsMet(int reward){
         LevelStats stats = controller.GetPlayer().GetLevelStats();
         ConditionType type = rewardOneCondition;
         ComparisonType comparison = rewardOneComparison;
         float value = rewardOneValue;
         if (reward > 1) {
             if (reward == 2){
+                if (rewardTwoPrefab.GetComponent<PowerupMain>().IsOwned()) return 2;
                 type = rewardTwoCondition;
                 comparison = rewardTwoComparison;
                 value = rewardTwoValue; 
             } else {
+                if (rewardThreePrefab.GetComponent<PowerupMain>().IsOwned()) return 2;
                 type = rewardThreeCondition;
                 comparison = rewardThreeComparison;
                 value = rewardThreeValue; 
             }
+        } else if (rewardThreePrefab.GetComponent<PowerupMain>().IsOwned()) return 2;
+        
+        if(ConditionMet(stats, type, comparison, value)){
+            return 1;
         }
-        return(ConditionMet(stats, type, comparison, value));
+
+        return 0;
     }
 
     private bool ConditionMet(LevelStats stats, ConditionType type, ComparisonType comparison, float value){
@@ -153,16 +182,20 @@ public class LevelRewards : MonoBehaviour
     public void ShowSuccessFailure(){
         for(int reward = 1; reward < 4; reward++){
             string target = "Reward" + reward + "Success";
-            Debug.Log(target);
             Text[] textElements = gameObject.GetComponentsInChildren<Text>();
+            int result;
             foreach(Text text in textElements){
                 if(text.name == target){
-                    if (IsMet(reward)){
+                    result = IsMet(reward);
+                    if (result == 1){
                         text.color = Color.green;
                         text.text = "SUCCESS";
-                    } else {
+                    } else if (result == 0) {
                         text.color = Color.red;
                         text.text = "FAILURE";
+                    } else {
+                        text.color = Color.blue;
+                        text.text = "OWNED";
                     }
                 }
             }

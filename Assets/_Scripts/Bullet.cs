@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
     public float y = 0f;
     public float rot = 0f;
 
+    public int lifespan = 1200;
+
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,18 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.position = new Vector2(x, y);
         rb.AddRelativeForce(new Vector2(velx, vely));
+    }
+
+    void Update()
+    {
+        if (lifespan <= 0)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            lifespan--;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
