@@ -192,7 +192,8 @@ public class GameController : MonoBehaviour
     public void RetryLevel()
     {
         player.ResetStats();
-        SceneManager.LoadScene(levels[nextLevel - 1], LoadSceneMode.Single);
+        nextLevel--;
+        StartGarageLevel();
     }
 
     public void StartNextLevel()

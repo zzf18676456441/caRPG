@@ -25,8 +25,10 @@ public class GarageMenuBar : MonoBehaviour
             element.Find("Image").GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
             if(main.IsOwned()){
                 element.Find("Image").GetComponent<Image>().color = Color.white;
+                element.Find("Text").GetComponent<Text>().color = Color.white;
             } else {
                 element.Find("Image").GetComponent<Image>().color = Color.black;
+                element.Find("Text").GetComponent<Text>().color = Color.black;
             }
             if(!main.IsChecked()){
                 main.Check();
