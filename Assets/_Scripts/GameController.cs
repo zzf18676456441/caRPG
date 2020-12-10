@@ -378,21 +378,14 @@ public class Player : IDamagable
                     levelStats.AddStat(LevelRewards.ConditionType.WallContacts, 1f);
                     break;
                 case DamageFlag.Piercing:
-                    damageTaken += currentArmor;
+                    damageTaken *= (10f + currentArmor)/10f;
                     break;
                 default:
                     break;
             }
         }
 
-        if (damageTaken - currentArmor <= 0)
-        {
-            damageTaken = 0;
-        }
-        else
-        {
-            damageTaken -= currentArmor;
-        }
+        damageTaken *= 10f/(10f + currentArmor);
 
         if (damageTaken >= 1)
         {

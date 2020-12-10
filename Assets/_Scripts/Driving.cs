@@ -20,7 +20,7 @@ public class Driving : MonoBehaviour
     private bool frontSliding = false;
     private bool rearSliding = false;
 
-    public float topSpeed = 100; // Not yet implemented
+    public float topSpeed = 44.7f; // Not yet implemented
     GameController controller;
 
     // Start is called before the first frame update
@@ -56,8 +56,22 @@ public class Driving : MonoBehaviour
             }
         }
 
+
         // Add acceleration
-        body.AddForceAtPosition(frontWheels * acceleration * body.mass * verticalInput, transform.position + transform.up * frontAxleDistance);
+        Vector2 intendedAcceleration = frontWheels * acceleration * body.mass * verticalInput;
+        
+        if (body.velocity.magnitude > topSpeed/2){    
+            Vector2 forwardAcceleration = Vector2.Dot(intendedAcceleration, body.velocity)/Vector2.Dot(body.velocity, body.velocity) * body.velocity;
+            Vector2 horizontalAcceleration = intendedAcceleration - forwardAcceleration;
+            forwardAcceleration *= (2 - 2 * body.velocity.magnitude / topSpeed);
+            //Debug.Log(intendedAcceleration.ToString() + "   /   " + (forwardAcceleration + horizontalAcceleration).ToString());
+            body.AddForceAtPosition(forwardAcceleration + horizontalAcceleration, transform.position + transform.up * frontAxleDistance);
+        } else {
+            body.AddForceAtPosition(intendedAcceleration, transform.position + transform.up * frontAxleDistance);
+        }
+
+        
+
 
         // Add boost
         if (boost == 1 && controller.GetPlayer().currentNO2 > 0)

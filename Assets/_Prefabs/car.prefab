@@ -191,7 +191,7 @@ MonoBehaviour:
   frontAxleDistance: 2
   rearAxleDistance: 2
   boostPower: 20000
-  topSpeed: 100
+  topSpeed: 44.07
 --- !u!114 &-309649962996153329
 MonoBehaviour:
   m_ObjectHideFlags: 0
