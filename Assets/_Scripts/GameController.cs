@@ -166,12 +166,7 @@ public class GameController : MonoBehaviour
     {
         player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time, Time.timeSinceLevelLoad);
         LevelRewards levelRewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>();
-        List<GameObject> rewards = levelRewards.GetRewards();
         rewardsPassable = levelRewards.Save();
-        foreach (GameObject reward in rewards)
-        {
-            reward.GetComponent<PowerupMain>().SetOwned(true);
-        }
         car.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
         car.transform.up = new Vector3(0, 1, 0);

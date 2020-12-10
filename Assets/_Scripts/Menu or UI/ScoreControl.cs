@@ -53,8 +53,10 @@ public class ScoreControl : MonoBehaviour
             scoreText.text = value.ToString("0.00");
         }
 
-        if (rewards.IsMet(reward)) scoreText.color = Color.green;
-        else scoreText.color = Color.red;
+        int result = rewards.IsMet(reward);
+        if (result == 1) scoreText.color = Color.green;
+        else if (result == 0) scoreText.color = Color.red;
+        else scoreText.color = Color.blue;
     }
 
 
