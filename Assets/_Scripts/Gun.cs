@@ -7,9 +7,11 @@ public class Gun : MonoBehaviour
     GameController controller;
     public float bulletSpeed = 10;
     public GameObject BulletPrefab;
-    public bool rightSide;
-    public bool leftSide;
-    public bool straight;
+    public bool door;
+    public bool roof;
+    public bool roofMulti;
+    public bool wheel;
+    public int fireTimer = 600;
 
     void Awake()
     {
@@ -19,35 +21,20 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (fireTimer <= 0)
         {
             Fire();
+            fireTimer = 600;
+        }
+        else
+        {
+            fireTimer--;
         }
     }
 
     void Fire()
     {
-        if (rightSide && !leftSide)
-        {
-            Bullet bullet = Instantiate<GameObject>(BulletPrefab, transform.position, transform.rotation).GetComponent<Bullet>();
-            var pos = transform.position;
-            bullet.x = pos.x;
-            bullet.y = pos.y;
-            float angle = AngleAboutY();
-            bullet.velx = 2000f * Mathf.Cos(angle);
-            bullet.vely = 2000f * Mathf.Sin(angle);
-        }
-        else if (!rightSide && leftSide)
-        {
-            Bullet bullet = Instantiate<GameObject>(BulletPrefab, transform.position, transform.rotation).GetComponent<Bullet>();
-            var pos = transform.position;
-            bullet.x = pos.x;
-            bullet.y = pos.y;
-            float angle = AngleAboutY();
-            bullet.velx = -2000f * Mathf.Cos(angle);
-            bullet.vely = -2000f * Mathf.Sin(angle);
-        }
-        else if (straight && !rightSide && !leftSide)
+        if (door)
         {
             Bullet bullet = Instantiate<GameObject>(BulletPrefab, transform.position, transform.rotation).GetComponent<Bullet>();
             var pos = transform.position;
@@ -57,7 +44,27 @@ public class Gun : MonoBehaviour
             bullet.velx = 2000f * Mathf.Cos(angle);
             bullet.vely = 2000f * Mathf.Sin(angle);
         }
-        else if (straight && rightSide && leftSide)
+        else if (wheel)
+        {
+            Bullet bullet = Instantiate<GameObject>(BulletPrefab, transform.position, transform.rotation).GetComponent<Bullet>();
+            var pos = transform.position;
+            bullet.x = pos.x;
+            bullet.y = pos.y;
+            float angle = AngleAboutY() + Mathf.PI / 2;
+            bullet.velx = 2000f * Mathf.Cos(angle);
+            bullet.vely = 2000f * Mathf.Sin(angle);
+        }
+        else if (roof)
+        {
+            Bullet bullet = Instantiate<GameObject>(BulletPrefab, transform.position, transform.rotation).GetComponent<Bullet>();
+            var pos = transform.position;
+            bullet.x = pos.x;
+            bullet.y = pos.y;
+            float angle = AngleAboutY() + Mathf.PI / 2;
+            bullet.velx = 2000f * Mathf.Cos(angle);
+            bullet.vely = 2000f * Mathf.Sin(angle);
+        }
+        else if (roofMulti)
         {
             Bullet bullet = Instantiate<GameObject>(BulletPrefab, transform.position, transform.rotation).GetComponent<Bullet>();
             var pos = transform.position;

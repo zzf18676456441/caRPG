@@ -159,9 +159,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   BulletPrefab: {fileID: 4850939274895371085, guid: de9f60ab66c1f974baaca902477dde7f, type: 3}
-  rightSide: 0
-  leftSide: 0
-  straight: 0
+  door: 0
+  roof: 0
+  roofMulti: 0
+  wheel: 1
+  fireTimer: 600
 --- !u!60 &5015904730840381996
 PolygonCollider2D:
   m_ObjectHideFlags: 0
