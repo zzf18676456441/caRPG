@@ -50,10 +50,10 @@ public class EnemyTurretAI : MonoBehaviour
 
     private void shoot_one()
     {
-        if (shotFrequencey_Mode1 <= 0)
+        if (shotFrequencey_Mode1 <= 0 && (shotFrequencey_Mode2 > 2 && shotFrequencey_Mode2 < 9f))
         {
-            GameObject shot = Instantiate(projectile1, transform.position + transform.up * 6f, Quaternion.identity);
-            shot.GetComponent<Projectile>().FireAt(transform.up);
+            GameObject shot = Instantiate(projectile1, transform.position - transform.up * 5f, Quaternion.identity);
+            shot.GetComponent<Projectile>().FireAt(-transform.up);
             shotFrequencey_Mode1 = startShotTime_Mode1;
         }
         else

@@ -372,7 +372,6 @@ public class Player : IDamagable
             switch (flag)
             {
                 case DamageFlag.Knockback:
-                    Debug.Log("Knockback applied " + damage.knockbackForce);
                     controller.GetCar().GetComponent<Rigidbody2D>().AddForce(velocity * damage.knockbackForce / velocity.magnitude);
                     break;
                 case DamageFlag.Wall:
