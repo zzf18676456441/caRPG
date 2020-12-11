@@ -25,9 +25,9 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
     void Awake()
     {
+        sprite = GetComponent<SpriteRenderer>();
         originColor = sprite.color;
         recoveryTime = recoveryTimer;
-        sprite = GetComponent<SpriteRenderer>();
     }
     void Update()
     {

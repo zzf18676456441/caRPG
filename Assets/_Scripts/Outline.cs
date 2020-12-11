@@ -10,15 +10,7 @@ public class Outline : MonoBehaviour
 
     void Start()
     {
-        Shader shaderGUItext;
-        foreach (SpriteRenderer s in outline)
-        {
-            shaderGUItext = Shader.Find("GUI/Text Shader");
-            s.material.shader = shaderGUItext;
-            s.sortingOrder = mainSprite.sortingOrder - 1;
-            s.color = outlineColor;
-        }
-
+        RefreshOutlineColor();
     }
 
     void Update()
@@ -26,6 +18,18 @@ public class Outline : MonoBehaviour
         foreach (SpriteRenderer s in outline)
         {
             s.sprite = mainSprite.sprite;
+        }
+    }
+
+    public void RefreshOutlineColor()
+    {
+        Shader shaderGUItext;
+        foreach (SpriteRenderer s in outline)
+        {
+            shaderGUItext = Shader.Find("GUI/Text Shader");
+            s.material.shader = shaderGUItext;
+            s.sortingOrder = mainSprite.sortingOrder - 1;
+            s.color = outlineColor;
         }
     }
 }
