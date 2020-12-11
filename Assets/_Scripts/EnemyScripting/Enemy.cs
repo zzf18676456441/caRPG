@@ -21,11 +21,9 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
 
     private SpriteRenderer sprite;
     private Dictionary<GameObject, float> recentDamagers = new Dictionary<GameObject, float>();
-    private Color originColor;
 
     void Awake()
     {
-        originColor = sprite.color;
         recoveryTime = recoveryTimer;
         sprite = GetComponent<SpriteRenderer>();
     }
@@ -33,7 +31,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDamager
     {
         if (recoveryTime <= 0 && sprite.color.a == 0)
         {
-            sprite.color = originColor;
+            sprite.color = Color.white;
             recoveryTime = recoveryTimer;
         }
         else if (recoveryTime > 0 && sprite.color.a == 0)

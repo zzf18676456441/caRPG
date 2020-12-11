@@ -20,7 +20,6 @@ GameObject:
   - component: {fileID: 8684213500836844969}
   - component: {fileID: 5048405281848733084}
   - component: {fileID: 6237798361896551758}
-  - component: {fileID: 5990798759118548583}
   - component: {fileID: 1872521130005720596}
   m_Layer: 0
   m_Name: Boss
@@ -207,7 +206,7 @@ MonoBehaviour:
   nO2Reward: 10
   damageType: 2
   damageFlags: 0100000003000000
-  knockbackForce: 1000000
+  knockbackForce: 500000
   aliengore: {fileID: 8389471273476262039, guid: 8c35374a695163d4780b22210b438113, type: 3}
   alienblood: {fileID: 808029405415505083, guid: 10a82af5d5aa8e94f8fe9f399be7880c, type: 3}
   audioHandler: {fileID: 6237798361896551758}
@@ -261,7 +260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2eef7386e8de2e44bbe369bdec105d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfx: {fileID: 5990798759118548583}
   firingAI: {fileID: 8684213500836844969}
   chargingAI: {fileID: 5055035758729100290}
   stats: {fileID: 2908182945691633661}
@@ -287,33 +285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionSounds: []
-  deathSounds:
-  - {fileID: 8300000, guid: 271f6e7aaa1a08644bccfcb93bdd429a, type: 3}
-  - {fileID: 8300000, guid: 7cc5b0d0f2599ce418503d11cad21372, type: 3}
-  - {fileID: 8300000, guid: b15be9f95050a9a41b692d9c844c34b2, type: 3}
-  source: {fileID: 1872521130005720596}
-  actionSoundTimer: 2.5
---- !u!114 &5990798759118548583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7304340864537881980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a2399cf0182f748842ac9776e4ceae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firingSound: {fileID: 8300000, guid: 11a91723330c14e4b9a7ec1621bd21af, type: 3}
-  actionSounds:
-  - {fileID: 8300000, guid: cbb04947acffc394097be678ee223003, type: 3}
-  - {fileID: 8300000, guid: dfed5e85b8df0ff43ae914fdf167a36f, type: 3}
-  - {fileID: 8300000, guid: eddbd377b7b949246afd69471305b2f2, type: 3}
   deathSounds: []
   source: {fileID: 1872521130005720596}
-  actionSoundTimer: 3
-  actionSoundTime: 0
+  actionSoundTimer: 2.5
 --- !u!82 &1872521130005720596
 AudioSource:
   m_ObjectHideFlags: 0
@@ -325,19 +299,19 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 60
-  DopplerLevel: 0
+  Priority: 128
+  DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -349,15 +323,6 @@ AudioSource:
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.657562
-      value: 0.61970073
-      inSlope: -1.4473689
-      outSlope: -1.4473689
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
