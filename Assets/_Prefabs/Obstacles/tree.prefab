@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseDamage: 2
   type: 1
-  flags: 
+  flags: 0000000004000000
 --- !u!50 &6286897506560689600
 Rigidbody2D:
   serializedVersion: 4
