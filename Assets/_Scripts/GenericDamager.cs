@@ -9,6 +9,8 @@ public class GenericDamager : MonoBehaviour, IDamager
     public float baseDamage;
     public DamageType type;
     public DamageFlag[] flags;
+
+    public float knockbackForce = 0f;
    
 
     
@@ -17,6 +19,7 @@ public class GenericDamager : MonoBehaviour, IDamager
         foreach (DamageFlag flag in flags){
             result.AddDamageFlag(flag);
         }
+        result.knockbackForce = knockbackForce;
         return result;
     }
 }

@@ -18,6 +18,7 @@ public class EnemyTurretAI : MonoBehaviour
     private float shotFrequencey_Mode1;
     private float shotFrequencey_Mode2;
     private float shotFrequencey_Mode3;
+    private bool tracking = false;
 
     void Start()
     {
@@ -31,20 +32,28 @@ public class EnemyTurretAI : MonoBehaviour
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.position);
-        if ( distance < attackRange)
-        {
-            shoot_one();
-            shoot_three();
+        if (tracking) {
+            if(distance > attackRange) {
+                tracking = false;
+                GetComponent<SinglePointMovement>().StopLooking();
+            }   
+            else {
+                shoot_one();
+                shoot_two();
+                shoot_three();
+            }
+        } else if(distance <= attackRange) {
+            tracking = true;
+            GetComponent<SinglePointMovement>().LookAt(player);
         }
-        shoot_two();
     }
 
     private void shoot_one()
     {
         if (shotFrequencey_Mode1 <= 0)
         {
-            GameObject shot = Instantiate(projectile1, transform.position, Quaternion.identity);
-            shot.GetComponent<Projectile>().FireAt(player.position - transform.position);
+            GameObject shot = Instantiate(projectile1, transform.position + transform.up * 6f, Quaternion.identity);
+            shot.GetComponent<Projectile>().FireAt(transform.up);
             shotFrequencey_Mode1 = startShotTime_Mode1;
         }
         else
@@ -66,14 +75,6 @@ public class EnemyTurretAI : MonoBehaviour
             GameObject shot4 = Instantiate(projectile2, transform.position, Quaternion.identity);
             shot4.GetComponent<Projectile>().FireAt(-transform.right);
             shotFrequencey_Mode2 = startShotTime_Mode2;
-            if(rotationCount >= 360f)
-            {
-                rotationCount = 0f;
-            }else
-            {
-                rotationCount += 45f;
-            }
-            transform.rotation = Quaternion.Euler(0, 0, rotationCount);
         }
         else
         {

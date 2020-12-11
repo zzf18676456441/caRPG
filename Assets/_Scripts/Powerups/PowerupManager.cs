@@ -267,7 +267,7 @@ public class PowerupManager : MonoBehaviour, IDamager
     private void OnTriggerEnter2D(Collider2D other){
         IDamager damager = (IDamager)other.GetComponent(typeof(IDamager));
         if (damager != null) {
-            DamageSystem.ApplyDamage(damager, controller.GetPlayer());
+            DamageSystem.ApplyDamage(damager, controller.GetPlayer(), transform.position - other.transform.position);
         }        
     }
 
