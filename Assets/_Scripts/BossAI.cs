@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossAI : MonoBehaviour
 {
+    public BossAudioHandler sfx;
     public EnemyAIShoot firingAI;
     public EnemyAI chargingAI;
     public Enemy stats;
@@ -43,6 +44,7 @@ public class BossAI : MonoBehaviour
         }
         else
         {
+            sfx.PlayActionSound();
             bool swapped = chargingAI;
             chargingAI.enabled = true;
             firingAI.enabled = false;
@@ -70,12 +72,14 @@ public class BossAI : MonoBehaviour
         //anim code
         if (chargingAI.enabled && animChanged)
         {
+            sfx.actionSoundTime = 0;
             anim.SetBool("isCharging", true);
             anim.Play("BossWalk");
             animChanged = false;
         }
         else if (animChanged)
         {
+            sfx.PlayFiringSound();
             anim.SetBool("isCharging", false);
             anim.Play("BossFiring");
             animChanged = false;
