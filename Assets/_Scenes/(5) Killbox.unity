@@ -12988,7 +12988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardThreeValue
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardThreePrefab
@@ -13002,6 +13002,10 @@ PrefabInstance:
       propertyPath: rewardTwoPrefab
       value: 
       objectReference: {fileID: 3176504602822217685, guid: 0b9ce10dcc09e124c935de13fd8fadc7, type: 3}
+    - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: rewardThreeComparison
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
 --- !u!1001 &907719715

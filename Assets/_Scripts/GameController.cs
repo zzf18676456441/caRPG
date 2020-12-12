@@ -246,12 +246,6 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
-    public void StartGarageMidLevel()
-    {
-        nextLevel--;
-        StartGarageLevel();
-    }
-
     public void StartNewGame()
     {
         PlayerPrefs.SetInt("CurrentLevel", 0);

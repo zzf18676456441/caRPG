@@ -4166,6 +4166,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5714200009985420361, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1423070648}
+    - target: {fileID: 5714200009985420361, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 6459631481931307174, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -4181,6 +4189,14 @@ PrefabInstance:
     - target: {fileID: 6459631481931307174, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459631482446339899, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1423070648}
+    - target: {fileID: 6459631482446339899, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6459631482893555404, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_AnchorMin.y
@@ -4341,7 +4357,7 @@ PrefabInstance:
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardThreePrefab
       value: 
-      objectReference: {fileID: 5177135278564436823, guid: dd4279fa7f902d64bb139a8773bdeece, type: 3}
+      objectReference: {fileID: 424778859491095356, guid: 53b58d0f1259ea04ea0ffe49043c9b86, type: 3}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardOneCondition
       value: 1
@@ -13420,6 +13436,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3160063794493046121, guid: 006e6d740aaf72c45b0acb1f190bdcf4, type: 3}
   m_PrefabInstance: {fileID: 2014767675}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1423070648 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2402284815302661270, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
+  m_PrefabInstance: {fileID: 530103064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610b3e59be6c0be45a6fe3510fb8f587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1425891181
 PrefabInstance:
   m_ObjectHideFlags: 0
