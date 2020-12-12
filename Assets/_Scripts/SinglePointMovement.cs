@@ -52,7 +52,7 @@ public class SinglePointMovement : MonoBehaviour
     /// </summary>
     /// <param name="desiredDirection">Direction to move in.</param>
     public void MoveByVector(Vector2 desiredDirection){
-        instruction.SetMoveTarget(new Target(desiredDirection),false);
+        instruction.SetMoveTarget(new Target(maxSpeed * 2 * desiredDirection / desiredDirection.magnitude),false);
     }
 
     /// <summary>
