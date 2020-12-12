@@ -23363,42 +23363,42 @@ PrefabInstance:
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardOnePrefab
       value: 
-      objectReference: {fileID: 424778859491095356, guid: 53b58d0f1259ea04ea0ffe49043c9b86, type: 3}
+      objectReference: {fileID: 424778859491095356, guid: a731fe877acf20a4f98c888d25495021, type: 3}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardOneValue
-      value: 30
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardTwoCondition
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardTwoComparison
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardTwoValue
-      value: 10
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardTwoPrefab
       value: 
-      objectReference: {fileID: 1899712038258736377, guid: edf8ac4faeb46de449ca2001244d8368, type: 3}
+      objectReference: {fileID: 424778859491095356, guid: a731fe877acf20a4f98c888d25495021, type: 3}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardThreeCondition
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardThreeValue
-      value: 3
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7911543916529019800, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: rewardThreePrefab
       value: 
-      objectReference: {fileID: 261466770757549597, guid: 9fc42b9974dc6024283bcc5ed8949319, type: 3}
+      objectReference: {fileID: 424778859491095356, guid: a731fe877acf20a4f98c888d25495021, type: 3}
     - target: {fileID: 8593939794976188282, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ac0c5e840451f40a3f75c6c840c02b, type: 3}
