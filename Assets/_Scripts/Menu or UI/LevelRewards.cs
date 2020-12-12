@@ -136,7 +136,7 @@ public class LevelRewards : MonoBehaviour
                 comparison = rewardThreeComparison;
                 value = rewardThreeValue; 
             }
-        } else if (rewardThreePrefab.GetComponent<PowerupMain>().IsOwned()) return 2;
+        } else if (rewardOnePrefab.GetComponent<PowerupMain>().IsOwned()) return 2;
         
         if(ConditionMet(stats, type, comparison, value)){
             return 1;

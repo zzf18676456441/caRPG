@@ -105,7 +105,7 @@ public class GameController : MonoBehaviour
 
         if (GetPlayer().currentHealth <= 0)
         {
-            FinishLevel();
+            ResetCar();
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single); //"Game Over" screen.
             GetPlayer().currentHealth = 100; //sets player health to 100 so we can get back in the game
         }
@@ -167,11 +167,7 @@ public class GameController : MonoBehaviour
         player.GetLevelStats().SetStat(LevelRewards.ConditionType.Time, Time.timeSinceLevelLoad);
         LevelRewards levelRewards = GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>();
         rewardsPassable = levelRewards.Save();
-        car.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
-        car.transform.up = new Vector3(0, 1, 0);
-        player.currentNO2 = player.maxNO2;
-        car.SetActive(false);
+        ResetCar();
 
         if (nextLevel > PlayerPrefs.GetInt("CurrentLevel"))
             PlayerPrefs.SetInt("CurrentLevel", nextLevel);
@@ -192,8 +188,17 @@ public class GameController : MonoBehaviour
     public void RetryLevel()
     {
         player.ResetStats();
+        ResetCar();
         nextLevel--;
         StartGarageLevel();
+    }
+
+    private void ResetCar(){
+        car.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        car.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+        car.transform.up = new Vector3(0, 1, 0);
+        player.currentNO2 = player.maxNO2;
+        car.SetActive(false);
     }
 
     public void StartNextLevel()

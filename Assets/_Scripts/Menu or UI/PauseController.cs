@@ -28,9 +28,9 @@ public class PauseController : MonoBehaviour
         {
             if (Time.timeScale > 0)
             {
-                Time.timeScale = 0;
                 _pausePanel.SetActive(true);
                 GameObject.Find("HUD").transform.Find("LevelRewards").GetComponent<LevelRewards>().Show();
+                Time.timeScale = 0;
             }
             else
             {
