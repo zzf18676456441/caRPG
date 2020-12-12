@@ -18,6 +18,9 @@ public class HPBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (boss == null){
+            gameObject.SetActive(false);
+        }
         transform.position = new Vector3(boss.transform.position.x, boss.transform.position.y + 6);
         hpbarInner.localScale = new Vector3(1 * (bossScript.health / maxHP), 1);
         color.color = new Color((.5f / (bossScript.health / maxHP)), (1f * (bossScript.health / maxHP)), .1f);

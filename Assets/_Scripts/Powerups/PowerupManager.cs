@@ -231,6 +231,8 @@ public class PowerupManager : MonoBehaviour, IDamager
     {
         controller.GetPlayer().currentHealth += boost.healthBoost;
         controller.GetPlayer().currentNO2 += boost.nO2Boost;
+        if(controller.GetPlayer().currentNO2 > controller.GetPlayer().maxNO2) 
+            controller.GetPlayer().currentNO2 = controller.GetPlayer().maxNO2;
         Destroy(boost.gameObject);
         return this;
     }
@@ -241,6 +243,7 @@ public class PowerupManager : MonoBehaviour, IDamager
     }
 
     public void NotifyCollision(Collision2D collision, IDamager hitter){
+        Debug.Log(collision.collider.gameObject.name);
         // Can the thing I hit deal damage?
         IDamager damager = (IDamager)collision.collider.GetComponent(typeof(IDamager));
 
