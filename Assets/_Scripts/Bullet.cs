@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Weapon" || other.gameObject.tag == "Equipment")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Weapon" || other.gameObject.tag == "Equipment" || other.gameObject.tag == "UIStuff")
         {
         }
         else if (other.gameObject.tag == "Enemy")

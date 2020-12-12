@@ -9,6 +9,7 @@ TagManager:
   - StartLocation
   - Wall
   - Enemy
+  - UIStuff
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5923978953734691856}
   m_Layer: 0
   m_Name: TurnNotification
-  m_TagString: Untagged
+  m_TagString: UIStuff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnPartner: {fileID: 5923978954027810308}
   passedThrough: 0
-  turnType: 1
+  turnSprite: {fileID: 0}
 --- !u!1 &5923978954027810308
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,4 +177,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnPartner: {fileID: 5923978953933024027}
   passedThrough: 0
-  turnType: 0
+  turnSprite: {fileID: 0}
