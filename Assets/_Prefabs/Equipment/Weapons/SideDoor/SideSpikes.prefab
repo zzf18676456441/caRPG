@@ -115,7 +115,7 @@ MonoBehaviour:
   weaponLocation: 1
   modLocation: 2
   attachType: 0
-  baseDamage: 50
+  baseDamage: 30
   damageType: 1
   damageFlags: 00000000
   anchorOverride: {x: 0.6, y: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthAdd: 0
   maxHealthMult: 0
-  maxArmorAdd: 2
+  maxArmorAdd: 5
   maxArmorMult: 0
   maxNO2Add: 0
   maxNO2Mult: 0

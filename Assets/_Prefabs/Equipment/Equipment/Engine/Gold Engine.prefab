@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1294050656496926003}
   - component: {fileID: -4048332942591340860}
   m_Layer: 0
-  m_Name: Steel Engine
+  m_Name: Gold Engine
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   weightAdd: 0
   gripAdd: 0
   gripMult: 0
-  accelerationAdd: 0.3
+  accelerationAdd: 0.4
   accelerationMult: 0
   topSpeedAdd: 0
   topSpeedMult: 0

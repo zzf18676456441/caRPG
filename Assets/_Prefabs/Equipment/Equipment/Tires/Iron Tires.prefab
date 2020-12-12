@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthAdd: 0
   maxHealthMult: 0
-  maxArmorAdd: 2
+  maxArmorAdd: 0
   maxArmorMult: 0
   maxNO2Add: 0
   maxNO2Mult: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   gripMult: 0
   accelerationAdd: 0.1
   accelerationMult: 0
-  topSpeedAdd: 0
+  topSpeedAdd: 10
   topSpeedMult: 0
 --- !u!212 &-5253195626572255200
 SpriteRenderer:

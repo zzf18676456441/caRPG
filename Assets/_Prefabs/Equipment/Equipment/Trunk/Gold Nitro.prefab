@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5663477003995231987}
   - component: {fileID: 3601171023732014112}
   m_Layer: 0
-  m_Name: Steel Trunk
+  m_Name: Gold Nitro
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,9 +80,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthAdd: 0
   maxHealthMult: 0
-  maxArmorAdd: 2
+  maxArmorAdd: 0
   maxArmorMult: 0
-  maxNO2Add: 0
+  maxNO2Add: 200
   maxNO2Mult: 0
   weightAdd: 0
   gripAdd: 0

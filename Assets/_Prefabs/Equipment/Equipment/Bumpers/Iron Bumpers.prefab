@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthAdd: 0
   maxHealthMult: 0
-  maxArmorAdd: 2
+  maxArmorAdd: 6
   maxArmorMult: 0
   maxNO2Add: 0
   maxNO2Mult: 0

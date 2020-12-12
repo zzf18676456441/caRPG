@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2970715519759392031}
   - component: {fileID: 5708984148295750680}
   m_Layer: 0
-  m_Name: Bronze Trunk
+  m_Name: Bronze Nitro
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,9 +80,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthAdd: 0
   maxHealthMult: 0
-  maxArmorAdd: 1
+  maxArmorAdd: 0
   maxArmorMult: 0
-  maxNO2Add: 0
+  maxNO2Add: 50
   maxNO2Mult: 0
   weightAdd: 0
   gripAdd: 0
