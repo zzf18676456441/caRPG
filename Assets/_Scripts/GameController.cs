@@ -56,7 +56,7 @@ public class GameController : MonoBehaviour
             string[] itemParts = item.Split(':');
             string slot = itemParts[0];
             string itemName = itemParts[1];
-            if (itemName == "stick")
+            if (itemName == "stick" || itemName == "Bronze Medal" || itemName == "Silver Medal" || itemName == "Gold Medal")
                 continue;
             System.Predicate<GameObject> findByName = (gO) => gO.name == itemName;
             switch (slot)
@@ -90,6 +90,8 @@ public class GameController : MonoBehaviour
                     break;
                 case "Wheels":
                     invMast.WheelWeapons.Find(findByName).GetComponent<PowerupMain>().SetOwned(true);
+                    break;
+                default:
                     break;
             }
         }
