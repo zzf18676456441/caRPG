@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5000
-  baseDamage: 50
+  baseDamage: 75
   nO2Reward: 10
   damageType: 2
   damageFlags: 0100000003000000
@@ -272,6 +272,8 @@ MonoBehaviour:
   bruiser: {fileID: 6870190510102607157, guid: c8afbcc755ec7214a9280c6783df297e, type: 3}
   shooter: {fileID: 3228305673942173924, guid: 8c5237dcbf38fd54f8daf3f28d8f43c4, type: 3}
   bomber: {fileID: 8511228838526005122, guid: 16108fffbadf9894785df3063523289f, type: 3}
+  bigBruiser: {fileID: 6422585101810872768, guid: 0536d42b9dd9c2043b77aa156d38f202, type: 3}
+  bigShooter: {fileID: 2623540730657910719, guid: f80090ecee7e60341aef7306e4ee4cc3, type: 3}
   spawnParticles: {fileID: 5235691889785837969, guid: dce5f3974d7556e4195044c47c477411, type: 3}
   maxEnemies: 20
 --- !u!114 &6237798361896551758
@@ -335,7 +337,7 @@ AudioSource:
   Priority: 60
   DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1000
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -346,31 +348,22 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      value: 1.1
+      inSlope: 11.772972
+      outSlope: 11.772972
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.657562
-      value: 0.61970073
-      inSlope: -1.4473689
-      outSlope: -1.4473689
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.060606062
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 1.1
+      inSlope: -4.29223
+      outSlope: -4.29223
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0.12145503
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -379,7 +372,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

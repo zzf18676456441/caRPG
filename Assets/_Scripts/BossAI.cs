@@ -12,7 +12,7 @@ public class BossAI : MonoBehaviour
     public float firingTimer;
     public float spawnTimer;
     public Animator anim;
-    public GameObject bruiser, shooter, bomber;
+    public GameObject bruiser, shooter, bomber, bigBruiser, bigShooter;
     public GameObject spawnParticles;
     public int maxEnemies;
     private List<GameObject> currentEnemies = new List<GameObject>();
@@ -32,6 +32,10 @@ public class BossAI : MonoBehaviour
     }
     void Update()
     {
+        if(stats.baseDamage != 125 && stats.health/maxHP <= .5f)
+        {
+            stats.baseDamage = 125;
+        }
         //handle ai switching based on distance and time
         float distance = Vector3.Distance(transform.position, player.position);
         if (distance > 70)
@@ -89,31 +93,54 @@ public class BossAI : MonoBehaviour
         //every SpawnTimer seconds, spawn 2-4 enemies.
         if (timeSpawn < 0 && (distance > 5 && distance < 80) && currentEnemies.Count < maxEnemies)
         {
-            int numToSpawn = Random.Range(2, 5);
-            for (int i = 0; i < numToSpawn; i++)
+            if (Random.Range(0, 3) == 0)
             {
-                int spawnType = Random.Range(1, 6);
-                // 1/2 chance for bruiser, 1/3 chance for shooter, 1/6 chance for bomber
-                GameObject spawn = null;
-                switch (spawnType)
+                if (Random.Range(0, 2) == 0)
                 {
-                    case 0:
-                    case 1:
-                    case 2:
-                        spawn = Instantiate(bruiser, transform.position + new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity);
-                        break;
-                    case 3:
-                    case 4:
-                        spawn = Instantiate(shooter, transform.position + new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity);
-                        break;
-                    case 5:
-                        spawn = Instantiate(bomber, transform.position + new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity);
-                        break;
+                    GameObject spawn = Instantiate(bigBruiser, transform.position + new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity);
+                    currentEnemies.Add(spawn);
                 }
-                GameObject spawnGore = Instantiate(spawnParticles, spawn.transform.position, Quaternion.identity);
-                currentEnemies.Add(spawn);
+                else
+                {
+                    GameObject spawn = Instantiate(bigShooter, transform.position + new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity);
+                    currentEnemies.Add(spawn);
+                }
             }
-            timeSpawn = spawnTimer;
+            else
+            {
+                int numToSpawn;
+                if (stats.health / maxHP > .5f)
+                    numToSpawn = Random.Range(2, 5);
+                else
+                    numToSpawn = Random.Range(4, 7);
+                for (int i = 0; i < numToSpawn; i++)
+                {
+                    int spawnType = Random.Range(1, 6);
+                    // 1/2 chance for bruiser, 1/3 chance for shooter, 1/6 chance for bomber
+                    GameObject spawn = null;
+                    switch (spawnType)
+                    {
+                        case 0:
+                        case 1:
+                        case 2:
+                            spawn = Instantiate(bruiser, transform.position + new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity);
+                            break;
+                        case 3:
+                        case 4:
+                            spawn = Instantiate(shooter, transform.position + new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity);
+                            break;
+                        case 5:
+                            spawn = Instantiate(bomber, transform.position + new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity);
+                            break;
+                    }
+                    GameObject spawnGore = Instantiate(spawnParticles, spawn.transform.position, Quaternion.identity);
+                    currentEnemies.Add(spawn);
+                }
+            }
+            if (stats.health / maxHP <= .5f)
+                timeSpawn = spawnTimer / 2;
+            else
+                timeSpawn = spawnTimer;
         }
         else
         {
