@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5923978953933024029}
   m_Layer: 0
   m_Name: Front Turn Trigger
-  m_TagString: Untagged
+  m_TagString: UIStuff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 5923978954027810310}
   m_Layer: 0
   m_Name: Rear Turn Trigger
-  m_TagString: Untagged
+  m_TagString: UIStuff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
