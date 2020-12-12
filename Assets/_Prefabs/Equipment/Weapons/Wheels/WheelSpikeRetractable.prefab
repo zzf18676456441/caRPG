@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 214b084478aeb0342bb490a59c2316f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   baseDamage: 50
   damageType: 1
   damageFlags: 00000000
-  anchorOverride: {x: -0.6, y: 0}
+  anchorOverride: {x: -0.01, y: 0}
 --- !u!114 &3819543947291594352
 MonoBehaviour:
   m_ObjectHideFlags: 0

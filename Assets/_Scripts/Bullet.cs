@@ -40,7 +40,7 @@ public class Bullet : MonoBehaviour
         }
         else if (other.gameObject.tag == "Enemy")
         {
-            other.gameObject.GetComponent<Enemy>().ApplyDamage(new Damage(20, DamageType.VelocityMitigated, this.gameObject), new Vector2(0,0));
+            other.gameObject.GetComponent<Enemy>().ApplyDamage(new Damage(40, DamageType.VelocityMitigated, this.gameObject), new Vector2(0,0));
             Destroy(gameObject);
         }
         else
