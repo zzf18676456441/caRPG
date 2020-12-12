@@ -136,7 +136,7 @@ MonoBehaviour:
   maxHealthMult: 0
   maxArmorAdd: 0
   maxArmorMult: 0
-  maxNO2Add: 100
+  maxNO2Add: 200
   maxNO2Mult: 0
   weightAdd: 0
   gripAdd: 0
