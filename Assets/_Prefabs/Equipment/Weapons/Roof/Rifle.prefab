@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7e9216b8bf2d248a6230813b9a91e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 15
   BulletPrefab: {fileID: 4850939274895371085, guid: de9f60ab66c1f974baaca902477dde7f, type: 3}
   door: 0
   roof: 1
