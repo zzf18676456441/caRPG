@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/(1) Prelude.unity
     guid: fb09561ac9cfe584abb1c98288f1dd31
   - enabled: 1
-    path: Assets/_Scenes/(2) First Contact.unity
+    path: Assets/_Scenes/(11) Occupation.unity
     guid: 02e4bde638c048c478b9e8001c289f47
   - enabled: 1
     path: Assets/_Scenes/(3) Melee.unity
@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/(10) Detour.unity
     guid: a24309cfd9734ac43a5703dd2df5aff0
   - enabled: 1
-    path: Assets/_Scenes/(11) Occupation.unity
+    path: Assets/_Scenes/(2) First Contact.unity
     guid: 2dde3bf8d3160034cae78815261b6001
   - enabled: 1
     path: Assets/_Scenes/(12) Industrial Park.unity
