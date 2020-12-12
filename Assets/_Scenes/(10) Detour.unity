@@ -372,6 +372,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &6323907
 Rigidbody2D:
   serializedVersion: 4
@@ -519,6 +520,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &6551460
 Rigidbody2D:
   serializedVersion: 4
@@ -748,6 +750,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &9825811
 Rigidbody2D:
   serializedVersion: 4
@@ -909,6 +912,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &10401220
 Rigidbody2D:
   serializedVersion: 4
@@ -1116,6 +1120,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &15502284
 Rigidbody2D:
   serializedVersion: 4
@@ -1649,6 +1654,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &32392979
 Rigidbody2D:
   serializedVersion: 4
@@ -1796,6 +1802,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &33390368
 Rigidbody2D:
   serializedVersion: 4
@@ -2409,6 +2416,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &46117379
 Rigidbody2D:
   serializedVersion: 4
@@ -2542,6 +2550,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &50300025
 Rigidbody2D:
   serializedVersion: 4
@@ -2919,6 +2928,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &53205891
 Rigidbody2D:
   serializedVersion: 4
@@ -3296,6 +3306,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &55596402
 Rigidbody2D:
   serializedVersion: 4
@@ -3815,6 +3826,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &70858187
 Rigidbody2D:
   serializedVersion: 4
@@ -3948,6 +3960,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &72168339
 Rigidbody2D:
   serializedVersion: 4
@@ -4095,6 +4108,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &73000287
 Rigidbody2D:
   serializedVersion: 4
@@ -4316,6 +4330,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &80342496
 Rigidbody2D:
   serializedVersion: 4
@@ -4833,6 +4848,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &90722477
 Rigidbody2D:
   serializedVersion: 4
@@ -5062,6 +5078,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &97728476
 Rigidbody2D:
   serializedVersion: 4
@@ -5278,6 +5295,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &103234202
 Rigidbody2D:
   serializedVersion: 4
@@ -5425,6 +5443,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &104772391
 Rigidbody2D:
   serializedVersion: 4
@@ -5572,6 +5591,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &105055915
 Rigidbody2D:
   serializedVersion: 4
@@ -6031,6 +6051,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &114323306
 Rigidbody2D:
   serializedVersion: 4
@@ -6178,6 +6199,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &118551772
 Rigidbody2D:
   serializedVersion: 4
@@ -6407,6 +6429,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &120479110
 Rigidbody2D:
   serializedVersion: 4
@@ -6710,6 +6733,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &121990404
 Rigidbody2D:
   serializedVersion: 4
@@ -6857,6 +6881,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &123618272
 Rigidbody2D:
   serializedVersion: 4
@@ -7078,6 +7103,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &128839711
 Rigidbody2D:
   serializedVersion: 4
@@ -7225,6 +7251,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &131045860
 Rigidbody2D:
   serializedVersion: 4
@@ -7446,6 +7473,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &136713102
 Rigidbody2D:
   serializedVersion: 4
@@ -7593,6 +7621,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &137181780
 Rigidbody2D:
   serializedVersion: 4
@@ -7740,6 +7769,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &137759775
 Rigidbody2D:
   serializedVersion: 4
@@ -7953,6 +7983,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &139870268
 Rigidbody2D:
   serializedVersion: 4
@@ -8100,6 +8131,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &140295281
 Rigidbody2D:
   serializedVersion: 4
@@ -8335,6 +8367,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &142238410
 Rigidbody2D:
   serializedVersion: 4
@@ -8548,6 +8581,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &145027161
 Rigidbody2D:
   serializedVersion: 4
@@ -8821,6 +8855,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &151633009
 Rigidbody2D:
   serializedVersion: 4
@@ -9502,6 +9537,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &178707840
 Rigidbody2D:
   serializedVersion: 4
@@ -9663,6 +9699,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &179976895
 Rigidbody2D:
   serializedVersion: 4
@@ -10001,6 +10038,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &194228093
 Rigidbody2D:
   serializedVersion: 4
@@ -10148,6 +10186,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &195133222
 Rigidbody2D:
   serializedVersion: 4
@@ -10361,6 +10400,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &195972002
 Rigidbody2D:
   serializedVersion: 4
@@ -10590,6 +10630,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &211200437
 Rigidbody2D:
   serializedVersion: 4
@@ -10906,6 +10947,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &217880796
 Rigidbody2D:
   serializedVersion: 4
@@ -11053,6 +11095,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &219038422
 Rigidbody2D:
   serializedVersion: 4
@@ -11438,6 +11481,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &223899610
 Rigidbody2D:
   serializedVersion: 4
@@ -11585,6 +11629,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &229073040
 Rigidbody2D:
   serializedVersion: 4
@@ -11732,6 +11777,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &231813054
 Rigidbody2D:
   serializedVersion: 4
@@ -12115,6 +12161,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &235953425
 Rigidbody2D:
   serializedVersion: 4
@@ -12248,6 +12295,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &237609454
 Rigidbody2D:
   serializedVersion: 4
@@ -12469,6 +12517,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &240791479
 Rigidbody2D:
   serializedVersion: 4
@@ -12616,6 +12665,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &245052376
 Rigidbody2D:
   serializedVersion: 4
@@ -12825,6 +12875,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &247110387
 Rigidbody2D:
   serializedVersion: 4
@@ -12972,6 +13023,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &247218017
 Rigidbody2D:
   serializedVersion: 4
@@ -13235,6 +13287,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &252644693
 Rigidbody2D:
   serializedVersion: 4
@@ -13382,6 +13435,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &255315465
 Rigidbody2D:
   serializedVersion: 4
@@ -13529,6 +13583,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &257686326
 Rigidbody2D:
   serializedVersion: 4
@@ -13676,6 +13731,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &261854856
 Rigidbody2D:
   serializedVersion: 4
@@ -14157,6 +14213,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &275959181
 Rigidbody2D:
   serializedVersion: 4
@@ -14290,6 +14347,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &276050279
 Rigidbody2D:
   serializedVersion: 4
@@ -14659,6 +14717,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &284246623
 Rigidbody2D:
   serializedVersion: 4
@@ -14970,6 +15029,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &288501042
 Rigidbody2D:
   serializedVersion: 4
@@ -15273,6 +15333,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &293814462
 Rigidbody2D:
   serializedVersion: 4
@@ -15420,6 +15481,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &293937675
 Rigidbody2D:
   serializedVersion: 4
@@ -15567,6 +15629,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &296310631
 Rigidbody2D:
   serializedVersion: 4
@@ -15862,6 +15925,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &300005946
 Rigidbody2D:
   serializedVersion: 4
@@ -16009,6 +16073,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &302769736
 Rigidbody2D:
   serializedVersion: 4
@@ -16156,6 +16221,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &303226274
 Rigidbody2D:
   serializedVersion: 4
@@ -16377,6 +16443,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &304340814
 Rigidbody2D:
   serializedVersion: 4
@@ -16828,6 +16895,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &309036503
 Rigidbody2D:
   serializedVersion: 4
@@ -17016,6 +17084,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &319404826
 Rigidbody2D:
   serializedVersion: 4
@@ -17237,6 +17306,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &322025396
 Rigidbody2D:
   serializedVersion: 4
@@ -17384,6 +17454,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &322809506
 Rigidbody2D:
   serializedVersion: 4
@@ -18123,6 +18194,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &345994194
 Rigidbody2D:
   serializedVersion: 4
@@ -18270,6 +18342,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &349049032
 Rigidbody2D:
   serializedVersion: 4
@@ -18491,6 +18564,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &353542418
 Rigidbody2D:
   serializedVersion: 4
@@ -18638,6 +18712,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &354514412
 Rigidbody2D:
   serializedVersion: 4
@@ -18873,6 +18948,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &356497108
 Rigidbody2D:
   serializedVersion: 4
@@ -19162,6 +19238,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &357320085
 Rigidbody2D:
   serializedVersion: 4
@@ -19309,6 +19386,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &357883686
 Rigidbody2D:
   serializedVersion: 4
@@ -19456,6 +19534,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &358207900
 Rigidbody2D:
   serializedVersion: 4
@@ -19677,6 +19756,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &365624119
 Rigidbody2D:
   serializedVersion: 4
@@ -19955,6 +20035,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &370336941
 Rigidbody2D:
   serializedVersion: 4
@@ -20176,6 +20257,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &373990624
 Rigidbody2D:
   serializedVersion: 4
@@ -20323,6 +20405,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &375390389
 Rigidbody2D:
   serializedVersion: 4
@@ -20626,6 +20709,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &378240713
 Rigidbody2D:
   serializedVersion: 4
@@ -20773,6 +20857,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &379640455
 Rigidbody2D:
   serializedVersion: 4
@@ -20994,6 +21079,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &383168277
 Rigidbody2D:
   serializedVersion: 4
@@ -21396,6 +21482,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &397330019
 Rigidbody2D:
   serializedVersion: 4
@@ -21625,6 +21712,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &402265206
 Rigidbody2D:
   serializedVersion: 4
@@ -21772,6 +21860,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &403437482
 Rigidbody2D:
   serializedVersion: 4
@@ -22075,6 +22164,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &406600084
 Rigidbody2D:
   serializedVersion: 4
@@ -22542,6 +22632,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &418193069
 Rigidbody2D:
   serializedVersion: 4
@@ -22689,6 +22780,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &423341818
 Rigidbody2D:
   serializedVersion: 4
@@ -22836,6 +22928,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &423538481
 Rigidbody2D:
   serializedVersion: 4
@@ -23057,6 +23150,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &428280977
 Rigidbody2D:
   serializedVersion: 4
@@ -23344,6 +23438,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &429743727
 Rigidbody2D:
   serializedVersion: 4
@@ -23635,6 +23730,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &437567229
 Rigidbody2D:
   serializedVersion: 4
@@ -24018,6 +24114,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &440898406
 Rigidbody2D:
   serializedVersion: 4
@@ -24225,6 +24322,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &452672093
 Rigidbody2D:
   serializedVersion: 4
@@ -24602,6 +24700,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &455996951
 Rigidbody2D:
   serializedVersion: 4
@@ -24913,6 +25012,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &460090814
 Rigidbody2D:
   serializedVersion: 4
@@ -25060,6 +25160,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &461991247
 Rigidbody2D:
   serializedVersion: 4
@@ -25207,6 +25308,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &463815864
 Rigidbody2D:
   serializedVersion: 4
@@ -25354,6 +25456,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &467013094
 Rigidbody2D:
   serializedVersion: 4
@@ -25501,6 +25604,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &469686386
 Rigidbody2D:
   serializedVersion: 4
@@ -25722,6 +25826,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &472200602
 Rigidbody2D:
   serializedVersion: 4
@@ -25943,6 +26048,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &477000165
 Rigidbody2D:
   serializedVersion: 4
@@ -26090,6 +26196,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &477217521
 Rigidbody2D:
   serializedVersion: 4
@@ -26237,6 +26344,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &481283165
 Rigidbody2D:
   serializedVersion: 4
@@ -26384,6 +26492,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &481473563
 Rigidbody2D:
   serializedVersion: 4
@@ -26613,6 +26722,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &482561670
 Rigidbody2D:
   serializedVersion: 4
@@ -26760,6 +26870,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &490856186
 Rigidbody2D:
   serializedVersion: 4
@@ -26907,6 +27018,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &491081822
 Rigidbody2D:
   serializedVersion: 4
@@ -27054,6 +27166,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &493615618
 Rigidbody2D:
   serializedVersion: 4
@@ -27201,6 +27314,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &493849149
 Rigidbody2D:
   serializedVersion: 4
@@ -27504,6 +27618,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &498545765
 Rigidbody2D:
   serializedVersion: 4
@@ -27651,6 +27766,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &499588385
 Rigidbody2D:
   serializedVersion: 4
@@ -27812,6 +27928,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &500160822
 Rigidbody2D:
   serializedVersion: 4
@@ -27945,6 +28062,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &501769040
 Rigidbody2D:
   serializedVersion: 4
@@ -28174,6 +28292,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &502686792
 Rigidbody2D:
   serializedVersion: 4
@@ -28321,6 +28440,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &503612941
 Rigidbody2D:
   serializedVersion: 4
@@ -28542,6 +28662,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &509301429
 Rigidbody2D:
   serializedVersion: 4
@@ -28689,6 +28810,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &510682173
 Rigidbody2D:
   serializedVersion: 4
@@ -28836,6 +28958,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &511337570
 Rigidbody2D:
   serializedVersion: 4
@@ -28983,6 +29106,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &515824231
 Rigidbody2D:
   serializedVersion: 4
@@ -29130,6 +29254,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &518598709
 Rigidbody2D:
   serializedVersion: 4
@@ -29351,6 +29476,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &522415662
 Rigidbody2D:
   serializedVersion: 4
@@ -29498,6 +29624,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &525738686
 Rigidbody2D:
   serializedVersion: 4
@@ -29645,6 +29772,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &530184634
 Rigidbody2D:
   serializedVersion: 4
@@ -29792,6 +29920,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &530876674
 Rigidbody2D:
   serializedVersion: 4
@@ -30087,6 +30216,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &535376642
 Rigidbody2D:
   serializedVersion: 4
@@ -30300,6 +30430,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &541545768
 Rigidbody2D:
   serializedVersion: 4
@@ -30447,6 +30578,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &542183019
 Rigidbody2D:
   serializedVersion: 4
@@ -30594,6 +30726,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &543642933
 Rigidbody2D:
   serializedVersion: 4
@@ -30815,6 +30948,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &551141196
 Rigidbody2D:
   serializedVersion: 4
@@ -30976,6 +31110,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &554271697
 Rigidbody2D:
   serializedVersion: 4
@@ -31183,6 +31318,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &559494236
 Rigidbody2D:
   serializedVersion: 4
@@ -31720,6 +31856,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &578477879
 Rigidbody2D:
   serializedVersion: 4
@@ -31867,6 +32004,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &579791382
 Rigidbody2D:
   serializedVersion: 4
@@ -32088,6 +32226,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &585079581
 Rigidbody2D:
   serializedVersion: 4
@@ -32331,6 +32470,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &586703799
 Rigidbody2D:
   serializedVersion: 4
@@ -32817,6 +32957,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &609429617
 Rigidbody2D:
   serializedVersion: 4
@@ -32964,6 +33105,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &609772801
 Rigidbody2D:
   serializedVersion: 4
@@ -33177,6 +33319,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &617992770
 Rigidbody2D:
   serializedVersion: 4
@@ -33324,6 +33467,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &618260573
 Rigidbody2D:
   serializedVersion: 4
@@ -33471,6 +33615,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &619790428
 Rigidbody2D:
   serializedVersion: 4
@@ -33853,6 +33998,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &630362169
 Rigidbody2D:
   serializedVersion: 4
@@ -34074,6 +34220,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &637056458
 Rigidbody2D:
   serializedVersion: 4
@@ -34235,6 +34382,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &637202637
 Rigidbody2D:
   serializedVersion: 4
@@ -34598,6 +34746,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &641179971
 Rigidbody2D:
   serializedVersion: 4
@@ -34833,6 +34982,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &644036646
 Rigidbody2D:
   serializedVersion: 4
@@ -35040,6 +35190,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &650113772
 Rigidbody2D:
   serializedVersion: 4
@@ -35187,6 +35338,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &653222873
 Rigidbody2D:
   serializedVersion: 4
@@ -35334,6 +35486,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &657066533
 Rigidbody2D:
   serializedVersion: 4
@@ -35793,6 +35946,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &666720310
 Rigidbody2D:
   serializedVersion: 4
@@ -36104,6 +36258,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &669492358
 Rigidbody2D:
   serializedVersion: 4
@@ -36251,6 +36406,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &680502142
 Rigidbody2D:
   serializedVersion: 4
@@ -36398,6 +36554,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &680664638
 Rigidbody2D:
   serializedVersion: 4
@@ -36545,6 +36702,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &683343233
 Rigidbody2D:
   serializedVersion: 4
@@ -36692,6 +36850,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &689129192
 Rigidbody2D:
   serializedVersion: 4
@@ -36987,6 +37146,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &694535134
 Rigidbody2D:
   serializedVersion: 4
@@ -37134,6 +37294,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &696721113
 Rigidbody2D:
   serializedVersion: 4
@@ -37281,6 +37442,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &698184439
 Rigidbody2D:
   serializedVersion: 4
@@ -37510,6 +37672,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &702556581
 Rigidbody2D:
   serializedVersion: 4
@@ -37745,6 +37908,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &703986155
 Rigidbody2D:
   serializedVersion: 4
@@ -37892,6 +38056,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &712779423
 Rigidbody2D:
   serializedVersion: 4
@@ -38121,6 +38286,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &714641438
 Rigidbody2D:
   serializedVersion: 4
@@ -38295,6 +38461,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &717215991
 Rigidbody2D:
   serializedVersion: 4
@@ -38442,6 +38609,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &725292966
 Rigidbody2D:
   serializedVersion: 4
@@ -38589,6 +38757,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &725872232
 Rigidbody2D:
   serializedVersion: 4
@@ -38736,6 +38905,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &726431507
 Rigidbody2D:
   serializedVersion: 4
@@ -38897,6 +39067,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &728295240
 Rigidbody2D:
   serializedVersion: 4
@@ -39044,6 +39215,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &728626754
 Rigidbody2D:
   serializedVersion: 4
@@ -39177,6 +39349,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &730296002
 Rigidbody2D:
   serializedVersion: 4
@@ -39324,6 +39497,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &735297295
 Rigidbody2D:
   serializedVersion: 4
@@ -39471,6 +39645,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &739133504
 Rigidbody2D:
   serializedVersion: 4
@@ -39700,6 +39875,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &744115873
 Rigidbody2D:
   serializedVersion: 4
@@ -39847,6 +40023,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &744391677
 Rigidbody2D:
   serializedVersion: 4
@@ -39994,6 +40171,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &749002919
 Rigidbody2D:
   serializedVersion: 4
@@ -40141,6 +40319,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &750199379
 Rigidbody2D:
   serializedVersion: 4
@@ -40444,6 +40623,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &755269092
 Rigidbody2D:
   serializedVersion: 4
@@ -40777,6 +40957,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &760405570
 Rigidbody2D:
   serializedVersion: 4
@@ -41156,6 +41337,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &768756057
 Rigidbody2D:
   serializedVersion: 4
@@ -41385,6 +41567,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &770477515
 Rigidbody2D:
   serializedVersion: 4
@@ -41532,6 +41715,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &771417011
 Rigidbody2D:
   serializedVersion: 4
@@ -41679,6 +41863,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &774739321
 Rigidbody2D:
   serializedVersion: 4
@@ -41908,6 +42093,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &787207313
 Rigidbody2D:
   serializedVersion: 4
@@ -42055,6 +42241,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &788243606
 Rigidbody2D:
   serializedVersion: 4
@@ -42202,6 +42389,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &788985350
 Rigidbody2D:
   serializedVersion: 4
@@ -42431,6 +42619,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &794982507
 Rigidbody2D:
   serializedVersion: 4
@@ -42660,6 +42849,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &797885526
 Rigidbody2D:
   serializedVersion: 4
@@ -43567,6 +43757,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &813345703
 Rigidbody2D:
   serializedVersion: 4
@@ -44174,6 +44365,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &819627561
 Rigidbody2D:
   serializedVersion: 4
@@ -44404,6 +44596,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &820469131
 Rigidbody2D:
   serializedVersion: 4
@@ -44619,6 +44812,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &823483643
 Rigidbody2D:
   serializedVersion: 4
@@ -44766,6 +44960,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &823905914
 Rigidbody2D:
   serializedVersion: 4
@@ -44927,6 +45122,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &824716117
 Rigidbody2D:
   serializedVersion: 4
@@ -45240,6 +45436,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &829873833
 Rigidbody2D:
   serializedVersion: 4
@@ -45401,6 +45598,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &832054959
 Rigidbody2D:
   serializedVersion: 4
@@ -45591,6 +45789,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &837863353
 Rigidbody2D:
   serializedVersion: 4
@@ -45738,6 +45937,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &838690068
 Rigidbody2D:
   serializedVersion: 4
@@ -45959,6 +46159,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &843782304
 Rigidbody2D:
   serializedVersion: 4
@@ -46188,6 +46389,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &846814393
 Rigidbody2D:
   serializedVersion: 4
@@ -46417,6 +46619,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &849503709
 Rigidbody2D:
   serializedVersion: 4
@@ -46564,6 +46767,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &852389605
 Rigidbody2D:
   serializedVersion: 4
@@ -46725,6 +46929,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &852452958
 Rigidbody2D:
   serializedVersion: 4
@@ -46915,6 +47120,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &855538092
 Rigidbody2D:
   serializedVersion: 4
@@ -47226,6 +47432,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &863140788
 Rigidbody2D:
   serializedVersion: 4
@@ -47537,6 +47744,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &872454568
 Rigidbody2D:
   serializedVersion: 4
@@ -47698,6 +47906,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &888226407
 Rigidbody2D:
   serializedVersion: 4
@@ -47831,6 +48040,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &895746170
 Rigidbody2D:
   serializedVersion: 4
@@ -48074,6 +48284,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &901806720
 Rigidbody2D:
   serializedVersion: 4
@@ -48207,6 +48418,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &908072790
 Rigidbody2D:
   serializedVersion: 4
@@ -48354,6 +48566,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &911690053
 Rigidbody2D:
   serializedVersion: 4
@@ -48501,6 +48714,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &913903843
 Rigidbody2D:
   serializedVersion: 4
@@ -48722,6 +48936,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &915976292
 Rigidbody2D:
   serializedVersion: 4
@@ -48869,6 +49084,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &916704815
 Rigidbody2D:
   serializedVersion: 4
@@ -49030,6 +49246,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &918351955
 Rigidbody2D:
   serializedVersion: 4
@@ -49163,6 +49380,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &919314306
 Rigidbody2D:
   serializedVersion: 4
@@ -49310,6 +49528,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &920800178
 Rigidbody2D:
   serializedVersion: 4
@@ -49457,6 +49676,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &921102362
 Rigidbody2D:
   serializedVersion: 4
@@ -49604,6 +49824,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &923737617
 Rigidbody2D:
   serializedVersion: 4
@@ -49817,6 +50038,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &926191853
 Rigidbody2D:
   serializedVersion: 4
@@ -50038,6 +50260,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &930341494
 Rigidbody2D:
   serializedVersion: 4
@@ -50267,6 +50490,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &945443439
 Rigidbody2D:
   serializedVersion: 4
@@ -50838,6 +51062,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &949234032
 Rigidbody2D:
   serializedVersion: 4
@@ -50971,6 +51196,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &950879842
 Rigidbody2D:
   serializedVersion: 4
@@ -51118,6 +51344,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &953736357
 Rigidbody2D:
   serializedVersion: 4
@@ -51265,6 +51492,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &954992509
 Rigidbody2D:
   serializedVersion: 4
@@ -51412,6 +51640,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &958906408
 Rigidbody2D:
   serializedVersion: 4
@@ -51765,6 +51994,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &974483354
 Rigidbody2D:
   serializedVersion: 4
@@ -51994,6 +52224,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &976123352
 Rigidbody2D:
   serializedVersion: 4
@@ -52297,6 +52528,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &977952439
 Rigidbody2D:
   serializedVersion: 4
@@ -52444,6 +52676,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &978410643
 Rigidbody2D:
   serializedVersion: 4
@@ -52591,6 +52824,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &978500706
 Rigidbody2D:
   serializedVersion: 4
@@ -52738,6 +52972,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &983059613
 Rigidbody2D:
   serializedVersion: 4
@@ -53033,6 +53268,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &989809526
 Rigidbody2D:
   serializedVersion: 4
@@ -53336,6 +53572,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &994268845
 Rigidbody2D:
   serializedVersion: 4
@@ -53557,6 +53794,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &997217267
 Rigidbody2D:
   serializedVersion: 4
@@ -53939,6 +54177,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1004283137
 Rigidbody2D:
   serializedVersion: 4
@@ -54288,6 +54527,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1012164760
 Rigidbody2D:
   serializedVersion: 4
@@ -54435,6 +54675,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1025699920
 Rigidbody2D:
   serializedVersion: 4
@@ -54664,6 +54905,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1032885487
 Rigidbody2D:
   serializedVersion: 4
@@ -54885,6 +55127,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1038258114
 Rigidbody2D:
   serializedVersion: 4
@@ -55032,6 +55275,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1049588682
 Rigidbody2D:
   serializedVersion: 4
@@ -55655,6 +55899,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1064809515
 Rigidbody2D:
   serializedVersion: 4
@@ -55802,6 +56047,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1064967785
 Rigidbody2D:
   serializedVersion: 4
@@ -55954,6 +56200,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1068028531
 Rigidbody2D:
   serializedVersion: 4
@@ -56101,6 +56348,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1071345882
 Rigidbody2D:
   serializedVersion: 4
@@ -56248,6 +56496,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1072510656
 Rigidbody2D:
   serializedVersion: 4
@@ -56374,6 +56623,7 @@ GameObject:
   - component: {fileID: 1075093255}
   - component: {fileID: 1075093254}
   - component: {fileID: 1075093256}
+  - component: {fileID: 1075093253}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -56446,6 +56696,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1075093253
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075093249}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 10f2debdb63fa884097cf84e9607b7e8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1075093254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56524,6 +56870,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1075416463
 Rigidbody2D:
   serializedVersion: 4
@@ -56753,6 +57100,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1078514145
 Rigidbody2D:
   serializedVersion: 4
@@ -56900,6 +57248,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1078523054
 Rigidbody2D:
   serializedVersion: 4
@@ -57121,6 +57470,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1080604645
 Rigidbody2D:
   serializedVersion: 4
@@ -57342,6 +57692,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1081849158
 Rigidbody2D:
   serializedVersion: 4
@@ -57558,6 +57909,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1082823279
 Rigidbody2D:
   serializedVersion: 4
@@ -57779,6 +58131,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1085956985
 Rigidbody2D:
   serializedVersion: 4
@@ -58008,6 +58361,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1087233066
 Rigidbody2D:
   serializedVersion: 4
@@ -58155,6 +58509,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1091658529
 Rigidbody2D:
   serializedVersion: 4
@@ -58524,6 +58879,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1101963939
 Rigidbody2D:
   serializedVersion: 4
@@ -58671,6 +59027,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1103363310
 Rigidbody2D:
   serializedVersion: 4
@@ -58979,6 +59336,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1120650321
 Rigidbody2D:
   serializedVersion: 4
@@ -59126,6 +59484,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1120938386
 Rigidbody2D:
   serializedVersion: 4
@@ -59413,6 +59772,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1125051947
 Rigidbody2D:
   serializedVersion: 4
@@ -59560,6 +59920,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1127554667
 Rigidbody2D:
   serializedVersion: 4
@@ -59707,6 +60068,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1130653892
 Rigidbody2D:
   serializedVersion: 4
@@ -59854,6 +60216,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1134130814
 Rigidbody2D:
   serializedVersion: 4
@@ -60255,6 +60618,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1140446373
 Rigidbody2D:
   serializedVersion: 4
@@ -60476,6 +60840,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1142973839
 Rigidbody2D:
   serializedVersion: 4
@@ -60837,6 +61202,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1150605603
 Rigidbody2D:
   serializedVersion: 4
@@ -61066,6 +61432,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1151995113
 Rigidbody2D:
   serializedVersion: 4
@@ -61295,6 +61662,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1153066630
 Rigidbody2D:
   serializedVersion: 4
@@ -61442,6 +61810,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1155065349
 Rigidbody2D:
   serializedVersion: 4
@@ -61745,6 +62114,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1163977895
 Rigidbody2D:
   serializedVersion: 4
@@ -62116,6 +62486,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1171314689
 Rigidbody2D:
   serializedVersion: 4
@@ -62323,6 +62694,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1176798962
 Rigidbody2D:
   serializedVersion: 4
@@ -62470,6 +62842,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1178229746
 Rigidbody2D:
   serializedVersion: 4
@@ -62691,6 +63064,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1179077211
 Rigidbody2D:
   serializedVersion: 4
@@ -63094,6 +63468,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1190257296
 Rigidbody2D:
   serializedVersion: 4
@@ -63241,6 +63616,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1191332208
 Rigidbody2D:
   serializedVersion: 4
@@ -63708,6 +64084,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1201084069
 Rigidbody2D:
   serializedVersion: 4
@@ -63855,6 +64232,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1206719832
 Rigidbody2D:
   serializedVersion: 4
@@ -64153,6 +64531,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1213106836
 Rigidbody2D:
   serializedVersion: 4
@@ -64300,6 +64679,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1213659591
 Rigidbody2D:
   serializedVersion: 4
@@ -64447,6 +64827,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1214391817
 Rigidbody2D:
   serializedVersion: 4
@@ -64594,6 +64975,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1215393510
 Rigidbody2D:
   serializedVersion: 4
@@ -64741,6 +65123,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1216588528
 Rigidbody2D:
   serializedVersion: 4
@@ -65110,6 +65493,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1223555337
 Rigidbody2D:
   serializedVersion: 4
@@ -65257,6 +65641,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1225453463
 Rigidbody2D:
   serializedVersion: 4
@@ -65478,6 +65863,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1228487200
 Rigidbody2D:
   serializedVersion: 4
@@ -65691,6 +66077,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1231342181
 Rigidbody2D:
   serializedVersion: 4
@@ -65926,6 +66313,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1236461735
 Rigidbody2D:
   serializedVersion: 4
@@ -66059,6 +66447,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1237890242
 Rigidbody2D:
   serializedVersion: 4
@@ -66206,6 +66595,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1242524106
 Rigidbody2D:
   serializedVersion: 4
@@ -66367,6 +66757,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1246475118
 Rigidbody2D:
   serializedVersion: 4
@@ -66500,6 +66891,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1247687025
 Rigidbody2D:
   serializedVersion: 4
@@ -66647,6 +67039,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1247822692
 Rigidbody2D:
   serializedVersion: 4
@@ -66794,6 +67187,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1248873202
 Rigidbody2D:
   serializedVersion: 4
@@ -66955,6 +67349,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1251286064
 Rigidbody2D:
   serializedVersion: 4
@@ -67229,6 +67624,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1264291601
 Rigidbody2D:
   serializedVersion: 4
@@ -67376,6 +67772,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1266182397
 Rigidbody2D:
   serializedVersion: 4
@@ -67523,6 +67920,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1268892414
 Rigidbody2D:
   serializedVersion: 4
@@ -67744,6 +68142,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1278910124
 Rigidbody2D:
   serializedVersion: 4
@@ -67973,6 +68372,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1281697903
 Rigidbody2D:
   serializedVersion: 4
@@ -68120,6 +68520,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1288813146
 Rigidbody2D:
   serializedVersion: 4
@@ -68411,6 +68812,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1293964347
 Rigidbody2D:
   serializedVersion: 4
@@ -68796,6 +69198,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1304881921
 Rigidbody2D:
   serializedVersion: 4
@@ -69025,6 +69428,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1307172901
 Rigidbody2D:
   serializedVersion: 4
@@ -69172,6 +69576,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1310105127
 Rigidbody2D:
   serializedVersion: 4
@@ -69398,6 +69803,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1324777623
 Rigidbody2D:
   serializedVersion: 4
@@ -69849,6 +70255,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1332968192
 Rigidbody2D:
   serializedVersion: 4
@@ -69996,6 +70403,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1342509915
 Rigidbody2D:
   serializedVersion: 4
@@ -70143,6 +70551,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1343198396
 Rigidbody2D:
   serializedVersion: 4
@@ -70372,6 +70781,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1345360330
 Rigidbody2D:
   serializedVersion: 4
@@ -70675,6 +71085,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1355669951
 Rigidbody2D:
   serializedVersion: 4
@@ -70836,6 +71247,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1356443033
 Rigidbody2D:
   serializedVersion: 4
@@ -71580,6 +71992,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1362507537
 Rigidbody2D:
   serializedVersion: 4
@@ -71949,6 +72362,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1366825575
 Rigidbody2D:
   serializedVersion: 4
@@ -72096,6 +72510,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1366904212
 Rigidbody2D:
   serializedVersion: 4
@@ -72413,6 +72828,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1370585798
 Rigidbody2D:
   serializedVersion: 4
@@ -72854,6 +73270,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1375902633
 Rigidbody2D:
   serializedVersion: 4
@@ -73001,6 +73418,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1377193214
 Rigidbody2D:
   serializedVersion: 4
@@ -73148,6 +73566,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1379462259
 Rigidbody2D:
   serializedVersion: 4
@@ -73435,6 +73854,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1390828172
 Rigidbody2D:
   serializedVersion: 4
@@ -73596,6 +74016,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1392174298
 Rigidbody2D:
   serializedVersion: 4
@@ -73791,6 +74212,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1393194495
 Rigidbody2D:
   serializedVersion: 4
@@ -73938,6 +74360,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1396042640
 Rigidbody2D:
   serializedVersion: 4
@@ -74085,6 +74508,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1401617701
 Rigidbody2D:
   serializedVersion: 4
@@ -74232,6 +74656,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1401940293
 Rigidbody2D:
   serializedVersion: 4
@@ -74379,6 +74804,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1402392043
 Rigidbody2D:
   serializedVersion: 4
@@ -74526,6 +74952,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1403225991
 Rigidbody2D:
   serializedVersion: 4
@@ -74673,6 +75100,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1404125094
 Rigidbody2D:
   serializedVersion: 4
@@ -74820,6 +75248,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1407266679
 Rigidbody2D:
   serializedVersion: 4
@@ -74967,6 +75396,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1408774245
 Rigidbody2D:
   serializedVersion: 4
@@ -75180,6 +75610,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1412608882
 Rigidbody2D:
   serializedVersion: 4
@@ -75384,6 +75815,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1413170243
 Rigidbody2D:
   serializedVersion: 4
@@ -75679,6 +76111,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1419359507
 Rigidbody2D:
   serializedVersion: 4
@@ -75826,6 +76259,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1419893109
 Rigidbody2D:
   serializedVersion: 4
@@ -75973,6 +76407,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1422179332
 Rigidbody2D:
   serializedVersion: 4
@@ -76120,6 +76555,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1422945799
 Rigidbody2D:
   serializedVersion: 4
@@ -76267,6 +76703,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1424016940
 Rigidbody2D:
   serializedVersion: 4
@@ -76657,6 +77094,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1438650711
 Rigidbody2D:
   serializedVersion: 4
@@ -77017,6 +77455,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1450357599
 Rigidbody2D:
   serializedVersion: 4
@@ -77377,6 +77816,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1458453633
 Rigidbody2D:
   serializedVersion: 4
@@ -77524,6 +77964,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1463982579
 Rigidbody2D:
   serializedVersion: 4
@@ -77671,6 +78112,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1466060091
 Rigidbody2D:
   serializedVersion: 4
@@ -77958,6 +78400,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1470434286
 Rigidbody2D:
   serializedVersion: 4
@@ -78119,6 +78562,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1473505967
 Rigidbody2D:
   serializedVersion: 4
@@ -78326,6 +78770,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1480185110
 Rigidbody2D:
   serializedVersion: 4
@@ -78785,6 +79230,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1490578876
 Rigidbody2D:
   serializedVersion: 4
@@ -78932,6 +79378,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1492505452
 Rigidbody2D:
   serializedVersion: 4
@@ -79079,6 +79526,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1495395879
 Rigidbody2D:
   serializedVersion: 4
@@ -79300,6 +79748,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1497937359
 Rigidbody2D:
   serializedVersion: 4
@@ -79447,6 +79896,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1498970665
 Rigidbody2D:
   serializedVersion: 4
@@ -79676,6 +80126,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1506089254
 Rigidbody2D:
   serializedVersion: 4
@@ -79823,6 +80274,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1506510679
 Rigidbody2D:
   serializedVersion: 4
@@ -79970,6 +80422,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1511354639
 Rigidbody2D:
   serializedVersion: 4
@@ -80117,6 +80570,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1513660827
 Rigidbody2D:
   serializedVersion: 4
@@ -80346,6 +80800,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1517710447
 Rigidbody2D:
   serializedVersion: 4
@@ -80493,6 +80948,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1521900868
 Rigidbody2D:
   serializedVersion: 4
@@ -80714,6 +81170,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1525053759
 Rigidbody2D:
   serializedVersion: 4
@@ -80861,6 +81318,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1525773961
 Rigidbody2D:
   serializedVersion: 4
@@ -81022,6 +81480,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1527073740
 Rigidbody2D:
   serializedVersion: 4
@@ -81155,6 +81614,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1531671807
 Rigidbody2D:
   serializedVersion: 4
@@ -81302,6 +81762,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1533136870
 Rigidbody2D:
   serializedVersion: 4
@@ -81449,6 +81910,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1534377979
 Rigidbody2D:
   serializedVersion: 4
@@ -81892,6 +82354,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1545644437
 Rigidbody2D:
   serializedVersion: 4
@@ -82121,6 +82584,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1551664362
 Rigidbody2D:
   serializedVersion: 4
@@ -82350,6 +82814,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1553877691
 Rigidbody2D:
   serializedVersion: 4
@@ -82571,6 +83036,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1560465318
 Rigidbody2D:
   serializedVersion: 4
@@ -82788,6 +83254,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1570891230
 Rigidbody2D:
   serializedVersion: 4
@@ -83075,6 +83542,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1576847183
 Rigidbody2D:
   serializedVersion: 4
@@ -83304,6 +83772,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1577887418
 Rigidbody2D:
   serializedVersion: 4
@@ -83533,6 +84002,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1583999806
 Rigidbody2D:
   serializedVersion: 4
@@ -83680,6 +84150,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1587069268
 Rigidbody2D:
   serializedVersion: 4
@@ -83934,6 +84405,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1592937672
 Rigidbody2D:
   serializedVersion: 4
@@ -84081,6 +84553,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1595206053
 Rigidbody2D:
   serializedVersion: 4
@@ -84367,6 +84840,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1602537694
 Rigidbody2D:
   serializedVersion: 4
@@ -84514,6 +84988,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1603150789
 Rigidbody2D:
   serializedVersion: 4
@@ -84661,6 +85136,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1603579704
 Rigidbody2D:
   serializedVersion: 4
@@ -84924,6 +85400,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1608765797
 Rigidbody2D:
   serializedVersion: 4
@@ -85071,6 +85548,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1610392060
 Rigidbody2D:
   serializedVersion: 4
@@ -85292,6 +85770,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1611448358
 Rigidbody2D:
   serializedVersion: 4
@@ -85587,6 +86066,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1617224219
 Rigidbody2D:
   serializedVersion: 4
@@ -85813,6 +86293,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1625109132
 Rigidbody2D:
   serializedVersion: 4
@@ -86034,6 +86515,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1636402390
 Rigidbody2D:
   serializedVersion: 4
@@ -86263,6 +86745,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1637191252
 Rigidbody2D:
   serializedVersion: 4
@@ -86410,6 +86893,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1639068738
 Rigidbody2D:
   serializedVersion: 4
@@ -86713,6 +87197,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1642057590
 Rigidbody2D:
   serializedVersion: 4
@@ -86939,6 +87424,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1648729587
 Rigidbody2D:
   serializedVersion: 4
@@ -87174,6 +87660,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1653375943
 Rigidbody2D:
   serializedVersion: 4
@@ -87381,6 +87868,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1655634422
 Rigidbody2D:
   serializedVersion: 4
@@ -87528,6 +88016,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1655682374
 Rigidbody2D:
   serializedVersion: 4
@@ -87749,6 +88238,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1659083971
 Rigidbody2D:
   serializedVersion: 4
@@ -87896,6 +88386,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1660982580
 Rigidbody2D:
   serializedVersion: 4
@@ -88171,6 +88662,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1667716189
 Rigidbody2D:
   serializedVersion: 4
@@ -88318,6 +88810,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1674743701
 Rigidbody2D:
   serializedVersion: 4
@@ -88465,6 +88958,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1675576780
 Rigidbody2D:
   serializedVersion: 4
@@ -88612,6 +89106,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1675628268
 Rigidbody2D:
   serializedVersion: 4
@@ -88841,6 +89336,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1680585520
 Rigidbody2D:
   serializedVersion: 4
@@ -88988,6 +89484,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1680776622
 Rigidbody2D:
   serializedVersion: 4
@@ -89135,6 +89632,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1681031628
 Rigidbody2D:
   serializedVersion: 4
@@ -89364,6 +89862,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1683168328
 Rigidbody2D:
   serializedVersion: 4
@@ -89511,6 +90010,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1686213240
 Rigidbody2D:
   serializedVersion: 4
@@ -89658,6 +90158,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1691524316
 Rigidbody2D:
   serializedVersion: 4
@@ -89903,6 +90404,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1696121756
 Rigidbody2D:
   serializedVersion: 4
@@ -90124,6 +90626,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1698623127
 Rigidbody2D:
   serializedVersion: 4
@@ -90271,6 +90774,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1706114608
 Rigidbody2D:
   serializedVersion: 4
@@ -90532,6 +91036,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1712855072
 Rigidbody2D:
   serializedVersion: 4
@@ -90679,6 +91184,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1713552333
 Rigidbody2D:
   serializedVersion: 4
@@ -90900,6 +91406,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1720257129
 Rigidbody2D:
   serializedVersion: 4
@@ -91047,6 +91554,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1725745709
 Rigidbody2D:
   serializedVersion: 4
@@ -91350,6 +91858,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1729936994
 Rigidbody2D:
   serializedVersion: 4
@@ -91502,6 +92011,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1730515749
 Rigidbody2D:
   serializedVersion: 4
@@ -91663,6 +92173,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1731346037
 Rigidbody2D:
   serializedVersion: 4
@@ -91796,6 +92307,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1731498032
 Rigidbody2D:
   serializedVersion: 4
@@ -92113,6 +92625,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1736743299
 Rigidbody2D:
   serializedVersion: 4
@@ -92246,6 +92759,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1737809377
 Rigidbody2D:
   serializedVersion: 4
@@ -92393,6 +92907,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1739609968
 Rigidbody2D:
   serializedVersion: 4
@@ -92693,6 +93208,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1743839547
 Rigidbody2D:
   serializedVersion: 4
@@ -92974,6 +93490,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1754673904
 Rigidbody2D:
   serializedVersion: 4
@@ -93121,6 +93638,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1757449860
 Rigidbody2D:
   serializedVersion: 4
@@ -93268,6 +93786,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1762250869
 Rigidbody2D:
   serializedVersion: 4
@@ -93522,6 +94041,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1771234037
 Rigidbody2D:
   serializedVersion: 4
@@ -93669,6 +94189,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1774050331
 Rigidbody2D:
   serializedVersion: 4
@@ -93898,6 +94419,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1776897003
 Rigidbody2D:
   serializedVersion: 4
@@ -94119,6 +94641,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1782255071
 Rigidbody2D:
   serializedVersion: 4
@@ -94488,6 +95011,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1784812386
 Rigidbody2D:
   serializedVersion: 4
@@ -94701,6 +95225,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1788842853
 Rigidbody2D:
   serializedVersion: 4
@@ -95042,6 +95567,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1793097731
 Rigidbody2D:
   serializedVersion: 4
@@ -95405,6 +95931,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1799630289
 Rigidbody2D:
   serializedVersion: 4
@@ -95634,6 +96161,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1809740335
 Rigidbody2D:
   serializedVersion: 4
@@ -95781,6 +96309,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1810271435
 Rigidbody2D:
   serializedVersion: 4
@@ -95928,6 +96457,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1813350048
 Rigidbody2D:
   serializedVersion: 4
@@ -96201,6 +96731,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1817024066
 Rigidbody2D:
   serializedVersion: 4
@@ -96430,6 +96961,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1820578781
 Rigidbody2D:
   serializedVersion: 4
@@ -96577,6 +97109,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1821550594
 Rigidbody2D:
   serializedVersion: 4
@@ -96724,6 +97257,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1821651103
 Rigidbody2D:
   serializedVersion: 4
@@ -96871,6 +97405,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1830574141
 Rigidbody2D:
   serializedVersion: 4
@@ -97018,6 +97553,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1830581030
 Rigidbody2D:
   serializedVersion: 4
@@ -97247,6 +97783,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1834592959
 Rigidbody2D:
   serializedVersion: 4
@@ -97476,6 +98013,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1837611240
 Rigidbody2D:
   serializedVersion: 4
@@ -97623,6 +98161,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1843079256
 Rigidbody2D:
   serializedVersion: 4
@@ -98036,6 +98575,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1853502826
 Rigidbody2D:
   serializedVersion: 4
@@ -98183,6 +98723,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1856989802
 Rigidbody2D:
   serializedVersion: 4
@@ -98330,6 +98871,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1859685524
 Rigidbody2D:
   serializedVersion: 4
@@ -98477,6 +99019,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1860282065
 Rigidbody2D:
   serializedVersion: 4
@@ -98794,6 +99337,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1863182978
 Rigidbody2D:
   serializedVersion: 4
@@ -98927,6 +99471,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1864864899
 Rigidbody2D:
   serializedVersion: 4
@@ -99074,6 +99619,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1867471228
 Rigidbody2D:
   serializedVersion: 4
@@ -99497,6 +100043,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1872273736
 Rigidbody2D:
   serializedVersion: 4
@@ -99718,6 +100265,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1875213820
 Rigidbody2D:
   serializedVersion: 4
@@ -100103,6 +100651,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1880263021
 Rigidbody2D:
   serializedVersion: 4
@@ -100250,6 +100799,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1880885797
 Rigidbody2D:
   serializedVersion: 4
@@ -100553,6 +101103,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1891554823
 Rigidbody2D:
   serializedVersion: 4
@@ -100700,6 +101251,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1893381599
 Rigidbody2D:
   serializedVersion: 4
@@ -100861,6 +101413,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1893486410
 Rigidbody2D:
   serializedVersion: 4
@@ -100994,6 +101547,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1895166995
 Rigidbody2D:
   serializedVersion: 4
@@ -101301,6 +101855,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1900377862
 Rigidbody2D:
   serializedVersion: 4
@@ -101530,6 +102085,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1904027185
 Rigidbody2D:
   serializedVersion: 4
@@ -101677,6 +102233,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1904836554
 Rigidbody2D:
   serializedVersion: 4
@@ -101898,6 +102455,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1907420808
 Rigidbody2D:
   serializedVersion: 4
@@ -102341,6 +102899,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1914319260
 Rigidbody2D:
   serializedVersion: 4
@@ -102488,6 +103047,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1914385438
 Rigidbody2D:
   serializedVersion: 4
@@ -102635,6 +103195,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1915090217
 Rigidbody2D:
   serializedVersion: 4
@@ -102856,6 +103417,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1920946304
 Rigidbody2D:
   serializedVersion: 4
@@ -103233,6 +103795,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1929822427
 Rigidbody2D:
   serializedVersion: 4
@@ -104008,6 +104571,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1932166045
 Rigidbody2D:
   serializedVersion: 4
@@ -104237,6 +104801,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1933853133
 Rigidbody2D:
   serializedVersion: 4
@@ -104705,6 +105270,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1945823708
 Rigidbody2D:
   serializedVersion: 4
@@ -104852,6 +105418,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1949561359
 Rigidbody2D:
   serializedVersion: 4
@@ -105237,6 +105804,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1953967937
 Rigidbody2D:
   serializedVersion: 4
@@ -105622,6 +106190,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1963408596
 Rigidbody2D:
   serializedVersion: 4
@@ -105843,6 +106412,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1968652500
 Rigidbody2D:
   serializedVersion: 4
@@ -106009,6 +106579,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1975011587
 Rigidbody2D:
   serializedVersion: 4
@@ -106142,6 +106713,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1975218173
 Rigidbody2D:
   serializedVersion: 4
@@ -106363,6 +106935,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1976325263
 Rigidbody2D:
   serializedVersion: 4
@@ -106753,6 +107326,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1996157734
 Rigidbody2D:
   serializedVersion: 4
@@ -106900,6 +107474,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1997009006
 Rigidbody2D:
   serializedVersion: 4
@@ -107047,6 +107622,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1997398174
 Rigidbody2D:
   serializedVersion: 4
@@ -107194,6 +107770,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &1997593458
 Rigidbody2D:
   serializedVersion: 4
@@ -107341,6 +107918,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2003102164
 Rigidbody2D:
   serializedVersion: 4
@@ -107636,6 +108214,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2009861116
 Rigidbody2D:
   serializedVersion: 4
@@ -107797,6 +108376,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2011076459
 Rigidbody2D:
   serializedVersion: 4
@@ -107992,6 +108572,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2015277679
 Rigidbody2D:
   serializedVersion: 4
@@ -108139,6 +108720,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2015664181
 Rigidbody2D:
   serializedVersion: 4
@@ -108491,6 +109073,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2029580199
 Rigidbody2D:
   serializedVersion: 4
@@ -108638,6 +109221,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2032316483
 Rigidbody2D:
   serializedVersion: 4
@@ -108785,6 +109369,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2033102902
 Rigidbody2D:
   serializedVersion: 4
@@ -108932,6 +109517,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2034446746
 Rigidbody2D:
   serializedVersion: 4
@@ -109161,6 +109747,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2038068013
 Rigidbody2D:
   serializedVersion: 4
@@ -109308,6 +109895,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2038698428
 Rigidbody2D:
   serializedVersion: 4
@@ -109529,6 +110117,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2046843232
 Rigidbody2D:
   serializedVersion: 4
@@ -109750,6 +110339,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2050839215
 Rigidbody2D:
   serializedVersion: 4
@@ -109985,6 +110575,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2057936617
 Rigidbody2D:
   serializedVersion: 4
@@ -110206,6 +110797,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2062155521
 Rigidbody2D:
   serializedVersion: 4
@@ -110339,6 +110931,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2065869687
 Rigidbody2D:
   serializedVersion: 4
@@ -110642,6 +111235,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2066935948
 Rigidbody2D:
   serializedVersion: 4
@@ -110789,6 +111383,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2068627808
 Rigidbody2D:
   serializedVersion: 4
@@ -111034,6 +111629,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2073133083
 Rigidbody2D:
   serializedVersion: 4
@@ -111181,6 +111777,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2074965812
 Rigidbody2D:
   serializedVersion: 4
@@ -111410,6 +112007,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2087475276
 Rigidbody2D:
   serializedVersion: 4
@@ -111557,6 +112155,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2090150060
 Rigidbody2D:
   serializedVersion: 4
@@ -111934,6 +112533,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2104439007
 Rigidbody2D:
   serializedVersion: 4
@@ -112277,6 +112877,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2110462312
 Rigidbody2D:
   serializedVersion: 4
@@ -112617,6 +113218,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2123112341
 Rigidbody2D:
   serializedVersion: 4
@@ -112994,6 +113596,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2130964633
 Rigidbody2D:
   serializedVersion: 4
@@ -113141,6 +113744,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2135676033
 Rigidbody2D:
   serializedVersion: 4
@@ -113444,6 +114048,7 @@ MonoBehaviour:
   baseDamage: 2
   type: 1
   flags: 0000000004000000
+  knockbackForce: 0
 --- !u!50 &2143772136
 Rigidbody2D:
   serializedVersion: 4
