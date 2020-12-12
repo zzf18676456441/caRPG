@@ -115,7 +115,7 @@ MonoBehaviour:
   weaponLocation: 2
   modLocation: 2
   attachType: 0
-  baseDamage: 25
+  baseDamage: 30
   damageType: 1
   damageFlags: 00000000
   anchorOverride: {x: 0, y: 0.1}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89475de6a3360ce4ca61a72ba4133e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthAdd: 10
+  maxHealthAdd: 0
   maxHealthMult: 0
   maxArmorAdd: 2
   maxArmorMult: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 953920218769884954}
   - component: {fileID: -83604179019915807}
   m_Layer: 0
-  m_Name: Iron Trunk
+  m_Name: Iron Nitro
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,9 +80,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthAdd: 0
   maxHealthMult: 0
-  maxArmorAdd: 1
+  maxArmorAdd: 0
   maxArmorMult: 0
-  maxNO2Add: 0
+  maxNO2Add: 100
   maxNO2Mult: 0
   weightAdd: 0
   gripAdd: 0

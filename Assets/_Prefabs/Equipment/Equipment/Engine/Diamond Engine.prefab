@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9222837853408487158}
   - component: {fileID: 8161309544207161346}
   m_Layer: 0
-  m_Name: Titanium Engine
+  m_Name: Diamond Engine
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   weightAdd: 0
   gripAdd: 0
   gripMult: 0
-  accelerationAdd: 0.4
+  accelerationAdd: 0.8
   accelerationMult: 0
   topSpeedAdd: 0
   topSpeedMult: 0

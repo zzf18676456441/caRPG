@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 248228961353304868}
   - component: {fileID: 6236057915483223451}
   m_Layer: 0
-  m_Name: Steel Tires
+  m_Name: Gold Tires
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthAdd: 0
   maxHealthMult: 0
-  maxArmorAdd: 2
+  maxArmorAdd: 0
   maxArmorMult: 0
   maxNO2Add: 0
   maxNO2Mult: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   gripMult: 0
   accelerationAdd: 0.2
   accelerationMult: 0
-  topSpeedAdd: 0
+  topSpeedAdd: 20
   topSpeedMult: 0
 --- !u!212 &6236057915483223451
 SpriteRenderer:

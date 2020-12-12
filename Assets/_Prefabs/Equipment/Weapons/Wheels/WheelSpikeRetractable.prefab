@@ -133,14 +133,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthAdd: 0
   maxHealthMult: 0
-  maxArmorAdd: 1
+  maxArmorAdd: 0
   maxArmorMult: 0
   maxNO2Add: 0
   maxNO2Mult: 0
   weightAdd: 0
   gripAdd: 0
   gripMult: 0
-  accelerationAdd: 0.1
+  accelerationAdd: 0.2
   accelerationMult: 0
   topSpeedAdd: 0
   topSpeedMult: 0
