@@ -11,7 +11,7 @@ public class GoreHandler : MonoBehaviour
     void Start()
     {
         print("created");
-        transform.position = FindObjectOfType<Camera>().transform.position + new Vector3(UnityEngine.Random.Range(-30f, 30f), UnityEngine.Random.Range(-30f, 30f));
+        transform.position = FindObjectOfType<Camera>().transform.position + new Vector3(UnityEngine.Random.Range(-50f, 50f), UnityEngine.Random.Range(-30f, 30f), 10);
         this.transform.parent = FindObjectOfType<Camera>().transform;
         GetComponent<SpriteRenderer>().sprite = splatters[UnityEngine.Random.Range(0, 3)];
         alpha = GetComponent<SpriteRenderer>().color.a;
@@ -31,7 +31,7 @@ public class GoreHandler : MonoBehaviour
                 alpha -= .025f;
             else
                 alpha -= .002f;
-            transform.position = new Vector3(transform.position.x, transform.position.y - .015f);
+            transform.position = new Vector3(transform.position.x, transform.position.y - .015f, 10);
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alpha);
         }
         if (alpha <= 0)
